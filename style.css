@@ -501,7 +501,7 @@ p  { color: var(--gray); font-size: .95rem; }
    PROPERTIES SECTION
    ============================================================ */
 .properties-section { background: #fff; }
-.properties-section .section-tag { color: var(--red); }
+.properties-section .section-tag { color: #fff; }
 .properties-section .section-header h2 { color: var(--dark); }
 .properties-section .section-header p { color: var(--gray); }
 
@@ -644,9 +644,10 @@ p  { color: var(--gray); font-size: .95rem; }
 
 .property-badge {
   position: absolute; top: .7rem; left: .7rem;
-  background: var(--red); color: #fff !important;
-  font-size: .68rem; font-weight: 700; letter-spacing: .06em;
-  text-transform: uppercase; padding: .2rem .55rem; border-radius: 4px;
+  background: var(--red); color: #ffffff !important;
+  font-size: .7rem; font-weight: 800; letter-spacing: .07em;
+  text-transform: uppercase; padding: .25rem .65rem; border-radius: 4px;
+  line-height: 1.4;
 }
 .badge-special   { background: #2563EB; color: #fff !important; }
 .badge-inversion { background: #7C3AED; color: #fff !important; }
