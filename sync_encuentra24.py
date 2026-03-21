@@ -30,7 +30,7 @@ PROJECT_DIR  = Path(__file__).parent
 ASSETS_DIR   = PROJECT_DIR / "assets"
 DATA_FILE    = PROJECT_DIR / "properties-data.js"
 PROFILE_URL  = "https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
-MAX_PROPS    = 6
+MAX_PROPS    = 20
 
 HEADERS = {
     "User-Agent": (
