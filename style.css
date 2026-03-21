@@ -375,6 +375,12 @@ p  { color: var(--gray); font-size: .95rem; }
   margin-bottom: 1.75rem;
 }
 .btn-wa-big:hover { background: #1DA851; transform: translateY(-2px); }
+
+/* Variante texto negro (sección agente) */
+.btn-wa-dark { color: #000 !important; }
+.btn-wa-dark .wa-big-text strong,
+.btn-wa-dark .wa-big-text span,
+.btn-wa-dark .wa-big-arrow { color: #000; }
 .wa-big-icon {
   font-size: 1.85rem; flex-shrink: 0;
   width: 48px; height: 48px;
@@ -754,7 +760,7 @@ p  { color: var(--gray); font-size: .95rem; }
 }
 .agent-tags {
   display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: .85rem; margin-bottom: 2rem;
+  gap: .7rem; margin-bottom: 2rem;
 }
 .agent-tags span {
   display: flex; align-items: flex-start; gap: .6rem;
