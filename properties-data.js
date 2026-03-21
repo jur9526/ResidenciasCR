@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-21 20:20
+// Auto-generado por sync_encuentra24.py — 2026-03-21 20:28
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -241,6 +241,22 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
   },
   {
+    "id": "E24-30422582",
+    "title": "Casa en Venta Ubicada en Coronado",
+    "price": "$430,000",
+    "location": "Vázquez de Coronado",
+    "beds": 5,
+    "baths": 4,
+    "area": "988 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30422582",
+    "wa": "Me%20interesa%20la%20propiedad%2030422582%20en%20encuentra24",
+    "image": "assets/e24-30422582.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-coronado/30422582"
+  },
+  {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
     "price": "$380,000",
@@ -303,5 +319,37 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031254758%20en%20encuentra24",
     "image": "assets/e24-31254758.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
+  },
+  {
+    "id": "E24-30127424",
+    "title": "Venta Apartamento Condominio BAMBU",
+    "price": "$165,000",
+    "location": "Ulloa",
+    "beds": 2,
+    "baths": 2,
+    "area": "74 m²",
+    "type": "Apartamento",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30127424",
+    "wa": "Me%20interesa%20la%20propiedad%2030127424%20en%20encuentra24",
+    "image": "assets/e24-30127424.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/venta-apartamento-condominio-bambu/30127424"
+  },
+  {
+    "id": "E24-29377968",
+    "title": "Casa en venta ubicada en Zapote",
+    "price": "₡75,000,000\n-1%",
+    "location": "Zapote",
+    "beds": 6,
+    "baths": 0,
+    "area": "133.55 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377968",
+    "wa": "Me%20interesa%20la%20propiedad%2029377968%20en%20encuentra24",
+    "image": "assets/e24-29377968.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-zapote/29377968"
   }
 ];
