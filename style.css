@@ -817,6 +817,30 @@ p  { color: var(--gray); font-size: .95rem; }
 .wa-social { background: var(--wa) !important; color: #fff !important; }
 .wa-social:hover { background: #1DA851 !important; }
 
+/* ── Social Pills ─────────────────────────────────────────── */
+.social-pills { display: flex; gap: .55rem; flex-wrap: wrap; margin-top: 1.25rem; }
+.social-pill {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .45rem 1rem .45rem .75rem;
+  border-radius: 999px;
+  font-size: .82rem; font-weight: 600; color: #fff;
+  text-decoration: none;
+  transition: filter .2s, transform .15s;
+  white-space: nowrap;
+}
+.social-pill:hover { filter: brightness(1.15); transform: translateY(-2px); color: #fff; }
+.social-pill i { font-size: 1rem; }
+
+/* Brand colours */
+.social-pill.ig {
+  background: linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%);
+}
+.social-pill.th { background: #101010; }
+.social-pill.fb { background: #1877F2; }
+.social-pill.tt { background: #010101; }
+.social-pill.tt i { background: linear-gradient(135deg,#69C9D0,#EE1D52); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.social-pill.wa { background: #25D366; }
+
 .contact-cta-box {
   background: var(--dark); border-radius: 16px;
   padding: 2.5rem; text-align: center; color: #fff;
