@@ -95,10 +95,7 @@ function buildPropertyCard(prop) {
     <div class="property-card reveal">
       <div class="property-img">
         <div class="prop-skeleton"></div>
-        <img src="${imgSrc}" alt="${prop.title}" loading="lazy"
-             onload="this.previousElementSibling.style.display='none';this.style.opacity='1'"
-             onerror="this.previousElementSibling.style.display='none';this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';this.style.opacity='1'"
-             style="opacity:0;transition:opacity .35s"/>
+        <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
         <div class="property-img-overlay">
           <a href="https://wa.me/50683725603?text=${prop.wa || 'Me%20interesa%20una%20propiedad'}"
@@ -136,6 +133,15 @@ function renderProperties() {
   } else {
     if (noResults) noResults.style.display = 'none';
     grid.innerHTML = slice.map(buildPropertyCard).join('');
+    grid.querySelectorAll('.prop-img-lazy').forEach(img => {
+      const skeleton = img.previousElementSibling;
+      img.addEventListener('load', () => { if (skeleton) skeleton.style.display = 'none'; img.classList.add('loaded'); });
+      img.addEventListener('error', () => {
+        if (skeleton) skeleton.style.display = 'none';
+        img.src = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
+        img.classList.add('loaded');
+      });
+    });
     grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }
 

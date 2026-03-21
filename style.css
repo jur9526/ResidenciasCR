@@ -564,6 +564,13 @@ p  { color: var(--gray); font-size: .95rem; }
 .prop-no-results i { font-size: 2.8rem; color: var(--light-gray); }
 .prop-no-results p strong { color: var(--dark); }
 
+/* ── Lazy img ── */
+.prop-img-lazy { opacity: 0; transition: opacity .35s; }
+.prop-img-lazy.loaded { opacity: 1; }
+
+/* ── Footer heart ── */
+.footer-heart { color: var(--red); }
+
 /* ── Skeleton carga ── */
 .prop-skeleton {
   position: absolute; inset: 0;
@@ -760,10 +767,10 @@ p  { color: var(--gray); font-size: .95rem; }
 .contact-item > .fa-arrow-right { color: var(--light-gray); font-size: .85rem; transition: color .2s; }
 .contact-item:hover > .fa-arrow-right { color: var(--gray); }
 .contact-item-icon {
-  width: 42px; height: 42px; border-radius: 10px;
+  width: 46px; height: 46px; border-radius: 10px;
   background: var(--cream);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  font-size: 1.45rem; flex-shrink: 0;
 }
 .contact-item.wa .contact-item-icon { background: #dcfce7; color: var(--wa); }
 .contact-item.ig .contact-item-icon { background: #fdf4ff; color: #C13584; }
