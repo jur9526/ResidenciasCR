@@ -433,8 +433,17 @@ p  { color: var(--gray); font-size: .95rem; }
   box-shadow: var(--shadow);
 }
 .form-card-header { margin-bottom: 1.5rem; }
-.form-card-header h3 { color: var(--dark); margin-bottom: .25rem; }
-.form-card-header p  { font-size: .85rem; }
+.form-card-badge {
+  display: inline-flex; align-items: center; gap: .35rem;
+  background: #fef2f2; color: var(--red);
+  font-size: .72rem; font-weight: 700; letter-spacing: .06em;
+  padding: .25rem .7rem; border-radius: 50px;
+  margin-bottom: .6rem;
+}
+.form-card-header h3 { color: var(--dark); margin-bottom: .3rem; font-size: 1.2rem; }
+.form-card-header p  { font-size: .85rem; line-height: 1.5; color: var(--gray); }
+.form-card-header p strong { color: var(--dark); }
+.botcheck-hidden { display: none; }
 
 .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
 .form-group { display: flex; flex-direction: column; gap: .3rem; margin-bottom: .75rem; }
@@ -475,7 +484,8 @@ p  { color: var(--gray); font-size: .95rem; }
 /* Compact form variant (sell section) */
 .form-compact { padding: 1.25rem 1.5rem; }
 .form-compact .form-card-header { margin-bottom: .75rem; }
-.form-compact .form-card-header h3 { font-size: 1rem; }
+.form-compact .form-card-badge { font-size: .68rem; padding: .2rem .55rem; margin-bottom: .4rem; }
+.form-compact .form-card-header h3 { font-size: .95rem; }
 .form-compact .form-card-header p  { font-size: .78rem; }
 .form-compact .form-group { margin-bottom: .45rem; gap: .2rem; }
 .form-compact .form-group label { font-size: .7rem; }
