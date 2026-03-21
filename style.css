@@ -770,7 +770,8 @@ p  { color: var(--gray); font-size: .95rem; }
 .contact-item.e24 .contact-item-icon { background: #fff4ee; color: #FF6B00; }
 .contact-item > div { flex: 1; }
 .contact-item strong { display: block; font-size: .88rem; font-weight: 600; color: var(--dark); }
-.contact-item span   { font-size: .8rem; color: var(--gray); }
+.contact-item span   { display: block; font-size: .8rem; color: var(--gray); }
+.contact-secondary-num { font-size: .78rem !important; color: var(--gray) !important; opacity: .75; }
 
 .social-links { display: flex; gap: .6rem; margin-top: 1.25rem; }
 .social-link {
