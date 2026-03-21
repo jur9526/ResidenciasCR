@@ -288,7 +288,20 @@ p  { color: var(--gray); font-size: .95rem; }
 .hero-content p   { color: rgba(255,255,255,.82); font-size: 1.1rem; max-width: 500px; margin-bottom: 2.5rem; line-height: 1.7; }
 .hero-content p strong { color: #fff; }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 0; }
-.hero-sell-cta { margin-top: auto; }
+.hero-sell-cta { margin-top: auto; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.18); }
+.btn-sell-hero {
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+  font-size: 1.1rem; font-weight: 700; color: #fff;
+  text-decoration: none;
+  gap: .75rem;
+  padding: .6rem 0;
+  border-bottom: 2px solid var(--red);
+  transition: color .2s, border-color .2s;
+}
+.btn-sell-hero:hover { color: var(--red); border-bottom-color: var(--red); }
+.btn-sell-hero i.fa-arrow-right { margin-left: auto; font-size: 1rem; transition: transform .2s; }
+.btn-sell-hero:hover i.fa-arrow-right { transform: translateX(5px); }
 .hero-stats  { display: flex; gap: 2rem; flex-wrap: wrap; margin-top: 1.5rem; }
 .hero-stat   { display: flex; flex-direction: column; gap: .15rem; min-width: 110px; }
 .hero-stat strong { font-size: 1.95rem; font-weight: 800; color: var(--red); line-height: 1; }
@@ -941,7 +954,7 @@ p  { color: var(--gray); font-size: .95rem; }
   .hero-stats      { gap: 1.5rem; flex-wrap: wrap; }
   .hero-stat strong { font-size: 1.6rem; }
   .hero-sell-cta   { margin-top: auto; }
-  .btn-sell-hero   { font-size: .85rem; }
+  .btn-sell-hero   { font-size: 1rem; }
 
   /* Propiedades */
   .properties-grid { grid-template-columns: 1fr; }
