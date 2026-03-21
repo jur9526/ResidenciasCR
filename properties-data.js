@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-21 19:43
+// Auto-generado por sync_encuentra24.py — 2026-03-21 20:20
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -55,7 +55,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "5 m²",
+    "area": "",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -151,7 +151,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "La Trinidad",
     "beds": 3,
     "baths": 5,
-    "area": "5 m²",
+    "area": "",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -191,6 +191,22 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881424%20en%20encuentra24",
     "image": "assets/e24-31881424.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-el-centro-de-cononado/31881424"
+  },
+  {
+    "id": "E24-30728594",
+    "title": "¡Oportunidad! Compre una casa y alquile la otra",
+    "price": "₡145,000,000\n-8%",
+    "location": "San Rafael",
+    "beds": 6,
+    "baths": 0,
+    "area": "357 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30728594",
+    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24",
+    "image": "assets/e24-30728594.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
   },
   {
     "id": "E24-30885142",
