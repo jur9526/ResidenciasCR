@@ -163,7 +163,27 @@
             </div>
             <form id="buyerForm">
               <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
-              <input type="hidden" name="subject" value="Nuevo comprador interesado — ResidenciasCostaRica" />
+              <input type="hidden" name="subject" value="Nuevo contacto — ResidenciasCostaRica" />
+
+              <!-- Quiero -->
+              <div class="form-group">
+                <label>¿Qué querés hacer?</label>
+                <div class="form-toggle-group">
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Comprar" checked />
+                    <span><i class="fa-solid fa-house"></i> Comprar</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Vender" />
+                    <span><i class="fa-solid fa-tag"></i> Vender</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Invertir" />
+                    <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
+                  </label>
+                </div>
+              </div>
+
               <div class="form-row-2">
                 <div class="form-group">
                   <label>Nombre</label>
@@ -174,25 +194,43 @@
                   <input type="tel" name="telefono" placeholder="+506 8xxx xxxx" required />
                 </div>
               </div>
+
+              <div class="form-group">
+                <label>Correo electrónico</label>
+                <input type="email" name="email" placeholder="ana@correo.com" />
+              </div>
+
               <div class="form-group">
                 <label>Zona de interés</label>
                 <input type="text" name="zona" placeholder="Ej. San José, Heredia, Alajuela..." />
               </div>
+
               <div class="form-row-2">
                 <div class="form-group">
-                  <label>Tipo</label>
+                  <label>Tipo de propiedad</label>
                   <select name="tipo">
                     <option value="">Seleccionar...</option>
                     <option>Casa</option>
                     <option>Apartamento</option>
                     <option>Terreno</option>
+                    <option>Finca</option>
+                    <option>Local comercial</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label>Presupuesto máximo</label>
-                  <input type="text" name="presupuesto" placeholder="₡ o $" />
+                  <label>Moneda</label>
+                  <select name="moneda">
+                    <option value="CRC">₡ Colones</option>
+                    <option value="USD">$ Dólares</option>
+                  </select>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label>Presupuesto máximo</label>
+                <input type="text" name="presupuesto" placeholder="Ej. 150,000,000 o 250,000" />
+              </div>
+
               <div class="form-group">
                 <label>Detalle adicional (opcional)</label>
                 <textarea name="detalle" rows="2" placeholder="Habitaciones, características, necesidades especiales..."></textarea>
@@ -264,6 +302,16 @@
 
       <div class="properties-grid" id="propertiesGrid"></div>
 
+      <div class="properties-cta">
+        <button class="btn btn-outline" id="loadMoreBtn" style="display:none">
+          <i class="fa-solid fa-plus"></i> Ver más propiedades
+        </button>
+        <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
+           target="_blank" rel="noopener" class="btn btn-primary">
+          <i class="fa-solid fa-external-link-alt"></i> Ver todas en Encuentra24
+        </a>
+      </div>
+
       <!-- Tarjeta marketing propiedades ocultas -->
       <div class="hidden-props-cta">
         <div class="hidden-props-inner">
@@ -279,16 +327,6 @@
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
-      </div>
-
-      <div class="properties-cta">
-        <button class="btn btn-outline" id="loadMoreBtn" style="display:none">
-          <i class="fa-solid fa-plus"></i> Ver más propiedades
-        </button>
-        <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
-           target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-solid fa-external-link-alt"></i> Ver todas en Encuentra24
-        </a>
       </div>
     </div>
   </section>

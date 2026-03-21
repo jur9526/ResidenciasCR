@@ -444,6 +444,23 @@ p  { color: var(--gray); font-size: .95rem; }
 .btn-submit:hover { background: var(--red-dark); transform: translateY(-1px); }
 .btn-submit:disabled { opacity: .6; cursor: default; transform: none; }
 
+/* Toggle comprar/vender/invertir */
+.form-toggle-group {
+  display: flex; gap: .5rem; flex-wrap: wrap;
+}
+.form-toggle input[type="radio"] { display: none; }
+.form-toggle span {
+  display: inline-flex; align-items: center; gap: .4rem;
+  padding: .45rem 1rem; border-radius: 8px; font-size: .85rem; font-weight: 600;
+  border: 1.5px solid var(--light-gray); background: #fff; color: var(--dark);
+  cursor: pointer; transition: all .18s;
+}
+.form-toggle span:hover { border-color: var(--red); color: var(--red); }
+.form-toggle input:checked + span {
+  background: var(--red); border-color: var(--red); color: #fff;
+}
+.form-toggle span i { font-size: .8rem; }
+
 .form-success {
   display: none; align-items: center; gap: .5rem;
   margin-top: .85rem; padding: .7rem 1rem;
