@@ -39,6 +39,7 @@ let properties  = [];
 
 // Estado de filtros
 let activeFilters = { tipo: 'todos', beds: 'todos', zona: '' };
+let showAll = false; // true cuando el usuario pide ver todo
 
 function loadProperties() {
   try {
@@ -50,6 +51,10 @@ function loadProperties() {
 }
 
 // ── Filtrado ─────────────────────────────────────────────────
+function filtersActive() {
+  return activeFilters.tipo !== 'todos' || activeFilters.beds !== 'todos' || activeFilters.zona !== '';
+}
+
 function getFiltered() {
   return properties.filter(p => {
     const tipoOk = activeFilters.tipo === 'todos' ||
@@ -120,8 +125,10 @@ function renderProperties() {
   if (!grid) return;
 
   const filtered = getFiltered();
-  const end      = (currentPage + 1) * PROPS_PER_PAGE;
-  const slice    = filtered.slice(0, end);
+
+  // Mostrar todo si: filtros activos O usuario pidió ver todo
+  const displayAll = showAll || filtersActive();
+  const slice = displayAll ? filtered : filtered.slice(0, PROPS_PER_PAGE);
 
   if (filtered.length === 0) {
     grid.innerHTML = '';
@@ -132,24 +139,23 @@ function renderProperties() {
     grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }
 
+  // Botón visible solo cuando hay más que mostrar y sin filtros activos y no showAll
   if (loadMoreBtn) {
-    loadMoreBtn.style.display = end < filtered.length ? 'inline-flex' : 'none';
+    loadMoreBtn.style.display = (!displayAll && filtered.length > PROPS_PER_PAGE) ? 'inline-flex' : 'none';
   }
 }
 
-// ── Load more ─────────────────────────────────────────────────
+// ── Load more — muestra TODAS ─────────────────────────────────
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 if (loadMoreBtn) {
   loadMoreBtn.addEventListener('click', () => {
-    currentPage++;
+    showAll = true;
     renderProperties();
-    document.getElementById('propertiesGrid').lastElementChild
-      ?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 }
 
 // ── Filtros ───────────────────────────────────────────────────
-function resetPage() { currentPage = 0; }
+function resetPage() { currentPage = 0; showAll = false; }
 
 // Chips de tipo
 document.querySelectorAll('[data-filter-tipo]').forEach(btn => {
