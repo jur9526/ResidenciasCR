@@ -492,52 +492,93 @@
         </div>
 
         <div class="sell-form">
-          <h3>O envianos los datos<br>de tu propiedad</h3>
-          <form id="sellForm">
-            <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
-            <input type="hidden" name="subject" value="Nueva propiedad para vender — ResidenciasCostaRica" />
-            <div class="form-row-2">
+          <div class="buyer-form-card">
+            <div class="form-card-header">
+              <h3>O llenás el formulario</h3>
+              <p>Te contactamos antes de 24 horas.</p>
+            </div>
+            <form id="sellForm">
+              <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
+              <input type="hidden" name="subject" value="Nueva consulta — ResidenciasCostaRica" />
+
               <div class="form-group">
-                <label>Nombre</label>
-                <input type="text" name="nombre" placeholder="Ana García" required />
+                <label>¿Qué querés hacer?</label>
+                <div class="form-toggle-group">
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Comprar" />
+                    <span><i class="fa-solid fa-house"></i> Comprar</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Vender" checked />
+                    <span><i class="fa-solid fa-tag"></i> Vender</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Invertir" />
+                    <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
+                  </label>
+                </div>
               </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="nombre" placeholder="Ana García" required />
+                </div>
+                <div class="form-group">
+                  <label>WhatsApp</label>
+                  <input type="tel" name="telefono" placeholder="+506 8xxx xxxx" required />
+                </div>
+              </div>
+
               <div class="form-group">
-                <label>WhatsApp</label>
-                <input type="tel" name="telefono" placeholder="+506 8xxx xxxx" required />
+                <label>Correo electrónico</label>
+                <input type="email" name="email" placeholder="ana@correo.com" />
               </div>
-            </div>
-            <div class="form-group">
-              <label>Ubicación de la propiedad</label>
-              <input type="text" name="ubicacion" placeholder="Ej. San José, Escazú" required />
-            </div>
-            <div class="form-row-2">
+
               <div class="form-group">
-                <label>Tipo</label>
-                <select name="tipo">
-                  <option value="">Seleccionar...</option>
-                  <option>Casa</option>
-                  <option>Apartamento</option>
-                  <option>Terreno</option>
-                  <option>Finca</option>
-                  <option>Local comercial</option>
-                </select>
+                <label>Zona / Ubicación</label>
+                <input type="text" name="zona" placeholder="Ej. San José, Heredia, Alajuela..." />
               </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Tipo de propiedad</label>
+                  <select name="tipo">
+                    <option value="">Seleccionar...</option>
+                    <option>Casa</option>
+                    <option>Apartamento</option>
+                    <option>Terreno</option>
+                    <option>Finca</option>
+                    <option>Local comercial</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Moneda</label>
+                  <select name="moneda">
+                    <option value="CRC">₡ Colones</option>
+                    <option value="USD">$ Dólares</option>
+                  </select>
+                </div>
+              </div>
+
               <div class="form-group">
-                <label>Precio (₡ o $)</label>
-                <input type="text" name="precio" placeholder="Ej. ₡ 90,000,000" />
+                <label>Precio / Presupuesto</label>
+                <input type="text" name="presupuesto" placeholder="Ej. ₡ 90,000,000 o $ 250,000" />
               </div>
-            </div>
-            <div class="form-group">
-              <label>Descripción breve</label>
-              <textarea name="descripcion" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">
-              <i class="fa-solid fa-paper-plane"></i> Enviar Propiedad
-            </button>
-            <div class="form-success" id="formSuccess">
-              <i class="fa-solid fa-circle-check"></i> ¡Recibido! Te contactamos pronto.
-            </div>
-          </form>
+
+              <div class="form-group">
+                <label>Detalle adicional (opcional)</label>
+                <textarea name="detalle" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar consulta
+              </button>
+              <div class="form-success" id="formSuccess">
+                <i class="fa-solid fa-circle-check"></i> ¡Recibido! Te contactamos pronto.
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -647,8 +688,9 @@
           <h4>Contacto</h4>
           <ul>
             <li><a href="https://wa.me/50683725603" target="_blank" rel="noopener">+506 8372-5603</a></li>
+            <li><a href="https://wa.me/50661374443" target="_blank" rel="noopener">+506 6137-4443</a></li>
             <li><a href="mailto:flory@residenciascostarica.com">flory@residenciascostarica.com</a></li>
-            <li><a href="#" >Costa Rica</a></li>
+            <li><span>Costa Rica</span></li>
           </ul>
         </div>
       </div>
