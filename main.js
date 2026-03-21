@@ -240,3 +240,11 @@ function handleForm(formId, successId) {
 
 handleForm('buyerForm', 'buyerSuccess');
 handleForm('sellForm',  'formSuccess');
+
+// ── Toggle "sin costo" en buyer form ─────────────────────────
+const freeNote = document.getElementById('buyer-free-note');
+document.querySelectorAll('#buyerForm input[name="intencion"]').forEach(radio => {
+  radio.addEventListener('change', () => {
+    if (freeNote) freeNote.style.display = radio.value === 'Comprar' ? '' : 'none';
+  });
+});

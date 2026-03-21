@@ -441,7 +441,7 @@ p  { color: var(--gray); font-size: .95rem; }
   margin-bottom: .6rem;
 }
 .form-card-header h3 { color: var(--dark); margin-bottom: .3rem; font-size: 1.2rem; }
-.form-card-header p  { font-size: .85rem; line-height: 1.5; color: var(--gray); }
+.form-card-header p  { font-size: .85rem; line-height: 1.5; color: var(--gray); margin: 0; }
 .form-card-header p strong { color: var(--dark); }
 .botcheck-hidden { display: none; }
 
