@@ -201,35 +201,76 @@ def sync():
         )
         page = ctx.new_page()
 
-        # ── Paso 1: Perfil — obtener IDs ──────────────────────
-        print(f"📋 Cargando perfil:\n   {PROFILE_URL}\n")
+        # ── Paso 1: Perfil — raspar TODAS las páginas ─────────
+        prop_urls_map = {}  # id -> url_completa (preserva orden de aparición)
+        cookies_accepted = False
+
+        def scrape_profile_page(html_content):
+            """Extrae URLs de propiedades del HTML de una página de perfil."""
+            hrefs = re.findall(
+                r'href="(/costa-rica-es/bienes-raices[^"]+?/(\d{7,}))"',
+                html_content
+            )
+            added = 0
+            for href, pid in hrefs:
+                if pid != "13021117" and pid not in prop_urls_map:
+                    prop_urls_map[pid] = "https://www.encuentra24.com" + href
+                    added += 1
+            return added
+
+        def get_total_pages(html_content):
+            """Detecta el número total de páginas en el perfil."""
+            nums = re.findall(
+                r'/user/profile/id/13021117/page/(\d+)', html_content
+            )
+            return max((int(n) for n in nums), default=1)
+
+        # Página 1
+        print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
         page.goto(PROFILE_URL, wait_until="networkidle", timeout=45000)
         page.wait_for_timeout(3000)
 
-        # Aceptar cookies via JS (el botón no es visible pero funciona)
+        # Aceptar cookies (solo la primera vez)
         try:
             page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
             page.wait_for_timeout(2000)
+            cookies_accepted = True
         except Exception:
             pass
 
         html = page.content()
+        found_p1 = scrape_profile_page(html)
+        total_pages = get_total_pages(html)
+        print(f"  Página 1: {found_p1} propiedades · Total de páginas detectadas: {total_pages}")
 
-        # Extraer URLs completas de propiedades (formato: /costa-rica-es/categoria/slug/ID)
-        prop_urls_map = {}  # id -> url_completa
-        all_hrefs = re.findall(r'href="(/costa-rica-es/bienes-raices[^"]+?/(\d{7,}))"', html)
-        for href, prop_id in all_hrefs:
-            if prop_id != "13021117" and prop_id not in prop_urls_map:
-                prop_urls_map[prop_id] = "https://www.encuentra24.com" + href
-
-        # Fallback: data-adid sin URL completa
-        if not prop_urls_map:
-            for pid in re.findall(r'data-adid="(\d+)"', html):
-                if pid != "13021117" and pid not in prop_urls_map:
-                    prop_urls_map[pid] = None
+        # Páginas 2..N
+        for pnum in range(2, total_pages + 1):
+            page_url = f"{PROFILE_URL}/page/{pnum}"
+            print(f"  Cargando página {pnum}: {page_url}")
+            try:
+                page.goto(page_url, wait_until="networkidle", timeout=45000)
+                page.wait_for_timeout(2500)
+                if not cookies_accepted:
+                    try:
+                        page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
+                        page.wait_for_timeout(1500)
+                        cookies_accepted = True
+                    except Exception:
+                        pass
+                html_n = page.content()
+                found_n = scrape_profile_page(html_n)
+                print(f"  Página {pnum}: {found_n} propiedades nuevas")
+                # Si una página no agrega nada nueva, probablemente no existe
+                if found_n == 0:
+                    print(f"  Sin propiedades nuevas en página {pnum}, deteniendo.")
+                    break
+            except Exception as e:
+                print(f"  ⚠ Error en página {pnum}: {e}")
+                break
 
         selected = list(prop_urls_map.items())[:MAX_PROPS]
-        print(f"  ✓ {len(selected)} propiedades encontradas")
+        print(f"\n  ✓ Total acumulado: {len(prop_urls_map)} propiedades en {total_pages} página(s)")
+        print(f"  ✓ Se descargarán las primeras {len(selected)}")
 
         if not selected:
             print("  ✗ No se encontraron propiedades. Abortando.")

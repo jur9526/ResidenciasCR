@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-21 19:16
+// Auto-generado por sync_encuentra24.py — 2026-03-21 19:43
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -55,7 +55,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "",
+    "area": "5 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -119,7 +119,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
-    "area": "6 m²",
+    "area": "168 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -135,7 +135,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "La Trinidad",
     "beds": 2,
     "baths": 1,
-    "area": "5 m²",
+    "area": "58 m²",
     "type": "Apartamento",
     "badge": "En Venta",
     "badgeClass": "",
@@ -151,7 +151,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "La Trinidad",
     "beds": 3,
     "baths": 5,
-    "area": "",
+    "area": "5 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -193,22 +193,6 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-el-centro-de-cononado/31881424"
   },
   {
-    "id": "E24-30728594",
-    "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "₡145,000,000\n-8%",
-    "location": "San Rafael",
-    "beds": 6,
-    "baths": 0,
-    "area": "357 m²",
-    "type": "Casa",
-    "badge": "Oportunidad",
-    "badgeClass": "badge-opp",
-    "e24id": "30728594",
-    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24",
-    "image": "assets/e24-30728594.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
-  },
-  {
     "id": "E24-30885142",
     "title": "¡Oportunidad en Paso Ancho- Dos casas en una!",
     "price": "₡80,000,000",
@@ -239,22 +223,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24",
     "image": "assets/e24-30885230.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
-  },
-  {
-    "id": "E24-30422582",
-    "title": "Casa en Venta Ubicada en Coronado",
-    "price": "$430,000",
-    "location": "Vázquez de Coronado",
-    "beds": 5,
-    "baths": 4,
-    "area": "988 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30422582",
-    "wa": "Me%20interesa%20la%20propiedad%2030422582%20en%20encuentra24",
-    "image": "assets/e24-30422582.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-coronado/30422582"
   },
   {
     "id": "E24-30856282",
@@ -295,7 +263,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
-    "area": "7 m²",
+    "area": "",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
