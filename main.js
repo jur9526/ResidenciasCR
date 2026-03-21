@@ -35,27 +35,45 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ── Properties ───────────────────────────────────────────────
 const PROPS_PER_PAGE = 6;
 let currentPage = 0;
-let properties = [];
+let properties  = [];
+
+// Estado de filtros
+let activeFilters = { tipo: 'todos', beds: 'todos', zona: '' };
 
 function loadProperties() {
   try {
     const stored = localStorage.getItem('rcr_properties');
-    if (stored) {
-      properties = JSON.parse(stored);
-    } else {
-      properties = window.DEFAULT_PROPERTIES || [];
-    }
-  } catch (e) {
+    properties = stored ? JSON.parse(stored) : (window.DEFAULT_PROPERTIES || []);
+  } catch {
     properties = window.DEFAULT_PROPERTIES || [];
   }
 }
 
+// ── Filtrado ─────────────────────────────────────────────────
+function getFiltered() {
+  return properties.filter(p => {
+    const tipoOk = activeFilters.tipo === 'todos' ||
+      (p.type || '').toLowerCase() === activeFilters.tipo.toLowerCase();
+
+    const bedsOk = activeFilters.beds === 'todos' ||
+      p.beds >= parseInt(activeFilters.beds);
+
+    const zonaOk = !activeFilters.zona ||
+      (p.location || '').toLowerCase().includes(activeFilters.zona.toLowerCase()) ||
+      (p.title   || '').toLowerCase().includes(activeFilters.zona.toLowerCase());
+
+    return tipoOk && bedsOk && zonaOk;
+  });
+}
+
+// ── Imagen con skeleton ───────────────────────────────────────
 function getPropertyImage(prop) {
   if (prop.image && prop.image.trim()) return prop.image;
   if (prop.e24id) return `assets/e24-${prop.e24id}.jpg`;
   return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
 }
 
+// ── Card HTML ─────────────────────────────────────────────────
 function buildPropertyCard(prop) {
   const beds  = prop.beds  > 0 ? `<span><i class="fa-solid fa-bed"></i> ${prop.beds} hab.</span>` : '';
   const baths = prop.baths > 0 ? `<span><i class="fa-solid fa-bath"></i> ${prop.baths} baños</span>` : '';
@@ -66,11 +84,16 @@ function buildPropertyCard(prop) {
          <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
        </a>`
     : '';
+  const imgSrc = getPropertyImage(prop);
+
   return `
     <div class="property-card reveal">
       <div class="property-img">
-        <img src="${getPropertyImage(prop)}" alt="${prop.title}" loading="lazy"
-             onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80'"/>
+        <div class="prop-skeleton"></div>
+        <img src="${imgSrc}" alt="${prop.title}" loading="lazy"
+             onload="this.previousElementSibling.style.display='none';this.style.opacity='1'"
+             onerror="this.previousElementSibling.style.display='none';this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';this.style.opacity='1'"
+             style="opacity:0;transition:opacity .35s"/>
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
         <div class="property-img-overlay">
           <a href="https://wa.me/50683725603?text=${prop.wa || 'Me%20interesa%20una%20propiedad'}"
@@ -89,32 +112,82 @@ function buildPropertyCard(prop) {
     </div>`;
 }
 
+// ── Render ────────────────────────────────────────────────────
 function renderProperties() {
-  const grid       = document.getElementById('propertiesGrid');
+  const grid        = document.getElementById('propertiesGrid');
   const loadMoreBtn = document.getElementById('loadMoreBtn');
+  const noResults   = document.getElementById('propNoResults');
   if (!grid) return;
 
-  const end   = (currentPage + 1) * PROPS_PER_PAGE;
-  const slice = properties.slice(0, end);
+  const filtered = getFiltered();
+  const end      = (currentPage + 1) * PROPS_PER_PAGE;
+  const slice    = filtered.slice(0, end);
 
-  grid.innerHTML = slice.map(buildPropertyCard).join('');
-  grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    if (noResults) noResults.style.display = 'flex';
+  } else {
+    if (noResults) noResults.style.display = 'none';
+    grid.innerHTML = slice.map(buildPropertyCard).join('');
+    grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+  }
 
   if (loadMoreBtn) {
-    loadMoreBtn.style.display = end < properties.length ? 'inline-flex' : 'none';
+    loadMoreBtn.style.display = end < filtered.length ? 'inline-flex' : 'none';
   }
 }
 
+// ── Load more ─────────────────────────────────────────────────
 const loadMoreBtn = document.getElementById('loadMoreBtn');
 if (loadMoreBtn) {
   loadMoreBtn.addEventListener('click', () => {
     currentPage++;
     renderProperties();
     document.getElementById('propertiesGrid').lastElementChild
-      .scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      ?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 }
 
+// ── Filtros ───────────────────────────────────────────────────
+function resetPage() { currentPage = 0; }
+
+// Chips de tipo
+document.querySelectorAll('[data-filter-tipo]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-filter-tipo]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilters.tipo = btn.dataset.filterTipo;
+    resetPage();
+    renderProperties();
+  });
+});
+
+// Chips de habitaciones
+document.querySelectorAll('[data-filter-beds]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-filter-beds]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilters.beds = btn.dataset.filterBeds;
+    resetPage();
+    renderProperties();
+  });
+});
+
+// Búsqueda por zona
+const zonaInput = document.getElementById('filterZona');
+if (zonaInput) {
+  let debounce;
+  zonaInput.addEventListener('input', () => {
+    clearTimeout(debounce);
+    debounce = setTimeout(() => {
+      activeFilters.zona = zonaInput.value.trim();
+      resetPage();
+      renderProperties();
+    }, 300);
+  });
+}
+
+// ── Init ──────────────────────────────────────────────────────
 loadProperties();
 renderProperties();
 

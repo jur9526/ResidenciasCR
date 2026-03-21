@@ -217,29 +217,68 @@
       <div class="section-header">
         <span class="section-tag">En Venta</span>
         <h2>Propiedades Destacadas</h2>
-        <p>Propiedades verificadas en las mejores zonas de Costa Rica. Incluye casas y tours directos desde TikTok, más visibilidad</p>
-        <p class="listing-channels">Publicamos en Meta, Facebook, Threads, Instagram, TikTok y Google Ads para potenciar tu venta.</p>
-        <div class="social-publish-logosp">
-          <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-publish-card">
-            <i class="fa-brands fa-instagram"></i> Instagram
-          </a>
-          <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
-            <i class="fa-brands fa-tiktok"></i> TikTok
-          </a>
-          <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
-            <i class="fa-brands fa-facebook"></i> Facebook
-          </a>
-          <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
-            <i class="fa-brands fa-threads"></i> Threads
-          </a>
+        <p>Propiedades verificadas en las mejores zonas de Costa Rica.</p>
+      </div>
+
+      <!-- ── Filtros ── -->
+      <div class="prop-filters">
+        <div class="prop-filter-row">
+          <div class="filter-search-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="filterZona" placeholder="Buscar por zona, ciudad o nombre..." autocomplete="off" />
+          </div>
         </div>
-        <div class="e24-badge">
-          <span>También publicamos en <strong>encuentra24.com</strong> y redes sociales clave.</span>
+        <div class="prop-filter-row">
+          <span class="filter-label"><i class="fa-solid fa-house"></i> Tipo</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-tipo="todos">Todos</button>
+            <button class="filter-chip" data-filter-tipo="Casa">Casa</button>
+            <button class="filter-chip" data-filter-tipo="Apartamento">Apartamento</button>
+            <button class="filter-chip" data-filter-tipo="Penthouse">Penthouse</button>
+            <button class="filter-chip" data-filter-tipo="Terreno">Terreno</button>
+            <button class="filter-chip" data-filter-tipo="Finca">Finca</button>
+          </div>
+        </div>
+        <div class="prop-filter-row">
+          <span class="filter-label"><i class="fa-solid fa-bed"></i> Habitaciones</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-beds="todos">Todas</button>
+            <button class="filter-chip" data-filter-beds="1">1+</button>
+            <button class="filter-chip" data-filter-beds="2">2+</button>
+            <button class="filter-chip" data-filter-beds="3">3+</button>
+            <button class="filter-chip" data-filter-beds="4">4+</button>
+          </div>
         </div>
       </div>
 
-      <div class="properties-grid" id="propertiesGrid">
-        <!-- Renderizado dinámicamente por main.js -->
+      <!-- Sin resultados -->
+      <div id="propNoResults" class="prop-no-results" style="display:none">
+        <i class="fa-solid fa-house-circle-xmark"></i>
+        <p>No encontramos propiedades con esos filtros.<br>
+           <strong>¡Pero podemos ayudarte!</strong> Escribinos y buscamos la opción ideal para vos.</p>
+        <a href="https://wa.me/50683725603?text=Hola%2C%20busco%20una%20propiedad%20espec%C3%ADfica"
+           target="_blank" rel="noopener" class="btn btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp
+        </a>
+      </div>
+
+      <div class="properties-grid" id="propertiesGrid"></div>
+
+      <!-- Tarjeta marketing propiedades ocultas -->
+      <div class="hidden-props-cta">
+        <div class="hidden-props-inner">
+          <div class="hidden-props-icon"><i class="fa-solid fa-lock"></i></div>
+          <div class="hidden-props-text">
+            <h3>¿No encontraste lo que buscás?</h3>
+            <p>Manejamos un portafolio <strong>privado y exclusivo</strong> de propiedades que no publicamos en internet — por discreción del vendedor, precio preferencial o acceso anticipado antes del lanzamiento. <strong>Llamá ahora y te contamos.</strong></p>
+          </div>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20me%20interesa%20ver%20el%20portafolio%20privado%20de%20propiedades"
+             target="_blank" rel="noopener" class="btn-hidden-props">
+            <i class="fa-solid fa-unlock"></i>
+            <span>Ver portafolio privado</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
 
       <div class="properties-cta">
@@ -247,7 +286,7 @@
           <i class="fa-solid fa-plus"></i> Ver más propiedades
         </button>
         <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
-           target="_blank" rel="noopener" class="btn btn-primary" style="padding: .95rem 1.8rem; font-size: 1.05rem;">
+           target="_blank" rel="noopener" class="btn btn-primary">
           <i class="fa-solid fa-external-link-alt"></i> Ver todas en Encuentra24
         </a>
       </div>
