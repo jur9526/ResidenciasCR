@@ -447,41 +447,22 @@ p  { color: var(--gray); font-size: .95rem; }
 }
 
 /* ============================================================
-   PROPERTIES SECTION (fondo negro)
+   PROPERTIES SECTION (fondo blanco)
    ============================================================ */
-.properties-section { background: #0a0a0a; }
+.properties-section { background: #fff; }
 
-.properties-section .section-tag { color: #f87171; }
-.properties-section .section-header h2 { color: #fff; }
-.properties-section .section-header p { color: rgba(255,255,255,.65); }
-.properties-section .listing-channels { color: rgba(255,255,255,.7); }
-.properties-section .social-publish-card {
-  background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.15); color: #fff;
-}
-.properties-section .social-publish-card:hover { border-color: #f87171; }
-.properties-section .social-publish-card i { color: #f87171; }
-.properties-section .e24-badge span { color: rgba(255,255,255,.6); }
-.properties-section .e24-badge strong { color: #FF6B00; }
-
-/* ── Cards sobre fondo negro ── */
-.properties-section .property-card {
-  background: #1a1a1a; border-color: rgba(255,255,255,.1);
-}
-.properties-section .property-card:hover { border-color: rgba(255,255,255,.22); }
-.properties-section .property-title { color: #f0f0f0; }
-.properties-section .property-location { color: rgba(255,255,255,.5); }
-.properties-section .property-features span {
-  background: rgba(255,255,255,.07); color: rgba(255,255,255,.65);
-}
-.properties-section .prop-e24-link { color: #FB923C; }
+.properties-section .section-tag { color: var(--red); }
+.properties-section .section-header h2 { color: var(--dark); }
+.properties-section .section-header p { color: var(--gray); }
+.properties-section .listing-channels { color: #475569; }
 
 /* ── Botón Ver más ── */
 .properties-section .btn-outline {
-  border-color: rgba(255,255,255,.25); color: #fff;
-  background: rgba(255,255,255,.06);
+  border-color: var(--red); color: var(--red);
+  background: transparent;
 }
 .properties-section .btn-outline:hover {
-  background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.5);
+  background: var(--red); color: #fff; border-color: var(--red);
 }
 
 /* ── PROPERTIES GRID ── */
