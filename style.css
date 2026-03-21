@@ -472,6 +472,21 @@ p  { color: var(--gray); font-size: .95rem; }
 .btn-submit:hover { background: var(--red-dark); transform: translateY(-1px); }
 .btn-submit:disabled { opacity: .6; cursor: default; transform: none; }
 
+/* Compact form variant (sell section) */
+.form-compact { padding: 1.25rem 1.5rem; }
+.form-compact .form-card-header { margin-bottom: .75rem; }
+.form-compact .form-card-header h3 { font-size: 1rem; }
+.form-compact .form-card-header p  { font-size: .78rem; }
+.form-compact .form-group { margin-bottom: .45rem; gap: .2rem; }
+.form-compact .form-group label { font-size: .7rem; }
+.form-compact .form-group input,
+.form-compact .form-group select,
+.form-compact .form-group textarea { padding: .45rem .75rem; font-size: .875rem; }
+.form-compact .form-group textarea { rows: 2; }
+.form-compact .form-toggle-group { gap: .35rem; }
+.form-compact .form-row-2 { gap: .5rem; }
+.form-compact .btn-submit { padding: .6rem 1rem; font-size: .9rem; margin-top: .25rem; }
+
 /* Toggle comprar/vender/invertir */
 .form-toggle-group {
   display: flex; gap: .5rem; flex-wrap: wrap;
