@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residencias Costa Rica — Casas en Venta</title>
+  <meta name="description" content="La inmobiliaria más completa de Costa Rica. Casas, apartamentos y terrenos en venta. Tramitología con todos los bancos. Servicio gratuito para el comprador." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand">
+        <span class="brand-dot"><i class="fa-solid fa-house-chimney"></i></span>
+        Residencias<strong>CostaRica</strong>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#buscar">Buscar Casa</a></li>
+        <li><a href="#propiedades">Propiedades</a></li>
+        <li><a href="#vender">Vende tu Casa</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20me%20interesa%20una%20propiedad"
+             target="_blank" rel="noopener" class="nav-cta">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          <i class="fa-solid fa-map-pin"></i>&nbsp; Costa Rica
+        </span>
+        <h1>Tu nuevo hogar te<br>está <em>esperando</em></h1>
+        <p>Casas, apartamentos y terrenos en venta en Costa Rica. Tramitología con todos los bancos. <strong>Sin costo para el comprador.</strong></p>
+        <div class="hero-actions">
+          <a href="#buscar" class="btn btn-primary">
+            <i class="fa-solid fa-magnifying-glass"></i> Buscar mi Casa
+          </a>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20busco%20una%20propiedad%20en%20Costa%20Rica"
+             target="_blank" rel="noopener" class="btn btn-wa-hero">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp — Más rápido
+          </a>
+        </div>
+        <div class="hero-sell-cta">
+          <a href="#vender" class="btn-sell-hero">
+            <i class="fa-solid fa-tag"></i> ¿Querés vender tu casa? Hacelo aquí
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span>Años de experiencia</span>
+          </div>
+          <div class="hero-stat">
+            <strong>10+</strong>
+            <span>Bancos aliados</span>
+          </div>
+          <div class="hero-stat">
+            <strong>₡0</strong>
+            <span>Costo al comprador</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANKS ===== -->
+  <section class="banks-section">
+    <div class="container">
+      <div class="banks-header">
+        <span class="section-tag">Aliados Financieros</span>
+        <h2>Trabajamos con +10 bancos de Costa Rica</h2>
+        <p>Te facilitamos la tramitología completa con todos los bancos para que tu compra sea rápida y segura.</p>
+        <p class="banks-subnote">¿No ves tu banco? No hay problema: trabajamos con cualquier banco y todos los canales digitales están cubiertos.</p>
+      </div>
+      <div class="banks-grid">
+        <div class="bank-logo">
+          <img src="assets/bank-logos/Banco nacional.jpg" alt="Banco Nacional de Costa Rica (BNCR)">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/BCR.jpg" alt="Banco de Costa Rica (BCR)">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/BANCO POPULAR.jpg" alt="Banco Popular">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/BAC.jpg" alt="BAC San José (BAC Credomatic)">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/BANCO LAFISE.png" alt="Banco Lafise">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/scotiabnk.jpg" alt="Scotiabank">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/DAVIVIENDA.jpg" alt="Davivienda">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/PROMERICA.png" alt="Banco Promerica">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/BCT.png" alt="Banco BCT">
+        </div>
+        <div class="bank-logo">
+          <img src="assets/bank-logos/MUTUAL ALAJUELA.jpeg" alt="Mutual Alajuela">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BUYER FORM ===== -->
+  <section class="buyer-section" id="buscar">
+    <div class="container">
+      <div class="buyer-inner">
+
+        <div class="buyer-left">
+          <span class="section-tag">Para Compradores</span>
+          <h2>¿Buscás tu<br>casa ideal?</h2>
+          <p>Contanos qué necesitás y te mostramos opciones que se ajusten a tu presupuesto. Nuestro servicio es <strong>completamente gratuito</strong> para el comprador.</p>
+
+          <a href="https://wa.me/50683725603?text=Hola%2C%20busco%20una%20casa%20en%20Costa%20Rica"
+             target="_blank" rel="noopener" class="btn-wa-big">
+            <div class="wa-big-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="wa-big-text">
+              <strong>Escribir por WhatsApp</strong>
+              <span>Respuesta en minutos · La forma más rápida</span>
+            </div>
+            <i class="fa-solid fa-arrow-right wa-big-arrow"></i>
+          </a>
+
+          <div class="buyer-perks">
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Asesoría completamente gratuita</div>
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Tramitología con +10 bancos</div>
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Bono de vivienda si calificás</div>
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Te acompañamos a ver la casa</div>
+          </div>
+        </div>
+
+        <div class="buyer-right">
+          <div class="buyer-form-card">
+            <div class="form-card-header">
+              <h3>O llenás el formulario</h3>
+              <p>Te contactamos antes de 24 horas.</p>
+            </div>
+            <form id="buyerForm">
+              <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
+              <input type="hidden" name="subject" value="Nuevo comprador interesado — ResidenciasCostaRica" />
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Nombre</label>
+                  <input type="text" name="nombre" placeholder="Ana García" required />
+                </div>
+                <div class="form-group">
+                  <label>WhatsApp</label>
+                  <input type="tel" name="telefono" placeholder="+506 8xxx xxxx" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Zona de interés</label>
+                <input type="text" name="zona" placeholder="Ej. San José, Heredia, Alajuela..." />
+              </div>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label>Tipo</label>
+                  <select name="tipo">
+                    <option value="">Seleccionar...</option>
+                    <option>Casa</option>
+                    <option>Apartamento</option>
+                    <option>Terreno</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Presupuesto máximo</label>
+                  <input type="text" name="presupuesto" placeholder="₡ o $" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Detalle adicional (opcional)</label>
+                <textarea name="detalle" rows="2" placeholder="Habitaciones, características, necesidades especiales..."></textarea>
+              </div>
+              <button type="submit" class="btn-submit" id="buyerSubmit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar consulta
+              </button>
+              <div class="form-success" id="buyerSuccess">
+                <i class="fa-solid fa-circle-check"></i> ¡Recibido! Te contactamos pronto.
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPERTIES ===== -->
+  <section class="section" id="propiedades">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">En Venta</span>
+        <h2>Propiedades Destacadas</h2>
+        <p>Propiedades verificadas en las mejores zonas de Costa Rica. Incluye casas y tours directos desde TikTok, más visibilidad</p>
+        <p class="listing-channels">Publicamos en Meta, Facebook, Threads, Instagram, TikTok y Google Ads para potenciar tu venta.</p>
+        <div class="social-publish-logosp">
+          <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-publish-card">
+            <i class="fa-brands fa-instagram"></i> Instagram
+          </a>
+          <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
+            <i class="fa-brands fa-tiktok"></i> TikTok
+          </a>
+          <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
+            <i class="fa-brands fa-facebook"></i> Facebook
+          </a>
+          <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="social-publish-card">
+            <i class="fa-brands fa-threads"></i> Threads
+          </a>
+        </div>
+        <div class="e24-badge">
+          <span>También publicamos en <strong>encuentra24.com</strong> y redes sociales clave.</span>
+        </div>
+      </div>
+
+      <div class="properties-grid" id="propertiesGrid">
+        <!-- Renderizado dinámicamente por main.js -->
+      </div>
+
+      <div class="properties-cta">
+        <button class="btn btn-outline" id="loadMoreBtn" style="display:none">
+          <i class="fa-solid fa-plus"></i> Ver más propiedades
+        </button>
+        <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
+           target="_blank" rel="noopener" class="btn btn-primary" style="padding: .95rem 1.8rem; font-size: 1.05rem;">
+          <i class="fa-solid fa-external-link-alt"></i> Ver todas en Encuentra24
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== AGENT ===== -->
+  <section class="section agent-section">
+    <div class="container">
+      <div class="agent-inner">
+        <div class="agent-photo-wrap">
+          <img src="flory.jpg" alt="Floribeth Elizondo — Asesora Inmobiliaria" class="agent-photo" />
+          <div class="agent-photo-badge">
+            <i class="fa-solid fa-award"></i> Asesora Premiada
+          </div>
+        </div>
+        <div class="agent-content">
+          <span class="section-tag">Nuestra Agente</span>
+          <h2>Conocé a <em>Floribeth</em><br>Real Estate Expert</h2>
+          <p class="agent-intro">Con más de <strong>10 años de experiencia</strong> en el mercado inmobiliario de Costa Rica, Floribeth Elizondo es especialista en transacciones residenciales, comerciales e inmuebles de inversión. Su éxito se refleja en cientos de transacciones cerradas y familias costarricenses en su nuevo hogar.</p>
+          <div class="agent-stats">
+            <div class="agent-stat">
+              <strong>500+</strong>
+              <span>Propiedades Vendidas</span>
+            </div>
+            <div class="agent-stat">
+              <strong>₡500M+</strong>
+              <span>En Transacciones</span>
+            </div>
+            <div class="agent-stat">
+              <strong>98%</strong>
+              <span>Satisfacción Clientes</span>
+            </div>
+          </div>
+          <div class="agent-tags">
+            <span><i class="fa-solid fa-check-circle"></i> Especialista en tramitología bancaria</span>
+            <span><i class="fa-solid fa-check-circle"></i> Experta en bonos de vivienda</span>
+            <span><i class="fa-solid fa-check-circle"></i> Conocimiento construcción e inmuebles</span>
+            <span><i class="fa-solid fa-check-circle"></i> Negociación & Valuación experta</span>
+          </div>
+          <a href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20quiero%20asesor%C3%ADa%20inmobiliaria"
+             target="_blank" rel="noopener" class="btn-wa-big">
+            <div class="wa-big-icon"><i class="fa-brands fa-whatsapp"></i></div>
+            <div class="wa-big-text">
+              <strong>Hablar con Floribeth</strong>
+              <span>+506 8372-5603 · Responde rápido</span>
+            </div>
+            <i class="fa-solid fa-arrow-right wa-big-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section class="section reasons-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">¿Por qué nosotros?</span>
+        <h2>La forma más fácil de comprar o vender</h2>
+        <p>Te acompañamos en cada paso del proceso inmobiliario, sin costos ocultos.</p>
+      </div>
+      <div class="reasons-grid">
+        <div class="reason-card reveal">
+          <div class="reason-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3>+10 Bancos Aliados</h3>
+          <p>Gestionamos tu crédito con BAC, Promerica, BCR, Banco Nacional, Davivienda, Mutual, MUCAP, Coopenae, Caja ANDE y más.</p>
+        </div>
+        <div class="reason-card reveal d1">
+          <div class="reason-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+          <h3>Bono de Vivienda</h3>
+          <p>Si tu salario está entre ₡450,000 y ₡1,920,000, podés aplicar al bono como prima. Lo tramitamos sin costo.</p>
+        </div>
+        <div class="reason-card reveal d2">
+          <div class="reason-icon"><i class="fa-solid fa-file-contract"></i></div>
+          <h3>Tramitología Completa</h3>
+          <p>Avalúos, planos, escrituras y toda la gestión documental con +10 bancos del país.</p>
+        </div>
+        <div class="reason-card reveal d3">
+          <div class="reason-icon"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
+          <h3>Gratis para el Comprador</h3>
+          <p>No nos tenés que pagar nada. Nuestro servicio es completamente gratuito para quien compra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SELL SECTION ===== -->
+  <section class="sell-section" id="vender">
+    <div class="container">
+      <div class="sell-inner">
+        <div class="sell-content">
+          <span class="section-tag-white">Para Vendedores</span>
+          <h2>¿Querés vender<br>tu casa?</h2>
+          <p>Publicamos tu propiedad en Instagram, Facebook, TikTok y <strong>encuentra24.com</strong> para llegar a miles de compradores activos.</p>
+          <ul class="sell-features">
+            <li><i class="fa-solid fa-check"></i> Publicación en redes sociales y Encuentra24</li>
+            <li><i class="fa-solid fa-check"></i> Compradores calificados y verificados</li>
+            <li><i class="fa-solid fa-check"></i> Te acompañamos en todo el proceso</li>
+            <li><i class="fa-solid fa-check"></i> Sin complicaciones ni papeleo extra</li>
+          </ul>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20quiero%20vender%20mi%20propiedad"
+             target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp — Publicar ahora
+          </a>
+        </div>
+
+        <div class="sell-form">
+          <h3>O envianos los datos<br>de tu propiedad</h3>
+          <form id="sellForm">
+            <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
+            <input type="hidden" name="subject" value="Nueva propiedad para vender — ResidenciasCostaRica" />
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" name="nombre" placeholder="Ana García" required />
+              </div>
+              <div class="form-group">
+                <label>WhatsApp</label>
+                <input type="tel" name="telefono" placeholder="+506 8xxx xxxx" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Ubicación de la propiedad</label>
+              <input type="text" name="ubicacion" placeholder="Ej. San José, Escazú" required />
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>Tipo</label>
+                <select name="tipo">
+                  <option value="">Seleccionar...</option>
+                  <option>Casa</option>
+                  <option>Apartamento</option>
+                  <option>Terreno</option>
+                  <option>Finca</option>
+                  <option>Local comercial</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Precio (₡ o $)</label>
+                <input type="text" name="precio" placeholder="Ej. ₡ 90,000,000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Descripción breve</label>
+              <textarea name="descripcion" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fa-solid fa-paper-plane"></i> Enviar Propiedad
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i> ¡Recibido! Te contactamos pronto.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section section-alt" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2>Estamos para ayudarte</h2>
+        <p>Escribinos por cualquiera de estos canales y te respondemos rápido.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Canales de Contacto</h3>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20quiero%20informaci%C3%B3n"
+             target="_blank" rel="noopener" class="contact-item wa">
+            <span class="contact-item-icon"><i class="fa-brands fa-whatsapp"></i></span>
+            <div>
+              <strong>WhatsApp — Más rápido</strong>
+              <span>+506 8372-5603</span>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="mailto:flory@residenciascostarica.com" class="contact-item">
+            <span class="contact-item-icon"><i class="fa-solid fa-envelope"></i></span>
+            <div>
+              <strong>Correo Electrónico</strong>
+              <span>flory@residenciascostarica.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://www.instagram.com/residenciascostarica/"
+             target="_blank" rel="noopener" class="contact-item ig">
+            <span class="contact-item-icon"><i class="fa-brands fa-instagram"></i></span>
+            <div>
+              <strong>Instagram</strong>
+              <span>@residenciascostarica</span>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
+             target="_blank" rel="noopener" class="contact-item e24">
+            <span class="contact-item-icon"><i class="fa-solid fa-globe"></i></span>
+            <div>
+              <strong>Encuentra24</strong>
+              <span>Ver todas nuestras publicaciones</span>
+            </div>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <div class="social-links">
+            <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/50683725603" target="_blank" rel="noopener" class="social-link wa-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-cta-box">
+          <h3>¿Listo para empezar?</h3>
+          <p>Un asesor te contacta hoy mismo. Sin costo, sin compromiso.</p>
+          <a href="https://wa.me/50683725603?text=Hola%2C%20estoy%20listo%20para%20empezar%20a%20buscar%20mi%20casa"
+             target="_blank" rel="noopener" class="btn btn-wa-full">
+            <i class="fa-brands fa-whatsapp"></i> Escribir ahora
+          </a>
+          <p class="cta-note"><i class="fa-solid fa-clock"></i> Respuesta en menos de 24 horas</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <div class="footer-brand">
+            <i class="fa-solid fa-house-chimney"></i> Residencias<strong>CostaRica</strong>
+          </div>
+          <p>Tu aliado de confianza en el mercado inmobiliario de Costa Rica. Compramos, vendemos y conectamos con los mejores bancos del país.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-link" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://wa.me/50683725603" target="_blank" rel="noopener" class="social-link wa-social" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Propiedades</h4>
+          <ul>
+            <li><a href="#propiedades">Casas en Venta</a></li>
+            <li><a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117" target="_blank" rel="noopener">Encuentra24</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="#buscar">Buscar Casa</a></li>
+            <li><a href="#vender">Vender Propiedad</a></li>
+            <li><a href="#buscar">Bono de Vivienda</a></li>
+            <li><a href="#buscar">Tramitología</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="https://wa.me/50683725603" target="_blank" rel="noopener">+506 8372-5603</a></li>
+            <li><a href="mailto:flory@residenciascostarica.com">flory@residenciascostarica.com</a></li>
+            <li><a href="#" >Costa Rica</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Residencias Costa Rica · Todos los derechos reservados</span>
+        <span>Pura Vida <i class="fa-solid fa-heart" style="color:var(--red)"></i></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/50683725603?text=Hola%2C%20me%20interesa%20una%20propiedad"
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="properties-data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

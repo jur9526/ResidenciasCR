@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin — Residencias Costa Rica</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --red: #C41E1E; --dark: #111827; --gray: #6B7280;
+      --light: #F3F4F6; --white: #FFFFFF; --border: #E5E7EB;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: var(--light); color: var(--dark); min-height: 100vh; }
+
+    /* ── Login Screen ── */
+    #loginScreen {
+      position: fixed; inset: 0; background: var(--dark);
+      display: flex; align-items: center; justify-content: center; z-index: 9999;
+    }
+    .login-box {
+      background: var(--white); border-radius: 16px;
+      padding: 2.5rem; width: 100%; max-width: 380px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      text-align: center;
+    }
+    .login-box .logo {
+      font-size: 2.5rem; color: var(--red); margin-bottom: .75rem;
+    }
+    .login-box h2 { font-size: 1.25rem; margin-bottom: .4rem; }
+    .login-box p  { font-size: .85rem; color: var(--gray); margin-bottom: 1.5rem; }
+    .login-box input {
+      width: 100%; padding: .75rem; border: 1.5px solid var(--border);
+      border-radius: 8px; font-size: .95rem; font-family: inherit;
+      outline: none; margin-bottom: 1rem;
+      transition: border-color .2s;
+    }
+    .login-box input:focus { border-color: var(--red); }
+    .login-box button {
+      width: 100%; padding: .8rem; background: var(--red); color: #fff;
+      border: none; border-radius: 8px; font-size: .95rem; font-weight: 700;
+      cursor: pointer; transition: background .2s;
+    }
+    .login-box button:hover { background: #9B1515; }
+    #loginError { color: var(--red); font-size: .82rem; margin-top: .6rem; display: none; }
+
+    /* ── App Layout ── */
+    #app { display: none; }
+    .topbar {
+      background: var(--dark); color: #fff; padding: 1rem 2rem;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .topbar-brand { display: flex; align-items: center; gap: .6rem; font-weight: 700; font-size: 1rem; }
+    .topbar-brand i { color: var(--red); }
+    .topbar-brand span { color: var(--red); }
+    .topbar-actions { display: flex; gap: .75rem; }
+    .btn-sm {
+      display: inline-flex; align-items: center; gap: .4rem;
+      padding: .45rem .9rem; border-radius: 6px;
+      font-size: .82rem; font-weight: 600; cursor: pointer;
+      transition: .2s; border: none; font-family: inherit;
+    }
+    .btn-red  { background: var(--red); color: #fff; }
+    .btn-red:hover { background: #9B1515; }
+    .btn-gray { background: rgba(255,255,255,.1); color: #fff; border: 1px solid rgba(255,255,255,.2); }
+    .btn-gray:hover { background: rgba(255,255,255,.2); }
+    .btn-green { background: #16a34a; color: #fff; }
+    .btn-green:hover { background: #15803d; }
+
+    .main { max-width: 1300px; margin: 0 auto; padding: 2rem; }
+    .stats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2rem; }
+    .stat-box { background: var(--white); border-radius: 12px; padding: 1.25rem 1.5rem; box-shadow: 0 1px 6px rgba(0,0,0,.06); }
+    .stat-box strong { display: block; font-size: 2rem; font-weight: 800; color: var(--red); line-height: 1; margin-bottom: .25rem; }
+    .stat-box span   { font-size: .82rem; color: var(--gray); }
+
+    .panel { background: var(--white); border-radius: 12px; padding: 1.75rem; box-shadow: 0 1px 6px rgba(0,0,0,.06); margin-bottom: 2rem; }
+    .panel-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+    .panel-header h2 { font-size: 1.1rem; font-weight: 700; }
+
+    /* ── Property Form ── */
+    .prop-form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .prop-form .full { grid-column: 1 / -1; }
+    .form-field { display: flex; flex-direction: column; gap: .3rem; }
+    .form-field label { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--gray); }
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      padding: .6rem .85rem; border: 1.5px solid var(--border);
+      border-radius: 8px; font-family: inherit; font-size: .9rem;
+      outline: none; transition: border-color .2s; resize: vertical;
+    }
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus { border-color: var(--red); }
+    .form-actions { grid-column: 1 / -1; display: flex; gap: .75rem; margin-top: .5rem; }
+    .form-actions .btn-submit-form {
+      padding: .7rem 1.5rem; background: var(--red); color: #fff;
+      border: none; border-radius: 8px; font-weight: 700;
+      font-family: inherit; cursor: pointer; font-size: .9rem;
+      display: flex; align-items: center; gap: .4rem; transition: background .2s;
+    }
+    .form-actions .btn-submit-form:hover { background: #9B1515; }
+    .btn-cancel {
+      padding: .7rem 1.5rem; background: var(--light); color: var(--dark);
+      border: 1.5px solid var(--border); border-radius: 8px; font-weight: 600;
+      font-family: inherit; cursor: pointer; font-size: .9rem;
+      display: flex; align-items: center; gap: .4rem; transition: .2s;
+    }
+    .btn-cancel:hover { background: var(--border); }
+
+    /* ── Properties Table ── */
+    .search-bar {
+      padding: .6rem .9rem; border: 1.5px solid var(--border);
+      border-radius: 8px; font-family: inherit; font-size: .88rem;
+      outline: none; width: 260px;
+    }
+    .search-bar:focus { border-color: var(--red); }
+    .prop-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .prop-table th {
+      text-align: left; padding: .65rem 1rem;
+      font-size: .72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .07em;
+      color: var(--gray); border-bottom: 2px solid var(--border);
+    }
+    .prop-table td { padding: .75rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+    .prop-table tr:last-child td { border-bottom: none; }
+    .prop-table tr:hover td { background: #fafafa; }
+    .prop-thumb { width: 56px; height: 42px; object-fit: cover; border-radius: 6px; }
+    .prop-price-cell { font-weight: 700; color: var(--red); white-space: nowrap; }
+    .badge-cell {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+      text-transform: uppercase; padding: .18rem .5rem; border-radius: 4px;
+      background: var(--red); color: #fff;
+    }
+    .action-btns { display: flex; gap: .5rem; }
+    .btn-edit { background: #EEF2FF; color: #4338CA; border: none; padding: .35rem .7rem; border-radius: 6px; font-size: .78rem; font-weight: 600; cursor: pointer; transition: .2s; }
+    .btn-edit:hover { background: #4338CA; color: #fff; }
+    .btn-delete { background: #FEF2F2; color: var(--red); border: none; padding: .35rem .7rem; border-radius: 6px; font-size: .78rem; font-weight: 600; cursor: pointer; transition: .2s; }
+    .btn-delete:hover { background: var(--red); color: #fff; }
+
+    .empty-state { text-align: center; padding: 3rem; color: var(--gray); }
+    .empty-state i { font-size: 3rem; margin-bottom: 1rem; opacity: .3; }
+    .empty-state p { font-size: .9rem; }
+
+    .toast {
+      position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
+      background: var(--dark); color: #fff; padding: .75rem 1.5rem;
+      border-radius: 8px; font-size: .88rem; font-weight: 600;
+      box-shadow: 0 4px 20px rgba(0,0,0,.3); z-index: 9999;
+      opacity: 0; transition: opacity .3s; pointer-events: none;
+    }
+    .toast.show { opacity: 1; }
+
+    @media (max-width: 768px) {
+      .prop-form { grid-template-columns: 1fr; }
+      .prop-form .full { grid-column: 1; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── LOGIN ── -->
+<div id="loginScreen">
+  <div class="login-box">
+    <div class="logo"><i class="fa-solid fa-house-chimney"></i></div>
+    <h2>Panel de Administración</h2>
+    <p>Residencias Costa Rica</p>
+    <input type="password" id="passwordInput" placeholder="Contraseña" autocomplete="current-password" />
+    <button onclick="doLogin()"><i class="fa-solid fa-lock-open"></i> Entrar</button>
+    <div id="loginError">Contraseña incorrecta.</div>
+  </div>
+</div>
+
+<!-- ── APP ── -->
+<div id="app">
+  <div class="topbar">
+    <div class="topbar-brand">
+      <i class="fa-solid fa-house-chimney"></i>
+      Residencias<span>CostaRica</span> — Admin
+    </div>
+    <div class="topbar-actions">
+      <a href="index.html" target="_blank" class="btn-sm btn-gray"><i class="fa-solid fa-eye"></i> Ver sitio</a>
+      <button class="btn-sm btn-green" onclick="exportData()"><i class="fa-solid fa-download"></i> Exportar JSON</button>
+      <button class="btn-sm btn-red" onclick="resetToDefault()" title="Restaurar propiedades originales de Encuentra24"><i class="fa-solid fa-rotate-left"></i> Restaurar</button>
+      <button class="btn-sm btn-gray" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i> Salir</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-box">
+        <strong id="statTotal">0</strong>
+        <span>Propiedades activas</span>
+      </div>
+      <div class="stat-box">
+        <strong id="statVenta">0</strong>
+        <span>En venta</span>
+      </div>
+      <div class="stat-box">
+        <strong id="statAptos">0</strong>
+        <span>Apartamentos / Fincas</span>
+      </div>
+    </div>
+
+    <!-- Add / Edit Form -->
+    <div class="panel" id="formPanel">
+      <div class="panel-header">
+        <h2 id="formTitle"><i class="fa-solid fa-plus"></i> Agregar Propiedad</h2>
+      </div>
+      <form id="propForm" autocomplete="off">
+        <div class="prop-form">
+          <div class="form-field full">
+            <label>Título</label>
+            <input type="text" id="f_title" placeholder="Ej. Casa en Venta en Moravia" required />
+          </div>
+          <div class="form-field">
+            <label>Precio</label>
+            <input type="text" id="f_price" placeholder="Ej. ₡90,000,000 o $280,000" required />
+          </div>
+          <div class="form-field">
+            <label>Ubicación</label>
+            <input type="text" id="f_location" placeholder="Ej. Moravia, San José" required />
+          </div>
+          <div class="form-field">
+            <label>Habitaciones</label>
+            <input type="number" id="f_beds" min="0" placeholder="0" value="0" />
+          </div>
+          <div class="form-field">
+            <label>Baños</label>
+            <input type="number" id="f_baths" min="0" placeholder="0" value="0" />
+          </div>
+          <div class="form-field">
+            <label>Área (m²)</label>
+            <input type="text" id="f_area" placeholder="Ej. 120 m²" />
+          </div>
+          <div class="form-field">
+            <label>Tipo</label>
+            <select id="f_type">
+              <option value="Casa">Casa</option>
+              <option value="Apartamento">Apartamento</option>
+              <option value="Terreno">Terreno</option>
+              <option value="Finca">Finca</option>
+              <option value="Penthouse">Penthouse</option>
+              <option value="Local">Local Comercial</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label>Etiqueta (badge)</label>
+            <select id="f_badge">
+              <option value="En Venta">En Venta</option>
+              <option value="Oportunidad">Oportunidad</option>
+              <option value="Remate">Remate</option>
+              <option value="Inversión">Inversión</option>
+              <option value="Apartamento">Apartamento</option>
+              <option value="Finca">Finca</option>
+              <option value="Venta / Alquiler">Venta / Alquiler</option>
+            </select>
+          </div>
+          <div class="form-field full">
+            <label>URL de la imagen</label>
+            <input type="url" id="f_image" placeholder="https://... (Unsplash, Google Photos, etc.)" />
+          </div>
+          <div class="form-field">
+            <label>ID de Encuentra24 (opcional)</label>
+            <input type="text" id="f_e24id" placeholder="Ej. 31892295" />
+          </div>
+          <div class="form-field">
+            <label>Mensaje WhatsApp (texto URL-encoded)</label>
+            <input type="text" id="f_wa" placeholder="Ej. Me%20interesa%20la%20casa..." />
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn-submit-form"><i class="fa-solid fa-floppy-disk"></i> Guardar</button>
+            <button type="button" class="btn-cancel" onclick="cancelEdit()"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- Properties List -->
+    <div class="panel">
+      <div class="panel-header">
+        <h2><i class="fa-solid fa-list"></i> Propiedades (<span id="propCount">0</span>)</h2>
+        <input type="text" class="search-bar" id="searchInput" placeholder="Buscar propiedad..." oninput="renderTable()" />
+      </div>
+      <div id="tableContainer"></div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="properties-data.js"></script>
+<script>
+  // ── Password ──────────────────────────────────────────────
+  // Cambiá esta contraseña a algo seguro
+  const ADMIN_PASSWORD = 'Jurgen';
+
+  function doLogin() {
+    const pw = document.getElementById('passwordInput').value;
+    if (pw === ADMIN_PASSWORD) {
+      document.getElementById('loginScreen').style.display = 'none';
+      document.getElementById('app').style.display = 'block';
+      init();
+    } else {
+      document.getElementById('loginError').style.display = 'block';
+    }
+  }
+  document.getElementById('passwordInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') doLogin();
+  });
+  function logout() {
+    document.getElementById('loginScreen').style.display = 'flex';
+    document.getElementById('app').style.display = 'none';
+    document.getElementById('passwordInput').value = '';
+  }
+
+  // ── State ─────────────────────────────────────────────────
+  let properties = [];
+  let editingId  = null;
+
+  function loadData() {
+    try {
+      const stored = localStorage.getItem('rcr_properties');
+      properties = stored ? JSON.parse(stored) : [...(window.DEFAULT_PROPERTIES || [])];
+    } catch(e) {
+      properties = [...(window.DEFAULT_PROPERTIES || [])];
+    }
+  }
+  function saveData() {
+    localStorage.setItem('rcr_properties', JSON.stringify(properties));
+  }
+  function resetToDefault() {
+    if (!confirm('¿Restaurar las propiedades originales de Encuentra24? Se perderán los cambios.')) return;
+    localStorage.removeItem('rcr_properties');
+    loadData();
+    renderAll();
+    toast('Propiedades restauradas.');
+  }
+
+  // ── Stats ─────────────────────────────────────────────────
+  function updateStats() {
+    document.getElementById('statTotal').textContent = properties.length;
+    document.getElementById('statVenta').textContent = properties.filter(p =>
+      !p.badge || p.badge === 'En Venta' || p.badge === 'Oportunidad' || p.badge === 'Remate').length;
+    document.getElementById('statAptos').textContent = properties.filter(p =>
+      p.type === 'Apartamento' || p.type === 'Finca' || p.type === 'Penthouse').length;
+    document.getElementById('propCount').textContent = properties.length;
+  }
+
+  // ── Table ─────────────────────────────────────────────────
+  function renderTable() {
+    const q   = (document.getElementById('searchInput').value || '').toLowerCase();
+    const filtered = q ? properties.filter(p =>
+      p.title.toLowerCase().includes(q) || p.location.toLowerCase().includes(q)) : properties;
+
+    const container = document.getElementById('tableContainer');
+    if (!filtered.length) {
+      container.innerHTML = `<div class="empty-state"><i class="fa-solid fa-house-circle-xmark"></i><p>No hay propiedades. Agregá una arriba.</p></div>`;
+      return;
+    }
+    container.innerHTML = `
+      <table class="prop-table">
+        <thead>
+          <tr>
+            <th>Foto</th>
+            <th>Título</th>
+            <th>Precio</th>
+            <th>Ubicación</th>
+            <th>Tipo</th>
+            <th>Badge</th>
+            <th>E24</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${filtered.map(p => `
+          <tr>
+            <td><img class="prop-thumb" src="${p.image || ''}" alt=""
+                     onerror="this.style.display='none'" /></td>
+            <td style="max-width:220px;font-weight:600;font-size:.83rem">${p.title}</td>
+            <td class="prop-price-cell">${p.price}</td>
+            <td style="font-size:.82rem;color:#6B7280">${p.location}</td>
+            <td style="font-size:.82rem">${p.type || 'Casa'}</td>
+            <td><span class="badge-cell">${p.badge || 'En Venta'}</span></td>
+            <td style="font-size:.8rem">${p.e24id ? `<a href="https://www.encuentra24.com/costa-rica-es/bienes-raices/${p.e24id}" target="_blank" style="color:#FF6B00">Ver</a>` : '—'}</td>
+            <td>
+              <div class="action-btns">
+                <button class="btn-edit" onclick="editProp('${p.id}')"><i class="fa-solid fa-pen"></i> Editar</button>
+                <button class="btn-delete" onclick="deleteProp('${p.id}')"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </td>
+          </tr>`).join('')}
+        </tbody>
+      </table>`;
+  }
+
+  function renderAll() { updateStats(); renderTable(); }
+
+  // ── Form ──────────────────────────────────────────────────
+  function cancelEdit() {
+    editingId = null;
+    document.getElementById('propForm').reset();
+    document.getElementById('formTitle').innerHTML = '<i class="fa-solid fa-plus"></i> Agregar Propiedad';
+  }
+
+  function editProp(id) {
+    const p = properties.find(x => x.id === id);
+    if (!p) return;
+    editingId = id;
+    document.getElementById('f_title').value    = p.title || '';
+    document.getElementById('f_price').value    = p.price || '';
+    document.getElementById('f_location').value = p.location || '';
+    document.getElementById('f_beds').value     = p.beds || 0;
+    document.getElementById('f_baths').value    = p.baths || 0;
+    document.getElementById('f_area').value     = p.area || '';
+    document.getElementById('f_type').value     = p.type || 'Casa';
+    document.getElementById('f_badge').value    = p.badge || 'En Venta';
+    document.getElementById('f_image').value    = p.image || '';
+    document.getElementById('f_e24id').value    = p.e24id || '';
+    document.getElementById('f_wa').value       = p.wa || '';
+    document.getElementById('formTitle').innerHTML = '<i class="fa-solid fa-pen"></i> Editar Propiedad';
+    document.getElementById('formPanel').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function deleteProp(id) {
+    if (!confirm('¿Eliminar esta propiedad?')) return;
+    properties = properties.filter(p => p.id !== id);
+    saveData(); renderAll();
+    toast('Propiedad eliminada.');
+  }
+
+  document.getElementById('propForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const type  = document.getElementById('f_type').value;
+    const badge = document.getElementById('f_badge').value;
+    const title = document.getElementById('f_title').value.trim();
+    const id    = editingId || 'CUSTOM-' + Date.now();
+    const wa    = document.getElementById('f_wa').value.trim() ||
+      'Me%20interesa%20la%20propiedad%20' + encodeURIComponent(title);
+
+    const badgeClassMap = {
+      'Oportunidad': 'badge-special', 'Remate': 'badge-remate',
+      'Inversión': 'badge-inversion', 'Apartamento': 'badge-apto',
+      'Finca': 'badge-lote', 'Venta / Alquiler': 'badge-special'
+    };
+
+    const updated = {
+      id, title,
+      price:     document.getElementById('f_price').value.trim(),
+      location:  document.getElementById('f_location').value.trim(),
+      beds:      parseInt(document.getElementById('f_beds').value) || 0,
+      baths:     parseInt(document.getElementById('f_baths').value) || 0,
+      area:      document.getElementById('f_area').value.trim(),
+      type, badge,
+      badgeClass: badgeClassMap[badge] || '',
+      image:     document.getElementById('f_image').value.trim(),
+      e24id:     document.getElementById('f_e24id').value.trim(),
+      wa
+    };
+
+    if (editingId) {
+      const idx = properties.findIndex(p => p.id === editingId);
+      if (idx > -1) properties[idx] = updated;
+      toast('Propiedad actualizada.');
+    } else {
+      properties.unshift(updated);
+      toast('Propiedad agregada.');
+    }
+
+    saveData();
+    cancelEdit();
+    renderAll();
+  });
+
+  // ── Export ────────────────────────────────────────────────
+  function exportData() {
+    const json = JSON.stringify(properties, null, 2);
+    const blob = new Blob([json], { type: 'application/json' });
+    const a    = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'propiedades-rcr.json';
+    a.click();
+    toast('JSON exportado.');
+  }
+
+  // ── Toast ─────────────────────────────────────────────────
+  let toastTimer;
+  function toast(msg) {
+    const el = document.getElementById('toast');
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
+  }
+
+  // ── Init ──────────────────────────────────────────────────
+  function init() { loadData(); renderAll(); }
+</script>
+</body>
+</html>
