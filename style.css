@@ -753,6 +753,7 @@ p  { color: var(--gray); font-size: .95rem; }
   transition: border-color .2s, box-shadow .2s, transform .2s;
 }
 .contact-item:hover { transform: translateX(4px); box-shadow: var(--shadow); }
+.contact-item-plain { cursor: default; pointer-events: none; opacity: .85; }
 .contact-item.wa:hover { border-color: var(--wa); }
 .contact-item.ig:hover { border-color: #C13584; }
 .contact-item.e24:hover { border-color: #FF6B00; }
@@ -854,6 +855,12 @@ p  { color: var(--gray); font-size: .95rem; }
 .agent-stat strong { color: #fff; }
 .agent-stat span { color: rgba(255,255,255,.6); }
 .agent-tags span { color: rgba(255,255,255,.8); }
+.agent-secondary-phone {
+  margin-top: 1rem; font-size: .88rem;
+  color: rgba(255,255,255,.65);
+  display: flex; align-items: center; gap: .45rem;
+}
+.agent-secondary-phone strong { color: rgba(255,255,255,.9); font-weight: 600; }
 .agent-tags .fa-check-circle { color: #f87171; }
 .agent-inner {
   display: grid; grid-template-columns: 1fr 1.2fr;
