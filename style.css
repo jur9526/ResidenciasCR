@@ -984,11 +984,11 @@ p  { color: var(--gray); font-size: .95rem; }
 }
 .agent-photo:hover { transform: scale(1.02); }
 .agent-photo-badge {
-  position: absolute; bottom: 1.5rem; left: 1.5rem;
+  margin-top: .75rem;
   background: var(--red); color: #fff;
   padding: .6rem 1.2rem; border-radius: 50px;
   font-size: .82rem; font-weight: 700;
-  display: flex; align-items: center; gap: .5rem;
+  display: inline-flex; align-items: center; gap: .5rem;
   box-shadow: 0 8px 24px rgba(196,30,30,.35);
 }
 .agent-content h2 { margin-bottom: 1rem; }
@@ -1014,11 +1014,9 @@ p  { color: var(--gray); font-size: .95rem; }
   font-weight: 500;
 }
 .camara-sello-wrap {
-  position: absolute;
-  bottom: 1rem; left: -1.5rem;
-  display: block;
+  display: inline-block;
+  margin-top: 1rem;
   transition: transform .25s;
-  z-index: 3;
 }
 .camara-sello-wrap:hover { transform: scale(1.1); }
 .camara-sello-img {
