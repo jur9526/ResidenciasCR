@@ -795,30 +795,5 @@
     </ol>
   </div>
   <div id="camara-tooltip">Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032</div>
-  <script>
-    const tip = document.getElementById('camara-tooltip');
-    document.querySelectorAll('.camara-contact-pill, .camara-sello-wrap').forEach(el => {
-      el.addEventListener('mouseenter', () => tip.style.opacity = '1');
-      el.addEventListener('mouseleave', () => tip.style.opacity = '0');
-      el.addEventListener('mousemove', e => {
-        tip.style.left = e.clientX + 'px';
-        tip.style.top  = (e.clientY - 44) + 'px';
-      });
-    });
-  </script>
-  <script>
-    (function() {
-      var modal = document.getElementById('bonoModal');
-      var card  = document.getElementById('bonoCard');
-      var closeBtn = document.getElementById('bonoModalClose');
-      var cta   = document.getElementById('bonoModalCta');
-      if (card && modal) {
-        card.addEventListener('click', function() { modal.style.display = 'flex'; });
-        modal.addEventListener('click', function(e) { if (e.target === modal) modal.style.display = 'none'; });
-        if (closeBtn) closeBtn.addEventListener('click', function() { modal.style.display = 'none'; });
-        if (cta) cta.addEventListener('click', function() { modal.style.display = 'none'; });
-      }
-    })();
-  </script>
 </body>
 </html>

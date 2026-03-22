@@ -248,3 +248,28 @@ document.querySelectorAll('#buyerForm input[name="intencion"]').forEach(radio =>
     if (freeNote) freeNote.style.display = radio.value === 'Comprar' ? '' : 'none';
   });
 });
+
+// ── Modal Bono Vivienda ──────────────────────────────────────
+const bonoModal   = document.getElementById('bonoModal');
+const bonoCard    = document.getElementById('bonoCard');
+const bonoClose   = document.getElementById('bonoModalClose');
+const bonoCta     = document.getElementById('bonoModalCta');
+if (bonoCard && bonoModal) {
+  bonoCard.addEventListener('click', () => { bonoModal.style.display = 'flex'; });
+  bonoModal.addEventListener('click', e => { if (e.target === bonoModal) bonoModal.style.display = 'none'; });
+  if (bonoClose) bonoClose.addEventListener('click', () => { bonoModal.style.display = 'none'; });
+  if (bonoCta)   bonoCta.addEventListener('click',   () => { bonoModal.style.display = 'none'; });
+}
+
+// ── Cámara de Comercio tooltip ───────────────────────────────
+const camaraTip = document.getElementById('camara-tooltip');
+if (camaraTip) {
+  document.querySelectorAll('.camara-contact-pill, .camara-sello-wrap').forEach(el => {
+    el.addEventListener('mouseenter', () => { camaraTip.style.opacity = '1'; });
+    el.addEventListener('mouseleave', () => { camaraTip.style.opacity = '0'; });
+    el.addEventListener('mousemove', e => {
+      camaraTip.style.left = e.clientX + 'px';
+      camaraTip.style.top  = (e.clientY - 44) + 'px';
+    });
+  });
+}
