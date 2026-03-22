@@ -739,6 +739,31 @@ p  { color: var(--gray); font-size: .95rem; }
   transition: box-shadow .25s, border-color .25s, transform .25s;
 }
 .reason-card:hover { box-shadow: var(--shadow); border-color: var(--red); transform: translateY(-3px); }
+
+/* Tooltip bono vivienda */
+.reason-tooltip-wrap { position: relative; }
+.reason-tooltip {
+  display: none;
+  position: absolute;
+  top: 100%; left: 50%;
+  transform: translateX(-50%);
+  margin-top: .6rem;
+  background: #fff;
+  border: 1.5px solid var(--red);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  width: 320px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  z-index: 100;
+  text-align: left;
+  font-size: .8rem;
+  color: var(--dark);
+  line-height: 1.5;
+}
+.reason-tooltip strong { display: block; margin-bottom: .6rem; font-size: .85rem; color: var(--red); }
+.reason-tooltip ol { padding-left: 1.1rem; margin: 0; }
+.reason-tooltip ol li { margin-bottom: .4rem; }
+.reason-tooltip-wrap:hover .reason-tooltip { display: block; }
 .reason-icon {
   font-size: 1.6rem; color: var(--red); margin-bottom: .85rem;
 }
@@ -1048,7 +1073,7 @@ p  { color: var(--gray); font-size: .95rem; }
   align-items: center;
   gap: .5rem;
   margin-top: 1rem;
-  margin-left: -5rem;
+  margin-left: -7rem;
   position: relative;
   cursor: pointer;
   transition: transform .25s;
