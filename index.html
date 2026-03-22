@@ -191,7 +191,7 @@
           <h3>+10 Bancos</h3>
           <p>BAC, BCR, Banco Nacional, Davivienda, MUCAP, Coopenae y más.</p>
         </div>
-        <div class="reason-card reveal d1" id="bonoCard" style="cursor:pointer;" onclick="document.getElementById('bonoModal').style.display='flex'">
+        <div class="reason-card reveal d1" id="bonoCard" style="cursor:pointer;">
           <div class="reason-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
           <h3>Bono de Vivienda <i class="fa-solid fa-circle-info" style="font-size:.75rem;opacity:.6;"></i></h3>
           <p>Aplicá al bono como prima. Lo tramitamos sin costo. <em style="font-size:.75rem;color:var(--red);">Ver condiciones →</em></p>
@@ -766,9 +766,9 @@
   <script src="main.js"></script>
 
   <!-- Modal Bono Vivienda -->
-  <div id="bonoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+  <div id="bonoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:1rem;">
     <div style="background:#fff;border-radius:14px;padding:2rem;max-width:480px;width:100%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3);">
-      <button onclick="document.getElementById('bonoModal').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;">&times;</button>
+      <button id="bonoModalClose" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;">&times;</button>
       <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
         <span style="font-size:1.8rem;color:#c0392b;"><i class="fa-solid fa-hand-holding-dollar"></i></span>
         <h3 style="margin:0;font-size:1.1rem;">Condiciones para el Bono de Vivienda</h3>
@@ -780,7 +780,7 @@
         <li>Ingreso familiar menor a <strong>₡1.940.076</strong>. Para extrema necesidad: máx. <strong>₡485.019</strong>.</li>
         <li>Ser costarricense o tener cédula de residencia permanente (DIMEX).</li>
       </ol>
-      <a href="#buscar" onclick="document.getElementById('bonoModal').style.display='none'" style="display:inline-block;margin-top:1.5rem;background:#c0392b;color:#fff;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.88rem;">Consultar gratis →</a>
+      <a id="bonoModalCta" href="#buscar" style="display:inline-block;margin-top:1.5rem;background:#c0392b;color:#fff;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.88rem;">Consultar gratis →</a>
     </div>
   </div>
 
@@ -808,19 +808,16 @@
   </script>
   <script>
     (function() {
-      var card = document.getElementById('bonoCard');
-      var tip  = document.getElementById('bonoTooltip');
-      if (!card || !tip) return;
-      card.addEventListener('mouseenter', function() { tip.style.display = 'block'; });
-      card.addEventListener('mousemove', function(e) {
-        var x = e.clientX + 16;
-        var y = e.clientY + 16;
-        if (x + 320 > window.innerWidth) x = e.clientX - 336;
-        if (y + tip.offsetHeight > window.innerHeight) y = e.clientY - tip.offsetHeight - 8;
-        tip.style.left = x + 'px';
-        tip.style.top  = y + 'px';
-      });
-      card.addEventListener('mouseleave', function() { tip.style.display = 'none'; });
+      var modal = document.getElementById('bonoModal');
+      var card  = document.getElementById('bonoCard');
+      var closeBtn = document.getElementById('bonoModalClose');
+      var cta   = document.getElementById('bonoModalCta');
+      if (card && modal) {
+        card.addEventListener('click', function() { modal.style.display = 'flex'; });
+        modal.addEventListener('click', function(e) { if (e.target === modal) modal.style.display = 'none'; });
+        if (closeBtn) closeBtn.addEventListener('click', function() { modal.style.display = 'none'; });
+        if (cta) cta.addEventListener('click', function() { modal.style.display = 'none'; });
+      }
     })();
   </script>
 </body>
