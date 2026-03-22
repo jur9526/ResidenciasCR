@@ -724,6 +724,7 @@ p  { color: var(--gray); font-size: .95rem; }
    ============================================================ */
 .reasons-section {
   position: relative;
+  padding-bottom: 3rem;
   background:
     linear-gradient(rgba(5,8,22,.78), rgba(5,8,22,.78)),
     url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80')
