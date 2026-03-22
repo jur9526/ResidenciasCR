@@ -883,6 +883,7 @@ p  { color: var(--gray); font-size: .95rem; }
 .social-pill.wa { background: #25D366; }
 .social-pill.email { background: #4F46E5; }
 .social-pill.e24 { background: #E91E8C; }
+.social-pill.camara-pill { background: #1B4F8A; }
 
 /* ── Channel Groups ───────────────────────────────────────── */
 .contact-channels { display: flex; flex-direction: column; gap: .5rem; }
