@@ -881,6 +881,8 @@ p  { color: var(--gray); font-size: .95rem; }
 .social-pill.tt { background: #010101; }
 .social-pill.tt i { background: linear-gradient(135deg,#69C9D0,#EE1D52); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 .social-pill.wa { background: #25D366; }
+.social-pill.email { background: #4F46E5; }
+.social-pill.e24 { background: #FF6B00; }
 
 .contact-cta-box {
   background: var(--dark); border-radius: 16px;
