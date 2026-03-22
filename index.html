@@ -191,10 +191,10 @@
           <h3>+10 Bancos</h3>
           <p>BAC, BCR, Banco Nacional, Davivienda, MUCAP, Coopenae y más.</p>
         </div>
-        <div class="reason-card reveal d1" id="bonoCard">
+        <div class="reason-card reveal d1" id="bonoCard" style="cursor:pointer;" onclick="document.getElementById('bonoModal').style.display='flex'">
           <div class="reason-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-          <h3>Bono de Vivienda <i class="fa-solid fa-circle-info" style="font-size:.75rem;opacity:.5;"></i></h3>
-          <p>Aplicá al bono como prima. Lo tramitamos sin costo.</p>
+          <h3>Bono de Vivienda <i class="fa-solid fa-circle-info" style="font-size:.75rem;opacity:.6;"></i></h3>
+          <p>Aplicá al bono como prima. Lo tramitamos sin costo. <em style="font-size:.75rem;color:var(--red);">Ver condiciones →</em></p>
         </div>
         <div class="reason-card reveal d2">
           <div class="reason-icon"><i class="fa-solid fa-file-contract"></i></div>
@@ -764,6 +764,25 @@
 
   <script src="properties-data.js"></script>
   <script src="main.js"></script>
+
+  <!-- Modal Bono Vivienda -->
+  <div id="bonoModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:1rem;" onclick="if(event.target===this)this.style.display='none'">
+    <div style="background:#fff;border-radius:14px;padding:2rem;max-width:480px;width:100%;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.3);">
+      <button onclick="document.getElementById('bonoModal').style.display='none'" style="position:absolute;top:1rem;right:1rem;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#999;">&times;</button>
+      <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:1.25rem;">
+        <span style="font-size:1.8rem;color:#c0392b;"><i class="fa-solid fa-hand-holding-dollar"></i></span>
+        <h3 style="margin:0;font-size:1.1rem;">Condiciones para el Bono de Vivienda</h3>
+      </div>
+      <ol style="padding-left:1.2rem;margin:0;color:#444;font-size:.88rem;line-height:1.7;">
+        <li>Núcleo familiar bajo un mismo techo con al menos una persona mayor de edad.</li>
+        <li>No tener casa propia ni más de una propiedad.</li>
+        <li>No haber recibido el Bono anteriormente — se otorga solo una vez.</li>
+        <li>Ingreso familiar menor a <strong>₡1.940.076</strong>. Para extrema necesidad: máx. <strong>₡485.019</strong>.</li>
+        <li>Ser costarricense o tener cédula de residencia permanente (DIMEX).</li>
+      </ol>
+      <a href="#buscar" onclick="document.getElementById('bonoModal').style.display='none'" style="display:inline-block;margin-top:1.5rem;background:#c0392b;color:#fff;padding:.65rem 1.4rem;border-radius:8px;font-weight:700;font-size:.88rem;">Consultar gratis →</a>
+    </div>
+  </div>
 
   <div id="bonoTooltip" class="reason-tooltip">
     <strong>Condiciones para el Bono de Vivienda</strong>
