@@ -1014,11 +1014,16 @@ p  { color: var(--gray); font-size: .95rem; }
   font-weight: 500;
 }
 .camara-sello-wrap {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
   margin-top: 1rem;
+  position: relative;
+  cursor: pointer;
   transition: transform .25s;
 }
-.camara-sello-wrap:hover { transform: scale(1.1); }
+.camara-sello-wrap:hover { transform: scale(1.08); }
 .camara-sello-img {
   width: 120px; height: 120px;
   object-fit: contain;
@@ -1026,24 +1031,26 @@ p  { color: var(--gray); font-size: .95rem; }
   transition: filter .25s;
 }
 .camara-sello-wrap:hover .camara-sello-img {
-  filter: drop-shadow(0 8px 20px rgba(0,0,0,.4));
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.5)) brightness(1.05);
 }
 .camara-sello-wrap::after {
   content: "Empresa Asociada · AF: 2026032";
-  position: absolute;
-  bottom: -2.2rem; left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,.75);
+  background: rgba(0,0,0,.82);
   color: #fff;
-  font-size: .7rem; font-weight: 600;
+  font-size: .72rem; font-weight: 700;
   white-space: nowrap;
-  padding: .3rem .7rem;
+  padding: .35rem .85rem;
   border-radius: 999px;
+  letter-spacing: .03em;
   opacity: 0;
+  transform: translateY(4px);
+  transition: opacity .2s, transform .2s;
   pointer-events: none;
-  transition: opacity .2s;
 }
-.camara-sello-wrap:hover::after { opacity: 1; }
+.camara-sello-wrap:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .agent-tags {
   display: grid; grid-template-columns: repeat(2, 1fr);
