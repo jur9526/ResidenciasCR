@@ -890,7 +890,7 @@ p  { color: var(--gray); font-size: .95rem; }
   transition: transform .2s;
 }
 .camara-contact-pill img {
-  width: 40px; height: 40px;
+  width: 56px; height: 56px;
   object-fit: contain;
   display: block;
   filter: drop-shadow(0 2px 6px rgba(0,0,0,.2));
@@ -898,23 +898,20 @@ p  { color: var(--gray); font-size: .95rem; }
 }
 .camara-contact-pill:hover { transform: scale(1.1); }
 .camara-contact-pill:hover img { filter: drop-shadow(0 4px 10px rgba(0,0,0,.35)); }
-.camara-contact-pill::after {
-  content: "Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032";
-  position: absolute;
-  bottom: calc(100% + 8px); left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,.82);
+#camara-tooltip {
+  position: fixed;
+  background: rgba(20,20,20,.92);
   color: #fff;
-  font-size: .68rem; font-weight: 600;
+  font-size: .72rem; font-weight: 600;
   white-space: nowrap;
-  padding: .3rem .75rem;
+  padding: .4rem .9rem;
   border-radius: 999px;
-  opacity: 0;
   pointer-events: none;
+  opacity: 0;
   transition: opacity .2s;
-  z-index: 10;
+  z-index: 9999;
+  transform: translateX(-50%);
 }
-.camara-contact-pill:hover::after { opacity: 1; }
 
 /* ── Channel Groups ───────────────────────────────────────── */
 .contact-channels { display: flex; flex-direction: column; gap: .5rem; }
@@ -1066,7 +1063,7 @@ p  { color: var(--gray); font-size: .95rem; }
   filter: drop-shadow(0 10px 24px rgba(0,0,0,.5)) brightness(1.05);
 }
 .camara-sello-wrap::after {
-  content: "Empresa Asociada · AF: 2026032";
+  content: "Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032";
   background: rgba(0,0,0,.82);
   color: #fff;
   font-size: .72rem; font-weight: 700;
