@@ -861,16 +861,16 @@ p  { color: var(--gray); font-size: .95rem; }
 /* ── Social Pills ─────────────────────────────────────────── */
 .social-pills { display: flex; gap: .55rem; flex-wrap: wrap; margin-top: 1.25rem; }
 .social-pill {
-  display: inline-flex; align-items: center; gap: .5rem;
-  padding: .45rem 1rem .45rem .75rem;
+  display: inline-flex; align-items: center; gap: .35rem;
+  padding: .32rem .7rem .32rem .55rem;
   border-radius: 999px;
-  font-size: .82rem; font-weight: 600; color: #fff;
+  font-size: .75rem; font-weight: 600; color: #fff;
   text-decoration: none;
   transition: filter .2s, transform .15s;
   white-space: nowrap;
 }
 .social-pill:hover { filter: brightness(1.15); transform: translateY(-2px); color: #fff; }
-.social-pill i { font-size: 1rem; }
+.social-pill i { font-size: .85rem; }
 
 /* Brand colours */
 .social-pill.ig {
