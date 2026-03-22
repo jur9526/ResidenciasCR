@@ -800,6 +800,14 @@ p  { color: var(--gray); font-size: .95rem; }
 .contact-item.wa .contact-item-icon { background: #dcfce7; color: var(--wa); }
 .contact-item.ig .contact-item-icon { background: #fdf4ff; color: #C13584; }
 .contact-item.e24 .contact-item-icon { background: #fff4ee; color: #FF6B00; }
+.contact-item.th .contact-item-icon { background: #f0f0f0; color: #101010; }
+.contact-item.fb .contact-item-icon { background: #e7f0fd; color: #1877F2; }
+.contact-item.tt .contact-item-icon { background: #f5f5f5; color: #EE1D52; }
+.contact-item.email .contact-item-icon { background: #eef2ff; color: #4F46E5; }
+.contact-item.th:hover { border-color: #101010; }
+.contact-item.fb:hover { border-color: #1877F2; }
+.contact-item.tt:hover { border-color: #EE1D52; }
+.contact-item.email:hover { border-color: #4F46E5; }
 .contact-item > div { flex: 1; }
 .contact-item strong { display: block; font-size: .88rem; font-weight: 600; color: var(--dark); }
 .contact-item > div > span { display: block; font-size: .8rem; color: var(--gray); }
