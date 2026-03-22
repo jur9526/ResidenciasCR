@@ -732,10 +732,10 @@ p  { color: var(--gray); font-size: .95rem; }
 .reasons-section .section-tag { }
 .reasons-section .section-header h2 { color: #fff; }
 .reasons-section .section-header p { color: rgba(255,255,255,.68); }
-.reasons-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; }
+.reasons-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1rem; }
 .reason-card {
   background: var(--white); border: 1.5px solid var(--light-gray);
-  border-radius: var(--radius); padding: 1.75rem 1.5rem;
+  border-radius: var(--radius); padding: 1.25rem 1rem;
   transition: box-shadow .25s, border-color .25s, transform .25s;
 }
 .reason-card:hover { box-shadow: var(--shadow); border-color: var(--red); transform: translateY(-3px); }
@@ -1048,6 +1048,7 @@ p  { color: var(--gray); font-size: .95rem; }
   align-items: center;
   gap: .5rem;
   margin-top: 1rem;
+  margin-left: -5rem;
   position: relative;
   cursor: pointer;
   transition: transform .25s;
