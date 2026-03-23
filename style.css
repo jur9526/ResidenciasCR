@@ -983,8 +983,13 @@ p  { color: var(--gray); font-size: .95rem; }
 .footer-col a  { font-size: .85rem; color: rgba(255,255,255,.45); transition: color .2s; }
 .footer-col a:hover { color: #fff; }
 .footer-bottom {
-  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
   font-size: .78rem; color: rgba(255,255,255,.28); flex-wrap: wrap;
+}
+.footer-pura-vida {
+  text-align: center; margin-top: 1.5rem;
+  font-size: 2rem; font-weight: 800; letter-spacing: .05em;
+  color: rgba(255,255,255,.15);
 }
 
 /* ============================================================
