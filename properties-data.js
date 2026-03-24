@@ -1,5 +1,21 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-23 16:11
+// Auto-generado por sync_encuentra24.py — 2026-03-24 14:23
 window.DEFAULT_PROPERTIES = [
+  {
+    "id": "E24-31892295",
+    "title": "Penthouse en venta ubicado en Curridabat",
+    "price": "$280,000",
+    "location": "Sanchez",
+    "beds": 3,
+    "baths": 3,
+    "area": "14 m²",
+    "type": "Penthouse",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892295",
+    "wa": "Me%20interesa%20la%20propiedad%2031892295%20en%20encuentra24",
+    "image": "assets/e24-31892295.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
+  },
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
@@ -49,6 +65,22 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-la-trinidad-de-moravia/28313598"
   },
   {
+    "id": "E24-32127494",
+    "title": "Venta de Casa en Condominio en San Pablo de Heredia",
+    "price": "₡100,000,000",
+    "location": "San Pablo",
+    "beds": 3,
+    "baths": 0,
+    "area": "171,79 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32127494",
+    "wa": "Me%20interesa%20la%20propiedad%2032127494%20en%20encuentra24",
+    "image": "assets/e24-32127494.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-san-pablo-de-heredia/32127494"
+  },
+  {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
     "price": "₡90,000,000",
@@ -65,38 +97,6 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   },
   {
-    "id": "E24-31939144",
-    "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡109,000,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 2,
-    "area": "168 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31939144",
-    "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24",
-    "image": "assets/e24-31939144.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
-  },
-  {
-    "id": "E24-31354896",
-    "title": "Apartamentos en Venta ubicados en Moravia",
-    "price": "₡48,000,000",
-    "location": "La Trinidad",
-    "beds": 2,
-    "baths": 1,
-    "area": "58 m²",
-    "type": "Apartamento",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31354896",
-    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24",
-    "image": "assets/e24-31354896.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
-  },
-  {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
     "price": "₡450,000,000\n-53%",
@@ -111,6 +111,54 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24",
     "image": "assets/e24-29377845.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
+  },
+  {
+    "id": "E24-30728594",
+    "title": "¡Oportunidad! Compre una casa y alquile la otra",
+    "price": "₡145,000,000\n-8%",
+    "location": "San Rafael",
+    "beds": 6,
+    "baths": 0,
+    "area": "357 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30728594",
+    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24",
+    "image": "assets/e24-30728594.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
+  },
+  {
+    "id": "E24-30885142",
+    "title": "¡Oportunidad en Paso Ancho- Dos casas en una!",
+    "price": "₡80,000,000",
+    "location": "San José Capital",
+    "beds": 8,
+    "baths": 1,
+    "area": "287 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30885142",
+    "wa": "Me%20interesa%20la%20propiedad%2030885142%20en%20encuentra24",
+    "image": "assets/e24-30885142.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-paso-ancho-dos-casas-en-una/30885142"
+  },
+  {
+    "id": "E24-30885230",
+    "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
+    "price": "₡120,000,000",
+    "location": "Coyol",
+    "beds": 5,
+    "baths": 2,
+    "area": "398 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30885230",
+    "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24",
+    "image": "assets/e24-30885230.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
   },
   {
     "id": "E24-31881424",
@@ -175,22 +223,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2030856191%20en%20encuentra24",
     "image": "assets/e24-30856191.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/finca-en-venta-sarchi-sur/30856191"
-  },
-  {
-    "id": "E24-31881388",
-    "title": "Casa en venta ubicada en San José, Desamparados",
-    "price": "₡57,000,000",
-    "location": "Desamparados",
-    "beds": 3,
-    "baths": 2,
-    "area": "9 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31881388",
-    "wa": "Me%20interesa%20la%20propiedad%2031881388%20en%20encuentra24",
-    "image": "assets/e24-31881388.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-san-jose-desamparados/31881388"
   },
   {
     "id": "E24-31254758",
