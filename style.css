@@ -705,11 +705,12 @@ p  { color: var(--gray); font-size: .95rem; }
 .property-features i { color: var(--red); font-size: .72rem; }
 
 .prop-e24-link {
-  display: flex; align-items: center; gap: .35rem;
-  font-size: .75rem; font-weight: 600; color: #FF6B00;
-  margin-top: .6rem; transition: gap .2s;
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-size: .78rem; font-weight: 600; color: #fff;
+  background: #E8176A; padding: .45rem 1rem; border-radius: 2rem;
+  margin-top: .75rem; text-decoration: none; transition: opacity .2s;
 }
-.prop-e24-link:hover { gap: .55rem; }
+.prop-e24-link:hover { opacity: .85; }
 
 .properties-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
 
