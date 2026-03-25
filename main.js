@@ -109,8 +109,8 @@ function buildPropertyCard(prop) {
         <div class="property-title">${prop.title}</div>
         <div class="property-location"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
         <div class="property-features">${beds}${baths}${area}</div>
+        ${e24Link}
       </div>
-      ${e24Link}
     </div>`;
 }
 
