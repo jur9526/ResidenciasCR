@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-25 12:30
+// Auto-generado por sync_encuentra24.py — 2026-03-25 14:17
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -7,7 +7,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
-    "area": "220 m²",
+    "area": "14 m²",
     "type": "Penthouse",
     "badge": "En Venta",
     "badgeClass": "",
