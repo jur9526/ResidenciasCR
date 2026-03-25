@@ -160,7 +160,7 @@ def parse_property_page(page, prop_id: str) -> dict:
     }
 
 
-# ── Descargar imagen ──────────────────────────────────────────
+# ── Descargar y comprimir imagen ──────────────────────────────
 def download_image(image_url: str, prop_id: str) -> str:
     if not image_url:
         return ""
@@ -168,7 +168,14 @@ def download_image(image_url: str, prop_id: str) -> str:
         r = requests.get(image_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
             path = ASSETS_DIR / f"e24-{prop_id}.jpg"
-            path.write_bytes(r.content)
+            try:
+                from PIL import Image
+                import io
+                img = Image.open(io.BytesIO(r.content)).convert("RGB")
+                img.thumbnail((800, 600), Image.LANCZOS)
+                img.save(path, "JPEG", quality=72, optimize=True)
+            except ImportError:
+                path.write_bytes(r.content)
             return f"assets/e24-{prop_id}.jpg"
     except Exception as e:
         print(f"    ⚠  Imagen {prop_id}: {str(e)[:40]}")
