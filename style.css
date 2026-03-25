@@ -251,7 +251,7 @@ p  { color: var(--gray); font-size: .95rem; }
    HERO
    ============================================================ */
 .hero {
-  position: relative; min-height: 100vh; max-height: 900px;
+  position: relative; min-height: 100vh;
   display: flex; align-items: center;
   padding-top: var(--nav-h);
   background: var(--black); overflow: hidden;
@@ -688,7 +688,7 @@ p  { color: var(--gray); font-size: .95rem; }
 .badge-apto      { background: #0891B2; color: #fff !important; }
 .badge-opp       { background: #D97706; color: #fff !important; }
 
-.property-body { padding: 1.1rem 1.25rem; display: flex; flex-direction: column; flex: 1; }
+.property-body { padding: 1.1rem 1.25rem; }
 .property-price { font-size: 1.25rem; font-weight: 800; color: var(--red); margin-bottom: .25rem; }
 .property-title { font-size: .95rem; font-weight: 600; color: var(--dark); margin-bottom: .4rem; line-height: 1.35; }
 .property-location {
@@ -705,11 +705,12 @@ p  { color: var(--gray); font-size: .95rem; }
 .property-features i { color: var(--red); font-size: .72rem; }
 
 .prop-e24-link {
+  position: absolute; top: .65rem; left: .65rem; z-index: 2;
   display: inline-flex; align-items: center; gap: .4rem;
-  font-size: .78rem; font-weight: 600; color: #fff;
-  background: #E8176A; padding: .45rem 1rem; border-radius: 2rem;
-  margin-top: auto; padding-top: .75rem; margin-left: auto;
+  font-size: .72rem; font-weight: 700; color: #fff;
+  background: #E8176A; padding: .35rem .85rem; border-radius: 2rem;
   text-decoration: none; transition: opacity .2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
 .prop-e24-link:hover { opacity: .85; }
 
