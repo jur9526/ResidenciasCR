@@ -97,7 +97,6 @@ function buildPropertyCard(prop) {
         <div class="prop-skeleton"></div>
         <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
-        ${e24Link}
         <div class="property-img-overlay">
           <a href="https://wa.me/50683725603?text=${prop.wa || 'Me%20interesa%20una%20propiedad'}"
              target="_blank" rel="noopener" class="prop-wa-btn">
@@ -111,6 +110,7 @@ function buildPropertyCard(prop) {
         <div class="property-location"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
         <div class="property-features">${beds}${baths}${area}</div>
       </div>
+      ${e24Link}
     </div>`;
 }
 

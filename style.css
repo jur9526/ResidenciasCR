@@ -251,7 +251,7 @@ p  { color: var(--gray); font-size: .95rem; }
    HERO
    ============================================================ */
 .hero {
-  position: relative; min-height: 100vh;
+  position: relative; min-height: 100vh; max-height: 860px;
   display: flex; align-items: center;
   padding-top: var(--nav-h);
   background: var(--black); overflow: hidden;
@@ -705,14 +705,13 @@ p  { color: var(--gray); font-size: .95rem; }
 .property-features i { color: var(--red); font-size: .72rem; }
 
 .prop-e24-link {
-  position: absolute; top: .65rem; left: .65rem; z-index: 2;
-  display: inline-flex; align-items: center; gap: .4rem;
-  font-size: .72rem; font-weight: 700; color: #fff;
-  background: #E8176A; padding: .35rem .85rem; border-radius: 2rem;
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  font-size: .82rem; font-weight: 700; color: #fff;
+  background: #E8176A; padding: .7rem 1rem;
+  border-radius: 0 0 var(--radius) var(--radius);
   text-decoration: none; transition: opacity .2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,.25);
 }
-.prop-e24-link:hover { opacity: .85; }
+.prop-e24-link:hover { opacity: .88; }
 
 .properties-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
 
