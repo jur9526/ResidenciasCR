@@ -1,5 +1,53 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-24 11:14
+// Auto-generado por sync_encuentra24.py — 2026-03-25 12:30
 window.DEFAULT_PROPERTIES = [
+  {
+    "id": "E24-31892295",
+    "title": "Penthouse en venta ubicado en Curridabat",
+    "price": "$280,000",
+    "location": "Sanchez",
+    "beds": 3,
+    "baths": 3,
+    "area": "220 m²",
+    "type": "Penthouse",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892295",
+    "wa": "Me%20interesa%20la%20propiedad%2031892295%20en%20encuentra24",
+    "image": "assets/e24-31892295.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
+  },
+  {
+    "id": "E24-31254567",
+    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
+    "price": "$480,000",
+    "location": "Ciudad Curridabat",
+    "beds": 5,
+    "baths": 3,
+    "area": "629 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "31254567",
+    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24",
+    "image": "assets/e24-31254567.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
+  },
+  {
+    "id": "E24-31881272",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "₡79,000,000",
+    "location": "Guácima",
+    "beds": 3,
+    "baths": 0,
+    "area": "170 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31881272",
+    "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24",
+    "image": "assets/e24-31881272.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
+  },
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
@@ -13,7 +61,7 @@ window.DEFAULT_PROPERTIES = [
     "badgeClass": "",
     "e24id": "31076847",
     "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    "image": "assets/e24-31076847.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
   },
   {
@@ -33,20 +81,20 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-la-trinidad-de-moravia/28313598"
   },
   {
-    "id": "E24-32127494",
-    "title": "Venta de Casa en Condominio en San Pablo de Heredia",
-    "price": "₡100,000,000",
-    "location": "San Pablo",
+    "id": "E24-31892169",
+    "title": "Casa en Venta ubicada en Moravia",
+    "price": "₡90,000,000",
+    "location": "Moravia",
     "beds": 3,
     "baths": 0,
-    "area": "171,79 m²",
+    "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "32127494",
-    "wa": "Me%20interesa%20la%20propiedad%2032127494%20en%20encuentra24",
-    "image": "assets/e24-32127494.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-san-pablo-de-heredia/32127494"
+    "e24id": "31892169",
+    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24",
+    "image": "assets/e24-31892169.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   },
   {
     "id": "E24-31939144",
@@ -55,7 +103,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
-    "area": "16 m²",
+    "area": "168 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -63,6 +111,38 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24",
     "image": "assets/e24-31939144.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
+  },
+  {
+    "id": "E24-31354896",
+    "title": "Apartamentos en Venta ubicados en Moravia",
+    "price": "₡48,000,000",
+    "location": "La Trinidad",
+    "beds": 2,
+    "baths": 1,
+    "area": "58 m²",
+    "type": "Apartamento",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31354896",
+    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24",
+    "image": "assets/e24-31354896.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
+  },
+  {
+    "id": "E24-31254818",
+    "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
+    "price": "₡103,000,000",
+    "location": "La Trinidad",
+    "beds": 3,
+    "baths": 5,
+    "area": "",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31254818",
+    "wa": "Me%20interesa%20la%20propiedad%2031254818%20en%20encuentra24",
+    "image": "assets/e24-31254818.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/la-casa-de-sus-suenos-en-la-trinidad-de-moravia/31254818"
   },
   {
     "id": "E24-29377845",
@@ -113,6 +193,22 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
   },
   {
+    "id": "E24-30885142",
+    "title": "¡Oportunidad en Paso Ancho- Dos casas en una!",
+    "price": "₡80,000,000",
+    "location": "San José Capital",
+    "beds": 8,
+    "baths": 1,
+    "area": "287 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30885142",
+    "wa": "Me%20interesa%20la%20propiedad%2030885142%20en%20encuentra24",
+    "image": "assets/e24-30885142.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-paso-ancho-dos-casas-en-una/30885142"
+  },
+  {
     "id": "E24-30885230",
     "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
     "price": "₡120,000,000",
@@ -127,6 +223,22 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24",
     "image": "assets/e24-30885230.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
+  },
+  {
+    "id": "E24-30422582",
+    "title": "Casa en Venta Ubicada en Coronado",
+    "price": "$430,000",
+    "location": "Vázquez de Coronado",
+    "beds": 5,
+    "baths": 4,
+    "area": "988 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30422582",
+    "wa": "Me%20interesa%20la%20propiedad%2030422582%20en%20encuentra24",
+    "image": "assets/e24-30422582.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-coronado/30422582"
   },
   {
     "id": "E24-30856282",
