@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-27 14:09
+// Auto-generado por sync_encuentra24.py — 2026-03-27 15:59
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
