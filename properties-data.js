@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-27 15:59
+// Auto-generado por sync_encuentra24.py — 2026-03-28 13:47
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -161,22 +161,6 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   },
   {
-    "id": "E24-31881424",
-    "title": "Venta de casa en el centro de Cononado",
-    "price": "₡70,000,000",
-    "location": "Vázquez de Coronado",
-    "beds": 3,
-    "baths": 1,
-    "area": "",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31881424",
-    "wa": "Me%20interesa%20la%20propiedad%2031881424%20en%20encuentra24",
-    "image": "assets/e24-31881424.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-el-centro-de-cononado/31881424"
-  },
-  {
     "id": "E24-30728594",
     "title": "¡Oportunidad! Compre una casa y alquile la otra",
     "price": "₡145,000,000\n-8%",
@@ -223,6 +207,22 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24",
     "image": "assets/e24-30885230.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
+  },
+  {
+    "id": "E24-31881424",
+    "title": "Venta de casa en el centro de Cononado",
+    "price": "₡70,000,000",
+    "location": "Vázquez de Coronado",
+    "beds": 3,
+    "baths": 1,
+    "area": "",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31881424",
+    "wa": "Me%20interesa%20la%20propiedad%2031881424%20en%20encuentra24",
+    "image": "assets/e24-31881424.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-el-centro-de-cononado/31881424"
   },
   {
     "id": "E24-30422582",
@@ -279,7 +279,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
-    "area": "",
+    "area": "0 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
