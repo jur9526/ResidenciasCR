@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-28 13:47
+// Auto-generado por sync_encuentra24.py — 2026-03-28 15:39
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -279,7 +279,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
-    "area": "0 m²",
+    "area": "",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
