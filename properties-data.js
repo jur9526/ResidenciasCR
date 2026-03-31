@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-03-30 16:11
+// Auto-generado por sync_encuentra24.py — 2026-03-31 14:26
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -455,7 +455,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Ulloa",
     "beds": 2,
     "baths": 2,
-    "area": "74 m²",
+    "area": "68 m²",
     "type": "Apartamento",
     "badge": "En Venta",
     "badgeClass": "",
