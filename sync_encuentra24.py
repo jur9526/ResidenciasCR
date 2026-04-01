@@ -155,7 +155,7 @@ def parse_property_page(page, prop_id: str) -> dict:
         "badgeClass": badge_class,
         "image_url":  image_url,   # temporal, se reemplaza abajo
         "e24id":      prop_id,
-        "wa":         f"Me%20interesa%20la%20propiedad%20{prop_id}%20en%20encuentra24",
+        "wa":         f"Me%20interesa%20la%20propiedad%20{prop_id}%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     }
 
 
@@ -218,12 +218,15 @@ def sync():
                     added += 1
             return added
 
-        def get_total_pages(html_content):
-            """Detecta el número total de páginas en el perfil."""
-            nums = re.findall(
-                r'/user/profile/id/13021117/page/(\d+)', html_content
-            )
-            return max((int(n) for n in nums), default=1)
+        def get_total_pages(page_element):
+            """Detecta el número total de páginas a partir del texto 'Resultados: 1 - 8 / 29'."""
+            from playwright.sync_api import Locator
+            text = page_element.evaluate("() => document.body.innerText")
+            m = re.search(r'Resultados:\s*\d+\s*-\s*\d+\s*/\s*(\d+)', text)
+            if m:
+                total_results = int(m.group(1))
+                return max(1, -(-total_results // 8))  # ceil
+            return 1
 
         # Página 1
         print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
@@ -240,12 +243,12 @@ def sync():
 
         html = page.content()
         found_p1 = scrape_profile_page(html)
-        total_pages = get_total_pages(html)
+        total_pages = get_total_pages(page)
         print(f"  Página 1: {found_p1} propiedades · Total de páginas detectadas: {total_pages}")
 
-        # Páginas 2..N
+        # Páginas 2..N (usa ?p=N)
         for pnum in range(2, total_pages + 1):
-            page_url = f"{PROFILE_URL}/page/{pnum}"
+            page_url = f"{PROFILE_URL}?p={pnum}"
             print(f"  Cargando página {pnum}: {page_url}")
             try:
                 page.goto(page_url, wait_until="networkidle", timeout=45000)
@@ -262,8 +265,7 @@ def sync():
                 print(f"  Página {pnum}: {found_n} propiedades nuevas")
                 # Si una página no agrega nada nueva, probablemente no existe
                 if found_n == 0:
-                    print(f"  Sin propiedades nuevas en página {pnum}, deteniendo.")
-                    break
+                    print(f"  ⚠ Sin propiedades nuevas en página {pnum}, continuando por si acaso...")
             except Exception as e:
                 print(f"  ⚠ Error en página {pnum}: {e}")
                 break
