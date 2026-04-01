@@ -13,7 +13,6 @@ Uso:
 import re
 import json
 import sys
-import socket
 import requests
 from pathlib import Path
 from datetime import datetime
@@ -160,7 +159,7 @@ def parse_property_page(page, prop_id: str) -> dict:
     }
 
 
-# ── Descargar y comprimir imagen ──────────────────────────────
+# ── Descargar imagen ──────────────────────────────────────────
 def download_image(image_url: str, prop_id: str) -> str:
     if not image_url:
         return ""
@@ -168,14 +167,7 @@ def download_image(image_url: str, prop_id: str) -> str:
         r = requests.get(image_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
             path = ASSETS_DIR / f"e24-{prop_id}.jpg"
-            try:
-                from PIL import Image
-                import io
-                img = Image.open(io.BytesIO(r.content)).convert("RGB")
-                img.thumbnail((800, 600), Image.LANCZOS)
-                img.save(path, "JPEG", quality=72, optimize=True)
-            except ImportError:
-                path.write_bytes(r.content)
+            path.write_bytes(r.content)
             return f"assets/e24-{prop_id}.jpg"
     except Exception as e:
         print(f"    ⚠  Imagen {prop_id}: {str(e)[:40]}")
@@ -196,23 +188,10 @@ def update_data_file(properties: list):
 
 
 # ── Sync principal ────────────────────────────────────────────
-def check_internet() -> bool:
-    try:
-        socket.setdefaulttimeout(5)
-        socket.create_connection(("8.8.8.8", 53))
-        return True
-    except OSError:
-        return False
-
-
 def sync():
     print("=" * 55)
     print(f"Sincronización Encuentra24 — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 55 + "\n")
-
-    if not check_internet():
-        print("✗ Sin conexión a internet. Abortando.")
-        sys.exit(0)
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
@@ -248,13 +227,13 @@ def sync():
 
         # Página 1
         print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
-        page.goto(PROFILE_URL, wait_until="domcontentloaded", timeout=45000)
-        page.wait_for_timeout(1500)
+        page.goto(PROFILE_URL, wait_until="networkidle", timeout=45000)
+        page.wait_for_timeout(3000)
 
         # Aceptar cookies (solo la primera vez)
         try:
             page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-            page.wait_for_timeout(800)
+            page.wait_for_timeout(2000)
             cookies_accepted = True
         except Exception:
             pass
@@ -269,12 +248,12 @@ def sync():
             page_url = f"{PROFILE_URL}/page/{pnum}"
             print(f"  Cargando página {pnum}: {page_url}")
             try:
-                page.goto(page_url, wait_until="domcontentloaded", timeout=45000)
-                page.wait_for_timeout(1000)
+                page.goto(page_url, wait_until="networkidle", timeout=45000)
+                page.wait_for_timeout(2500)
                 if not cookies_accepted:
                     try:
                         page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-                        page.wait_for_timeout(500)
+                        page.wait_for_timeout(1500)
                         cookies_accepted = True
                     except Exception:
                         pass
@@ -307,11 +286,11 @@ def sync():
                 print(f"  ⚠  {prop_id} — URL desconocida, saltando")
                 continue
             try:
-                page.goto(prop_url, wait_until="domcontentloaded", timeout=30000)
-                page.wait_for_timeout(800)
+                page.goto(prop_url, wait_until="networkidle", timeout=45000)
+                page.wait_for_timeout(2000)
                 try:
                     page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-                    page.wait_for_timeout(500)
+                    page.wait_for_timeout(1500)
                 except Exception:
                     pass
 

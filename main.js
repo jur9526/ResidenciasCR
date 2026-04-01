@@ -100,7 +100,7 @@ function buildPropertyCard(prop) {
         <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
         <div class="property-img-overlay">
-          <a href="https://wa.me/50683725603?text=${prop.wa || 'Me%20interesa%20una%20propiedad'}"
+          <a href="https://wa.me/50683725603?text=${prop.wa || 'Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas'}"
              target="_blank" rel="noopener" class="prop-wa-btn">
             <i class="fa-brands fa-whatsapp"></i> Consultar
           </a>
