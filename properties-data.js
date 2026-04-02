@@ -1,21 +1,5 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-02 14:27
+// Auto-generado por sync_encuentra24.py — 2026-04-02 16:11
 window.DEFAULT_PROPERTIES = [
-  {
-    "id": "E24-32217993",
-    "title": "Lotes y Terrenos El Rosario",
-    "price": "₡48,500,000",
-    "location": "Venta en Condominio en Naranjo : CRC 48500000.00",
-    "beds": 0,
-    "baths": 0,
-    "area": "922 m²",
-    "type": "Terreno",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32217993",
-    "wa": "Me%20interesa%20la%20propiedad%2032217993%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32217993.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/lote-en-venta-en-condominio-en-naranjo/32217993"
-  },
   {
     "id": "E24-32217972",
     "title": "Alquiler de Casas en El Guarco",
@@ -81,13 +65,29 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/oportunidad-unica-venta-de-lote-en-condominio-en-cartago/32217733"
   },
   {
+    "id": "E24-32216513",
+    "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
+    "price": "₡170,000,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 3,
+    "area": "161 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32216513",
+    "wa": "Me%20interesa%20la%20propiedad%2032216513%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216513.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-hermosa-casa-en-condominio/32216513"
+  },
+  {
     "id": "E24-32216446",
     "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
     "price": "₡115,000,000",
     "location": "Tres Ríos",
     "beds": 2,
     "baths": 5,
-    "area": "0 m²",
+    "area": "150 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -95,6 +95,22 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32216446.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
+  },
+  {
+    "id": "E24-32216373",
+    "title": "Casa en venta en centro Guadalupe, San José",
+    "price": "₡115,000,000",
+    "location": "Guadalupe",
+    "beds": 3,
+    "baths": 5,
+    "area": "159 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32216373",
+    "wa": "Me%20interesa%20la%20propiedad%2032216373%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216373.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-centro-guadalupe-san-jose/32216373"
   },
   {
     "id": "E24-31254818",
@@ -159,22 +175,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881272.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
-  },
-  {
-    "id": "E24-31892169",
-    "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡90,000,000",
-    "location": "Moravia",
-    "beds": 3,
-    "baths": 0,
-    "area": "104 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31892169",
-    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31892169.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   },
   {
     "id": "E24-31076847",
