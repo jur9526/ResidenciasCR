@@ -1,20 +1,36 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-02 16:11
+// Auto-generado por sync_encuentra24.py — 2026-04-03 14:06
 window.DEFAULT_PROPERTIES = [
   {
-    "id": "E24-32217972",
-    "title": "Alquiler de Casas en El Guarco",
-    "price": "₡300,000",
-    "location": "El Guarco",
-    "beds": 2,
-    "baths": 1,
-    "area": "",
+    "id": "E24-32218078",
+    "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
+    "price": "₡112,000,000",
+    "location": "Ulloa",
+    "beds": 3,
+    "baths": 5,
+    "area": "124 m²",
     "type": "Casa",
-    "badge": "Venta / Alquiler",
-    "badgeClass": "badge-special",
-    "e24id": "32217972",
-    "wa": "Me%20interesa%20la%20propiedad%2032217972%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32217972.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-alquiler-casas/casa-en-alquiler-en-el-guarco-de-cartago/32217972"
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32218078",
+    "wa": "Me%20interesa%20la%20propiedad%2032218078%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32218078.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
+  },
+  {
+    "id": "E24-32217993",
+    "title": "Lotes y Terrenos El Rosario",
+    "price": "₡48,500,000",
+    "location": "Venta en Condominio en Naranjo : CRC 48500000.00",
+    "beds": 0,
+    "baths": 0,
+    "area": "922 m²",
+    "type": "Terreno",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32217993",
+    "wa": "Me%20interesa%20la%20propiedad%2032217993%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32217993.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/lote-en-venta-en-condominio-en-naranjo/32217993"
   },
   {
     "id": "E24-32217920",
@@ -31,22 +47,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032217920%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32217920.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-alajuela-centro/32217920"
-  },
-  {
-    "id": "E24-32217792",
-    "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡78,000,000",
-    "location": "Dulce Nombre",
-    "beds": 3,
-    "baths": 2,
-    "area": "210 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32217792",
-    "wa": "Me%20interesa%20la%20propiedad%2032217792%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32217792.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-hermosa-casa-en-cartago/32217792"
   },
   {
     "id": "E24-32217733",
@@ -97,38 +97,6 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
   },
   {
-    "id": "E24-32216373",
-    "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡115,000,000",
-    "location": "Guadalupe",
-    "beds": 3,
-    "baths": 5,
-    "area": "159 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32216373",
-    "wa": "Me%20interesa%20la%20propiedad%2032216373%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32216373.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-centro-guadalupe-san-jose/32216373"
-  },
-  {
-    "id": "E24-31254818",
-    "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
-    "price": "₡103,000,000",
-    "location": "La Trinidad",
-    "beds": 3,
-    "baths": 5,
-    "area": "",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31254818",
-    "wa": "Me%20interesa%20la%20propiedad%2031254818%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254818.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/la-casa-de-sus-suenos-en-la-trinidad-de-moravia/31254818"
-  },
-  {
     "id": "E24-31354896",
     "title": "Apartamentos en Venta ubicados en Moravia",
     "price": "₡48,000,000",
@@ -177,6 +145,22 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
   },
   {
+    "id": "E24-31892169",
+    "title": "Casa en Venta ubicada en Moravia",
+    "price": "₡90,000,000",
+    "location": "Moravia",
+    "beds": 3,
+    "baths": 0,
+    "area": "104 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892169",
+    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31892169.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
+  },
+  {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
     "price": "$1,150,000",
@@ -209,19 +193,19 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-la-trinidad-de-moravia/28313598"
   },
   {
-    "id": "E24-30728594",
-    "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "₡145,000,000\n-8%",
-    "location": "San Rafael",
-    "beds": 6,
+    "id": "E24-29377845",
+    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
+    "price": "₡450,000,000\n-53%",
+    "location": "Tres Ríos",
+    "beds": 5,
     "baths": 0,
-    "area": "357 m²",
+    "area": "2,096 m²",
     "type": "Casa",
-    "badge": "Oportunidad",
-    "badgeClass": "badge-opp",
-    "e24id": "30728594",
-    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30728594.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377845",
+    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-29377845.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   }
 ];
