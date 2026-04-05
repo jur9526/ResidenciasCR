@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-05 13:55
+// Auto-generado por sync_encuentra24.py — 2026-04-05 15:46
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
@@ -65,20 +65,36 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-hermosa-casa-en-cartago/32217792"
   },
   {
-    "id": "E24-32216513",
-    "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡170,000,000",
+    "id": "E24-32217733",
+    "title": "Lotes y Terrenos Guadalupe",
+    "price": "₡36,000,000",
+    "location": "condominio en Cartago* : CRC 36000000.00",
+    "beds": 0,
+    "baths": 0,
+    "area": "151 m²",
+    "type": "Terreno",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32217733",
+    "wa": "Me%20interesa%20la%20propiedad%2032217733%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32217733.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/oportunidad-unica-venta-de-lote-en-condominio-en-cartago/32217733"
+  },
+  {
+    "id": "E24-32216446",
+    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
+    "price": "₡115,000,000",
     "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 3,
-    "area": "161 m²",
+    "beds": 2,
+    "baths": 5,
+    "area": "150 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "32216513",
-    "wa": "Me%20interesa%20la%20propiedad%2032216513%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32216513.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-hermosa-casa-en-condominio/32216513"
+    "e24id": "32216446",
+    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216446.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
   },
   {
     "id": "E24-32216373",
@@ -95,22 +111,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032216373%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32216373.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-centro-guadalupe-san-jose/32216373"
-  },
-  {
-    "id": "E24-31892295",
-    "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$280,000",
-    "location": "Sanchez",
-    "beds": 3,
-    "baths": 3,
-    "area": "14 m²",
-    "type": "Penthouse",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31892295",
-    "wa": "Me%20interesa%20la%20propiedad%2031892295%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31892295.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
   },
   {
     "id": "E24-31254567",
@@ -145,22 +145,6 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
   },
   {
-    "id": "E24-31939144",
-    "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡109,000,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 2,
-    "area": "168 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31939144",
-    "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31939144.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
-  },
-  {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
     "price": "₡90,000,000",
@@ -183,7 +167,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "La Trinidad",
     "beds": 3,
     "baths": 5,
-    "area": "",
+    "area": "8 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -215,7 +199,7 @@ window.DEFAULT_PROPERTIES = [
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "",
+    "area": "5 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -223,38 +207,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31076847.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
-  },
-  {
-    "id": "E24-28313598",
-    "title": "Venta de casa en condominio en la Trinidad de Moravia",
-    "price": "₡95,000,000",
-    "location": "La Trinidad",
-    "beds": 3,
-    "baths": 5,
-    "area": "120 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "28313598",
-    "wa": "Me%20interesa%20la%20propiedad%2028313598%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-28313598.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-condominio-en-la-trinidad-de-moravia/28313598"
-  },
-  {
-    "id": "E24-29377845",
-    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "₡450,000,000\n-53%",
-    "location": "Tres Ríos",
-    "beds": 5,
-    "baths": 0,
-    "area": "2,096 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "29377845",
-    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377845.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   },
   {
     "id": "E24-30885142",
