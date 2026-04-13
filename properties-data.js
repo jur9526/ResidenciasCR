@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-12 15:44
+// Auto-generado por sync_encuentra24.py — 2026-04-13 14:31
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "$ 260,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 110,000,000",
+    "price": "$ 220,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "$ 210,000",
+    "price": "$ 274,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -81,12 +81,28 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-centro-guadalupe-san-jose/32216373"
   },
   {
-    "id": "E24-30728594",
-    "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "₡ 127,000,000\n\n-6%",
-    "location": "San Rafael",
+    "id": "E24-31881272",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 145,000\n\n-2%",
+    "location": "Guácima",
     "beds": 3,
     "baths": 2,
+    "area": "170 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31881272",
+    "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31881272.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
+  },
+  {
+    "id": "E24-30728594",
+    "title": "¡Oportunidad! Compre una casa y alquile la otra",
+    "price": "$ 350,000",
+    "location": "San Rafael",
+    "beds": 3,
+    "baths": 1,
     "area": "357 m²",
     "type": "Casa",
     "badge": "Oportunidad",
@@ -99,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30885230",
     "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
-    "price": "$ 220,000",
+    "price": "₡ 120,000,000",
     "location": "Coyol",
     "beds": 2,
     "baths": 2,
@@ -113,9 +129,41 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
   },
   {
+    "id": "E24-29377845",
+    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
+    "price": "$ 925,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 5,
+    "area": "2,096 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377845",
+    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-29377845.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
+  },
+  {
+    "id": "E24-31254567",
+    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
+    "price": "₡ 188,000,000\n\n-5%",
+    "location": "Ciudad Curridabat",
+    "beds": 5,
+    "baths": 3,
+    "area": "400 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "31254567",
+    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254567.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
+  },
+  {
     "id": "E24-31881388",
     "title": "Casa en venta ubicada en San José, Desamparados",
-    "price": "₡ 55,000,000",
+    "price": "₡ 60,000,000",
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
@@ -127,37 +175,5 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881388%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881388.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-san-jose-desamparados/31881388"
-  },
-  {
-    "id": "E24-31354896",
-    "title": "Apartamentos en Venta ubicados en Moravia",
-    "price": "$ 99,000",
-    "location": "La Trinidad",
-    "beds": 2,
-    "baths": 1,
-    "area": "58 m²",
-    "type": "Apartamento",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31354896",
-    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31354896.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
-  },
-  {
-    "id": "E24-31881272",
-    "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 150,000",
-    "location": "Guácima",
-    "beds": 3,
-    "baths": 2,
-    "area": "170 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31881272",
-    "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31881272.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
   }
 ];
