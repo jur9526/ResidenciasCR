@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-15 16:11
+// Auto-generado por sync_encuentra24.py — 2026-04-16 14:52
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 298,000",
+    "price": "$ 300,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -15,6 +15,22 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031892295%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31892295.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
+  },
+  {
+    "id": "E24-32218078",
+    "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
+    "price": "$ 265,000",
+    "location": "Ulloa",
+    "beds": 3,
+    "baths": 5,
+    "area": "155 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32218078",
+    "wa": "Me%20interesa%20la%20propiedad%2032218078%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32218078.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
     "id": "E24-32217792",
@@ -33,25 +49,9 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-hermosa-casa-en-cartago/32217792"
   },
   {
-    "id": "E24-32218078",
-    "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 112,500,000",
-    "location": "Ulloa",
-    "beds": 3,
-    "baths": 5,
-    "area": "155 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32218078",
-    "wa": "Me%20interesa%20la%20propiedad%2032218078%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32218078.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
-  },
-  {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 199,000,000",
+    "price": "$ 345,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "$ 274,000",
+    "price": "₡ 115,000,000\n\n-12%",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881388",
     "title": "Casa en venta ubicada en San José, Desamparados",
-    "price": "₡ 49,950,000",
+    "price": "₡ 62,000,000",
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 160,000",
+    "price": "₡ 80,000,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 3,
+    "baths": 2,
     "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -111,38 +111,6 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881272.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
-  },
-  {
-    "id": "E24-31354896",
-    "title": "Apartamentos en Venta ubicados en Moravia",
-    "price": "$ 99,000",
-    "location": "La Trinidad",
-    "beds": 2,
-    "baths": 1,
-    "area": "58 m²",
-    "type": "Apartamento",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31354896",
-    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31354896.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
-  },
-  {
-    "id": "E24-30885230",
-    "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
-    "price": "₡ 140,000,000",
-    "location": "Coyol",
-    "beds": 2,
-    "baths": 2,
-    "area": "398 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30885230",
-    "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30885230.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
   },
   {
     "id": "E24-29377845",
@@ -163,7 +131,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "₡ 188,000,000\n\n-5%",
+    "price": "$ 430,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -175,5 +143,53 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31254567.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
+  },
+  {
+    "id": "E24-31354896",
+    "title": "Apartamentos en Venta ubicados en Moravia",
+    "price": "₡ 45,000,000",
+    "location": "La Trinidad",
+    "beds": 2,
+    "baths": 1,
+    "area": "58 m²",
+    "type": "Apartamento",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31354896",
+    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31354896.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
+  },
+  {
+    "id": "E24-30885230",
+    "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
+    "price": "$ 220,000",
+    "location": "Coyol",
+    "beds": 2,
+    "baths": 2,
+    "area": "398 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30885230",
+    "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30885230.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela/30885230"
+  },
+  {
+    "id": "E24-30728594",
+    "title": "¡Oportunidad! Compre una casa y alquile la otra",
+    "price": "$ 280,000",
+    "location": "San Rafael",
+    "beds": 3,
+    "baths": 5,
+    "area": "357 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30728594",
+    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30728594.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
   }
 ];
