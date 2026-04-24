@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-24 14:31
+// Auto-generado por sync_encuentra24.py — 2026-04-24 16:10
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "$ 290,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 440,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 265,000",
+    "price": "$ 250,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 124,000,000",
+    "price": "$ 215,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31354896",
     "title": "Apartamentos en Venta ubicados en Moravia",
-    "price": "₡ 45,000,000",
+    "price": "$ 99,000",
     "location": "La Trinidad",
     "beds": 2,
     "baths": 1,
@@ -111,5 +111,21 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31354896.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
+  },
+  {
+    "id": "E24-29377845",
+    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
+    "price": "$ 860,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 5,
+    "area": "64 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377845",
+    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-29377845.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   }
 ];
