@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-25 14:02
+// Auto-generado por sync_encuentra24.py — 2026-04-25 15:48
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 125,000,000",
+    "price": "₡ 120,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 179,000,000",
+    "price": "$ 425,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 215,000",
+    "price": "$ 220,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 155,000",
+    "price": "$ 159,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 2,
+    "baths": 5,
     "area": "64 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881388",
     "title": "Casa en venta ubicada en San José, Desamparados",
-    "price": "₡ 68,500,000",
+    "price": "₡ 65,000,000\n\n-7%",
     "location": "Desamparados",
     "beds": 3,
     "baths": 2,
