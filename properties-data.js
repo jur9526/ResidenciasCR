@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-25 15:48
+// Auto-generado por sync_encuentra24.py — 2026-04-26 14:04
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 122,500,000",
+    "price": "$ 245,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 425,000",
+    "price": "₡ 199,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 81,900,000",
+    "price": "₡ 90,000,000\n\n-3%",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 220,000",
+    "price": "₡ 110,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 205,000\n\n-1%",
+    "price": "$ 210,000",
     "location": "Moravia",
     "beds": 3,
     "baths": 5,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 159,000",
+    "price": "₡ 80,000,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "64 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -114,18 +114,66 @@ window.DEFAULT_PROPERTIES = [
   },
   {
     "id": "E24-31881388",
-    "title": "Casa en venta ubicada en San José, Desamparados",
-    "price": "₡ 65,000,000\n\n-7%",
-    "location": "Desamparados",
-    "beds": 3,
-    "baths": 2,
+    "title": "Casas Costa Rica",
+    "price": "$ 185,000-5%",
+    "location": "Costa Rica",
+    "beds": 2,
+    "baths": 5,
     "area": "64 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
     "e24id": "31881388",
     "wa": "Me%20interesa%20la%20propiedad%2031881388%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31881388.jpg",
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-san-jose-desamparados/31881388"
+  },
+  {
+    "id": "E24-32298356",
+    "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
+    "price": "$ 175,000",
+    "location": "Aserrí",
+    "beds": 3,
+    "baths": 2,
+    "area": "64 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "32298356",
+    "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32298356.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-unica-en-aserri/32298356"
+  },
+  {
+    "id": "E24-30856282",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 320,000",
+    "location": "Guácima",
+    "beds": 4,
+    "baths": 5,
+    "area": "64 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30856282",
+    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30856282.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
+  },
+  {
+    "id": "E24-32216446",
+    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
+    "price": "₡ 110,000,000",
+    "location": "Tres Ríos",
+    "beds": 2,
+    "baths": 5,
+    "area": "64 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32216446",
+    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216446.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
   }
 ];
