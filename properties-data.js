@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-26 15:51
+// Auto-generado por sync_encuentra24.py — 2026-04-27 15:03
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 245,000\n\n-2%",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 170,000,000",
+    "price": "$ 435,000\n\n-2%",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 81,900,000",
+    "price": "₡ 70,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 220,000",
+    "price": "₡ 112,500,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-32298356",
-    "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 67,500,000",
-    "location": "Aserrí",
-    "beds": 3,
-    "baths": 2,
+    "id": "E24-31254567",
+    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
+    "price": "$ 550,000\n\n-3%",
+    "location": "Ciudad Curridabat",
+    "beds": 5,
+    "baths": 3,
     "area": "64 m²",
     "type": "Casa",
     "badge": "Oportunidad",
     "badgeClass": "badge-opp",
-    "e24id": "32298356",
-    "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32298356.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-unica-en-aserri/32298356"
+    "e24id": "31254567",
+    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254567.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
   },
   {
-    "id": "E24-30856282",
-    "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 450,000",
-    "location": "Guácima",
+    "id": "E24-31254758",
+    "title": "Lotes y Terrenos en Copey",
+    "price": "$ 280,000",
+    "location": "COPEY DE DOTA!: CRC 130000000.00",
     "beds": 4,
-    "baths": 5,
+    "baths": 2,
     "area": "64 m²",
-    "type": "Casa",
+    "type": "Terreno",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "30856282",
-    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30856282.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
+    "e24id": "31254758",
+    "wa": "Me%20interesa%20la%20propiedad%2031254758%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254758.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
   },
   {
-    "id": "E24-32216446",
-    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "₡ 115,000,000",
-    "location": "Tres Ríos",
-    "beds": 2,
+    "id": "E24-31254818",
+    "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
+    "price": "$ 210,000",
+    "location": "La Trinidad",
+    "beds": 3,
     "baths": 5,
     "area": "64 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "32216446",
-    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32216446.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
+    "e24id": "31254818",
+    "wa": "Me%20interesa%20la%20propiedad%2031254818%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254818.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/la-casa-de-sus-suenos-en-la-trinidad-de-moravia/31254818"
   }
 ];
