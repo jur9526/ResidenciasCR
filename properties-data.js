@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-28 15:25
+// Auto-generado por sync_encuentra24.py — 2026-04-28 16:59
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 275,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 150,000,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 73,000,000",
+    "price": "₡ 90,000,000\n\n-3%",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 110,000,000",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -79,6 +79,54 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032218078%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32218078.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
+  },
+  {
+    "id": "E24-32298356",
+    "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
+    "price": "₡ 73,900,000\n\n-3%",
+    "location": "Aserrí",
+    "beds": 3,
+    "baths": 2,
+    "area": "140 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "32298356",
+    "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32298356.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-unica-en-aserri/32298356"
+  },
+  {
+    "id": "E24-30856282",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 390,000",
+    "location": "Guácima",
+    "beds": 3,
+    "baths": 5,
+    "area": "2 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30856282",
+    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30856282.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
+  },
+  {
+    "id": "E24-32216446",
+    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
+    "price": "₡ 107,000,000\n\n-10%",
+    "location": "Tres Ríos",
+    "beds": 2,
+    "baths": 5,
+    "area": "150 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32216446",
+    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216446.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
   },
   {
     "id": "E24-31354896",
@@ -115,10 +163,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 185,000",
+    "price": "$ 215,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 1,
+    "baths": 3,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
