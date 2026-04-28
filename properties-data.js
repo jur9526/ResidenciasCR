@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-27 16:47
+// Auto-generado por sync_encuentra24.py — 2026-04-28 15:25
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 440,000",
+    "price": "₡ 150,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 250,000",
+    "price": "₡ 110,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-31254567",
-    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 550,000\n\n-3%",
-    "location": "Ciudad Curridabat",
-    "beds": 5,
-    "baths": 3,
-    "area": "400 m²",
-    "type": "Casa",
-    "badge": "Oportunidad",
-    "badgeClass": "badge-opp",
-    "e24id": "31254567",
-    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254567.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
-  },
-  {
-    "id": "E24-31254758",
-    "title": "Lotes y Terrenos en Copey",
-    "price": "$ 280,000",
-    "location": "COPEY DE DOTA!: CRC 130000000.00",
-    "beds": 4,
-    "baths": 2,
-    "area": "3,695 m²",
-    "type": "Terreno",
+    "id": "E24-31354896",
+    "title": "Apartamentos en Venta ubicados en Moravia",
+    "price": "$ 99,000",
+    "location": "La Trinidad",
+    "beds": 2,
+    "baths": 1,
+    "area": "58 m²",
+    "type": "Apartamento",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "31254758",
-    "wa": "Me%20interesa%20la%20propiedad%2031254758%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254758.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
+    "e24id": "31354896",
+    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31354896.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
   },
   {
-    "id": "E24-31254818",
-    "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
-    "price": "$ 210,000",
-    "location": "La Trinidad",
+    "id": "E24-31881272",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 159,000",
+    "location": "Guácima",
     "beds": 3,
     "baths": 5,
-    "area": "147 m²",
+    "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "31254818",
-    "wa": "Me%20interesa%20la%20propiedad%2031254818%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254818.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/la-casa-de-sus-suenos-en-la-trinidad-de-moravia/31254818"
+    "e24id": "31881272",
+    "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31881272.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
+  },
+  {
+    "id": "E24-31892169",
+    "title": "Casa en Venta ubicada en Moravia",
+    "price": "$ 185,000",
+    "location": "Moravia",
+    "beds": 3,
+    "baths": 1,
+    "area": "104 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892169",
+    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31892169.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   }
 ];
