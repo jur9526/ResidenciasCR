@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-29 15:11
+// Auto-generado por sync_encuentra24.py — 2026-04-29 16:48
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 130,000,000",
+    "price": "$ 274,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 150,000,000",
+    "price": "$ 425,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 79,000,000",
+    "price": "₡ 73,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -65,13 +65,29 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-hermosa-casa-en-cartago/32217792"
   },
   {
+    "id": "E24-32218078",
+    "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
+    "price": "₡ 110,000,000",
+    "location": "Ulloa",
+    "beds": 3,
+    "baths": 5,
+    "area": "155 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32218078",
+    "wa": "Me%20interesa%20la%20propiedad%2032218078%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32218078.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
+  },
+  {
     "id": "E24-32216446",
     "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "₡115,000,000",
+    "price": "$ 215,000",
     "location": "Tres Ríos",
-    "beds": 0,
-    "baths": 0,
-    "area": "",
+    "beds": 2,
+    "baths": 5,
+    "area": "150 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -83,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30127424",
     "title": "Venta Apartamento Condominio BAMBU",
-    "price": "$ 145,000\n\n-3%",
+    "price": "$ 145,000",
     "location": "Ulloa",
     "beds": 2,
     "baths": 2,
@@ -99,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 89,000,000",
+    "price": "₡ 97,000,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
