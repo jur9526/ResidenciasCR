@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-29 16:48
+// Auto-generado por sync_encuentra24.py — 2026-04-30 16:26
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 122,500,000",
+    "price": "$ 245,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "$ 274,000",
+    "price": "₡ 137,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 425,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 73,000,000",
+    "price": "₡ 81,900,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 110,000,000",
+    "price": "₡ 112,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-32216446",
-    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "$ 215,000",
-    "location": "Tres Ríos",
-    "beds": 2,
-    "baths": 5,
-    "area": "150 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32216446",
-    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32216446.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
-  },
-  {
-    "id": "E24-30127424",
-    "title": "Venta Apartamento Condominio BAMBU",
-    "price": "$ 145,000",
-    "location": "Ulloa",
-    "beds": 2,
-    "baths": 2,
-    "area": "74 m²",
-    "type": "Apartamento",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30127424",
-    "wa": "Me%20interesa%20la%20propiedad%2030127424%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30127424.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/venta-apartamento-condominio-bambu/30127424"
-  },
-  {
-    "id": "E24-32217920",
-    "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 97,000,000",
-    "location": "Alajuela Centro",
+    "id": "E24-30856282",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 320,000",
+    "location": "Guácima",
     "beds": 3,
-    "baths": 3,
-    "area": "192 m²",
+    "baths": 5,
+    "area": "2 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "32217920",
-    "wa": "Me%20interesa%20la%20propiedad%2032217920%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32217920.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-alajuela-centro/32217920"
+    "e24id": "30856282",
+    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30856282.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
+  },
+  {
+    "id": "E24-31939144",
+    "title": "Venta de Casa en La Unión de Tres Ríos",
+    "price": "$ 225,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 2,
+    "area": "200 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31939144",
+    "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31939144.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
+  },
+  {
+    "id": "E24-31076847",
+    "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
+    "price": "$ 1,100,000",
+    "location": "Santa Ana Centro",
+    "beds": 4,
+    "baths": 5,
+    "area": "470 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31076847",
+    "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31076847.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
   }
 ];
