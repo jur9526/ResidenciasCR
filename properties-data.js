@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-04-30 16:26
+// Auto-generado por sync_encuentra24.py — 2026-05-01 14:16
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 245,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 137,000,000",
+    "price": "₡ 125,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 112,000,000",
+    "price": "$ 260,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,25 +81,9 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-30856282",
-    "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 320,000",
-    "location": "Guácima",
-    "beds": 3,
-    "baths": 5,
-    "area": "2 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30856282",
-    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30856282.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
-  },
-  {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 225,000",
+    "price": "$ 240,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -113,19 +97,35 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
   },
   {
-    "id": "E24-31076847",
-    "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 1,100,000",
-    "location": "Santa Ana Centro",
-    "beds": 4,
-    "baths": 5,
-    "area": "470 m²",
+    "id": "E24-32273860",
+    "title": "Estrena casa en Santo Domingo de Heredia",
+    "price": "₡ 79,000,000",
+    "location": "Santo Domingo",
+    "beds": 1,
+    "baths": 2,
+    "area": "115 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "31076847",
-    "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31076847.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
+    "e24id": "32273860",
+    "wa": "Me%20interesa%20la%20propiedad%2032273860%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32273860.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrena-casa-en-santo-domingo-de-heredia/32273860"
+  },
+  {
+    "id": "E24-30728594",
+    "title": "¡Oportunidad! Compre una casa y alquile la otra",
+    "price": "₡ 127,000,000\n\n-15%",
+    "location": "San Rafael",
+    "beds": 3,
+    "baths": 2,
+    "area": "357 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30728594",
+    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30728594.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
   }
 ];
