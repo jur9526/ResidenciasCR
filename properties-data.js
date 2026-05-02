@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-01 16:02
+// Auto-generado por sync_encuentra24.py — 2026-05-02 14:09
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 245,000",
+    "price": "$ 290,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 137,000,000",
+    "price": "$ 290,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 164,000,000",
+    "price": "$ 375,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 73,000,000",
+    "price": "₡ 70,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-31939144",
-    "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 215,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 2,
-    "area": "200 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31939144",
-    "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31939144.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
-  },
-  {
-    "id": "E24-32273860",
-    "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "₡ 79,000,000",
-    "location": "Santo Domingo",
-    "beds": 1,
-    "baths": 2,
-    "area": "115 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32273860",
-    "wa": "Me%20interesa%20la%20propiedad%2032273860%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32273860.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrena-casa-en-santo-domingo-de-heredia/32273860"
-  },
-  {
-    "id": "E24-30728594",
-    "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "$ 340,000",
-    "location": "San Rafael",
+    "id": "E24-32298356",
+    "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
+    "price": "₡ 75,000,000\n\n-6%",
+    "location": "Aserrí",
     "beds": 3,
-    "baths": 1,
-    "area": "357 m²",
+    "baths": 2,
+    "area": "140 m²",
     "type": "Casa",
     "badge": "Oportunidad",
     "badgeClass": "badge-opp",
-    "e24id": "30728594",
-    "wa": "Me%20interesa%20la%20propiedad%2030728594%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30728594.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-compre-una-casa-y-alquile-la-otra/30728594"
+    "e24id": "32298356",
+    "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32298356.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-unica-en-aserri/32298356"
+  },
+  {
+    "id": "E24-31892169",
+    "title": "Casa en Venta ubicada en Moravia",
+    "price": "$ 210,000",
+    "location": "Moravia",
+    "beds": 3,
+    "baths": 2,
+    "area": "104 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892169",
+    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31892169.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
+  },
+  {
+    "id": "E24-31076847",
+    "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
+    "price": "$ 995,000",
+    "location": "Santa Ana Centro",
+    "beds": 4,
+    "baths": 5,
+    "area": "450 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31076847",
+    "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31076847.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
   }
 ];
