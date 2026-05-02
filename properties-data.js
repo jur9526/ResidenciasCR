@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-02 14:09
+// Auto-generado por sync_encuentra24.py — 2026-05-02 15:55
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 325,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 375,000",
+    "price": "$ 425,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 110,000,000",
+    "price": "₡ 103,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32298356",
     "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 75,000,000\n\n-6%",
+    "price": "₡ 67,500,000",
     "location": "Aserrí",
     "beds": 3,
     "baths": 2,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 210,000",
+    "price": "$ 210,000\n\n-5%",
     "location": "Moravia",
     "beds": 3,
-    "baths": 2,
+    "baths": 3,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -115,11 +115,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 995,000",
+    "price": "$ 1,175,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "450 m²",
+    "area": "470 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
