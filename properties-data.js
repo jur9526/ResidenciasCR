@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-03 15:55
+// Auto-generado por sync_encuentra24.py — 2026-05-04 16:54
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 275,000",
+    "price": "$ 320,000\n\n-2%",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "$ 274,000",
+    "price": "₡ 125,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 164,000,000",
+    "price": "₡ 152,500,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 81,900,000",
+    "price": "₡ 73,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 260,000",
+    "price": "₡ 110,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-31354896",
-    "title": "Apartamentos en Venta ubicados en Moravia",
-    "price": "₡ 45,000,000",
-    "location": "La Trinidad",
-    "beds": 2,
-    "baths": 1,
-    "area": "58 m²",
-    "type": "Apartamento",
+    "id": "E24-31881272",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "$ 175,000",
+    "location": "Guácima",
+    "beds": 3,
+    "baths": 2,
+    "area": "170 m²",
+    "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "31354896",
-    "wa": "Me%20interesa%20la%20propiedad%2031354896%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31354896.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/apartamentos-en-venta-ubicados-en-moravia/31354896"
+    "e24id": "31881272",
+    "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31881272.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
   },
   {
-    "id": "E24-31254567",
-    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 550,000\n\n-3%",
-    "location": "Ciudad Curridabat",
-    "beds": 5,
-    "baths": 3,
-    "area": "400 m²",
-    "type": "Casa",
-    "badge": "Oportunidad",
-    "badgeClass": "badge-opp",
-    "e24id": "31254567",
-    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254567.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
-  },
-  {
-    "id": "E24-31254758",
-    "title": "Lotes y Terrenos en Copey",
-    "price": "$ 280,000",
-    "location": "COPEY DE DOTA!: CRC 130000000.00",
-    "beds": 4,
-    "baths": 2,
-    "area": "3,695 m²",
+    "id": "E24-32369690",
+    "title": "Lotes y Terrenos en Bagaces",
+    "price": "$ 186,000",
+    "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
+    "beds": 2,
+    "baths": 1,
+    "area": "8,200 m²",
     "type": "Terreno",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "31254758",
-    "wa": "Me%20interesa%20la%20propiedad%2031254758%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254758.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
+    "e24id": "32369690",
+    "wa": "Me%20interesa%20la%20propiedad%2032369690%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32369690.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/finca-en-venta-con-vistas-al-volcan-tenorio/32369690"
+  },
+  {
+    "id": "E24-30422582",
+    "title": "Casa en Venta Ubicada en Coronado",
+    "price": "$ 375,000",
+    "location": "Vázquez de Coronado",
+    "beds": 5,
+    "baths": 4,
+    "area": "988 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "30422582",
+    "wa": "Me%20interesa%20la%20propiedad%2030422582%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30422582.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-coronado/30422582"
   }
 ];
