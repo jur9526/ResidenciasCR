@@ -309,6 +309,28 @@
       font-weight: 700;
     }
 
+    /* ── SITE BUTTON ── */
+    .btn-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: #fff;
+      border: 2px solid var(--red);
+      color: var(--red);
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-site:hover, .btn-site:active {
+      background: var(--red);
+      color: #fff;
+    }
+
     /* ── FOOTER ── */
     .footer-note {
       font-size: 12px;
@@ -397,8 +419,13 @@
       <p class="countdown-num" id="countNum">10 seg</p>
     </div>
 
+    <a href="https://residenciascostarica.com" class="btn-site">
+      <i class="fa-solid fa-house-chimney"></i>
+      Ver todas las propiedades
+    </a>
+
     <p class="footer-note">
-      <a href="/">residenciascostarica.com</a> · +506 8372-5603
+      <a href="https://residenciascostarica.com">residenciascostarica.com</a> · +506 8372-5603
     </p>
 
   </div>
