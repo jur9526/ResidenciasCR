@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-07 15:27
+// Auto-generado por sync_encuentra24.py — 2026-05-07 16:58
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 320,000\n\n-2%",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 120,000,000",
+    "price": "₡ 90,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 160,000,000",
+    "price": "₡ 145,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 70,000,000",
+    "price": "₡ 81,900,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 110,000,000",
+    "price": "$ 280,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -83,9 +83,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 975,000",
+    "price": "$ 820,000",
     "location": "Tres Ríos",
-    "beds": 4,
+    "beds": 6,
     "baths": 5,
     "area": "2,096 m²",
     "type": "Casa",
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30127424",
     "title": "Venta Apartamento Condominio BAMBU",
-    "price": "₡ 65,000,000",
+    "price": "₡ 72,000,000",
     "location": "Ulloa",
     "beds": 2,
     "baths": 2,
