@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-08 14:49
+// Auto-generado por sync_encuentra24.py — 2026-05-08 16:21
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 100,000,000",
+    "price": "₡ 105,000,000\n\n-9%",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 425,000",
+    "price": "₡ 149,990,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 65,000,000",
+    "price": "₡ 79,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216446",
     "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "₡ 122,000,000",
+    "price": "₡ 110,000,000",
     "location": "Tres Ríos",
     "beds": 2,
     "baths": 5,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "$ 250,000",
+    "price": "₡ 84,500,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
