@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-07 16:58
+// Auto-generado por sync_encuentra24.py — 2026-05-08 14:49
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 122,500,000",
+    "price": "$ 290,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 90,000,000",
+    "price": "₡ 100,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 145,000,000",
+    "price": "$ 425,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 81,900,000",
+    "price": "₡ 65,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 280,000",
+    "price": "₡ 110,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-lagunilla-de-heredia/32218078"
   },
   {
-    "id": "E24-29377845",
-    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 820,000",
+    "id": "E24-32216446",
+    "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
+    "price": "₡ 122,000,000",
     "location": "Tres Ríos",
-    "beds": 6,
+    "beds": 2,
     "baths": 5,
-    "area": "2,096 m²",
+    "area": "150 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "29377845",
-    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377845.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
+    "e24id": "32216446",
+    "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216446.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
   },
   {
-    "id": "E24-29377968",
-    "title": "Casa en venta ubicada en Zapote",
-    "price": "₡ 76,500,000",
-    "location": "Zapote",
+    "id": "E24-32217920",
+    "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
+    "price": "$ 250,000",
+    "location": "Alajuela Centro",
+    "beds": 3,
+    "baths": 3,
+    "area": "180 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32217920",
+    "wa": "Me%20interesa%20la%20propiedad%2032217920%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32217920.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-alajuela-centro/32217920"
+  },
+  {
+    "id": "E24-30885142",
+    "title": "¡Oportunidad en Paso Ancho- Dos casas en una!",
+    "price": "₡ 85,000,000",
+    "location": "San José Capital",
     "beds": 3,
     "baths": 1,
-    "area": "2 m²",
+    "area": "287 m²",
     "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "29377968",
-    "wa": "Me%20interesa%20la%20propiedad%2029377968%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377968.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-zapote/29377968"
-  },
-  {
-    "id": "E24-30127424",
-    "title": "Venta Apartamento Condominio BAMBU",
-    "price": "₡ 72,000,000",
-    "location": "Ulloa",
-    "beds": 2,
-    "baths": 2,
-    "area": "74 m²",
-    "type": "Apartamento",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30127424",
-    "wa": "Me%20interesa%20la%20propiedad%2030127424%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30127424.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-apartamentos/venta-apartamento-condominio-bambu/30127424"
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "30885142",
+    "wa": "Me%20interesa%20la%20propiedad%2030885142%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30885142.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-paso-ancho-dos-casas-en-una/30885142"
   }
 ];
