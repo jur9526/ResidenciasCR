@@ -16,7 +16,8 @@
       --dark:     #111827;
       --gray:     #6B7280;
       --cream:    #F9F8F6;
-      --radius:   12px;
+      --wa:       #25D366;
+      --wa-dark:  #128C7E;
     }
 
     body {
@@ -30,7 +31,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ── NAVBAR ── */
     .navbar {
       width: 100%;
       background: #fff;
@@ -63,7 +63,6 @@
       font-size: 16px;
     }
 
-    /* ── MAIN ── */
     .page {
       flex: 1;
       width: 100%;
@@ -75,7 +74,6 @@
       gap: 24px;
     }
 
-    /* ── AGENT CARD ── */
     .agent-card {
       background: #fff;
       border: 1px solid #E5E7EB;
@@ -113,7 +111,6 @@
       font-weight: 700;
     }
 
-    /* ── SOURCE BADGE ── */
     .source-badge {
       display: none;
       align-items: center;
@@ -123,11 +120,10 @@
       font-size: 13px;
       font-weight: 700;
     }
-    .source-badge.tiktok   { background: #f0fdfb; border: 1.5px solid #25f4ee; color: #008a87; }
+    .source-badge.tiktok    { background: #f0fdfb; border: 1.5px solid #25f4ee; color: #008a87; }
     .source-badge.instagram { background: #fff0f5; border: 1.5px solid #e1306c; color: #c0215c; }
     .source-badge.facebook  { background: #eff6ff; border: 1.5px solid #1877F2; color: #1877F2; }
 
-    /* ── PROPERTY CARD ── */
     .prop-card {
       display: none;
       width: 100%;
@@ -160,7 +156,6 @@
     .prop-key { color: var(--gray); font-weight: 600; text-transform: capitalize; white-space: nowrap; }
     .prop-val { color: var(--dark); font-weight: 700; text-align: right; word-break: break-word; }
 
-    /* ── CTA AREA ── */
     .cta-area {
       width: 100%;
       display: flex;
@@ -193,21 +188,18 @@
       width: 100%;
     }
 
-    @media (max-width: 380px) {
-      .arrows-side { display: none; }
-    }
+    @media (max-width: 380px) { .arrows-side { display: none; } }
 
     .arr {
-      color: var(--red);
+      color: var(--wa);
       font-size: clamp(32px, 9vw, 52px);
-      filter: drop-shadow(0 0 8px rgba(196,30,30,.5));
+      filter: drop-shadow(0 0 10px rgba(37,211,102,.8));
     }
 
-    .top .arr    { animation: bounce-down  0.7s ease-in-out infinite; }
-    .bottom .arr { animation: bounce-up    0.7s ease-in-out infinite; }
+    .top .arr        { animation: bounce-down  0.7s ease-in-out infinite; }
+    .bottom .arr     { animation: bounce-up    0.7s ease-in-out infinite; }
     .side-left .arr  { animation: bounce-right 0.7s ease-in-out infinite; }
     .side-right .arr { animation: bounce-left  0.7s ease-in-out infinite; }
-
     .arr:nth-child(2) { animation-delay: 0.15s; }
     .arr:nth-child(3) { animation-delay: 0.30s; }
     .arr:nth-child(4) { animation-delay: 0.45s; }
@@ -217,8 +209,7 @@
     @keyframes bounce-right { 0%,100%{transform:translateX(-8px);opacity:.5} 50%{transform:translateX(8px);opacity:1} }
     @keyframes bounce-left  { 0%,100%{transform:translateX(8px);opacity:.5}  50%{transform:translateX(-8px);opacity:1} }
 
-    /* ── MAIN CTA BUTTON ── */
-    .btn-site {
+    .btn-wa {
       flex: 1;
       display: flex;
       align-items: center;
@@ -226,37 +217,62 @@
       gap: 12px;
       padding: 22px 20px;
       border-radius: 18px;
-      background: var(--red);
+      background: linear-gradient(135deg, var(--wa), var(--wa-dark));
       color: #fff;
-      font-size: clamp(17px, 5vw, 22px);
+      font-size: clamp(18px, 5vw, 22px);
       font-weight: 900;
       text-decoration: none;
-      box-shadow: 0 8px 32px rgba(196,30,30,.35);
+      box-shadow: 0 8px 32px rgba(37,211,102,.40);
       transition: transform 0.15s, box-shadow 0.15s;
-      animation: pulse-red 2s ease-in-out infinite;
+      animation: pulse-wa 2s ease-in-out infinite;
       text-align: center;
       line-height: 1.2;
     }
-    .btn-site:hover, .btn-site:active {
-      background: var(--red-dark);
-      transform: scale(1.03);
+    .btn-wa:hover, .btn-wa:active {
+      transform: scale(1.04);
+      box-shadow: 0 12px 48px rgba(37,211,102,.60);
       animation: none;
     }
-    .btn-site i { font-size: clamp(26px, 7vw, 34px); flex-shrink: 0; }
-    .btn-site-text { display: flex; flex-direction: column; align-items: center; }
-    .btn-site-text small { font-size: 12px; font-weight: 500; opacity: 0.85; }
+    .btn-wa i { font-size: clamp(28px, 8vw, 36px); flex-shrink: 0; }
+    .btn-wa-text { display: flex; flex-direction: column; align-items: center; }
+    .btn-wa-text small { font-size: 12px; font-weight: 500; opacity: 0.85; }
 
-    @keyframes pulse-red {
-      0%,100%{ box-shadow: 0 8px 32px rgba(196,30,30,.35); }
-      50%    { box-shadow: 0 8px 48px rgba(196,30,30,.60); }
+    @keyframes pulse-wa {
+      0%,100%{ box-shadow: 0 8px 32px rgba(37,211,102,.40); }
+      50%    { box-shadow: 0 8px 48px rgba(37,211,102,.65); }
     }
 
-    /* ── FOOTER ── */
-    .footer-note {
-      font-size: 12px;
-      color: #9CA3AF;
-      text-align: center;
+    .countdown-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
     }
+    .countdown-label { font-size: 12px; color: var(--gray); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
+    .countdown-bar-track { width: 180px; height: 5px; background: #E5E7EB; border-radius: 99px; overflow: hidden; }
+    .countdown-bar-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--wa), var(--wa-dark)); border-radius: 99px; transition: width 1s linear; }
+    .countdown-num { font-size: 12px; color: #9CA3AF; font-weight: 700; }
+
+    .btn-site {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: #fff;
+      border: 2px solid var(--red);
+      color: var(--red);
+      font-size: 16px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .btn-site:hover, .btn-site:active { background: var(--red); color: #fff; }
+
+    .footer-note { font-size: 12px; color: #9CA3AF; text-align: center; }
     .footer-note a { color: var(--red); font-weight: 600; text-decoration: none; }
   </style>
 </head>
@@ -276,7 +292,7 @@
       <div class="agent-info">
         <p class="agent-name">Floribeth Elizondo</p>
         <p class="agent-title">Asesora Inmobiliaria · Costa Rica</p>
-        <span class="agent-badge"><i class="fa-solid fa-circle-check"></i> Asesora certificada</span>
+        <span class="agent-badge"><i class="fa-solid fa-circle-check"></i> Responde en minutos</span>
       </div>
     </div>
 
@@ -298,11 +314,11 @@
           <i class="arr fa-solid fa-angles-right"></i>
         </div>
 
-        <a class="btn-site" href="https://residenciascostarica.com">
-          <i class="fa-solid fa-house-chimney"></i>
-          <span class="btn-site-text">
-            Ver todas las propiedades
-            <small>residenciascostarica.com</small>
+        <a class="btn-wa" id="waBtn" href="#" target="_blank" rel="noopener">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span class="btn-wa-text">
+            Escribir a Floribeth
+            <small>WhatsApp — Respuesta inmediata</small>
           </span>
         </a>
 
@@ -321,6 +337,19 @@
 
     </div>
 
+    <div class="countdown-wrap" id="countdownWrap">
+      <p class="countdown-label">Te conectamos automáticamente en</p>
+      <div class="countdown-bar-track">
+        <div class="countdown-bar-fill" id="bar"></div>
+      </div>
+      <p class="countdown-num" id="countNum">10 seg</p>
+    </div>
+
+    <a href="https://residenciascostarica.com" class="btn-site">
+      <i class="fa-solid fa-house-chimney"></i>
+      Ver todas las propiedades
+    </a>
+
     <p class="footer-note">
       <a href="https://residenciascostarica.com">residenciascostarica.com</a> · +506 8372-5603
     </p>
@@ -331,15 +360,39 @@
     const params = new URLSearchParams(window.location.search);
     const PROP_EXCLUDE = new Set(['source','link','utm_source','utm_medium','utm_content','utm_campaign','utm_term']);
 
-    const source = (params.get('source') || params.get('utm_source') || '').toLowerCase();
+    const source      = (params.get('source')      || params.get('utm_source')  || '').toLowerCase();
+    const adLink      = params.get('link')          || params.get('utm_content') || '';
+    const utmCampaign = params.get('utm_campaign')  || '';
+    const utmMedium   = params.get('utm_medium')    || '';
+    const utmTerm     = params.get('utm_term')      || '';
 
     const propEntries = [];
     for (const [k, v] of params.entries()) {
       if (!PROP_EXCLUDE.has(k)) propEntries.push([k, v]);
     }
 
-    // Source badge
     const PLATFORM_LABELS = { tiktok: 'TikTok', instagram: 'Instagram', facebook: 'Facebook', google: 'Google Ads' };
+    const platformLabel = PLATFORM_LABELS[source] || (source ? source.charAt(0).toUpperCase() + source.slice(1) : '');
+
+    // Mensaje WhatsApp
+    let msg = 'Hola Floribeth de residenciascostarica.com, estoy interesado en la casa';
+    if (propEntries.length > 0) {
+      msg += ':\n' + propEntries.map(([k,v]) => `• ${k}: ${v}`).join('\n');
+    }
+    const originLines = [];
+    if (platformLabel) originLines.push(`• Plataforma: ${platformLabel}`);
+    if (utmCampaign)   originLines.push(`• Campaña: ${utmCampaign}`);
+    if (utmMedium)     originLines.push(`• Medio: ${utmMedium}`);
+    if (utmTerm)       originLines.push(`• Búsqueda: ${utmTerm}`);
+    if (adLink)        originLines.push(`• Anuncio: ${adLink}`);
+    if (originLines.length > 0) {
+      msg += '\n\n📍 Origen del anuncio:\n' + originLines.join('\n');
+    }
+
+    const WA_URL = 'https://wa.me/50683725603?text=' + encodeURIComponent(msg);
+    document.getElementById('waBtn').href = WA_URL;
+
+    // Source badge
     if (PLATFORM_LABELS[source]) {
       const icons = { tiktok: 'fa-tiktok', instagram: 'fa-instagram', facebook: 'fa-facebook-f', google: 'fa-google' };
       const badge = document.getElementById('sourceBadge');
@@ -357,6 +410,27 @@
         ).join('');
       card.style.display = 'flex';
     }
+
+    // Countdown
+    const TOTAL = 10;
+    let remaining = TOTAL;
+    const bar = document.getElementById('bar');
+    const num = document.getElementById('countNum');
+
+    const tick = setInterval(() => {
+      remaining--;
+      bar.style.width = (remaining / TOTAL * 100) + '%';
+      num.textContent = remaining + ' seg';
+      if (remaining <= 0) {
+        clearInterval(tick);
+        window.location.href = WA_URL;
+      }
+    }, 1000);
+
+    document.getElementById('waBtn').addEventListener('click', () => {
+      clearInterval(tick);
+      document.getElementById('countdownWrap').style.display = 'none';
+    });
   </script>
 </body>
 </html>
