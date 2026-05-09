@@ -999,13 +999,68 @@ p  { color: var(--gray); font-size: .95rem; }
    ============================================================ */
 .whatsapp-float {
   position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 800;
-  width: 56px; height: 56px; background: var(--wa); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 1.6rem;
-  box-shadow: 0 6px 24px rgba(37,211,102,.4);
-  transition: transform .25s, box-shadow .25s;
+  display: flex; align-items: center; gap: 10px;
+  background: var(--wa); border-radius: 99px;
+  padding: 14px 20px 14px 16px;
+  color: #fff; font-size: 1.5rem; font-weight: 800; font-family: var(--font);
+  box-shadow: 0 6px 28px rgba(37,211,102,.5);
+  transition: transform .2s, box-shadow .2s;
+  animation: wa-pulse 2s ease-in-out infinite;
+  text-decoration: none;
 }
-.whatsapp-float:hover { transform: scale(1.08) translateY(-2px); box-shadow: 0 10px 32px rgba(37,211,102,.5); }
+.whatsapp-float .wa-label { font-size: .95rem; font-weight: 800; white-space: nowrap; }
+.whatsapp-float:hover { transform: scale(1.06) translateY(-2px); box-shadow: 0 12px 36px rgba(37,211,102,.65); animation: none; }
+
+/* notification dot */
+.whatsapp-float::before {
+  content: '1';
+  position: absolute;
+  top: -6px; right: -6px;
+  width: 22px; height: 22px;
+  background: #ff3b30;
+  border-radius: 50%;
+  font-size: 12px; font-weight: 900;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff;
+  animation: dot-pop 2s ease-in-out infinite;
+}
+
+/* bubble tooltip */
+.whatsapp-float::after {
+  content: '¡Escríbenos ahora!';
+  position: absolute;
+  bottom: calc(100% + 10px); right: 0;
+  background: #111827;
+  color: #fff;
+  font-size: 13px; font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(6px);
+  animation: bubble-show 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes wa-pulse {
+  0%,100% { box-shadow: 0 6px 28px rgba(37,211,102,.5); transform: scale(1); }
+  50%      { box-shadow: 0 6px 42px rgba(37,211,102,.8); transform: scale(1.05); }
+}
+@keyframes dot-pop {
+  0%,80%,100% { transform: scale(1); }
+  90%         { transform: scale(1.4); }
+}
+@keyframes bubble-show {
+  0%,30%,100% { opacity: 0; transform: translateY(6px); }
+  40%,70%     { opacity: 1; transform: translateY(0); }
+}
+@keyframes wa-shake {
+  0%,100% { transform: rotate(0deg); }
+  20%     { transform: rotate(-8deg); }
+  40%     { transform: rotate(8deg); }
+  60%     { transform: rotate(-5deg); }
+  80%     { transform: rotate(5deg); }
+}
 
 /* ============================================================
    AGENT SECTION

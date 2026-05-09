@@ -274,6 +274,55 @@
 
     .footer-note { font-size: 12px; color: #9CA3AF; text-align: center; }
     .footer-note a { color: var(--red); font-weight: 600; text-decoration: none; }
+
+    /* ── FLOATING STICKY WA ── */
+    .wa-float {
+      position: fixed;
+      bottom: 20px; left: 50%; transform: translateX(-50%);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: linear-gradient(135deg, var(--wa), var(--wa-dark));
+      color: #fff;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 16px 28px;
+      border-radius: 99px;
+      text-decoration: none;
+      box-shadow: 0 8px 32px rgba(37,211,102,.55);
+      animation: pulse-float 2s ease-in-out infinite;
+      white-space: nowrap;
+    }
+    .wa-float i { font-size: 26px; }
+    .wa-float::before {
+      content: '1';
+      position: absolute;
+      top: -8px; right: -4px;
+      width: 24px; height: 24px;
+      background: #ff3b30;
+      border-radius: 50%;
+      font-size: 13px; font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      animation: dot-bounce 2s ease-in-out infinite;
+    }
+    @keyframes pulse-float {
+      0%,100% { box-shadow: 0 8px 32px rgba(37,211,102,.55); transform: translateX(-50%) scale(1); }
+      50%      { box-shadow: 0 8px 52px rgba(37,211,102,.85); transform: translateX(-50%) scale(1.05); }
+    }
+    @keyframes shake {
+      0%,100% { transform: translateX(-50%) rotate(0deg); }
+      20%     { transform: translateX(-50%) rotate(-8deg); }
+      40%     { transform: translateX(-50%) rotate(8deg); }
+      60%     { transform: translateX(-50%) rotate(-5deg); }
+      80%     { transform: translateX(-50%) rotate(5deg); }
+    }
+    @keyframes dot-bounce {
+      0%,80%,100% { transform: scale(1); }
+      90%         { transform: scale(1.5); }
+    }
+    /* space so content isn't hidden behind sticky button */
+    .page { padding-bottom: 100px; }
   </style>
 </head>
 <body>
@@ -356,6 +405,12 @@
 
   </div>
 
+  <!-- STICKY FLOATING WA BUTTON -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener">
+    <i class="fa-brands fa-whatsapp"></i>
+    Escribir a Floribeth
+  </a>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const PROP_EXCLUDE = new Set(['source','link','utm_source','utm_medium','utm_content','utm_campaign','utm_term']);
@@ -391,6 +446,7 @@
 
     const WA_URL = 'https://wa.me/50683725603?text=' + encodeURIComponent(msg);
     document.getElementById('waBtn').href = WA_URL;
+    document.getElementById('waFloat').href = WA_URL;
 
     // Source badge
     if (PLATFORM_LABELS[source]) {
@@ -427,10 +483,12 @@
       }
     }, 1000);
 
-    document.getElementById('waBtn').addEventListener('click', () => {
-      clearInterval(tick);
-      document.getElementById('countdownWrap').style.display = 'none';
-    });
+    // Shake the sticky button every 6 seconds
+    setInterval(() => {
+      const btn = document.getElementById('waFloat');
+      btn.style.animation = 'shake 0.6s ease';
+      setTimeout(() => { btn.style.animation = 'pulse-float 2s ease-in-out infinite'; }, 700);
+    }, 6000);
   </script>
 </body>
 </html>

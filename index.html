@@ -782,9 +782,18 @@
 
   <!-- WHATSAPP FLOAT -->
   <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
-     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" id="waFloat">
     <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-label">WhatsApp</span>
   </a>
+  <script>
+    // Shake the button every 8 seconds
+    setInterval(() => {
+      const btn = document.getElementById('waFloat');
+      btn.style.animation = 'wa-shake 0.6s ease';
+      setTimeout(() => { btn.style.animation = 'wa-pulse 2s ease-in-out infinite'; }, 700);
+    }, 8000);
+  </script>
 
   <script src="properties-data.js"></script>
   <script src="main.js"></script>
