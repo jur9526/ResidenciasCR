@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-10 14:19
+// Auto-generado por sync_encuentra24.py — 2026-05-10 16:00
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32298356",
     "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 73,900,000\n\n-3%",
+    "price": "₡ 67,500,000",
     "location": "Aserrí",
     "beds": 3,
     "baths": 2,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 435,000",
+    "price": "$ 390,000\n\n-1%",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 70,000,000",
+    "price": "₡ 65,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32273860",
     "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "₡ 79,000,000",
+    "price": "₡ 90,000,000",
     "location": "Santo Domingo",
     "beds": 1,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 85,000,000",
+    "price": "₡ 89,000,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 422,000",
+    "price": "$ 570,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 280,000",
+    "price": "$ 250,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "$ 250,000",
+    "price": "₡ 120,000,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
