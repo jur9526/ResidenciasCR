@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-12 15:39
+// Auto-generado por sync_encuentra24.py — 2026-05-12 17:20
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 90,000,000",
+    "price": "₡ 108,000,000\n\n-4%",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 164,000,000",
+    "price": "₡ 185,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 320,000\n\n-2%",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -49,9 +49,25 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
   },
   {
+    "id": "E24-32416347",
+    "title": "¡Oportunidad en Condominio en Cartago!",
+    "price": "₡ 63,000,000",
+    "location": "El Tejar",
+    "beds": 3,
+    "baths": 2,
+    "area": "136 m²",
+    "type": "Casa",
+    "badge": "Oportunidad",
+    "badgeClass": "badge-opp",
+    "e24id": "32416347",
+    "wa": "Me%20interesa%20la%20propiedad%2032416347%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32416347.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-condominio-en-cartago/32416347"
+  },
+  {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 495,000\n\n-9%",
+    "price": "$ 460,000\n\n-4%",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -67,11 +83,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 995,000",
+    "price": "$ 1,175,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "450 m²",
+    "area": "470 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -83,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 240,000",
+    "price": "₡ 95,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -99,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 159,000",
+    "price": "$ 160,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -111,21 +127,5 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881272.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
-  },
-  {
-    "id": "E24-29377845",
-    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 820,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 5,
-    "area": "2,096 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "29377845",
-    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377845.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   }
 ];
