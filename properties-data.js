@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-13 15:43
+// Auto-generado por sync_encuentra24.py — 2026-05-13 17:22
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 215,000",
+    "price": "$ 250,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 149,990,000",
+    "price": "$ 400,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 130,000,000",
+    "price": "$ 275,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "₡ 98,000,000\n\n-7%",
+    "price": "₡ 98,000,000",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -83,11 +83,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 1,175,000",
+    "price": "$ 995,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "470 m²",
+    "area": "450 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 149,000",
+    "price": "$ 160,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 2,
+    "baths": 5,
     "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -111,5 +111,21 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881272.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
+  },
+  {
+    "id": "E24-29377845",
+    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
+    "price": "$ 975,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 5,
+    "area": "2,096 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377845",
+    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-29377845.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
   }
 ];
