@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-12 17:20
+// Auto-generado por sync_encuentra24.py — 2026-05-13 15:43
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 108,000,000\n\n-4%",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 185,000,000",
+    "price": "₡ 149,990,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 320,000\n\n-2%",
+    "price": "₡ 130,000,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 63,000,000",
+    "price": "₡ 75,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -65,20 +65,20 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-condominio-en-cartago/32416347"
   },
   {
-    "id": "E24-31254567",
-    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 460,000\n\n-4%",
-    "location": "Ciudad Curridabat",
-    "beds": 5,
-    "baths": 3,
-    "area": "629 m²",
+    "id": "E24-32416761",
+    "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
+    "price": "₡ 98,000,000\n\n-7%",
+    "location": "San Vicente",
+    "beds": 3,
+    "baths": 2,
+    "area": "166 m²",
     "type": "Casa",
-    "badge": "Oportunidad",
-    "badgeClass": "badge-opp",
-    "e24id": "31254567",
-    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31254567.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32416761",
+    "wa": "Me%20interesa%20la%20propiedad%2032416761%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32416761.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-condominio-de-dos-niveles-excelente-ubicacion-y-comodidad/32416761"
   },
   {
     "id": "E24-31076847",
@@ -97,28 +97,12 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
   },
   {
-    "id": "E24-31939144",
-    "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 95,000,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 2,
-    "area": "168 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31939144",
-    "wa": "Me%20interesa%20la%20propiedad%2031939144%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31939144.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
-  },
-  {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 160,000",
+    "price": "$ 149,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
