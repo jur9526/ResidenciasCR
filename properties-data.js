@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-14 15:16
+// Auto-generado por sync_encuentra24.py — 2026-05-14 17:06
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 108,000,000\n\n-4%",
+    "price": "₡ 112,500,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 180,000,000",
+    "price": "₡ 155,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "$ 198,500",
+    "price": "$ 225,000",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 240,000",
+    "price": "₡ 95,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 159,000",
+    "price": "₡ 80,000,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -115,10 +115,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 235,000",
+    "price": "₡ 98,000,000\n\n-7%",
     "location": "Moravia",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
