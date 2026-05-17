@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-17 14:24
+// Auto-generado por sync_encuentra24.py — 2026-05-17 16:03
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 260,000",
+    "price": "₡ 99,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 170,000,000",
+    "price": "₡ 143,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 130,000,000",
+    "price": "$ 250,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "$ 225,000",
+    "price": "₡ 98,000,000",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 198,500",
+    "price": "$ 215,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 5,
+    "baths": 3,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 925,000",
+    "price": "$ 1,167,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 5,
