@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-20 16:23
+// Auto-generado por sync_encuentra24.py — 2026-05-20 17:56
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 130,000,000",
+    "price": "$ 260,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 295,000",
+    "price": "₡ 130,000,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 65,000,000",
+    "price": "₡ 62,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "₡ 80,000,000",
+    "price": "$ 205,000\n\n-1%",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -83,10 +83,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30728594",
     "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "₡ 127,000,000\n\n-15%",
+    "price": "$ 280,000",
     "location": "San Rafael",
     "beds": 3,
-    "baths": 2,
+    "baths": 1,
     "area": "357 m²",
     "type": "Casa",
     "badge": "Oportunidad",
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "$ 200,000",
+    "price": "$ 230,000",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
