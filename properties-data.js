@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-21 16:14
+// Auto-generado por sync_encuentra24.py — 2026-05-21 17:33
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 130,000,000",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 285,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 155,000,000",
+    "price": "$ 345,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 63,000,000",
+    "price": "₡ 65,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "₡ 90,000,000",
+    "price": "$ 198,500",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 185,000\n\n-5%",
+    "price": "₡ 75,000,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 390,000",
+    "price": "$ 320,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -115,10 +115,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡ 98,000,000",
+    "price": "$ 198,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 3,
+    "baths": 1,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
