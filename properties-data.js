@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-21 17:33
+// Auto-generado por sync_encuentra24.py — 2026-05-22 15:47
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 215,000",
+    "price": "₡ 99,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "$ 295,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -33,25 +33,9 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
   },
   {
-    "id": "E24-32216513",
-    "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 345,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 3,
-    "area": "161 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32216513",
-    "wa": "Me%20interesa%20la%20propiedad%2032216513%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32216513.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-hermosa-casa-en-condominio/32216513"
-  },
-  {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 65,000,000",
+    "price": "₡ 68,500,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -67,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "$ 198,500",
+    "price": "$ 210,000",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -81,9 +65,57 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-condominio-de-dos-niveles-excelente-ubicacion-y-comodidad/32416761"
   },
   {
+    "id": "E24-32216513",
+    "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
+    "price": "₡ 170,000,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 3,
+    "area": "161 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32216513",
+    "wa": "Me%20interesa%20la%20propiedad%2032216513%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216513.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-hermosa-casa-en-condominio/32216513"
+  },
+  {
+    "id": "E24-32369690",
+    "title": "Lotes y Terrenos en Bagaces",
+    "price": "$ 230,000",
+    "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
+    "beds": 2,
+    "baths": 1,
+    "area": "130 m²",
+    "type": "Terreno",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "32369690",
+    "wa": "Me%20interesa%20la%20propiedad%2032369690%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32369690.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/finca-en-venta-con-vistas-al-volcan-tenorio/32369690"
+  },
+  {
+    "id": "E24-31076847",
+    "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
+    "price": "$ 995,000",
+    "location": "Santa Ana Centro",
+    "beds": 4,
+    "baths": 5,
+    "area": "450 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31076847",
+    "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31076847.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-lujo-en-venta-en-santa-ana-costa-rica/31076847"
+  },
+  {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "₡ 75,000,000",
+    "price": "$ 165,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -95,37 +127,5 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2031881272%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-31881272.jpg",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/31881272"
-  },
-  {
-    "id": "E24-30856282",
-    "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 320,000",
-    "location": "Guácima",
-    "beds": 3,
-    "baths": 5,
-    "area": "1,019.31 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "30856282",
-    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-30856282.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
-  },
-  {
-    "id": "E24-31892169",
-    "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 198,000",
-    "location": "Moravia",
-    "beds": 3,
-    "baths": 1,
-    "area": "104 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "31892169",
-    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-31892169.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   }
 ];
