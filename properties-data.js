@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-23 14:28
+// Auto-generado por sync_encuentra24.py — 2026-05-23 16:06
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 250,000",
+    "price": "₡ 109,000,000\n\n-3%",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 74,000,000",
+    "price": "₡ 68,500,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "$ 198,000",
+    "price": "$ 198,500",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 165,000,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 295,000",
+    "price": "$ 320,000\n\n-2%",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32417016",
     "title": "Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos",
-    "price": "₡ 180,000,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32417374",
     "title": "Estrene Moderna Casa En Tres Ríos",
-    "price": "$ 360,000",
+    "price": "₡ 165,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32298356",
     "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 69,500,000",
+    "price": "₡ 68,000,000",
     "location": "Aserrí",
     "beds": 3,
     "baths": 2,
