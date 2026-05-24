@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-23 16:06
+// Auto-generado por sync_encuentra24.py — 2026-05-24 14:23
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 109,000,000\n\n-3%",
+    "price": "$ 250,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 68,500,000",
+    "price": "₡ 63,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416761",
     "title": "Casa en Condominio de Dos Niveles – Excelente Ubicación y Comodidad",
-    "price": "$ 198,500",
+    "price": "₡ 80,000,000",
     "location": "San Vicente",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 170,000,000",
+    "price": "₡ 167,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 320,000\n\n-2%",
+    "price": "₡ 122,500,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -81,51 +81,51 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/penthouse-en-venta-ubicado-en-curridabat/31892295"
   },
   {
-    "id": "E24-32417016",
-    "title": "Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos",
-    "price": "₡ 170,000,000",
-    "location": "Tres Ríos",
-    "beds": 4,
+    "id": "E24-31254567",
+    "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
+    "price": "$ 475,000",
+    "location": "Ciudad Curridabat",
+    "beds": 5,
     "baths": 3,
-    "area": "200 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32417016",
-    "wa": "Me%20interesa%20la%20propiedad%2032417016%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32417016.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-casa-en-exclusivo-condominio-en-dulce-nombre-de-tres-rios/32417016"
-  },
-  {
-    "id": "E24-32417374",
-    "title": "Estrene Moderna Casa En Tres Ríos",
-    "price": "₡ 165,000,000",
-    "location": "Tres Ríos",
-    "beds": 4,
-    "baths": 3,
-    "area": "172 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "32417374",
-    "wa": "Me%20interesa%20la%20propiedad%2032417374%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32417374.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-moderna-casa-en-tres-rios/32417374"
-  },
-  {
-    "id": "E24-32298356",
-    "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 68,000,000",
-    "location": "Aserrí",
-    "beds": 3,
-    "baths": 2,
-    "area": "140 m²",
+    "area": "629 m²",
     "type": "Casa",
     "badge": "Oportunidad",
     "badgeClass": "badge-opp",
-    "e24id": "32298356",
-    "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32298356.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-unica-en-aserri/32298356"
+    "e24id": "31254567",
+    "wa": "Me%20interesa%20la%20propiedad%2031254567%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254567.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat/31254567"
+  },
+  {
+    "id": "E24-31254758",
+    "title": "Lotes y Terrenos en Copey",
+    "price": "₡ 108,000,000\n\n-4%",
+    "location": "COPEY DE DOTA!: CRC 130000000.00",
+    "beds": 4,
+    "baths": 2,
+    "area": "380 m²",
+    "type": "Terreno",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31254758",
+    "wa": "Me%20interesa%20la%20propiedad%2031254758%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254758.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
+  },
+  {
+    "id": "E24-31254818",
+    "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
+    "price": "$ 215,000",
+    "location": "La Trinidad",
+    "beds": 3,
+    "baths": 5,
+    "area": "147 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31254818",
+    "wa": "Me%20interesa%20la%20propiedad%2031254818%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31254818.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/la-casa-de-sus-suenos-en-la-trinidad-de-moravia/31254818"
   }
 ];
