@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-25 15:47
+// Auto-generado por sync_encuentra24.py — 2026-05-25 17:11
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 280,000",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 285,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 180,000,000",
+    "price": "₡ 164,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "$ 169,500",
+    "price": "₡ 74,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -67,11 +67,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 995,000",
+    "price": "$ 1,200,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "450 m²",
+    "area": "2,000 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 87,500,000",
+    "price": "₡ 90,000,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32273860",
     "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "₡ 79,000,000",
+    "price": "$ 205,000",
     "location": "Santo Domingo",
     "beds": 1,
     "baths": 2,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "$ 290,000\n\n-2%",
+    "price": "$ 290,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
