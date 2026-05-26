@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-26 16:38
+// Auto-generado por sync_encuentra24.py — 2026-05-26 18:05
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 250,000",
+    "price": "$ 280,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 63,000,000",
+    "price": "₡ 65,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 130,000,000",
+    "price": "$ 285,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 165,000,000",
+    "price": "₡ 167,000,000\n\n-2%",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 70,000,000",
+    "price": "₡ 78,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "$ 240,000",
+    "price": "$ 215,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 200,000",
+    "price": "₡ 100,000,000\n\n-9%",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
