@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-27 16:35
+// Auto-generado por sync_encuentra24.py — 2026-05-27 18:07
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 90,000,000",
+    "price": "₡ 99,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 57,000,000\n\n-8%",
+    "price": "₡ 75,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 130,000,000",
+    "price": "$ 285,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32273860",
     "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "$ 178,000",
+    "price": "₡ 79,000,000",
     "location": "Santo Domingo",
     "beds": 1,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "₡ 145,000,000",
+    "price": "₡ 120,000,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "$ 210,000\n\n-13%",
+    "price": "₡ 82,000,000",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
