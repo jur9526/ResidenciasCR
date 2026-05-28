@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-05-28 16:51
+// Auto-generado por sync_encuentra24.py — 2026-05-28 18:16
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 112,500,000",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 320,000\n\n-2%",
+    "price": "₡ 132,900,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "$ 169,500",
+    "price": "₡ 63,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 180,000,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -83,10 +83,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡ 95,000,000",
+    "price": "₡ 98,000,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 2,
+    "baths": 5,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -99,11 +99,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 1,200,000",
+    "price": "$ 1,250,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "2,000 m²",
+    "area": "725 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -115,9 +115,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 890,000",
+    "price": "$ 850,000",
     "location": "Tres Ríos",
-    "beds": 3,
+    "beds": 5,
     "baths": 5,
     "area": "2,096 m²",
     "type": "Casa",
