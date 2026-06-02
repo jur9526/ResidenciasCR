@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-02 17:17
+// Auto-generado por sync_encuentra24.py — 2026-06-02 18:47
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "$ 280,000",
+    "price": "$ 215,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "₡ 130,000,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 80,300,000",
+    "price": "₡ 70,000,000\n\n-6%",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 164,000,000",
+    "price": "₡ 169,900,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 975,000",
+    "price": "$ 850,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 5,
@@ -83,10 +83,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377968",
     "title": "Casa en venta ubicada en Zapote",
-    "price": "₡ 76,500,000",
+    "price": "₡ 86,000,000",
     "location": "Zapote",
-    "beds": 1,
-    "baths": 1,
+    "beds": 3,
+    "baths": 2,
     "area": "133.55 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -99,10 +99,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡ 98,000,000",
+    "price": "₡ 95,000,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-28313598",
     "title": "Venta de casa en condominio en la Trinidad de Moravia",
-    "price": "$ 200,000",
+    "price": "₡ 95,000,000",
     "location": "La Trinidad",
     "beds": 2,
     "baths": 5,
