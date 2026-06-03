@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-03 17:59
+// Auto-generado por sync_encuentra24.py — 2026-06-03 18:52
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 90,000,000",
+    "price": "₡ 99,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 169,900,000",
+    "price": "₡ 168,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 74,000,000",
+    "price": "₡ 80,300,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "₡ 122,500,000",
+    "price": "$ 290,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -70,7 +70,7 @@ window.DEFAULT_PROPERTIES = [
     "price": "$ 280,000",
     "location": "San Rafael",
     "beds": 3,
-    "baths": 2,
+    "baths": 1,
     "area": "357 m²",
     "type": "Casa",
     "badge": "Oportunidad",
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 77,000,000",
+    "price": "₡ 75,000,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 124,000,000",
+    "price": "₡ 109,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
