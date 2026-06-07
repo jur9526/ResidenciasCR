@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-07 14:50
+// Auto-generado por sync_encuentra24.py — 2026-06-07 16:23
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 109,000,000\n\n-3%",
+    "price": "₡ 90,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 63,000,000",
+    "price": "₡ 70,000,000\n\n-6%",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 78,900,000\n\n-1%",
+    "price": "₡ 86,000,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 104,900,000\n\n-1%",
+    "price": "$ 280,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -99,9 +99,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "₡ 390,000,000",
+    "price": "$ 848,000",
     "location": "Tres Ríos",
-    "beds": 4,
+    "beds": 5,
     "baths": 5,
     "area": "2,096 m²",
     "type": "Casa",
@@ -115,10 +115,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377968",
     "title": "Casa en venta ubicada en Zapote",
-    "price": "₡ 76,500,000",
+    "price": "₡ 75,000,000",
     "location": "Zapote",
     "beds": 3,
-    "baths": 1,
+    "baths": 2,
     "area": "133.55 m²",
     "type": "Casa",
     "badge": "En Venta",
