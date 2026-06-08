@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-07 16:23
+// Auto-generado por sync_encuentra24.py — 2026-06-08 16:46
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "¡Hermosa casa en venta en Lagunilla de Heredia!",
-    "price": "₡ 90,000,000",
+    "price": "₡ 109,000,000\n\n-3%",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 180,000,000",
+    "price": "₡ 164,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -65,25 +65,41 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/oportunidad-en-condominio-en-cartago/32416347"
   },
   {
-    "id": "E24-32471958",
-    "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 86,000,000",
-    "location": "San José Capital",
-    "beds": 5,
-    "baths": 3,
-    "area": "143 m²",
+    "id": "E24-30856282",
+    "title": "Casa en Venta en la Guácima de Alajuela",
+    "price": "₡ 195,000,000",
+    "location": "Guácima",
+    "beds": 3,
+    "baths": 5,
+    "area": "1,019.31 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "32471958",
-    "wa": "Me%20interesa%20la%20propiedad%2032471958%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-32471958.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-de-5-habitaciones-en-paso-ancho-amplia-y-centrica-75-millones/32471958"
+    "e24id": "30856282",
+    "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-30856282.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-la-guacima-de-alajuela/30856282"
+  },
+  {
+    "id": "E24-31892169",
+    "title": "Casa en Venta ubicada en Moravia",
+    "price": "$ 210,000",
+    "location": "Moravia",
+    "beds": 3,
+    "baths": 5,
+    "area": "104 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "31892169",
+    "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-31892169.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-moravia/31892169"
   },
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 280,000",
+    "price": "₡ 130,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -97,35 +113,19 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-la-union-de-tres-rios/31939144"
   },
   {
-    "id": "E24-29377845",
-    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 848,000",
-    "location": "Tres Ríos",
-    "beds": 5,
-    "baths": 5,
-    "area": "2,096 m²",
-    "type": "Casa",
-    "badge": "En Venta",
-    "badgeClass": "",
-    "e24id": "29377845",
-    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377845.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
-  },
-  {
-    "id": "E24-29377968",
-    "title": "Casa en venta ubicada en Zapote",
-    "price": "₡ 75,000,000",
-    "location": "Zapote",
+    "id": "E24-32216373",
+    "title": "Casa en venta en centro Guadalupe, San José",
+    "price": "$ 199,000",
+    "location": "Guadalupe",
     "beds": 3,
-    "baths": 2,
-    "area": "133.55 m²",
+    "baths": 5,
+    "area": "159 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
-    "e24id": "29377968",
-    "wa": "Me%20interesa%20la%20propiedad%2029377968%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
-    "image": "assets/e24-29377968.jpg",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-ubicada-en-zapote/29377968"
+    "e24id": "32216373",
+    "wa": "Me%20interesa%20la%20propiedad%2032216373%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216373.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-centro-guadalupe-san-jose/32216373"
   }
 ];
