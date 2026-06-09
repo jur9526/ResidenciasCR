@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-09 15:51
+// Auto-generado por sync_encuentra24.py — 2026-06-09 17:27
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 100,000,000",
+    "price": "₡ 105,000,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "Casa en Venta en Lagunilla de Heredia",
-    "price": "$ 210,000\n\n-2%",
+    "price": "$ 210,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 470,000\n\n-20%",
+    "price": "$ 495,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 64,500,000",
+    "price": "₡ 75,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 167,000,000\n\n-2%",
+    "price": "₡ 164,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 70,000,000",
+    "price": "₡ 66,500,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 848,000",
+    "price": "$ 1,150,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 5,
