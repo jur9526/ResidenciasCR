@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ── Properties ───────────────────────────────────────────────
-const PROPS_PER_PAGE = 6;
+const PROPS_PER_PAGE = 9;
 let currentPage = 0;
 let properties  = [];
 
@@ -147,9 +147,20 @@ function renderProperties() {
     grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
   }
 
-  // Botón visible solo cuando hay más que mostrar y sin filtros activos y no showAll
+  // Botón loadMore (fallback)
   if (loadMoreBtn) {
-    loadMoreBtn.style.display = (!displayAll && filtered.length > PROPS_PER_PAGE) ? 'inline-flex' : 'none';
+    loadMoreBtn.style.display = 'none';
+  }
+
+  // Botón "Ver más propiedades" → /propiedades
+  const verMasWrapper = document.getElementById('verMasWrapper');
+  const verMasCount   = document.getElementById('verMasCount');
+  if (verMasWrapper) {
+    const remaining = filtered.length - slice.length;
+    verMasWrapper.style.display = remaining > 0 ? 'flex' : 'none';
+    if (verMasCount) {
+      verMasCount.textContent = remaining > 0 ? `${remaining} propiedades más disponibles` : '';
+    }
   }
 }
 

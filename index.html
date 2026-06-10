@@ -416,19 +416,25 @@
 
       <div class="properties-cta">
         <button class="btn btn-outline" id="loadMoreBtn" style="display:none">
-          <i class="fa-solid fa-plus"></i> Ver más propiedades
+          <i class="fa-solid fa-plus"></i> Ver más
         </button>
-        <a href="/propiedades" class="btn-ver-mas-props">
-          <span class="ver-mas-icon"><i class="fa-solid fa-grid-2"></i></span>
-          <span class="ver-mas-text">
-            <strong>Ver todas las propiedades</strong>
-            <small>Catálogo completo · Filtros avanzados</small>
-          </span>
-          <i class="fa-solid fa-arrow-right ver-mas-arrow"></i>
-        </a>
+        <div class="ver-mas-wrapper" id="verMasWrapper">
+          <a href="/propiedades" class="btn-ver-mas-pulse">
+            <span class="ver-mas-pulse-bg"></span>
+            <span class="ver-mas-pulse-ring"></span>
+            <span class="ver-mas-pulse-content">
+              <i class="fa-solid fa-layer-group"></i>
+              <span class="ver-mas-pulse-text">
+                <strong>Ver más propiedades</strong>
+                <small id="verMasCount"></small>
+              </span>
+              <i class="fa-solid fa-chevron-right ver-mas-chev"></i>
+            </span>
+          </a>
+        </div>
         <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
            target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-solid fa-external-link-alt"></i> Ver todas en Encuentra24
+          <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
         </a>
       </div>
 

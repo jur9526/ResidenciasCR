@@ -1318,6 +1318,76 @@ p  { color: var(--gray); font-size: .95rem; }
   }
 }
 
+/* ── Ver más propiedades — botón pulse llamativo ── */
+.ver-mas-wrapper { display: flex; justify-content: center; }
+
+.btn-ver-mas-pulse {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+.ver-mas-pulse-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--red) 0%, #e63333 100%);
+  border-radius: 50px;
+  z-index: 0;
+}
+.ver-mas-pulse-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50px;
+  border: 2px solid var(--red);
+  opacity: 0;
+  animation: ver-mas-ring 2s ease-out infinite;
+  z-index: 0;
+}
+@keyframes ver-mas-ring {
+  0%   { inset: -2px; opacity: .7; }
+  100% { inset: -14px; opacity: 0; }
+}
+.ver-mas-pulse-content {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: .85rem;
+  padding: 1rem 1.75rem;
+  color: #fff;
+}
+.ver-mas-pulse-content > .fa-layer-group {
+  font-size: 1.2rem;
+  opacity: .9;
+}
+.ver-mas-pulse-text {
+  display: flex;
+  flex-direction: column;
+  gap: .1rem;
+  text-align: left;
+}
+.ver-mas-pulse-text strong {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.ver-mas-pulse-text small {
+  font-size: .76rem;
+  font-weight: 500;
+  opacity: .8;
+}
+.ver-mas-chev {
+  font-size: .85rem;
+  opacity: .75;
+  transition: transform .2s;
+}
+.btn-ver-mas-pulse:hover .ver-mas-chev { transform: translateX(4px); opacity: 1; }
+.btn-ver-mas-pulse:hover .ver-mas-pulse-bg {
+  filter: brightness(1.08);
+}
+.btn-ver-mas-pulse { transition: transform .2s; }
+.btn-ver-mas-pulse:hover { transform: translateY(-2px); }
+
 /* ── Ver todas las propiedades CTA ── */
 .btn-ver-mas-props {
   display: inline-flex;
