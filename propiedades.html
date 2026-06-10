@@ -196,16 +196,6 @@
         </div>
       </div>
 
-      <!-- Contador -->
-      <div class="props-count-bar">
-        <p class="count-label">Mostrando <strong id="propsCountVisible">0</strong> de <strong id="propsCountTotal">0</strong> propiedades</p>
-        <a onclick="return gtagSendEvent(this.href)"
-           href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
-           target="_blank" rel="noopener" class="wa-quick">
-          <i class="fa-brands fa-whatsapp"></i> ¿No encontrás lo que buscás?
-        </a>
-      </div>
-
       <!-- Sin resultados -->
       <div id="propNoResults" class="prop-no-results" style="display:none">
         <i class="fa-solid fa-house-circle-xmark"></i>
@@ -390,9 +380,6 @@
       const grid      = document.getElementById('propertiesGrid');
       const noResults = document.getElementById('propNoResults');
       const filtered  = getFiltered();
-
-      document.getElementById('propsCountVisible').textContent = filtered.length;
-      document.getElementById('propsCountTotal').textContent   = properties.length;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
