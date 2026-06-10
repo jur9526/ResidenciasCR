@@ -158,8 +158,8 @@ function renderProperties() {
   if (verMasWrapper) {
     const remaining = filtered.length - slice.length;
     verMasWrapper.style.display = remaining > 0 ? 'flex' : 'none';
-    if (verMasCount) {
-      verMasCount.textContent = remaining > 0 ? `${remaining} propiedades más disponibles` : '';
+    if (verMasCount && remaining > 0) {
+      verMasCount.textContent = `${remaining} propiedades más te están esperando`;
     }
   }
 }

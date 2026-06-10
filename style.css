@@ -1318,75 +1318,126 @@ p  { color: var(--gray); font-size: .95rem; }
   }
 }
 
-/* ── Ver más propiedades — botón pulse llamativo ── */
-.ver-mas-wrapper { display: flex; justify-content: center; }
+/* ── Ver más propiedades — marketing CTA ── */
+.ver-mas-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: .5rem 0;
+}
 
-.btn-ver-mas-pulse {
+@keyframes vmc-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-6px); }
+}
+@keyframes vmc-bounce-in {
+  0%   { opacity: 0; transform: translateY(20px) scale(.95); }
+  60%  { transform: translateY(-4px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes vmc-attention {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  15%       { transform: translateY(-8px) rotate(-1deg); }
+  30%       { transform: translateY(-4px) rotate(1deg); }
+  45%       { transform: translateY(-7px) rotate(0deg); }
+  60%       { transform: translateY(-2px); }
+}
+@keyframes vmc-shimmer {
+  0%   { transform: translateX(-100%) skewX(-15deg); }
+  100% { transform: translateX(200%) skewX(-15deg); }
+}
+@keyframes vmc-arrow-bounce {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(5px); }
+}
+
+.btn-ver-mas-cta {
   position: relative;
   display: inline-flex;
   align-items: center;
+  gap: 1.1rem;
+  background: linear-gradient(135deg, #b91c1c 0%, var(--red) 50%, #dc2626 100%);
+  color: #fff;
+  border-radius: 16px;
+  padding: 1.1rem 1.6rem 1.1rem 1.3rem;
   text-decoration: none;
+  overflow: hidden;
+  box-shadow: 0 6px 30px rgba(196,30,30,.45), 0 2px 8px rgba(0,0,0,.15);
+  animation: vmc-bounce-in .6s cubic-bezier(.34,1.56,.64,1) both, vmc-float 3.5s ease-in-out 1s infinite;
+  transition: box-shadow .2s, filter .2s;
+  min-width: 320px;
+  justify-content: space-between;
 }
-.ver-mas-pulse-bg {
+.btn-ver-mas-cta::before {
+  content: '';
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, var(--red) 0%, #e63333 100%);
-  border-radius: 50px;
-  z-index: 0;
+  top: 0; left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.18), transparent);
+  animation: vmc-shimmer 2.8s ease-in-out infinite;
 }
-.ver-mas-pulse-ring {
+.btn-ver-mas-cta:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 10px 40px rgba(196,30,30,.55), 0 4px 12px rgba(0,0,0,.2);
+  animation: none;
+  transform: translateY(-3px);
+}
+
+.vmc-badge {
   position: absolute;
-  inset: -4px;
+  top: -10px; left: 50%;
+  transform: translateX(-50%);
+  background: #fbbf24;
+  color: #78350f;
+  font-size: .68rem;
+  font-weight: 800;
+  padding: .2rem .65rem;
   border-radius: 50px;
-  border: 2px solid var(--red);
-  opacity: 0;
-  animation: ver-mas-ring 2s ease-out infinite;
-  z-index: 0;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
 }
-@keyframes ver-mas-ring {
-  0%   { inset: -2px; opacity: .7; }
-  100% { inset: -14px; opacity: 0; }
-}
-.ver-mas-pulse-content {
-  position: relative;
-  z-index: 1;
-  display: inline-flex;
+
+.vmc-body {
+  display: flex;
   align-items: center;
   gap: .85rem;
-  padding: 1rem 1.75rem;
-  color: #fff;
+  flex: 1;
 }
-.ver-mas-pulse-content > .fa-layer-group {
-  font-size: 1.2rem;
-  opacity: .9;
+.vmc-icon {
+  width: 2.6rem; height: 2.6rem;
+  background: rgba(255,255,255,.18);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
-.ver-mas-pulse-text {
+.vmc-text {
   display: flex;
   flex-direction: column;
-  gap: .1rem;
-  text-align: left;
+  gap: .15rem;
 }
-.ver-mas-pulse-text strong {
-  font-size: 1rem;
+.vmc-text strong {
+  font-size: .98rem;
   font-weight: 700;
-  letter-spacing: -.01em;
+  line-height: 1.2;
 }
-.ver-mas-pulse-text small {
+.vmc-text small {
   font-size: .76rem;
   font-weight: 500;
-  opacity: .8;
+  opacity: .85;
 }
-.ver-mas-chev {
+.vmc-arrow {
+  width: 2rem; height: 2rem;
+  background: rgba(255,255,255,.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
   font-size: .85rem;
-  opacity: .75;
-  transition: transform .2s;
+  flex-shrink: 0;
+  animation: vmc-arrow-bounce 1.2s ease-in-out infinite;
 }
-.btn-ver-mas-pulse:hover .ver-mas-chev { transform: translateX(4px); opacity: 1; }
-.btn-ver-mas-pulse:hover .ver-mas-pulse-bg {
-  filter: brightness(1.08);
-}
-.btn-ver-mas-pulse { transition: transform .2s; }
-.btn-ver-mas-pulse:hover { transform: translateY(-2px); }
+.btn-ver-mas-cta:hover .vmc-arrow { animation: none; transform: translateX(3px); }
 
 /* ── Ver todas las propiedades CTA ── */
 .btn-ver-mas-props {
