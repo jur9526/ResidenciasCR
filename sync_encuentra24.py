@@ -31,6 +31,7 @@ ASSETS_DIR   = PROJECT_DIR / "assets"
 DATA_FILE    = PROJECT_DIR / "properties-data.js"
 PROFILE_URL  = "https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
 MAX_PROPS    = 50
+MAX_PAGES    = 8
 
 HEADERS = {
     "User-Agent": (
@@ -218,16 +219,6 @@ def sync():
                     added += 1
             return added
 
-        def get_total_pages(page_element):
-            """Detecta el número total de páginas a partir del texto 'Resultados: 1 - 8 / 29'."""
-            from playwright.sync_api import Locator
-            text = page_element.evaluate("() => document.body.innerText")
-            m = re.search(r'Resultados:\s*\d+\s*-\s*\d+\s*/\s*(\d+)', text)
-            if m:
-                total_results = int(m.group(1))
-                return max(1, -(-total_results // 8))  # ceil
-            return 1
-
         # Página 1
         print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
         page.goto(PROFILE_URL, wait_until="networkidle", timeout=45000)
@@ -243,12 +234,11 @@ def sync():
 
         html = page.content()
         found_p1 = scrape_profile_page(html)
-        total_pages = get_total_pages(page)
-        print(f"  Página 1: {found_p1} propiedades · Total de páginas detectadas: {total_pages}")
+        print(f"  Página 1: {found_p1} propiedades")
 
-        # Páginas 2..N (usa ?p=N)
-        for pnum in range(2, total_pages + 1):
-            page_url = f"{PROFILE_URL}?p={pnum}"
+        # Páginas 2..MAX_PAGES (usa ?page=N)
+        for pnum in range(2, MAX_PAGES + 1):
+            page_url = f"{PROFILE_URL}?page={pnum}"
             print(f"  Cargando página {pnum}: {page_url}")
             try:
                 page.goto(page_url, wait_until="networkidle", timeout=45000)
@@ -263,15 +253,15 @@ def sync():
                 html_n = page.content()
                 found_n = scrape_profile_page(html_n)
                 print(f"  Página {pnum}: {found_n} propiedades nuevas")
-                # Si una página no agrega nada nueva, probablemente no existe
                 if found_n == 0:
-                    print(f"  ⚠ Sin propiedades nuevas en página {pnum}, continuando por si acaso...")
+                    print(f"  ⚠ Página {pnum} sin propiedades nuevas, deteniendo paginación")
+                    break
             except Exception as e:
                 print(f"  ⚠ Error en página {pnum}: {e}")
                 break
 
         selected = list(prop_urls_map.items())[:MAX_PROPS]
-        print(f"\n  ✓ Total acumulado: {len(prop_urls_map)} propiedades en {total_pages} página(s)")
+        print(f"\n  ✓ Total acumulado: {len(prop_urls_map)} propiedades")
         print(f"  ✓ Se descargarán las primeras {len(selected)}")
 
         if not selected:
