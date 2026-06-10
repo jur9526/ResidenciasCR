@@ -1318,6 +1318,63 @@ p  { color: var(--gray); font-size: .95rem; }
   }
 }
 
+/* ── Ver todas las propiedades CTA ── */
+.btn-ver-mas-props {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--dark);
+  color: var(--white);
+  border-radius: var(--radius);
+  padding: .9rem 1.4rem;
+  font-size: .92rem;
+  font-weight: 600;
+  transition: transform .2s, box-shadow .2s, background .2s;
+  box-shadow: 0 4px 24px rgba(0,0,0,.18);
+  position: relative;
+  overflow: hidden;
+}
+.btn-ver-mas-props::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.06) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform .5s ease;
+}
+.btn-ver-mas-props:hover::before { transform: translateX(100%); }
+.btn-ver-mas-props:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,0,0,.25);
+}
+.ver-mas-icon {
+  width: 2.4rem; height: 2.4rem;
+  background: var(--red);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+.ver-mas-text {
+  display: flex; flex-direction: column; gap: .1rem; text-align: left;
+}
+.ver-mas-text strong { font-size: .92rem; line-height: 1.2; }
+.ver-mas-text small  { font-size: .74rem; color: rgba(255,255,255,.55); font-weight: 400; }
+.ver-mas-arrow {
+  font-size: .85rem;
+  color: rgba(255,255,255,.5);
+  transition: transform .2s, color .2s;
+  flex-shrink: 0;
+}
+.btn-ver-mas-props:hover .ver-mas-arrow {
+  transform: translateX(4px);
+  color: var(--white);
+}
+
+/* active nav link */
+.nav-links .active-nav { color: var(--red) !important; font-weight: 600; }
+
 /* ── Scroll down hint ── */
 @keyframes bounce-down {
   0%, 100% { transform: translateY(0); }

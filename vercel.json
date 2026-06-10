@@ -1,4 +1,7 @@
 {
+  "rewrites": [
+    { "source": "/propiedades", "destination": "/propiedades.html" }
+  ],
   "redirects": [
     {
       "source": "/(.*)",
