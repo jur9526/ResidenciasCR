@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080">
+
+  <!-- Fondo blanco -->
+  <rect width="1080" height="1080" fill="#FFFFFF"/>
+
+  <!-- Cuadrado rojo redondeado -->
+  <rect x="290" y="120" width="500" height="500" rx="110" fill="#C41E1E"/>
+
+  <!-- Casa simple (igual a la imagen) -->
+  <!-- Techo -->
+  <polygon points="540,195 720,355 360,355" fill="white"/>
+  <!-- Cuerpo -->
+  <rect x="385" y="348" width="310" height="230" fill="white"/>
+  <!-- Puerta con arco -->
+  <rect x="482" y="418" width="116" height="160" rx="58" fill="#C41E1E"/>
+
+  <!-- Línea divisoria -->
+  <line x1="140" y1="690" x2="940" y2="690" stroke="#E5E7EB" stroke-width="3"/>
+
+  <!-- Nombre empresa -->
+  <text x="540" y="775"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="92"
+    font-weight="400"
+    fill="#111827"
+    text-anchor="middle"
+    letter-spacing="-1">Residencias</text>
+
+  <text x="540" y="870"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="92"
+    font-weight="bold"
+    fill="#C41E1E"
+    text-anchor="middle"
+    letter-spacing="-1">Costa Rica</text>
+
+  <!-- Datos contacto -->
+  <text x="540" y="940"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="30"
+    fill="#6B7280"
+    text-anchor="middle"
+    letter-spacing="0.5">residenciascostarica.com  ·  +506 8372-5603</text>
+
+</svg>
