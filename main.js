@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ── Properties ───────────────────────────────────────────────
-const PROPS_PER_PAGE = 9;
+const PROPS_PER_PAGE = 6;
 let currentPage = 0;
 let properties  = [];
 
