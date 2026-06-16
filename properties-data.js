@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-16 18:03
+// Auto-generado por sync_encuentra24.py — 2026-06-16 18:59
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
@@ -227,7 +227,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "₡ 150,000,000",
+    "price": "$ 310,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
