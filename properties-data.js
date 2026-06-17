@@ -1,9 +1,9 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-17 16:37
+// Auto-generado por sync_encuentra24.py — 2026-06-17 17:54
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
     "title": "Casa en venta en centro Guadalupe, San José",
-    "price": "₡ 95,000,000",
+    "price": "$ 220,000",
     "location": "Guadalupe",
     "beds": 3,
     "baths": 5,
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "$ 325,000",
+    "price": "₡ 173,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 285,000",
+    "price": "$ 320,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 848,000",
+    "price": "$ 1,050,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 4,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "$ 250,000",
+    "price": "₡ 124,900,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -115,7 +115,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 470,000\n\n-20%",
+    "price": "$ 422,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -195,7 +195,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217733",
     "title": "Lotes y Terrenos en El Tejar",
-    "price": "₡ 33,000,000",
+    "price": "₡ 37,000,000",
     "location": "condominio en Cartago*: CRC 36000000.00",
     "beds": 3,
     "baths": 5,
@@ -243,7 +243,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 63,000,000",
+    "price": "₡ 75,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -259,7 +259,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 89,900,000\n\n-2%",
+    "price": "₡ 89,000,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
@@ -275,7 +275,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "Casa en Venta en Lagunilla de Heredia",
-    "price": "₡ 108,000,000\n\n-4%",
+    "price": "₡ 90,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -291,7 +291,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32417374",
     "title": "Estrene Moderna Casa En Tres Ríos",
-    "price": "₡ 173,000,000",
+    "price": "₡ 165,000,000\n\n-3%",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -323,11 +323,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 1,175,000",
+    "price": "$ 1,250,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "470 m²",
+    "area": "725 m²",
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -339,7 +339,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "₡ 100,000,000",
+    "price": "₡ 100,000,000\n\n-73%",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
@@ -355,7 +355,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 78,900,000\n\n-1%",
+    "price": "₡ 75,000,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -371,7 +371,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32273860",
     "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "₡ 79,000,000",
+    "price": "$ 205,000",
     "location": "Santo Domingo",
     "beds": 1,
     "baths": 2,
@@ -387,7 +387,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "₡ 150,000,000",
+    "price": "₡ 130,000,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
@@ -403,7 +403,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30885230",
     "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
-    "price": "$ 272,000",
+    "price": "₡ 140,000,000",
     "location": "Coyol",
     "beds": 2,
     "baths": 2,
@@ -435,7 +435,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-28313598",
     "title": "Venta de casa en condominio en la Trinidad de Moravia",
-    "price": "$ 210,000",
+    "price": "₡ 115,000,000",
     "location": "La Trinidad",
     "beds": 2,
     "baths": 5,
@@ -451,10 +451,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 200,000",
+    "price": "₡ 75,000,000\n\n-6%",
     "location": "Moravia",
     "beds": 3,
-    "baths": 1,
+    "baths": 2,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -467,9 +467,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 430,000",
+    "price": "$ 328,000",
     "location": "Guácima",
-    "beds": 5,
+    "beds": 4,
     "baths": 5,
     "area": "1,019.31 m²",
     "type": "Casa",
@@ -483,7 +483,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254818",
     "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
-    "price": "$ 200,000",
+    "price": "$ 230,000",
     "location": "La Trinidad",
     "beds": 3,
     "baths": 5,
@@ -499,7 +499,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32298356",
     "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 62,000,000",
+    "price": "₡ 77,500,000",
     "location": "Aserrí",
     "beds": 3,
     "baths": 2,
@@ -515,11 +515,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32554362",
     "title": "Casas en alquiler en El Tejar",
-    "price": "₡ 500,000",
+    "price": "₡ 490,000",
     "location": "Alquiler – Condominio Novarum, Cartago (Quebradilla de Tejar) 2 recámaras por CRC 550000.00",
     "beds": 2,
     "baths": 2,
-    "area": "115 m²",
+    "area": "128 m²",
     "type": "Casa",
     "badge": "Venta / Alquiler",
     "badgeClass": "badge-special",
