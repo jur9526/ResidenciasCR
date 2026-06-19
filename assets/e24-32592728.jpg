@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       window.trackplatform = 'desktop';
       window.userid = null;
       window.countryslug = '';
-      window.sid = 'b7275888bde633a382442d159fce38cd';
+      window.sid = '6e8831a9cd0b211607150762ee2a5425';
       window.gtslots = [];
       window.categorycurrent = {
         slug: ''
@@ -383,7 +383,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
 
       <div class="search-body nocountry">
         <form id="startform" method="post" action="/">
-          <input type="hidden" name="start[_csrf_token]" value="fee74109bbdad2b3d140c0393c44ff05" id="start__csrf_token" />          <input type="text" name="start[what]" placeholder="¿Qué buscas?" id="start_what" />          <select name="start[where]" required="required" id="start_where">
+          <input type="hidden" name="start[_csrf_token]" value="2c5c6d97d0dcd034e7da7d0329a4b387" id="start__csrf_token" />          <input type="text" name="start[what]" placeholder="¿Qué buscas?" id="start_what" />          <select name="start[where]" required="required" id="start_where">
 <option value="" selected="selected">¿Dónde?</option>
 <option value="panama-es">Panamá</option>
 <option value="costa-rica-es">Costa Rica</option>
@@ -409,7 +409,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Panamá</h2>
           <div class="count-box">
-            <strong>62 519</strong> ofertas          </div>
+            <strong>62 584</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -419,7 +419,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Costa Rica</h2>
           <div class="count-box">
-            <strong>31 689</strong> ofertas          </div>
+            <strong>31 704</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -439,7 +439,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Guatemala</h2>
           <div class="count-box">
-            <strong>18 290</strong> ofertas          </div>
+            <strong>18 296</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -449,7 +449,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Nicaragua</h2>
           <div class="count-box">
-            <strong>19 155</strong> ofertas          </div>
+            <strong>19 127</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -459,7 +459,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Honduras</h2>
           <div class="count-box">
-            <strong>5 368</strong> ofertas          </div>
+            <strong>5 372</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -469,7 +469,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Dominicana</h2>
           <div class="count-box">
-            <strong>13 442</strong> ofertas          </div>
+            <strong>13 425</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -479,7 +479,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Colombia</h2>
           <div class="count-box">
-            <strong>2 263</strong> ofertas          </div>
+            <strong>2 254</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -489,7 +489,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Puerto Rico</h2>
           <div class="count-box">
-            <strong>636</strong> ofertas          </div>
+            <strong>638</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -1088,5 +1088,5 @@ end userWay -->
     window.bindIntlTelInput = initIntlTelInput;
     window.validatePhoneInput = validatePhoneInput;
   });
-</script>  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0e3c1dd69fe4801',t:'MTc4MTg4NDkzNw=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</script>  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0e43db319dcd64d',t:'MTc4MTg5MDAxMA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
