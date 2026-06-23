@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-06-23 15:49
+// Auto-generado por sync_encuentra24.py — 2026-06-23 17:24
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216373",
@@ -19,7 +19,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 250,000",
+    "price": "$ 285,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 145,000,000",
+    "price": "₡ 170,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 79,000,000",
+    "price": "₡ 85,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 475,000",
+    "price": "₡ 188,000,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -83,7 +83,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 100,000,000\n\n-5%",
+    "price": "₡ 94,500,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -129,9 +129,25 @@ window.DEFAULT_PROPERTIES = [
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-lotes-y-terrenos/gran-remate-en-copey-de-dota/31254758"
   },
   {
+    "id": "E24-29377845",
+    "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
+    "price": "$ 925,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 5,
+    "area": "2,096 m²",
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "e24id": "29377845",
+    "wa": "Me%20interesa%20la%20propiedad%2029377845%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-29377845.jpg",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante/29377845"
+  },
+  {
     "id": "E24-32217733",
     "title": "Lotes y Terrenos en El Tejar",
-    "price": "₡ 33,000,000",
+    "price": "₡ 37,000,000",
     "location": "condominio en Cartago*: CRC 36000000.00",
     "beds": 3,
     "baths": 5,
@@ -179,11 +195,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32558182",
     "title": "Apartamento en Venta – ¡Vista extraordinaria y excelente ubicación!",
-    "price": "₡ 49,000,000",
+    "price": "₡ 42,000,000",
     "location": "Moravia",
     "beds": 2,
     "baths": 1,
-    "area": "57 m²",
+    "area": "47 m²",
     "type": "Apartamento",
     "badge": "En Venta",
     "badgeClass": "",
@@ -195,7 +211,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 87,000,000",
+    "price": "₡ 76,500,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -211,7 +227,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30728594",
     "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "$ 290,000",
+    "price": "$ 340,000",
     "location": "San Rafael",
     "beds": 3,
     "baths": 1,
@@ -227,7 +243,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 85,000,000",
+    "price": "$ 250,000\n\n-9%",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
@@ -243,7 +259,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30885230",
     "title": "Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela",
-    "price": "$ 220,000",
+    "price": "₡ 120,000,000",
     "location": "Coyol",
     "beds": 2,
     "baths": 2,
@@ -259,7 +275,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 70,000,000\n\n-6%",
+    "price": "₡ 72,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -291,7 +307,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "Casa en Venta en Lagunilla de Heredia",
-    "price": "₡ 95,000,000",
+    "price": "₡ 90,000,000",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
@@ -307,7 +323,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "$ 240,000\n\n-4%",
+    "price": "$ 285,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
@@ -323,7 +339,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254818",
     "title": "¡La casa de sus sueños en la Trinidad de Moravia!",
-    "price": "$ 230,000",
+    "price": "₡ 115,000,000",
     "location": "La Trinidad",
     "beds": 3,
     "baths": 5,
@@ -339,7 +355,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "₡ 100,000,000",
+    "price": "₡ 100,000,000\n\n-73%",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
@@ -371,7 +387,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "$ 198,500",
+    "price": "₡ 98,000,000",
     "location": "Moravia",
     "beds": 3,
     "baths": 5,
@@ -387,7 +403,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216446",
     "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "$ 215,000",
+    "price": "₡ 99,000,000",
     "location": "Tres Ríos",
     "beds": 2,
     "baths": 5,
@@ -403,7 +419,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 160,000",
+    "price": "₡ 93,000,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -419,10 +435,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377968",
     "title": "Casa en venta ubicada en Zapote",
-    "price": "₡ 76,500,000",
+    "price": "₡ 68,000,000",
     "location": "Zapote",
     "beds": 3,
-    "baths": 1,
+    "baths": 2,
     "area": "133.55 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -451,7 +467,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-28313598",
     "title": "Venta de casa en condominio en la Trinidad de Moravia",
-    "price": "₡ 87,000,000\n\n-11%",
+    "price": "$ 200,000",
     "location": "La Trinidad",
     "beds": 2,
     "baths": 5,
@@ -469,7 +485,7 @@ window.DEFAULT_PROPERTIES = [
     "title": "Casa en Venta en la Guácima de Alajuela",
     "price": "$ 409,900",
     "location": "Guácima",
-    "beds": 3,
+    "beds": 5,
     "baths": 5,
     "area": "1,019.31 m²",
     "type": "Casa",
@@ -483,7 +499,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32298356",
     "title": "¡OPORTUNIDAD ÚNICA EN ASERRÍ!",
-    "price": "₡ 62,000,000",
+    "price": "₡ 67,900,000",
     "location": "Aserrí",
     "beds": 3,
     "baths": 2,
@@ -515,7 +531,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592729",
     "title": "Apartamentos en alquiler en San José Capital",
-    "price": "$ 1,150",
+    "price": "₡ 525,000",
     "location": "Bambú Rivera , Calles Blanco 1 recámaras por USD 1100.00",
     "beds": 2,
     "baths": 2,
@@ -531,7 +547,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592730",
     "title": "Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos",
-    "price": "$ 160,000",
+    "price": "₡ 75,000,000\n\n-5%",
     "location": "San José Capital",
     "beds": 2,
     "baths": 2,
@@ -563,7 +579,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592728",
     "title": "Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos",
-    "price": "₡ 75,000,000\n\n-5%",
+    "price": "$ 175,000",
     "location": "San José Capital",
     "beds": 2,
     "baths": 2,
