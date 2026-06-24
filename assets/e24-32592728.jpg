@@ -212,7 +212,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       window.trackplatform = 'desktop';
       window.userid = null;
       window.countryslug = '';
-      window.sid = '40b58eee4b6c16b4ab32fd196365b3aa';
+      window.sid = '412256777a455884458a8ddc3caa95cd';
       window.gtslots = [];
       window.categorycurrent = {
         slug: ''
@@ -383,7 +383,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
 
       <div class="search-body nocountry">
         <form id="startform" method="post" action="/">
-          <input type="hidden" name="start[_csrf_token]" value="c0a30bad07488c8590c39b2b41094dce" id="start__csrf_token" />          <input type="text" name="start[what]" placeholder="¿Qué buscas?" id="start_what" />          <select name="start[where]" required="required" id="start_where">
+          <input type="hidden" name="start[_csrf_token]" value="e2500a03ed2b7f6ab9c8f0bad64e4609" id="start__csrf_token" />          <input type="text" name="start[what]" placeholder="¿Qué buscas?" id="start_what" />          <select name="start[where]" required="required" id="start_where">
 <option value="" selected="selected">¿Dónde?</option>
 <option value="panama-es">Panamá</option>
 <option value="costa-rica-es">Costa Rica</option>
@@ -409,7 +409,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Panamá</h2>
           <div class="count-box">
-            <strong>62 959</strong> ofertas          </div>
+            <strong>63 015</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -419,7 +419,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Costa Rica</h2>
           <div class="count-box">
-            <strong>31 836</strong> ofertas          </div>
+            <strong>31 841</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -429,7 +429,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>El Salvador</h2>
           <div class="count-box">
-            <strong>8 347</strong> ofertas          </div>
+            <strong>8 351</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -439,7 +439,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Guatemala</h2>
           <div class="count-box">
-            <strong>18 455</strong> ofertas          </div>
+            <strong>18 464</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -449,7 +449,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Nicaragua</h2>
           <div class="count-box">
-            <strong>19 177</strong> ofertas          </div>
+            <strong>19 153</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -469,7 +469,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Dominicana</h2>
           <div class="count-box">
-            <strong>13 384</strong> ofertas          </div>
+            <strong>13 374</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -489,7 +489,7 @@ window.__h82AlnkH6D91__("WyJwdWItNzA3ODE1ODA5NzczMjM4MiIsW251bGwsbnVsbCxudWxsLCJ
         <div class="vertical-center">
           <h2>Puerto Rico</h2>
           <div class="count-box">
-            <strong>643</strong> ofertas          </div>
+            <strong>646</strong> ofertas          </div>
         </div>
       </div>
     </a>
@@ -1088,5 +1088,5 @@ end userWay -->
     window.bindIntlTelInput = initIntlTelInput;
     window.validatePhoneInput = validatePhoneInput;
   });
-</script>  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a10ccd19894ff0b8',t:'MTc4MjMxNTMxNA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</script>  <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a10d5cc4fce2cc6e',t:'MTc4MjMyMTE5OA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
