@@ -20,15 +20,15 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
-  <title>Moving to Costa Rica — Everything You Need | Residencias Costa Rica</title>
-  <meta name="description" content="Everything you need to know about moving to Costa Rica. Residency options, buying property, best areas to live, and how Floribeth Elizondo helps you every step of the way." />
-  <meta name="keywords" content="moving to costa rica, expat costa rica, buy property costa rica, residency costa rica, retire costa rica, digital nomad costa rica" />
+  <title>Make it to Costa Rica — The Real Guide | Residencias Costa Rica</title>
+  <meta name="description" content="The honest, complete guide to emigrating to Costa Rica. Visa types, taxes, cost of living, bank accounts, CAJA, and what it actually costs to make the move." />
+  <meta name="keywords" content="emigrate costa rica, moving to costa rica guide, costa rica visa types, cost of living costa rica, taxes costa rica expat, residency costa rica requirements" />
   <link rel="canonical" href="https://residenciascostarica.com/moving-to-costa-rica" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://residenciascostarica.com/moving-to-costa-rica" />
-  <meta property="og:title" content="Moving to Costa Rica — Everything You Need" />
-  <meta property="og:description" content="Your complete guide to moving to Costa Rica. Residency, property buying, best areas, and expert help from Floribeth Elizondo." />
+  <meta property="og:title" content="Make it to Costa Rica — The Real Guide" />
+  <meta property="og:description" content="Visas, taxes, real costs, and how to actually emigrate to Costa Rica. No fluff, just facts." />
   <meta property="og:image" content="https://residenciascostarica.com/FloryRcr.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,363 +39,276 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    /* ── Language toggle ── */
-    .lang-toggle {
-      display: flex;
+    /* ── Lang toggle ── */
+    .lang-toggle-nav {
+      display: inline-flex;
       align-items: center;
-      gap: .3rem;
-      background: rgba(255,255,255,.12);
+      gap: .2rem;
+      background: var(--cream);
+      border: 1px solid var(--light-gray);
       border-radius: 50px;
-      padding: .3rem .4rem;
-      border: 1px solid rgba(255,255,255,.2);
+      padding: .2rem .3rem;
     }
     .lang-btn {
-      font-size: .75rem;
-      font-weight: 700;
-      padding: .25rem .6rem;
-      border-radius: 50px;
-      border: none;
-      cursor: pointer;
-      transition: background .2s, color .2s;
-      background: transparent;
-      color: rgba(255,255,255,.6);
-      font-family: var(--font);
-      letter-spacing: .04em;
+      font-size: .72rem; font-weight: 700; letter-spacing: .05em;
+      padding: .22rem .55rem; border-radius: 50px; border: none; cursor: pointer;
+      background: transparent; color: var(--gray); font-family: var(--font);
+      transition: background .15s, color .15s;
     }
-    .lang-btn.active {
-      background: #fff;
-      color: var(--dark);
-    }
-    .lang-toggle-nav {
-      background: rgba(196,30,30,.08);
-      border-color: rgba(196,30,30,.2);
-    }
-    .lang-toggle-nav .lang-btn { color: var(--gray); }
-    .lang-toggle-nav .lang-btn.active { background: var(--red); color: #fff; }
+    .lang-btn.active { background: var(--red); color: #fff; }
+    .active-nav { color: var(--red) !important; font-weight: 600; }
 
     /* ── Hero ── */
     .mtcr-hero {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 60%, #2d0808 100%);
-      padding: 8rem 0 5rem;
+      background: var(--dark);
+      padding: 7.5rem 0 0;
       position: relative;
       overflow: hidden;
     }
-    .mtcr-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C41E1E' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    .mtcr-hero-top {
+      position: relative; z-index: 1;
+      padding-bottom: 3rem;
     }
-    .mtcr-hero .container { position: relative; z-index: 1; }
-    .mtcr-hero-inner {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 3rem;
-      align-items: center;
+    .mtcr-label {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+      color: #f87171; margin-bottom: 1.1rem;
     }
-    .mtcr-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      background: rgba(196,30,30,.2);
-      border: 1px solid rgba(196,30,30,.4);
-      color: #f87171;
-      font-size: .78rem;
-      font-weight: 700;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      padding: .35rem .85rem;
-      border-radius: 50px;
-      margin-bottom: 1.2rem;
+    .mtcr-label span { width: 20px; height: 2px; background: #f87171; display: inline-block; }
+    .mtcr-hero h1 { color: #fff; font-size: clamp(2.4rem, 5.5vw, 3.8rem); margin-bottom: 1.2rem; line-height: 1.1; }
+    .mtcr-hero h1 em { color: #f87171; font-style: italic; }
+    .mtcr-hero-sub {
+      color: rgba(255,255,255,.6); font-size: 1rem; max-width: 600px;
+      line-height: 1.8; margin-bottom: 2rem;
     }
-    .mtcr-hero h1 { color: #fff; margin-bottom: 1.2rem; }
-    .mtcr-hero h1 em { color: var(--red); font-style: italic; }
-    .mtcr-hero > .container > .mtcr-hero-inner > div > p {
-      color: rgba(255,255,255,.65);
-      font-size: 1.05rem;
-      max-width: 540px;
-      margin-bottom: 2rem;
-      line-height: 1.75;
+    .mtcr-hero-sub strong { color: rgba(255,255,255,.9); }
+    .mtcr-hero-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      padding: 1.75rem 0; border-top: 1px solid rgba(255,255,255,.08);
     }
-    .mtcr-hero-flags {
-      display: flex;
-      gap: 1rem;
-      font-size: 2.5rem;
-      line-height: 1;
+    .mtcr-meta-item {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .8rem; color: rgba(255,255,255,.45);
     }
-    .mtcr-hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn-mtcr-wa {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      background: var(--wa);
-      color: #fff;
-      font-weight: 700;
-      font-size: .92rem;
-      padding: .85rem 1.5rem;
-      border-radius: 50px;
-      transition: opacity .2s, transform .2s;
-    }
-    .btn-mtcr-wa:hover { opacity: .9; transform: translateY(-1px); }
-    .btn-mtcr-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      border: 1px solid rgba(255,255,255,.25);
-      color: rgba(255,255,255,.85);
-      font-weight: 600;
-      font-size: .92rem;
-      padding: .85rem 1.5rem;
-      border-radius: 50px;
-      transition: background .2s, border-color .2s;
-    }
-    .btn-mtcr-outline:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.4); }
-    .mtcr-hero-stats {
-      display: flex;
-      gap: 2.5rem;
-      margin-top: 2.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid rgba(255,255,255,.1);
-    }
-    .mtcr-stat strong { display: block; font-size: 1.6rem; font-weight: 800; color: #fff; }
-    .mtcr-stat span   { font-size: .78rem; color: rgba(255,255,255,.5); text-transform: uppercase; letter-spacing: .06em; }
+    .mtcr-meta-item i { color: var(--red); }
 
-    /* ── Why CR ── */
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
+    /* ── Section jump nav ── */
+    .mtcr-jump-nav {
+      background: rgba(255,255,255,.04);
+      border-top: 1px solid rgba(255,255,255,.08);
     }
-    .why-card {
+    .mtcr-jump-nav .container {
+      display: flex; overflow-x: auto; gap: 0;
+      scrollbar-width: none;
+    }
+    .mtcr-jump-nav .container::-webkit-scrollbar { display: none; }
+    .jump-link {
+      white-space: nowrap; padding: 1rem 1.25rem;
+      font-size: .78rem; font-weight: 600; color: rgba(255,255,255,.45);
+      border-bottom: 2px solid transparent;
+      transition: color .2s, border-color .2s;
+      text-decoration: none;
+    }
+    .jump-link:hover { color: #fff; border-bottom-color: var(--red); }
+
+    /* ── Content layout ── */
+    .mtcr-section { padding: 4rem 0; }
+    .mtcr-section + .mtcr-section { border-top: 1px solid var(--light-gray); }
+    .mtcr-section-alt { background: var(--cream); }
+
+    .mtcr-section-head { margin-bottom: 2.5rem; }
+    .mtcr-section-head .mtcr-label { margin-bottom: .6rem; }
+    .mtcr-section-head h2 { margin-bottom: .5rem; }
+    .mtcr-section-head p { max-width: 620px; }
+
+    /* ── Money table ── */
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .cost-card {
       background: var(--white);
       border: 1px solid var(--light-gray);
       border-radius: var(--radius);
-      padding: 1.75rem 1.5rem;
-      text-align: center;
-      transition: box-shadow .2s, transform .2s;
-    }
-    .why-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
-    .why-icon {
-      width: 3rem; height: 3rem;
-      background: var(--red-light);
-      border-radius: 10px;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 1rem;
-      font-size: 1.25rem;
-      color: var(--red);
-    }
-    .why-card h3 { margin-bottom: .4rem; }
-    .why-card p  { font-size: .86rem; }
-
-    /* ── Residency options ── */
-    .residency-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .res-card {
-      background: var(--white);
-      border: 2px solid var(--light-gray);
-      border-radius: var(--radius);
-      padding: 1.75rem;
-      position: relative;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .res-card:hover { border-color: var(--red); box-shadow: 0 4px 20px rgba(196,30,30,.1); }
-    .res-card.featured {
-      border-color: var(--red);
-      background: var(--red-light);
-    }
-    .res-badge {
-      position: absolute;
-      top: -10px; right: 1.25rem;
-      background: var(--red);
-      color: #fff;
-      font-size: .68rem;
-      font-weight: 800;
-      padding: .2rem .65rem;
-      border-radius: 50px;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-    }
-    .res-icon {
-      font-size: 1.6rem;
-      margin-bottom: .75rem;
-    }
-    .res-card h3 { margin-bottom: .3rem; color: var(--dark); }
-    .res-req {
-      display: inline-block;
-      background: var(--dark);
-      color: #fff;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: .2rem .6rem;
-      border-radius: 4px;
-      margin: .5rem 0 .75rem;
-    }
-    .res-card p { font-size: .86rem; margin-bottom: .75rem; }
-    .res-perks { list-style: none; padding: 0; margin: 0; }
-    .res-perks li {
-      font-size: .82rem;
-      color: var(--gray);
-      padding: .2rem 0;
-      display: flex;
-      align-items: flex-start;
-      gap: .4rem;
-    }
-    .res-perks li i { color: #22c55e; margin-top: .15rem; flex-shrink: 0; }
-
-    /* ── Areas ── */
-    .areas-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .area-card {
-      background: var(--dark);
-      border-radius: var(--radius);
-      padding: 2rem 1.75rem;
-      color: #fff;
-      position: relative;
       overflow: hidden;
     }
-    .area-card::before {
-      content: '';
-      position: absolute;
-      top: 0; right: 0;
-      width: 80px; height: 80px;
-      background: rgba(196,30,30,.15);
-      border-radius: 0 var(--radius) 0 100%;
+    .cost-card-head {
+      padding: .9rem 1.25rem;
+      background: var(--dark);
+      display: flex; align-items: center; gap: .6rem;
     }
-    .area-card h3 { color: #fff; margin-bottom: .3rem; }
-    .area-tag {
-      display: inline-block;
-      background: rgba(196,30,30,.3);
-      color: #f87171;
-      font-size: .72rem;
-      font-weight: 700;
-      padding: .2rem .55rem;
-      border-radius: 4px;
-      margin-bottom: .75rem;
-      letter-spacing: .04em;
+    .cost-card-head i { color: var(--red); font-size: .9rem; }
+    .cost-card-head span { font-size: .82rem; font-weight: 700; color: #fff; letter-spacing: .03em; text-transform: uppercase; }
+    .cost-row {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: .7rem 1.25rem; border-bottom: 1px solid var(--light-gray);
+      font-size: .86rem;
     }
-    .area-card p { color: rgba(255,255,255,.6); font-size: .86rem; margin-bottom: 1rem; }
-    .area-perks { list-style: none; padding: 0; margin: 0; }
-    .area-perks li {
-      font-size: .82rem;
-      color: rgba(255,255,255,.55);
-      padding: .2rem 0;
-      display: flex;
-      align-items: center;
-      gap: .4rem;
-    }
-    .area-perks li i { color: var(--red); font-size: .7rem; }
-
-    /* ── How we help ── */
-    .help-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3rem;
-    }
-    .help-card {
-      padding: 1.75rem 1.5rem;
+    .cost-row:last-child { border-bottom: none; }
+    .cost-row .label { color: var(--gray); }
+    .cost-row .value { font-weight: 700; color: var(--dark); }
+    .cost-row .value.green { color: #16a34a; }
+    .cost-row .value.red { color: var(--red); }
+    .cost-note {
+      margin-top: 1.25rem; font-size: .82rem; color: var(--gray);
+      background: var(--cream); padding: .9rem 1.1rem; border-radius: 8px;
       border-left: 3px solid var(--red);
-      background: var(--cream);
-      border-radius: 0 var(--radius) var(--radius) 0;
     }
-    .help-number {
-      font-size: .72rem;
-      font-weight: 800;
-      color: var(--red);
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-bottom: .5rem;
-    }
-    .help-card h3 { margin-bottom: .4rem; }
-    .help-card p { font-size: .86rem; }
 
-    /* ── FAQ ── */
-    .faq-list { margin-top: 2.5rem; }
-    .faq-item {
-      border-bottom: 1px solid var(--light-gray);
+    /* ── Tax section ── */
+    .tax-highlight {
+      background: var(--dark); color: #fff;
+      border-radius: var(--radius); padding: 2rem;
+      margin-bottom: 2rem;
     }
-    .faq-item summary {
-      list-style: none;
-      padding: 1.25rem 0;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 600;
-      font-size: .95rem;
-      color: var(--dark);
-      gap: 1rem;
+    .tax-highlight h3 { color: #fff; margin-bottom: .5rem; }
+    .tax-highlight p  { color: rgba(255,255,255,.65); font-size: .9rem; line-height: 1.75; }
+    .tax-highlight strong { color: #fbbf24; }
+    .tax-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem; margin-top: 1.5rem;
     }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary i { color: var(--red); font-size: .8rem; transition: transform .25s; flex-shrink: 0; }
-    .faq-item[open] summary i { transform: rotate(180deg); }
-    .faq-answer {
-      padding: 0 0 1.25rem;
-      color: var(--gray);
-      font-size: .9rem;
-      line-height: 1.75;
-      max-width: 700px;
+    .tax-item {
+      background: var(--white); border: 1px solid var(--light-gray);
+      border-radius: var(--radius); padding: 1.25rem 1.5rem;
     }
+    .tax-item h4 { font-size: .88rem; color: var(--dark); margin-bottom: .3rem; }
+    .tax-item .tax-rate {
+      font-size: 1.5rem; font-weight: 800; color: var(--red); margin-bottom: .3rem; display: block;
+    }
+    .tax-item p { font-size: .8rem; }
+    .tax-brackets { margin-top: 1.5rem; }
+    .tax-brackets table { width: 100%; border-collapse: collapse; font-size: .86rem; }
+    .tax-brackets th {
+      text-align: left; padding: .6rem .9rem; background: var(--dark); color: #fff;
+      font-size: .75rem; letter-spacing: .06em; text-transform: uppercase;
+    }
+    .tax-brackets td { padding: .6rem .9rem; border-bottom: 1px solid var(--light-gray); }
+    .tax-brackets tr:last-child td { border-bottom: none; }
+    .tax-brackets tr:nth-child(even) td { background: var(--cream); }
+
+    /* ── Visa cards ── */
+    .visa-list { display: flex; flex-direction: column; gap: 1.25rem; margin-top: 1.5rem; }
+    .visa-card {
+      background: var(--white); border: 1px solid var(--light-gray);
+      border-radius: var(--radius); padding: 1.75rem;
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 1.25rem 1.75rem; align-items: start;
+      transition: box-shadow .2s, border-color .2s;
+    }
+    .visa-card:hover { border-color: var(--red); box-shadow: 0 4px 20px rgba(196,30,30,.1); }
+    .visa-card.featured { border-color: var(--red); border-width: 2px; }
+    .visa-icon {
+      width: 3rem; height: 3rem; background: var(--red-light);
+      border-radius: 10px; display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem; color: var(--red); flex-shrink: 0;
+    }
+    .visa-header { display: flex; align-items: center; gap: .75rem; flex-wrap: wrap; margin-bottom: .35rem; }
+    .visa-header h3 { margin: 0; font-size: 1.05rem; }
+    .visa-tag {
+      font-size: .68rem; font-weight: 800; padding: .18rem .55rem;
+      border-radius: 4px; text-transform: uppercase; letter-spacing: .05em;
+    }
+    .visa-tag.popular { background: var(--red); color: #fff; }
+    .visa-tag.new     { background: #0ea5e9; color: #fff; }
+    .visa-tag.easy    { background: #16a34a; color: #fff; }
+    .visa-req {
+      font-size: .82rem; font-weight: 700; color: var(--red);
+      margin-bottom: .5rem; display: block;
+    }
+    .visa-body p { font-size: .88rem; margin-bottom: .75rem; }
+    .visa-details {
+      display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: .75rem;
+    }
+    .visa-detail {
+      background: var(--cream); border-radius: 6px; padding: .25rem .6rem;
+      font-size: .76rem; color: var(--gray);
+      display: flex; align-items: center; gap: .3rem;
+    }
+    .visa-detail i { color: var(--dark); font-size: .7rem; }
+    .visa-perks { list-style: none; padding: 0; margin: 0; }
+    .visa-perks li {
+      font-size: .82rem; color: var(--gray);
+      padding: .18rem 0; display: flex; align-items: flex-start; gap: .4rem;
+    }
+    .visa-perks li i { color: #16a34a; margin-top: .15rem; flex-shrink: 0; font-size: .7rem; }
+    @media (max-width: 600px) {
+      .visa-card { grid-template-columns: 1fr; }
+      .visa-icon { display: none; }
+    }
+
+    /* ── Process timeline ── */
+    .process-list { margin-top: 2rem; }
+    .process-step {
+      display: grid; grid-template-columns: 3rem 1fr;
+      gap: 1.25rem; padding-bottom: 2rem; position: relative;
+    }
+    .process-step::before {
+      content: ''; position: absolute;
+      left: 1.4rem; top: 3rem; bottom: 0;
+      width: 2px; background: var(--light-gray);
+    }
+    .process-step:last-child::before { display: none; }
+    .process-num {
+      width: 3rem; height: 3rem; border-radius: 50%;
+      background: var(--red); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: .9rem; flex-shrink: 0; z-index: 1;
+    }
+    .process-body h3 { margin-bottom: .35rem; padding-top: .5rem; }
+    .process-body p  { font-size: .88rem; margin-bottom: .5rem; }
+    .process-time {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .76rem; font-weight: 600; color: var(--red);
+      background: var(--red-light); padding: .2rem .55rem; border-radius: 4px;
+    }
+
+    /* ── Reality check ── */
+    .reality-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 2rem;
+    }
+    .reality-col { border-radius: var(--radius); padding: 1.75rem; }
+    .reality-col.good { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .reality-col.hard { background: #fff7ed; border: 1px solid #fed7aa; }
+    .reality-col h3 { margin-bottom: 1rem; font-size: 1rem; }
+    .reality-col.good h3 { color: #15803d; }
+    .reality-col.hard h3 { color: #c2410c; }
+    .reality-list { list-style: none; padding: 0; margin: 0; }
+    .reality-list li {
+      font-size: .85rem; color: var(--gray); padding: .35rem 0;
+      display: flex; align-items: flex-start; gap: .5rem;
+      border-bottom: 1px solid rgba(0,0,0,.05);
+    }
+    .reality-list li:last-child { border-bottom: none; }
+    .reality-col.good .reality-list li i { color: #16a34a; margin-top: .1rem; }
+    .reality-col.hard .reality-list li i { color: #ea580c; margin-top: .1rem; }
+    @media (max-width: 640px) { .reality-grid { grid-template-columns: 1fr; } }
 
     /* ── CTA band ── */
     .mtcr-cta-band {
-      background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 100%);
-      padding: 4rem 0;
-      text-align: center;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%);
+      padding: 4.5rem 0; text-align: center;
     }
     .mtcr-cta-band h2 { color: #fff; margin-bottom: .75rem; }
-    .mtcr-cta-band p  { color: rgba(255,255,255,.75); margin-bottom: 2rem; font-size: 1rem; }
+    .mtcr-cta-band p  { color: rgba(255,255,255,.6); max-width: 520px; margin: 0 auto 2rem; font-size: .95rem; }
     .mtcr-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-cta-white {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      background: #fff;
-      color: var(--red);
-      font-weight: 700;
-      font-size: .95rem;
-      padding: .9rem 1.75rem;
-      border-radius: 50px;
-      transition: transform .2s, box-shadow .2s;
+    .btn-wa-hero-dark {
+      display: inline-flex; align-items: center; gap: .6rem;
+      background: #25D366; color: #fff; font-weight: 700; font-size: .95rem;
+      padding: .9rem 1.75rem; border-radius: 50px;
+      transition: opacity .2s, transform .2s;
     }
-    .btn-cta-white:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(0,0,0,.15); }
-    .btn-cta-ghost {
-      display: inline-flex;
-      align-items: center;
-      gap: .6rem;
-      border: 2px solid rgba(255,255,255,.5);
-      color: #fff;
-      font-weight: 600;
-      font-size: .95rem;
-      padding: .9rem 1.75rem;
-      border-radius: 50px;
-      transition: background .2s, border-color .2s;
+    .btn-wa-hero-dark:hover { opacity: .9; transform: translateY(-2px); }
+    .btn-outline-white {
+      display: inline-flex; align-items: center; gap: .6rem;
+      border: 1.5px solid rgba(255,255,255,.3); color: rgba(255,255,255,.85);
+      font-weight: 600; font-size: .95rem; padding: .9rem 1.75rem; border-radius: 50px;
+      transition: border-color .2s, background .2s;
     }
-    .btn-cta-ghost:hover { background: rgba(255,255,255,.12); border-color: #fff; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,.08); }
 
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .mtcr-hero { padding: 6rem 0 3rem; }
-      .mtcr-hero-inner { grid-template-columns: 1fr; }
-      .mtcr-hero-flags { display: none; }
-      .mtcr-hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-    }
-
-    /* hide/show lang content */
-    [data-en], [data-es] { }
+    /* hide/show bilingual */
     .lang-es [data-en] { display: none !important; }
     .lang-en [data-es] { display: none !important; }
   </style>
@@ -410,280 +323,525 @@
         Residencias<strong>CostaRica</strong>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="/#buscar" data-en="Find a Home" data-es="Buscar Casa">Find a Home</a></li>
-        <li><a href="/propiedades" data-en="Properties" data-es="Propiedades">Properties</a></li>
-        <li><a href="/moving-to-costa-rica" class="active-nav" data-en="Moving to CR" data-es="Mudarse a CR">Moving to CR</a></li>
-        <li><a href="/#contacto" data-en="Contact" data-es="Contacto">Contact</a></li>
+        <li><a href="/#buscar">
+          <span data-en>Find a Home</span><span data-es>Buscar Casa</span>
+        </a></li>
+        <li><a href="/propiedades">
+          <span data-en>Properties</span><span data-es>Propiedades</span>
+        </a></li>
+        <li><a href="/moving-to-costa-rica" class="active-nav">
+          <span data-en>Moving to CR</span><span data-es>Emigrar a CR</span>
+        </a></li>
+        <li><a href="/#contacto">
+          <span data-en>Contact</span><span data-es>Contacto</span>
+        </a></li>
         <li>
-          <div class="lang-toggle lang-toggle-nav">
+          <div class="lang-toggle-nav">
             <button class="lang-btn active" onclick="setLang('en')">EN</button>
             <button class="lang-btn" onclick="setLang('es')">ES</button>
           </div>
         </li>
         <li>
           <a onclick="return gtagSendEvent(this.href)"
-             href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+             href="https://wa.me/50683725603?text=Hi%2C%20I%20want%20to%20know%20more%20about%20moving%20to%20Costa%20Rica"
              target="_blank" rel="noopener" class="nav-cta">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp
           </a>
         </li>
       </ul>
-      <button class="nav-toggle" id="navToggle" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
   <!-- ===== HERO ===== -->
   <section class="mtcr-hero">
-    <div class="container">
-      <div class="mtcr-hero-inner">
-        <div>
-          <div class="mtcr-eyebrow">
-            <i class="fa-solid fa-map-pin"></i>
-            <span data-en="Your Guide to Costa Rica">Your Guide to Costa Rica</span>
-            <span data-es="Tu Guía para Costa Rica" style="display:none">Tu Guía para Costa Rica</span>
-          </div>
+    <div class="container mtcr-hero-top">
+      <div class="mtcr-label">
+        <span></span>
+        <span data-en>The honest guide — no fluff</span>
+        <span data-es>La guía honesta — sin relleno</span>
+      </div>
 
-          <h1 data-en>Moving to<br><em>Costa Rica?</em><br>We've got you.</h1>
-          <h1 data-es style="display:none">¿Mudándote a<br><em>Costa Rica?</em><br>Te ayudamos.</h1>
+      <h1 data-en>Make it to<br><em>Costa Rica.</em></h1>
+      <h1 data-es style="display:none">Emigrá a<br><em>Costa Rica.</em></h1>
 
-          <p data-en>From finding your dream home to navigating residency, banking, and paperwork — we make your move smooth, safe, and exciting. <strong style="color:#fff;">Pura Vida starts here.</strong></p>
-          <p data-es style="display:none">Desde encontrar tu casa ideal hasta gestionar residencia, bancos y trámites — hacemos tu mudanza tranquila, segura y emocionante. <strong style="color:#fff;">Pura Vida empieza aquí.</strong></p>
+      <p class="mtcr-hero-sub" data-en>
+        Visas, taxes, real costs, bank accounts, healthcare, bureaucracy — everything they don't tell you in the travel blogs. <strong>We've helped hundreds of families make this move, and we'll tell you exactly what to expect.</strong>
+      </p>
+      <p class="mtcr-hero-sub" data-es style="display:none">
+        Visas, impuestos, costos reales, cuentas bancarias, salud, burocracia — todo lo que los blogs de viaje no te dicen. <strong>Hemos ayudado a cientos de familias a hacer este cambio, y te diremos exactamente qué esperar.</strong>
+      </p>
 
-          <div class="mtcr-hero-actions">
-            <a onclick="return gtagSendEvent(this.href)"
-               href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20you%20on%20residenciascostarica.com%20and%20I%27m%20interested%20in%20moving%20to%20Costa%20Rica"
-               target="_blank" rel="noopener" class="btn-mtcr-wa">
-              <i class="fa-brands fa-whatsapp"></i>
-              <span data-en>Chat with Floribeth</span>
-              <span data-es style="display:none">Hablar con Floribeth</span>
-            </a>
-            <a href="/propiedades" class="btn-mtcr-outline">
-              <i class="fa-solid fa-house"></i>
-              <span data-en>Browse Properties</span>
-              <span data-es style="display:none">Ver Propiedades</span>
-            </a>
-          </div>
+      <div class="mtcr-hero-meta">
+        <div class="mtcr-meta-item"><i class="fa-solid fa-flag"></i> <span data-en>75+ years of democracy</span><span data-es>75+ años de democracia</span></div>
+        <div class="mtcr-meta-item"><i class="fa-solid fa-earth-americas"></i> <span data-en>No. 1 happiest in the Americas</span><span data-es>N°1 más feliz de las Américas</span></div>
+        <div class="mtcr-meta-item"><i class="fa-solid fa-leaf"></i> <span data-en>99% renewable energy</span><span data-es>99% energía renovable</span></div>
+        <div class="mtcr-meta-item"><i class="fa-solid fa-shield-halved"></i> <span data-en>No military since 1948</span><span data-es>Sin ejército desde 1948</span></div>
+      </div>
+    </div>
 
-          <div class="mtcr-hero-stats">
-            <div class="mtcr-stat">
-              <strong>10+</strong>
-              <span data-en>Years Experience</span>
-              <span data-es style="display:none">Años Experiencia</span>
-            </div>
-            <div class="mtcr-stat">
-              <strong>200+</strong>
-              <span data-en>Families Helped</span>
-              <span data-es style="display:none">Familias Ayudadas</span>
-            </div>
-            <div class="mtcr-stat">
-              <strong>$0</strong>
-              <span data-en>Cost to Buyer</span>
-              <span data-es style="display:none">Costo al Comprador</span>
-            </div>
-          </div>
-        </div>
-        <div class="mtcr-hero-flags">
-          <span title="Costa Rica">🇨🇷</span>
-          <span title="USA">🇺🇸</span>
-          <span title="Canada">🇨🇦</span>
-          <span title="Europe">🇪🇺</span>
-        </div>
+    <!-- Section jump nav -->
+    <div class="mtcr-jump-nav">
+      <div class="container">
+        <a href="#dinero" class="jump-link" data-en>💰 The Money</a>
+        <a href="#dinero" class="jump-link" data-es style="display:none">💰 El Dinero</a>
+        <a href="#impuestos" class="jump-link" data-en>📋 Taxes</a>
+        <a href="#impuestos" class="jump-link" data-es style="display:none">📋 Impuestos</a>
+        <a href="#visas" class="jump-link" data-en>🛂 Visa Types</a>
+        <a href="#visas" class="jump-link" data-es style="display:none">🛂 Tipos de Visa</a>
+        <a href="#proceso" class="jump-link" data-en>📅 The Process</a>
+        <a href="#proceso" class="jump-link" data-es style="display:none">📅 El Proceso</a>
+        <a href="#realidad" class="jump-link" data-en>🎯 Reality Check</a>
+        <a href="#realidad" class="jump-link" data-es style="display:none">🎯 La Realidad</a>
+        <a href="#ayuda" class="jump-link" data-en>🤝 How We Help</a>
+        <a href="#ayuda" class="jump-link" data-es style="display:none">🤝 Cómo Ayudamos</a>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY COSTA RICA ===== -->
-  <section class="section">
+  <!-- ===== THE MONEY ===== -->
+  <section class="mtcr-section" id="dinero">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en>Why Costa Rica?</span>
-        <span class="section-tag" data-es style="display:none">¿Por qué Costa Rica?</span>
-        <h2 data-en>A country that <em>earns</em> your move</h2>
-        <h2 data-es style="display:none">Un país que <em>merece</em> tu mudanza</h2>
-        <p data-en>75+ years of democracy, no standing army, and a constitution that protects your right to nature. Costa Rica isn't just a destination — it's a lifestyle.</p>
-        <p data-es style="display:none">Más de 75 años de democracia, sin ejército, y una constitución que protege tu derecho a la naturaleza. Costa Rica no es solo un destino — es un estilo de vida.</p>
+      <div class="mtcr-section-head">
+        <div class="mtcr-label"><span></span>
+          <span data-en>Cost of Living</span><span data-es>Costo de Vida</span>
+        </div>
+        <h2 data-en>The money — <em>what it actually costs</em></h2>
+        <h2 data-es style="display:none">El dinero — <em>lo que realmente cuesta</em></h2>
+        <p data-en>Costa Rica is not cheap by Latin American standards, but it's 35–50% cheaper than the US, Canada, or Western Europe. Here are real numbers, not estimates.</p>
+        <p data-es style="display:none">Costa Rica no es barato para estándares latinoamericanos, pero es 35–50% más económico que EE.UU., Canadá o Europa Occidental. Acá van números reales, no estimados.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-icon"><i class="fa-solid fa-sun"></i></div>
-          <h3 data-en>Perfect Climate</h3>
-          <h3 data-es style="display:none">Clima Perfecto</h3>
-          <p data-en>Year-round temperatures between 65–85°F. Two seasons: dry (Dec–Apr) and green (May–Nov).</p>
-          <p data-es style="display:none">Temperaturas todo el año entre 18–30°C. Dos estaciones: seca (dic–abr) y verde (may–nov).</p>
+      <div class="cost-grid">
+
+        <div class="cost-card reveal">
+          <div class="cost-card-head"><i class="fa-solid fa-house"></i> <span data-en>Housing / Month</span><span data-es>Vivienda / Mes</span></div>
+          <div class="cost-row"><span class="label" data-en>Studio / 1BR — suburbs</span><span class="label" data-es style="display:none">Estudio / 1H — suburbios</span> <span class="value green">$350 – $600</span></div>
+          <div class="cost-row"><span class="label" data-en>2BR apartment — San José</span><span class="label" data-es style="display:none">Apartamento 2H — San José</span> <span class="value">$650 – $1,100</span></div>
+          <div class="cost-row"><span class="label" data-en>3BR house — gated community</span><span class="label" data-es style="display:none">Casa 3H — condominio</span> <span class="value">$900 – $1,800</span></div>
+          <div class="cost-row"><span class="label" data-en>Luxury / Escazú / Santa Ana</span><span class="label" data-es style="display:none">Lujo / Escazú / Santa Ana</span> <span class="value red">$1,500 – $3,500+</span></div>
         </div>
-        <div class="why-card reveal d1">
-          <div class="why-icon"><i class="fa-solid fa-heart-pulse"></i></div>
-          <h3 data-en>World-Class Healthcare</h3>
-          <h3 data-es style="display:none">Salud de Primera</h3>
-          <p data-en>Universal public healthcare (CAJA) + excellent private hospitals. JCI-accredited medical centers at a fraction of US costs.</p>
-          <p data-es style="display:none">Salud pública universal (CAJA) + excelentes hospitales privados. Centros médicos acreditados JCI a una fracción del costo en EE.UU.</p>
+
+        <div class="cost-card reveal d1">
+          <div class="cost-card-head"><i class="fa-solid fa-cart-shopping"></i> <span data-en>Daily Life / Month</span><span data-es>Vida Diaria / Mes</span></div>
+          <div class="cost-row"><span class="label" data-en>Groceries (couple)</span><span class="label" data-es style="display:none">Supermercado (pareja)</span> <span class="value">$300 – $500</span></div>
+          <div class="cost-row"><span class="label" data-en>Local restaurant meal</span><span class="label" data-es style="display:none">Comida en soda local</span> <span class="value green">$4 – $10</span></div>
+          <div class="cost-row"><span class="label" data-en>Mid-range restaurant</span><span class="label" data-es style="display:none">Restaurante nivel medio</span> <span class="value">$15 – $30</span></div>
+          <div class="cost-row"><span class="label" data-en>Electricity + water + internet</span><span class="label" data-es style="display:none">Luz + agua + internet</span> <span class="value">$80 – $180</span></div>
+          <div class="cost-row"><span class="label" data-en>Gas (per liter)</span><span class="label" data-es style="display:none">Gasolina (por litro)</span> <span class="value">$1.40 – $1.60</span></div>
         </div>
-        <div class="why-card reveal d2">
-          <div class="why-icon"><i class="fa-solid fa-coins"></i></div>
-          <h3 data-en>Affordable Living</h3>
-          <h3 data-es style="display:none">Costo de Vida Accesible</h3>
-          <p data-en>35–50% cheaper than the US or Western Europe. Your money goes much further without sacrificing quality of life.</p>
-          <p data-es style="display:none">35–50% más barato que EE.UU. o Europa Occidental. Tu dinero rinde mucho más sin sacrificar calidad de vida.</p>
+
+        <div class="cost-card reveal d2">
+          <div class="cost-card-head"><i class="fa-solid fa-heart-pulse"></i> <span data-en>Healthcare / Month</span><span data-es>Salud / Mes</span></div>
+          <div class="cost-row"><span class="label" data-en>CAJA (public) — voluntary</span><span class="label" data-es style="display:none">CAJA (pública) — voluntaria</span> <span class="value green">$70 – $200</span></div>
+          <div class="cost-row"><span class="label" data-en>Private health insurance</span><span class="label" data-es style="display:none">Seguro privado</span> <span class="value">$100 – $350</span></div>
+          <div class="cost-row"><span class="label" data-en>Private doctor visit</span><span class="label" data-es style="display:none">Consulta médica privada</span> <span class="value green">$40 – $80</span></div>
+          <div class="cost-row"><span class="label" data-en>Dentist (cleaning)</span><span class="label" data-es style="display:none">Dentista (limpieza)</span> <span class="value green">$30 – $60</span></div>
         </div>
-        <div class="why-card reveal d3">
-          <div class="why-icon"><i class="fa-solid fa-wifi"></i></div>
-          <h3 data-en>Digital Nomad Ready</h3>
-          <h3 data-es style="display:none">Listo para Nómadas</h3>
-          <p data-en>Fiber internet in most urban areas, growing coworking scene, and a dedicated Digital Nomad Visa since 2021.</p>
-          <p data-es style="display:none">Fibra óptica en la mayoría de zonas urbanas, coworkings en crecimiento y Visa Nómada Digital desde 2021.</p>
+
+        <div class="cost-card reveal d3">
+          <div class="cost-card-head"><i class="fa-solid fa-car"></i> <span data-en>Getting Around</span><span data-es>Transporte</span></div>
+          <div class="cost-row"><span class="label" data-en>Bus (San José metro)</span><span class="label" data-es style="display:none">Bus (Gran Área Metropolitana)</span> <span class="value green">$0.50 – $1.50</span></div>
+          <div class="cost-row"><span class="label" data-en>Uber / ride-share (trip)</span><span class="label" data-es style="display:none">Uber / transporte (viaje)</span> <span class="value">$3 – $15</span></div>
+          <div class="cost-row"><span class="label" data-en>New car (import tax ~52%)</span><span class="label" data-es style="display:none">Carro nuevo (imp. ~52%)</span> <span class="value red">Very expensive</span></div>
+          <div class="cost-row"><span class="label" data-en>Used car (local market)</span><span class="label" data-es style="display:none">Carro usado (mercado local)</span> <span class="value">$8,000 – $25,000</span></div>
         </div>
-        <div class="why-card reveal d1">
-          <div class="why-icon"><i class="fa-solid fa-leaf"></i></div>
-          <h3 data-en>99% Renewable Energy</h3>
-          <h3 data-es style="display:none">99% Energía Renovable</h3>
-          <p data-en>Costa Rica runs almost entirely on hydroelectric, geothermal and wind power. One of the greenest countries on Earth.</p>
-          <p data-es style="display:none">Costa Rica funciona casi completamente con energía hidroeléctrica, geotérmica y eólica. Uno de los países más verdes del planeta.</p>
-        </div>
-        <div class="why-card reveal d2">
-          <div class="why-icon"><i class="fa-solid fa-shield-halved"></i></div>
-          <h3 data-en>Safe & Stable</h3>
-          <h3 data-es style="display:none">Seguro y Estable</h3>
-          <p data-en>The oldest democracy in Latin America with no military since 1948. Consistently ranked as the happiest country in the Americas.</p>
-          <p data-es style="display:none">La democracia más antigua de Latinoamérica sin ejército desde 1948. Constantemente rankeado como el país más feliz de las Américas.</p>
-        </div>
+
+      </div>
+      <div class="cost-note reveal" data-en>
+        <strong>Budget estimate:</strong> A couple living comfortably (rent + food + health + transport) can expect to spend <strong>$1,800 – $2,800/month</strong> outside of San José, or <strong>$2,500 – $4,000/month</strong> in the greater metro area. Single person: roughly 60% of those figures.
+      </div>
+      <div class="cost-note reveal" data-es style="display:none">
+        <strong>Estimado de presupuesto:</strong> Una pareja viviendo cómodamente (alquiler + comida + salud + transporte) puede esperar gastar <strong>$1,800 – $2,800/mes</strong> fuera del área metropolitana, o <strong>$2,500 – $4,000/mes</strong> en el GAM. Persona sola: aproximadamente el 60% de esas cifras.
       </div>
     </div>
   </section>
 
-  <!-- ===== RESIDENCY OPTIONS ===== -->
-  <section class="section section-alt">
+  <!-- ===== TAXES ===== -->
+  <section class="mtcr-section mtcr-section-alt" id="impuestos">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en>Legal Pathways</span>
-        <span class="section-tag" data-es style="display:none">Opciones Legales</span>
-        <h2 data-en>Residency options <em>for you</em></h2>
-        <h2 data-es style="display:none">Opciones de <em>residencia</em> para vos</h2>
-        <p data-en>Costa Rica offers several paths to legal residency. We connect you with trusted immigration attorneys to find the right fit.</p>
-        <p data-es style="display:none">Costa Rica ofrece varias vías para la residencia legal. Te conectamos con abogados de inmigración de confianza para encontrar la mejor opción.</p>
+      <div class="mtcr-section-head">
+        <div class="mtcr-label"><span></span>
+          <span data-en>Taxes & Law</span><span data-es>Impuestos y Ley</span>
+        </div>
+        <h2 data-en>Taxes — the <em>rules you must know</em></h2>
+        <h2 data-es style="display:none">Impuestos — las <em>reglas que debes conocer</em></h2>
       </div>
-      <div class="residency-grid">
-        <div class="res-card featured reveal">
-          <div class="res-badge" data-en>Most Popular</div>
-          <div class="res-badge" data-es style="display:none">Más Popular</div>
-          <div class="res-icon">🏖️</div>
-          <h3 data-en>Pensionado (Retiree)</h3>
-          <h3 data-es style="display:none">Pensionado (Jubilado)</h3>
-          <div class="res-req" data-en>$1,000/month pension</div>
-          <div class="res-req" data-es style="display:none">$1,000/mes de pensión</div>
-          <p data-en>Ideal for retirees receiving a pension from a government, company, or private source.</p>
-          <p data-es style="display:none">Ideal para jubilados que reciben pensión de gobierno, empresa o fuente privada.</p>
-          <ul class="res-perks">
-            <li><i class="fa-solid fa-check"></i> <span data-en>Import household goods duty-free</span><span data-es style="display:none">Importar bienes del hogar libres de impuestos</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Import one vehicle duty-free every 5 years</span><span data-es style="display:none">Importar un vehículo libre de impuestos cada 5 años</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Discounts on medical, transport & entertainment</span><span data-es style="display:none">Descuentos en salud, transporte y entretenimiento</span></li>
-          </ul>
+
+      <div class="tax-highlight reveal">
+        <h3 data-en>🏆 The biggest advantage: Territorial Taxation</h3>
+        <h3 data-es style="display:none">🏆 La mayor ventaja: Tributación Territorial</h3>
+        <p data-en>Costa Rica taxes only income <strong>generated inside the country</strong>. If you receive a pension, dividends, rent, or salary from abroad, <strong>you pay zero income tax in Costa Rica on that money.</strong> This is the system that attracts retirees and investors from all over the world.</p>
+        <p data-es style="display:none">Costa Rica solo grava los ingresos <strong>generados dentro del país</strong>. Si recibís pensión, dividendos, alquiler o salario del exterior, <strong>no pagás impuesto sobre la renta en Costa Rica por ese dinero.</strong> Este sistema atrae a jubilados e inversores de todo el mundo.</p>
+      </div>
+
+      <div class="tax-grid">
+        <div class="tax-item reveal">
+          <span class="tax-rate">13%</span>
+          <h4 data-en>VAT (IVA)</h4>
+          <h4 data-es style="display:none">IVA</h4>
+          <p data-en>Applied to most goods and services. Basic food items, medicines, and education are taxed at 0% or reduced rates.</p>
+          <p data-es style="display:none">Aplicado a la mayoría de bienes y servicios. Alimentos básicos, medicamentos y educación tienen tasa 0% o reducida.</p>
         </div>
-        <div class="res-card reveal d1">
-          <div class="res-icon">💼</div>
-          <h3 data-en>Rentista (Passive Income)</h3>
-          <h3 data-es style="display:none">Rentista (Ingresos Pasivos)</h3>
-          <div class="res-req" data-en>$2,500/month guaranteed</div>
-          <div class="res-req" data-es style="display:none">$2,500/mes garantizados</div>
-          <p data-en>For those with a reliable passive income source like investments, rental income, or annuities.</p>
-          <p data-es style="display:none">Para quienes tienen ingresos pasivos confiables como inversiones, alquileres o anualidades.</p>
-          <ul class="res-perks">
-            <li><i class="fa-solid fa-check"></i> <span data-en>Same duty-free import benefits</span><span data-es style="display:none">Mismos beneficios de importación libre</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Income must be maintained for 3 years</span><span data-es style="display:none">Ingreso debe mantenerse por 3 años</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Can apply for permanent residency later</span><span data-es style="display:none">Puede solicitar residencia permanente después</span></li>
-          </ul>
+        <div class="tax-item reveal d1">
+          <span class="tax-rate">0.25%</span>
+          <h4 data-en>Property Tax (annual)</h4>
+          <h4 data-es style="display:none">Impuesto de Bienes Inmuebles (anual)</h4>
+          <p data-en>Paid annually to the municipality based on the registered property value. One of the lowest in Latin America.</p>
+          <p data-es style="display:none">Se paga anualmente a la municipalidad sobre el valor registral de la propiedad. Uno de los más bajos de Latinoamérica.</p>
         </div>
-        <div class="res-card reveal d2">
-          <div class="res-icon">📈</div>
-          <h3 data-en>Inversionista (Investor)</h3>
-          <h3 data-es style="display:none">Inversionista</h3>
-          <div class="res-req" data-en>$150,000 investment</div>
-          <div class="res-req" data-es style="display:none">$150,000 en inversión</div>
-          <p data-en>Invest in Costa Rican real estate or a registered business to qualify for this residency category.</p>
-          <p data-es style="display:none">Invierte en bienes raíces o un negocio registrado en Costa Rica para calificar en esta categoría.</p>
-          <ul class="res-perks">
-            <li><i class="fa-solid fa-check"></i> <span data-en>Real estate qualifies as investment</span><span data-es style="display:none">Bienes raíces califican como inversión</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Fast path for business owners</span><span data-es style="display:none">Vía rápida para dueños de negocios</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Can work legally in Costa Rica</span><span data-es style="display:none">Puede trabajar legalmente en Costa Rica</span></li>
-          </ul>
+        <div class="tax-item reveal d2">
+          <span class="tax-rate">1.5%</span>
+          <h4 data-en>Property Transfer Tax</h4>
+          <h4 data-es style="display:none">Impuesto de Traspaso</h4>
+          <p data-en>Paid once when buying property. Additional stamp duties and notary fees bring total closing costs to ~3–4% of purchase price.</p>
+          <p data-es style="display:none">Se paga una vez al comprar propiedad. Timbres adicionales y honorarios de notario llevan los costos totales al ~3–4% del precio.</p>
         </div>
-        <div class="res-card reveal d3">
-          <div class="res-icon">💻</div>
-          <h3 data-en>Digital Nomad Visa</h3>
-          <h3 data-es style="display:none">Visa Nómada Digital</h3>
-          <div class="res-req" data-en>$3,000/month income</div>
-          <div class="res-req" data-es style="display:none">$3,000/mes de ingreso</div>
-          <p data-en>Work remotely for companies outside Costa Rica while enjoying the Pura Vida lifestyle. Valid for 1 year, renewable.</p>
-          <p data-es style="display:none">Trabaja remotamente para empresas fuera de Costa Rica disfrutando el estilo Pura Vida. Válida 1 año, renovable.</p>
-          <ul class="res-perks">
-            <li><i class="fa-solid fa-check"></i> <span data-en>Tax exemption on foreign income</span><span data-es style="display:none">Exención de impuestos en ingresos del exterior</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Bring family members</span><span data-es style="display:none">Traer familiares</span></li>
-            <li><i class="fa-solid fa-check"></i> <span data-en>Available since 2021</span><span data-es style="display:none">Disponible desde 2021</span></li>
-          </ul>
+        <div class="tax-item reveal d3">
+          <span class="tax-rate">Varies</span>
+          <h4 data-en>Luxury Home Tax</h4>
+          <h4 data-es style="display:none">Impuesto Solidario (Casas de Lujo)</h4>
+          <p data-en>Applies to properties valued over ~$230,000. Rates range from 0.25% to 0.55% annually. Most residential properties fall below this threshold.</p>
+          <p data-es style="display:none">Aplica a propiedades valoradas en más de ~$230,000. Tasas del 0.25% al 0.55% anual. La mayoría de propiedades residenciales están por debajo.</p>
         </div>
+      </div>
+
+      <div class="tax-brackets reveal" style="margin-top:2rem;">
+        <h3 style="margin-bottom:1rem" data-en>Income Tax — if you work in Costa Rica</h3>
+        <h3 style="margin-bottom:1rem" data-es style="display:none">Impuesto sobre la Renta — si trabajás en Costa Rica</h3>
+        <p style="margin-bottom:1rem" data-en>Only applies to income earned from Costa Rican sources (local employer, Costa Rican clients, or local business). Foreign income remains untaxed.</p>
+        <p style="margin-bottom:1rem" data-es style="display:none">Solo aplica a ingresos de fuentes costarricenses (empleador local, clientes costarricenses o negocio local). Los ingresos del exterior no se gravan.</p>
+        <table>
+          <thead>
+            <tr>
+              <th data-en>Monthly Income (CRC)</th><th data-en>Monthly Income (USD ~)</th><th data-en>Rate</th>
+              <th data-es style="display:none">Ingreso Mensual (CRC)</th><th data-es style="display:none">Ingreso Mensual (USD ~)</th><th data-es style="display:none">Tasa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td data-en>Up to ₡941,000</td><td data-en>~ $1,800</td><td><strong>0%</strong></td>
+                <td data-es style="display:none">Hasta ₡941,000</td><td data-es style="display:none">~ $1,800</td></tr>
+            <tr><td data-en>₡941,001 – ₡1,381,000</td><td data-en>$1,800 – $2,650</td><td><strong>10%</strong></td>
+                <td data-es style="display:none">₡941,001 – ₡1,381,000</td><td data-es style="display:none">$1,800 – $2,650</td></tr>
+            <tr><td data-en>₡1,381,001 – ₡2,419,000</td><td data-en>$2,650 – $4,650</td><td><strong>15%</strong></td>
+                <td data-es style="display:none">₡1,381,001 – ₡2,419,000</td><td data-es style="display:none">$2,650 – $4,650</td></tr>
+            <tr><td data-en>₡2,419,001 – ₡4,842,000</td><td data-en>$4,650 – $9,300</td><td><strong>20%</strong></td>
+                <td data-es style="display:none">₡2,419,001 – ₡4,842,000</td><td data-es style="display:none">$4,650 – $9,300</td></tr>
+            <tr><td data-en>Over ₡4,842,000</td><td data-en>Over $9,300</td><td><strong>25%</strong></td>
+                <td data-es style="display:none">Sobre ₡4,842,000</td><td data-es style="display:none">Sobre $9,300</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="cost-note reveal" style="margin-top:1.5rem" data-en>
+        <strong>CAJA (Social Security):</strong> If you work for a Costa Rican company, CAJA contributions are mandatory — employee pays ~10.67%, employer pays ~26.33%. If self-employed or as a voluntary member (required for most residency categories), you pay a monthly fee based on declared income, starting around $70–150/month for access to the public healthcare system.
+      </div>
+      <div class="cost-note reveal" style="margin-top:1.5rem" data-es style="display:none">
+        <strong>CAJA (Seguridad Social):</strong> Si trabajás para una empresa costarricense, las contribuciones a la CAJA son obligatorias — empleado paga ~10.67%, patrono ~26.33%. Si sos trabajador independiente o afiliado voluntario (requerido para la mayoría de categorías de residencia), pagás una cuota mensual basada en ingresos declarados, desde ~$70–150/mes para acceder al sistema de salud pública.
       </div>
     </div>
   </section>
 
-  <!-- ===== BEST AREAS ===== -->
-  <section class="section">
+  <!-- ===== VISAS ===== -->
+  <section class="mtcr-section" id="visas">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en>Where to Live</span>
-        <span class="section-tag" data-es style="display:none">Dónde Vivir</span>
-        <h2 data-en>Find your <em>perfect area</em></h2>
-        <h2 data-es style="display:none">Encontrá tu <em>zona ideal</em></h2>
-        <p data-en>Every lifestyle has its perfect spot in Costa Rica. Here are the most popular areas for expats and newcomers.</p>
-        <p data-es style="display:none">Cada estilo de vida tiene su lugar perfecto en Costa Rica. Estas son las zonas más populares para expats y nuevos residentes.</p>
+      <div class="mtcr-section-head">
+        <div class="mtcr-label"><span></span>
+          <span data-en>Immigration</span><span data-es>Inmigración</span>
+        </div>
+        <h2 data-en>Visa types — <em>find your path</em></h2>
+        <h2 data-es style="display:none">Tipos de visa — <em>encontrá tu camino</em></h2>
+        <p data-en>Costa Rica offers several legal pathways. Most nationalities can enter visa-free for 90 days as a tourist — but if you want to stay and build a life here, here are your options.</p>
+        <p data-es style="display:none">Costa Rica ofrece varias vías legales. La mayoría de nacionalidades pueden entrar sin visa por 90 días como turistas — pero si querés quedarte y construir una vida aquí, estas son tus opciones.</p>
       </div>
-      <div class="areas-grid">
-        <div class="area-card reveal">
-          <div class="area-tag" data-en>Urban · Central</div>
-          <div class="area-tag" data-es style="display:none">Urbano · Central</div>
-          <h3>San José / GAM</h3>
-          <p data-en>The capital metro area. Best for professionals, families, and anyone who wants city convenience — hospitals, international schools, restaurants, and culture.</p>
-          <p data-es style="display:none">El área metropolitana de la capital. Ideal para profesionales, familias y quienes quieren comodidad urbana — hospitales, escuelas internacionales, restaurantes y cultura.</p>
-          <ul class="area-perks">
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Best infrastructure & connectivity</span><span data-es style="display:none">Mejor infraestructura y conectividad</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>International schools & universities</span><span data-es style="display:none">Escuelas internacionales y universidades</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Homes from $80,000 to $500,000+</span><span data-es style="display:none">Casas desde $80,000 hasta $500,000+</span></li>
+
+      <div class="visa-list">
+
+        <!-- Turista -->
+        <div class="visa-card reveal">
+          <div class="visa-icon"><i class="fa-solid fa-passport"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Tourist Stay</h3>
+              <h3 data-es style="display:none">Estadía Turística</h3>
+              <span class="visa-tag easy" data-en>No application needed</span>
+              <span class="visa-tag easy" data-es style="display:none">Sin trámite</span>
+            </div>
+            <span class="visa-req" data-en>Valid passport · 0 requirements</span>
+            <span class="visa-req" data-es style="display:none">Pasaporte válido · 0 requisitos</span>
+            <p data-en>Citizens of 60+ countries (including US, Canada, EU, UK, Australia) enter Costa Rica visa-free for 90 days. You can exit and re-enter, but immigration has started scrutinizing "perpetual tourists." Not a long-term strategy.</p>
+            <p data-es style="display:none">Ciudadanos de 60+ países (incluyendo EE.UU., Canadá, UE, UK, Australia) entran a Costa Rica sin visa por 90 días. Podés salir y reingresar, pero migración ha comenzado a escrutar a los "turistas perpetuos." No es una estrategia a largo plazo.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-clock"></i> 90 days</span>
+              <span class="visa-detail"><i class="fa-solid fa-rotate"></i> <span data-en>Renewable by exit</span><span data-es>Renovable saliendo</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-ban"></i> <span data-en>Cannot work legally</span><span data-es>No puede trabajar legalmente</span></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pensionado -->
+        <div class="visa-card featured reveal">
+          <div class="visa-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Pensionado (Retiree)</h3>
+              <h3 data-es style="display:none">Pensionado (Jubilado)</h3>
+              <span class="visa-tag popular" data-en>Most popular</span>
+              <span class="visa-tag popular" data-es style="display:none">Más popular</span>
+            </div>
+            <span class="visa-req" data-en>Minimum: $1,000/month guaranteed pension</span>
+            <span class="visa-req" data-es style="display:none">Mínimo: $1,000/mes de pensión garantizada</span>
+            <p data-en>For retirees with a guaranteed, lifetime pension from a government, military, private company, or approved institution. The pension must be permanent and verifiable. Processing takes 6–12 months.</p>
+            <p data-es style="display:none">Para jubilados con pensión garantizada y vitalicia de gobierno, institución militar, empresa privada o institución aprobada. La pensión debe ser permanente y verificable. El proceso toma 6–12 meses.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-calendar"></i> <span data-en>2-yr renewable</span><span data-es>Renovable cada 2 años</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-building-columns"></i> <span data-en>Permanent residency after 3 yrs</span><span data-es>Residencia permanente a los 3 años</span></span>
+            </div>
+            <ul class="visa-perks">
+              <li><i class="fa-solid fa-check"></i> <span data-en>Import household goods & one vehicle duty-free</span><span data-es>Importar bienes del hogar y un vehículo libre de impuestos</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>50% discount on entertainment, transport & more</span><span data-es>50% descuento en entretenimiento, transporte y más</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Enroll in CAJA public healthcare</span><span data-es>Inscribirse en la CAJA (salud pública)</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Cannot work for a CR employer (can own a business)</span><span data-es>No puede trabajar para empleador CR (sí puede tener empresa)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Rentista -->
+        <div class="visa-card reveal">
+          <div class="visa-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Rentista (Passive Income)</h3>
+              <h3 data-es style="display:none">Rentista (Ingresos Pasivos)</h3>
+            </div>
+            <span class="visa-req" data-en>Minimum: $2,500/month from a bank or investment source, guaranteed for 5 years</span>
+            <span class="visa-req" data-es style="display:none">Mínimo: $2,500/mes de banco o inversión, garantizados por 5 años</span>
+            <p data-en>For those with passive income: dividends, annuities, trust distributions, or a certified bank deposit. The income doesn't have to be a pension — but it must be consistent and provable from a recognized financial institution.</p>
+            <p data-es style="display:none">Para quienes tienen ingresos pasivos: dividendos, anualidades, fideicomisos o depósito bancario certificado. No tiene que ser pensión, pero debe ser constante y comprobable de una institución financiera reconocida.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-calendar"></i> <span data-en>2-yr renewable</span><span data-es>Renovable cada 2 años</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-building-columns"></i> <span data-en>Permanent residency after 3 yrs</span><span data-es>Residencia permanente a los 3 años</span></span>
+            </div>
+            <ul class="visa-perks">
+              <li><i class="fa-solid fa-check"></i> <span data-en>Same duty-free import benefits as Pensionado</span><span data-es>Mismos beneficios de importación libre que el Pensionado</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Must maintain income level for minimum 5 years</span><span data-es>Debe mantener nivel de ingresos por mínimo 5 años</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Cannot work for a CR employer (can own a business)</span><span data-es>No puede trabajar para empleador CR (sí puede tener empresa)</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Inversionista -->
+        <div class="visa-card reveal">
+          <div class="visa-icon"><i class="fa-solid fa-building"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Inversionista (Investor)</h3>
+              <h3 data-es style="display:none">Inversionista</h3>
+            </div>
+            <span class="visa-req" data-en>Minimum: $150,000 investment in Costa Rican real estate or a registered business</span>
+            <span class="visa-req" data-es style="display:none">Mínimo: $150,000 de inversión en bienes raíces o empresa registrada en Costa Rica</span>
+            <p data-en>Buying a property worth $150,000+ qualifies as the investment. The property must remain in your name throughout the residency period. This is the most common path for those who come to buy a home and settle down.</p>
+            <p data-es style="display:none">Comprar una propiedad de $150,000+ califica como la inversión. La propiedad debe mantenerse a tu nombre durante el período de residencia. Es el camino más común para quienes vienen a comprar casa y establecerse.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-calendar"></i> <span data-en>2-yr renewable</span><span data-es>Renovable cada 2 años</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-briefcase"></i> <span data-en>Can work in CR</span><span data-es>Puede trabajar en CR</span></span>
+            </div>
+            <ul class="visa-perks">
+              <li><i class="fa-solid fa-check"></i> <span data-en>Real estate investment counts directly toward the requirement</span><span data-es>La inversión en bienes raíces cuenta directamente</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Can apply for work authorization separately</span><span data-es>Puede solicitar permiso de trabajo por separado</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Permanent residency after 3 years</span><span data-es>Residencia permanente a los 3 años</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Nómada Digital -->
+        <div class="visa-card reveal">
+          <div class="visa-icon"><i class="fa-solid fa-laptop"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Digital Nomad Visa</h3>
+              <h3 data-es style="display:none">Visa Nómada Digital</h3>
+              <span class="visa-tag new">2021</span>
+            </div>
+            <span class="visa-req" data-en>Minimum: $3,000/month income from foreign sources + health insurance</span>
+            <span class="visa-req" data-es style="display:none">Mínimo: $3,000/mes de fuentes extranjeras + seguro médico</span>
+            <p data-en>Work remotely for companies or clients outside Costa Rica while living here legally. Valid for 1 year, renewable once for another year. After 2 years you must switch to another category or leave.</p>
+            <p data-es style="display:none">Trabajá remotamente para empresas o clientes fuera de Costa Rica mientras vivís aquí legalmente. Válida 1 año, renovable una vez por otro año más. Después de 2 años debés cambiar de categoría o salir.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-calendar"></i> <span data-en>1 year + 1 renewal</span><span data-es>1 año + 1 renovación</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-ban"></i> <span data-en>No CR-source income</span><span data-es>Sin ingresos de fuente CR</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-heart"></i> <span data-en>Health insurance required</span><span data-es>Seguro médico requerido</span></span>
+            </div>
+            <ul class="visa-perks">
+              <li><i class="fa-solid fa-check"></i> <span data-en>Foreign income completely tax-exempt in Costa Rica</span><span data-es>Ingresos del exterior completamente exentos de impuestos en CR</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Can bring spouse and dependents</span><span data-es>Puede traer cónyuge y dependientes</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Import personal items and one vehicle duty-free</span><span data-es>Importar artículos personales y un vehículo libre de impuestos</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Vínculos -->
+        <div class="visa-card reveal">
+          <div class="visa-icon"><i class="fa-solid fa-heart"></i></div>
+          <div class="visa-body">
+            <div class="visa-header">
+              <h3 data-en>Family / Marriage Ties</h3>
+              <h3 data-es style="display:none">Vínculos Familiares / Matrimonio</h3>
+            </div>
+            <span class="visa-req" data-en>Marriage or first-degree family relationship with a Costa Rican citizen</span>
+            <span class="visa-req" data-es style="display:none">Matrimonio o vínculo familiar de primer grado con ciudadano costarricense</span>
+            <p data-en>If you are married to a Costa Rican or are the parent/child of one, you can apply for residency as a <em>dependiente</em>. One of the fastest paths to permanent residency.</p>
+            <p data-es style="display:none">Si estás casado/a con un costarricense o sos padre/madre/hijo de uno, podés solicitar residencia como <em>dependiente</em>. Uno de los caminos más rápidos hacia la residencia permanente.</p>
+            <div class="visa-details">
+              <span class="visa-detail"><i class="fa-solid fa-calendar"></i> <span data-en>2-yr renewable</span><span data-es>Renovable cada 2 años</span></span>
+              <span class="visa-detail"><i class="fa-solid fa-briefcase"></i> <span data-en>Can work in CR</span><span data-es>Puede trabajar en CR</span></span>
+            </div>
+            <ul class="visa-perks">
+              <li><i class="fa-solid fa-check"></i> <span data-en>Full work authorization in Costa Rica</span><span data-es>Autorización plena para trabajar en Costa Rica</span></li>
+              <li><i class="fa-solid fa-check"></i> <span data-en>Eligible for permanent residency sooner</span><span data-es>Elegible para residencia permanente más pronto</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE PROCESS ===== -->
+  <section class="mtcr-section mtcr-section-alt" id="proceso">
+    <div class="container" style="max-width:780px">
+      <div class="mtcr-section-head">
+        <div class="mtcr-label"><span></span>
+          <span data-en>Step by Step</span><span data-es>Paso a Paso</span>
+        </div>
+        <h2 data-en>The process — <em>what actually happens</em></h2>
+        <h2 data-es style="display:none">El proceso — <em>lo que realmente pasa</em></h2>
+        <p data-en>From landing as a tourist to holding your DIMEX (Costa Rican resident ID). This is the real timeline.</p>
+        <p data-es style="display:none">Desde llegar como turista hasta tener tu DIMEX (cédula de residente). Este es el cronograma real.</p>
+      </div>
+      <div class="process-list">
+
+        <div class="process-step reveal">
+          <div class="process-num">1</div>
+          <div class="process-body">
+            <h3 data-en>Enter as a tourist</h3>
+            <h3 data-es style="display:none">Entrás como turista</h3>
+            <p data-en>You arrive on your passport. 90-day stamp. No visa needed for most nationalities. Use this time to explore areas, visit properties, and set up your immigration attorney.</p>
+            <p data-es style="display:none">Llegás con tu pasaporte. Sello de 90 días. Sin visa para la mayoría de nacionalidades. Usá este tiempo para explorar zonas, visitar propiedades y contratar abogado de migración.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> Day 1</span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">2</div>
+          <div class="process-body">
+            <h3 data-en>Choose and buy your property (optional but smart)</h3>
+            <h3 data-es style="display:none">Elegís y comprás tu propiedad (opcional pero inteligente)</h3>
+            <p data-en>Foreigners can buy property with just a passport — no residency needed. If your target is the <em>Inversionista</em> visa ($150k+ property), buying first means your investment immediately starts the clock on your residency application.</p>
+            <p data-es style="display:none">Los extranjeros pueden comprar propiedad solo con pasaporte — sin residencia. Si tu meta es la visa de <em>Inversionista</em> ($150k+ en propiedad), comprar primero significa que tu inversión empieza inmediatamente a contar para la solicitud de residencia.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>Months 1–3</span><span data-es>Meses 1–3</span></span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">3</div>
+          <div class="process-body">
+            <h3 data-en>Gather your documents</h3>
+            <h3 data-es style="display:none">Reunís tus documentos</h3>
+            <p data-en>Each residency category has a document list: apostilled birth certificate, criminal background check, passport copies, income proof, photos. All foreign documents must be translated to Spanish by a certified translator and apostilled.</p>
+            <p data-es style="display:none">Cada categoría de residencia tiene una lista de documentos: acta de nacimiento apostillada, récord de delincuencia, copias de pasaporte, comprobante de ingresos, fotos. Todos los documentos extranjeros deben traducirse al español por traductor certificado y apostillarse.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>1–3 months (allows 6 months from issue date)</span><span data-es>1–3 meses (vigencia de 6 meses desde emisión)</span></span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">4</div>
+          <div class="process-body">
+            <h3 data-en>File at DGME (Immigration)</h3>
+            <h3 data-es style="display:none">Presentás en la DGME (Migración)</h3>
+            <p data-en>Your attorney submits the file to the Dirección General de Migración y Extranjería. You receive an <em>expediente</em> number. From this point you can legally stay in Costa Rica while your application is processed — no more border runs.</p>
+            <p data-es style="display:none">Tu abogado presenta el expediente en la DGME. Recibís un número de expediente. Desde este punto podés quedarte legalmente en Costa Rica mientras se procesa tu solicitud — sin más "border runs".</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>Day of filing</span><span data-es>Día de la presentación</span></span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">5</div>
+          <div class="process-body">
+            <h3 data-en>Wait — and enroll in CAJA</h3>
+            <h3 data-es style="display:none">Esperás — y te inscribís en la CAJA</h3>
+            <p data-en>Processing currently takes 6–18 months depending on case volume. During this time, enroll in CAJA as a voluntary member — it's required before your residency is approved, and it gives you access to public healthcare.</p>
+            <p data-es style="display:none">El proceso actualmente toma 6–18 meses según el volumen de casos. Durante este tiempo, inscribite en la CAJA como asegurado voluntario — es requisito antes de que aprueben tu residencia y te da acceso a la salud pública.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>6–18 months</span><span data-es>6–18 meses</span></span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">6</div>
+          <div class="process-body">
+            <h3 data-en>Get your DIMEX</h3>
+            <h3 data-es style="display:none">Recibís tu DIMEX</h3>
+            <p data-en>Once approved, you go to DGME to pick up your <em>DIMEX</em> — the plastic resident ID card. This is your official ID in Costa Rica. With it you can open bank accounts, sign contracts, and access all public services.</p>
+            <p data-es style="display:none">Una vez aprobado, vas a la DGME a retirar tu <em>DIMEX</em> — la tarjeta plástica de residente. Es tu cédula oficial en Costa Rica. Con ella podés abrir cuentas bancarias, firmar contratos y acceder a todos los servicios públicos.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>Approval day</span><span data-es>Día de aprobación</span></span>
+          </div>
+        </div>
+
+        <div class="process-step reveal">
+          <div class="process-num">7</div>
+          <div class="process-body">
+            <h3 data-en>Open a bank account</h3>
+            <h3 data-es style="display:none">Abrís una cuenta bancaria</h3>
+            <p data-en>Most Costa Rican banks require the DIMEX to open a full account. Some private banks (BAC, Scotiabank) may work with a passport and proof of income — but the DIMEX makes everything easier. This is one of the most bureaucratic steps.</p>
+            <p data-es style="display:none">La mayoría de bancos costarricenses requieren el DIMEX para abrir una cuenta completa. Algunos bancos privados (BAC, Scotiabank) pueden trabajar con pasaporte e ingresos comprobados — pero el DIMEX facilita todo. Es uno de los pasos más burocráticos.</p>
+            <span class="process-time"><i class="fa-solid fa-clock"></i> <span data-en>After DIMEX</span><span data-es>Después del DIMEX</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REALITY CHECK ===== -->
+  <section class="mtcr-section" id="realidad">
+    <div class="container">
+      <div class="mtcr-section-head">
+        <div class="mtcr-label"><span></span>
+          <span data-en>Honest Assessment</span><span data-es>Evaluación Honesta</span>
+        </div>
+        <h2 data-en>Reality check — <em>the good and the hard</em></h2>
+        <h2 data-es style="display:none">La realidad — <em>lo bueno y lo difícil</em></h2>
+        <p data-en>No one should move to another country based on a travel blog. Here's what people love, and what actually surprises them.</p>
+        <p data-es style="display:none">Nadie debería emigrar a otro país basándose en un blog de viajes. Esto es lo que la gente ama, y lo que realmente les sorprende.</p>
+      </div>
+      <div class="reality-grid">
+        <div class="reality-col good reveal">
+          <h3><i class="fa-solid fa-circle-check" style="margin-right:.4rem"></i>
+            <span data-en>What's genuinely great</span><span data-es>Lo que es genuinamente bueno</span>
+          </h3>
+          <ul class="reality-list">
+            <li><i class="fa-solid fa-check"></i> <span data-en>Year-round spring-like weather in the Central Valley</span><span data-es>Clima primaveral todo el año en el Valle Central</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Foreign income not taxed — ever</span><span data-es>Ingresos del exterior no se gravan — nunca</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Excellent private healthcare at low cost</span><span data-es>Excelente atención médica privada a bajo costo</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Strong expat community — you won't feel alone</span><span data-es>Fuerte comunidad de expats — no te sentirás solo</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Same-day flights to Miami, Houston, NYC</span><span data-es>Vuelos el mismo día a Miami, Houston, Nueva York</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Stable currency, dollarized economy in practice</span><span data-es>Moneda estable, economía dolarizada en la práctica</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Property rights identical for foreigners and nationals</span><span data-es>Derechos de propiedad idénticos para extranjeros y nacionales</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-en>Pura Vida — genuine friendliness and relaxed pace</span><span data-es>Pura Vida — amabilidad genuina y ritmo relajado</span></li>
           </ul>
         </div>
-        <div class="area-card reveal d1">
-          <div class="area-tag" data-en>Suburban · Cool Climate</div>
-          <div class="area-tag" data-es style="display:none">Suburbano · Clima Fresco</div>
-          <h3>Heredia / Alajuela</h3>
-          <p data-en>The sweet spot for expat families. Cooler temperatures, quieter neighborhoods, excellent access to the airport, and lower prices than San José.</p>
-          <p data-es style="display:none">El punto ideal para familias expat. Temperaturas frescas, barrios tranquilos, excelente acceso al aeropuerto y precios más bajos que San José.</p>
-          <ul class="area-perks">
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>15 min from Juan Santamaría Airport</span><span data-es style="display:none">15 min del Aeropuerto Juan Santamaría</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Large expat community</span><span data-es style="display:none">Gran comunidad de expats</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Homes from $60,000 to $350,000</span><span data-es style="display:none">Casas desde $60,000 hasta $350,000</span></li>
-          </ul>
-        </div>
-        <div class="area-card reveal d2">
-          <div class="area-tag" data-en>Suburban · Modern</div>
-          <div class="area-tag" data-es style="display:none">Suburbano · Moderno</div>
-          <h3>Tres Ríos / Cartago</h3>
-          <p data-en>Fast-growing area with new condos and gated communities. Great value, modern infrastructure, and a short commute to San José.</p>
-          <p data-es style="display:none">Zona en rápido crecimiento con condominios nuevos y urbanizaciones cerradas. Excelente valor, infraestructura moderna y corto trayecto a San José.</p>
-          <ul class="area-perks">
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>New developments & modern condos</span><span data-es style="display:none">Nuevos desarrollos y condominios modernos</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Lower cost vs. western suburbs</span><span data-es style="display:none">Menor costo vs. suburbios del oeste</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Homes from $100,000 to $280,000</span><span data-es style="display:none">Casas desde $100,000 hasta $280,000</span></li>
-          </ul>
-        </div>
-        <div class="area-card reveal d3">
-          <div class="area-tag" data-en>Nature · Peaceful</div>
-          <div class="area-tag" data-es style="display:none">Naturaleza · Tranquilo</div>
-          <h3>Santo Domingo / San Pablo</h3>
-          <p data-en>Charming towns with a small-community feel, lush greenery, and excellent quality of life. Popular with retirees and remote workers.</p>
-          <p data-es style="display:none">Pueblos encantadores con sensación de pequeña comunidad, vegetación exuberante y excelente calidad de vida. Popular entre jubilados y trabajadores remotos.</p>
-          <ul class="area-perks">
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Quiet, safe neighborhoods</span><span data-es style="display:none">Barrios tranquilos y seguros</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Close to Heredia & San José</span><span data-es style="display:none">Cercano a Heredia y San José</span></li>
-            <li><i class="fa-solid fa-circle-dot"></i> <span data-en>Homes from $90,000 to $250,000</span><span data-es style="display:none">Casas desde $90,000 hasta $250,000</span></li>
+        <div class="reality-col hard reveal d1">
+          <h3><i class="fa-solid fa-triangle-exclamation" style="margin-right:.4rem"></i>
+            <span data-en>What surprises people</span><span data-es>Lo que sorprende a la gente</span>
+          </h3>
+          <ul class="reality-list">
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Traffic in San José is brutal during rush hours</span><span data-es>El tráfico en San José es brutal en horas pico</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Residency paperwork takes longer than expected</span><span data-es>Los trámites de residencia tardan más de lo esperado</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Cars are very expensive due to 52% import tax</span><span data-es>Los carros son muy caros por el 52% de impuesto de importación</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Rainy season (May–Nov) means rain every afternoon</span><span data-es>La época lluviosa (may–nov) significa lluvia cada tarde</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Opening a bank account without DIMEX is very hard</span><span data-es>Abrir cuenta bancaria sin DIMEX es muy difícil</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Internet reliability varies a lot by area</span><span data-es>La confiabilidad del internet varía mucho por zona</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>Spanish is essential for daily life outside expat zones</span><span data-es>El español es esencial fuera de las zonas de expats</span></li>
+            <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>"Tico time" — punctuality works differently here</span><span data-es>"Hora tica" — la puntualidad funciona diferente acá</span></li>
           </ul>
         </div>
       </div>
@@ -691,192 +849,43 @@
   </section>
 
   <!-- ===== HOW WE HELP ===== -->
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag" data-en>Our Role</span>
-        <span class="section-tag" data-es style="display:none">Nuestro Rol</span>
-        <h2 data-en>How <em>we help</em> you every step</h2>
-        <h2 data-es style="display:none">Cómo te <em>ayudamos</em> en cada paso</h2>
-        <p data-en>We're not just a real estate agency. We're your local partner — before, during, and after your move.</p>
-        <p data-es style="display:none">No somos solo una agencia inmobiliaria. Somos tu socio local — antes, durante y después de tu mudanza.</p>
-      </div>
-      <div class="help-grid">
-        <div class="help-card reveal">
-          <div class="help-number" data-en>Step 01</div>
-          <div class="help-number" data-es style="display:none">Paso 01</div>
-          <h3 data-en>Understand Your Needs</h3>
-          <h3 data-es style="display:none">Entender Tus Necesidades</h3>
-          <p data-en>We listen first. Budget, lifestyle, work situation, family size — we map it all to find the right area and property type for you.</p>
-          <p data-es style="display:none">Primero escuchamos. Presupuesto, estilo de vida, situación laboral, tamaño de familia — lo mapeamos todo para encontrar la zona y tipo de propiedad correcta.</p>
-        </div>
-        <div class="help-card reveal d1">
-          <div class="help-number" data-en>Step 02</div>
-          <div class="help-number" data-es style="display:none">Paso 02</div>
-          <h3 data-en>Find Your Home</h3>
-          <h3 data-es style="display:none">Encontrar Tu Hogar</h3>
-          <p data-en>We show you verified listings — including our exclusive off-market portfolio not published anywhere. We accompany you to every showing.</p>
-          <p data-es style="display:none">Te mostramos listados verificados — incluyendo nuestro portafolio exclusivo fuera de mercado. Te acompañamos a cada visita.</p>
-        </div>
-        <div class="help-card reveal d2">
-          <div class="help-number" data-en>Step 03</div>
-          <div class="help-number" data-es style="display:none">Paso 03</div>
-          <h3 data-en>Secure Your Financing</h3>
-          <h3 data-es style="display:none">Asegurar tu Financiamiento</h3>
-          <p data-en>We work with 10+ banks and can connect you with options for foreign buyers. We handle the full paperwork process at no cost to you.</p>
-          <p data-es style="display:none">Trabajamos con +10 bancos y te conectamos con opciones para compradores extranjeros. Manejamos todo el papeleo sin costo para vos.</p>
-        </div>
-        <div class="help-card reveal d3">
-          <div class="help-number" data-en>Step 04</div>
-          <div class="help-number" data-es style="display:none">Paso 04</div>
-          <h3 data-en>Close with Confidence</h3>
-          <h3 data-es style="display:none">Cerrar con Confianza</h3>
-          <p data-en>Floribeth knows Costa Rican property law inside-out. She manages appraisals, title searches, deed signing, and registration — no surprises.</p>
-          <p data-es style="display:none">Floribeth conoce la ley inmobiliaria costarricense a fondo. Gestiona avalúos, estudio de títulos, firma de escrituras y registro — sin sorpresas.</p>
-        </div>
-        <div class="help-card reveal">
-          <div class="help-number" data-en>Step 05</div>
-          <div class="help-number" data-es style="display:none">Paso 05</div>
-          <h3 data-en>Settle In</h3>
-          <h3 data-es style="display:none">Establecerte</h3>
-          <p data-en>After closing, we stay in touch. We connect you with trusted contacts for immigration, utilities, internet, schools, and anything else you need.</p>
-          <p data-es style="display:none">Después del cierre, seguimos en contacto. Te conectamos con contactos de confianza para inmigración, servicios, internet, escuelas y lo que necesites.</p>
-        </div>
-        <div class="help-card reveal d1">
-          <div class="help-number" data-en>Always</div>
-          <div class="help-number" data-es style="display:none">Siempre</div>
-          <h3 data-en>Free for the Buyer</h3>
-          <h3 data-es style="display:none">Gratis para el Comprador</h3>
-          <p data-en>Our entire service — property search, bank coordination, paperwork — is 100% free to the buyer. We're paid by the seller.</p>
-          <p data-es style="display:none">Todo nuestro servicio — búsqueda de propiedades, coordinación bancaria, trámites — es 100% gratis para el comprador. El vendedor nos paga.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section class="section">
-    <div class="container" style="max-width:800px">
-      <div class="section-header">
-        <span class="section-tag" data-en>FAQ</span>
-        <span class="section-tag" data-es style="display:none">Preguntas Frecuentes</span>
-        <h2 data-en>Questions we <em>hear every day</em></h2>
-        <h2 data-es style="display:none">Preguntas que <em>escuchamos todos los días</em></h2>
-      </div>
-      <div class="faq-list">
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>Can foreigners buy property in Costa Rica?</span>
-            <span data-es style="display:none">¿Los extranjeros pueden comprar propiedad en Costa Rica?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>Yes — 100%. Costa Rica has one of the most foreigner-friendly property laws in Latin America. Non-residents have the exact same property rights as citizens. No restrictions, no special permits needed.</p>
-          <p class="faq-answer" data-es style="display:none">Sí — 100%. Costa Rica tiene una de las leyes de propiedad más amigables para extranjeros en Latinoamérica. Los no residentes tienen exactamente los mismos derechos de propiedad que los ciudadanos. Sin restricciones ni permisos especiales.</p>
-        </details>
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>Do I need to be a resident to buy a home?</span>
-            <span data-es style="display:none">¿Necesito ser residente para comprar una casa?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>No. You can purchase property as a tourist on a passport. Residency and property ownership are completely independent in Costa Rica. Many buyers purchase first, then apply for residency using their investment.</p>
-          <p class="faq-answer" data-es style="display:none">No. Podés comprar propiedad como turista con pasaporte. Residencia y propiedad son completamente independientes en Costa Rica. Muchos compradores primero compran y luego solicitan residencia usando su inversión.</p>
-        </details>
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>Can I get a mortgage as a foreigner?</span>
-            <span data-es style="display:none">¿Puedo obtener una hipoteca como extranjero?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>Yes. Several Costa Rican banks offer mortgages to non-residents, though requirements and rates vary. Floribeth works with 10+ banks and will find the best option for your situation — and handles all the paperwork.</p>
-          <p class="faq-answer" data-es style="display:none">Sí. Varios bancos costarricenses ofrecen hipotecas a no residentes, aunque los requisitos y tasas varían. Floribeth trabaja con +10 bancos y encontrará la mejor opción para tu situación — y maneja todos los trámites.</p>
-        </details>
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>How long does buying a property take?</span>
-            <span data-es style="display:none">¿Cuánto tiempo tarda comprar una propiedad?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>Cash purchases typically close in 30–60 days. Financed purchases (with a bank mortgage) usually take 60–120 days depending on the bank and documentation. Floribeth manages the entire timeline to avoid delays.</p>
-          <p class="faq-answer" data-es style="display:none">Las compras en efectivo típicamente cierran en 30–60 días. Las compras financiadas (con hipoteca bancaria) suelen tomar 60–120 días dependiendo del banco y documentación. Floribeth maneja todo el cronograma para evitar demoras.</p>
-        </details>
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>What are the taxes and costs when buying?</span>
-            <span data-es style="display:none">¿Cuáles son los impuestos y costos al comprar?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>Closing costs in Costa Rica are typically 3–4% of the purchase price, split between buyer and seller. This includes transfer tax (1.5%), registration fees, notary, and stamps. There is no capital gains tax for primary residences.</p>
-          <p class="faq-answer" data-es style="display:none">Los costos de cierre en Costa Rica son típicamente 3–4% del precio de compra, divididos entre comprador y vendedor. Esto incluye impuesto de traspaso (1.5%), registro, notario y timbres. No hay impuesto sobre ganancias de capital para residencias primarias.</p>
-        </details>
-
-        <details class="faq-item reveal">
-          <summary>
-            <span data-en>Is it safe to live in Costa Rica?</span>
-            <span data-es style="display:none">¿Es seguro vivir en Costa Rica?</span>
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <p class="faq-answer" data-en>Costa Rica is consistently the safest country in Central America and one of the safest in Latin America. Like any country, some neighborhoods are better than others — we always advise on the safest areas for your lifestyle and budget.</p>
-          <p class="faq-answer" data-es style="display:none">Costa Rica es consistentemente el país más seguro de Centroamérica y uno de los más seguros de Latinoamérica. Como en cualquier país, algunos barrios son mejores que otros — siempre asesoramos sobre las zonas más seguras para tu estilo de vida y presupuesto.</p>
-        </details>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AGENT ===== -->
-  <section class="section section-alt">
+  <section class="mtcr-section mtcr-section-alt" id="ayuda">
     <div class="container">
       <div class="agent-inner">
         <div class="agent-photo-wrap">
-          <img src="FloryRcr.png" alt="Floribeth Elizondo — Real Estate Agent Costa Rica" class="agent-photo" />
+          <img src="FloryRcr.png" alt="Floribeth Elizondo — Agente Inmobiliaria Costa Rica" class="agent-photo" />
           <div class="agent-photo-badge">
             <i class="fa-solid fa-shield-halved"></i>
             <span data-en>Top Agent · 10+ Years</span>
-            <span data-es style="display:none">Top Agente · 10+ Años</span>
+            <span data-es>Top Agente · 10+ Años</span>
           </div>
         </div>
         <div class="agent-content">
-          <span class="section-tag" data-en>Your Local Expert</span>
-          <span class="section-tag" data-es style="display:none">Tu Experta Local</span>
-          <h2 data-en>Floribeth Elizondo —<br><em>She's done this before</em></h2>
-          <h2 data-es style="display:none">Floribeth Elizondo —<br><em>Ella ya lo ha hecho antes</em></h2>
+          <span class="section-tag" data-en>Where we come in</span>
+          <span class="section-tag" data-es style="display:none">Dónde entramos nosotros</span>
+          <h2 data-en>Floribeth has done<br><em>this hundreds of times</em></h2>
+          <h2 data-es style="display:none">Floribeth lo ha hecho<br><em>cientos de veces</em></h2>
           <p class="agent-intro" data-en>
-            With <strong>10+ years in Costa Rican real estate</strong>, Floribeth has helped hundreds of families — including expats from the US, Canada, and Europe — find and buy their homes in Costa Rica. She speaks the language of banks, lawyers, and registries, so you don't have to.
+            The paperwork, the banks, the lawyers, the property search — it's a lot. Floribeth has navigated every step of this process for families from the US, Canada, Europe, and Latin America. <strong>She finds your home, coordinates the financing, handles the documentation, and stays with you after closing.</strong> And her service is 100% free to the buyer.
           </p>
           <p class="agent-intro" data-es style="display:none">
-            Con <strong>más de 10 años en bienes raíces costarricenses</strong>, Floribeth ha ayudado a cientos de familias — incluyendo expats de EE.UU., Canadá y Europa — a encontrar y comprar sus casas en Costa Rica. Habla el idioma de bancos, abogados y registros para que vos no tengas que hacerlo.
+            Los trámites, los bancos, los abogados, la búsqueda de propiedad — es mucho. Floribeth ha navegado cada paso de este proceso para familias de EE.UU., Canadá, Europa y Latinoamérica. <strong>Encuentra tu hogar, coordina el financiamiento, maneja la documentación y se queda con vos después del cierre.</strong> Y su servicio es 100% gratuito para el comprador.
           </p>
-          <div class="agent-stats">
-            <div class="agent-stat">
-              <strong>200+</strong>
-              <span data-en>Closings</span>
-              <span data-es style="display:none">Cierres</span>
-            </div>
-            <div class="agent-stat">
-              <strong>10+</strong>
-              <span data-en>Banks</span>
-              <span data-es style="display:none">Bancos</span>
-            </div>
-            <div class="agent-stat">
-              <strong>98%</strong>
-              <span data-en>Satisfied</span>
-              <span data-es style="display:none">Satisfechos</span>
-            </div>
+          <div class="agent-tags">
+            <span><i class="fa-solid fa-file-contract"></i> <span data-en>Full tramitología (title, deed, registry)</span><span data-es>Tramitología completa (título, escritura, registro)</span></span>
+            <span><i class="fa-solid fa-building-columns"></i> <span data-en>Bank connections for foreign buyers</span><span data-es>Conexiones bancarias para compradores extranjeros</span></span>
+            <span><i class="fa-solid fa-magnifying-glass-dollar"></i> <span data-en>Property search + private portfolio</span><span data-es>Búsqueda de propiedad + portafolio privado</span></span>
+            <span><i class="fa-solid fa-hand-holding-dollar"></i> <span data-en>Housing grant (Bono) processing</span><span data-es>Trámite del Bono de Vivienda</span></span>
+            <span><i class="fa-solid fa-circle-dollar-to-slot"></i> <span data-en>Free for the buyer — always</span><span data-es>Gratis para el comprador — siempre</span></span>
           </div>
           <a onclick="return gtagSendEvent(this.href)"
-             href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20you%20on%20residenciascostarica.com%20and%20I%27m%20interested%20in%20moving%20to%20Costa%20Rica"
+             href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20your%20Moving%20to%20Costa%20Rica%20guide%20and%20I%27d%20like%20to%20talk%20about%20buying%20property"
              target="_blank" rel="noopener" class="btn-wa-big btn-wa-dark">
             <div class="wa-big-icon"><i class="fa-brands fa-whatsapp"></i></div>
             <div class="wa-big-text">
-              <strong data-en>Talk to Floribeth</strong>
-              <strong data-es style="display:none">Hablar con Floribeth</strong>
-              <span>+506 8372-5603 · <span data-en>Replies fast</span><span data-es style="display:none">Responde rápido</span></span>
+              <strong data-en>Talk to Floribeth — free</strong>
+              <strong data-es style="display:none">Hablar con Floribeth — gratis</strong>
+              <span>+506 8372-5603</span>
             </div>
             <i class="fa-solid fa-arrow-right wa-big-arrow"></i>
           </a>
@@ -885,22 +894,22 @@
     </div>
   </section>
 
-  <!-- ===== CTA BAND ===== -->
+  <!-- ===== CTA ===== -->
   <section class="mtcr-cta-band">
     <div class="container">
-      <h2 data-en>Ready to make the move?</h2>
-      <h2 data-es style="display:none">¿Listo para hacer la mudanza?</h2>
-      <p data-en>Talk to Floribeth today — no cost, no commitment. Just honest advice from someone who's helped hundreds of families make Costa Rica their home.</p>
-      <p data-es style="display:none">Hablá con Floribeth hoy — sin costo, sin compromiso. Solo asesoría honesta de alguien que ha ayudado a cientos de familias a hacer de Costa Rica su hogar.</p>
+      <h2 data-en>Ready to start planning?</h2>
+      <h2 data-es style="display:none">¿Listo para empezar a planificar?</h2>
+      <p data-en>Ask Floribeth anything — visa questions, property search, areas, costs. No commitment, no cost. Just honest answers from someone who's been doing this for 10+ years.</p>
+      <p data-es style="display:none">Preguntale a Floribeth lo que sea — visas, búsqueda de propiedad, zonas, costos. Sin compromiso, sin costo. Solo respuestas honestas de alguien con más de 10 años en esto.</p>
       <div class="mtcr-cta-btns">
         <a onclick="return gtagSendEvent(this.href)"
-           href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20you%20on%20residenciascostarica.com%20and%20I%27m%20interested%20in%20moving%20to%20Costa%20Rica"
-           target="_blank" rel="noopener" class="btn-cta-white">
+           href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20your%20Moving%20to%20Costa%20Rica%20guide%20and%20I%27d%20like%20to%20talk"
+           target="_blank" rel="noopener" class="btn-wa-hero-dark">
           <i class="fa-brands fa-whatsapp"></i>
           <span data-en>WhatsApp Floribeth</span>
           <span data-es style="display:none">WhatsApp a Floribeth</span>
         </a>
-        <a href="/propiedades" class="btn-cta-ghost">
+        <a href="/propiedades" class="btn-outline-white">
           <i class="fa-solid fa-house"></i>
           <span data-en>Browse Properties</span>
           <span data-es style="display:none">Ver Propiedades</span>
@@ -914,11 +923,9 @@
     <div class="container">
       <div class="footer-inner">
         <div class="footer-about">
-          <div class="footer-brand">
-            <i class="fa-solid fa-house-chimney"></i> Residencias<strong>CostaRica</strong>
-          </div>
-          <p data-en>Your trusted partner in Costa Rican real estate. We help expats and locals buy, sell, and connect with the best banks in the country.</p>
-          <p data-es style="display:none">Tu aliado de confianza en el mercado inmobiliario de Costa Rica. Compramos, vendemos y conectamos con los mejores bancos del país.</p>
+          <div class="footer-brand"><i class="fa-solid fa-house-chimney"></i> Residencias<strong>CostaRica</strong></div>
+          <p data-en>Your trusted real estate partner in Costa Rica. We help expats and locals buy, sell, and navigate every step.</p>
+          <p data-es style="display:none">Tu aliado de confianza en bienes raíces en Costa Rica.</p>
           <div class="social-pills">
             <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-pill ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
             <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-pill fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
@@ -930,25 +937,22 @@
           <h4 data-en>Explore</h4>
           <h4 data-es style="display:none">Explorar</h4>
           <ul>
-            <li><a href="/propiedades" data-en>All Properties</a><a href="/propiedades" data-es style="display:none">Todas las Propiedades</a></li>
-            <li><a href="/moving-to-costa-rica" data-en>Moving to Costa Rica</a><a href="/moving-to-costa-rica" data-es style="display:none">Mudarse a Costa Rica</a></li>
-            <li><a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117" target="_blank" rel="noopener">Encuentra24</a></li>
+            <li><a href="/propiedades"><span data-en>All Properties</span><span data-es>Todas las Propiedades</span></a></li>
+            <li><a href="/moving-to-costa-rica"><span data-en>Moving to Costa Rica</span><span data-es>Emigrar a Costa Rica</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4 data-en>Services</h4>
           <h4 data-es style="display:none">Servicios</h4>
           <ul>
-            <li><a href="/#buscar" data-en>Find a Home</a><a href="/#buscar" data-es style="display:none">Buscar Casa</a></li>
-            <li><a href="/#vender" data-en>Sell Property</a><a href="/#vender" data-es style="display:none">Vender Propiedad</a></li>
-            <li><a href="/#buscar" data-en>Housing Grant (Bono)</a><a href="/#buscar" data-es style="display:none">Bono de Vivienda</a></li>
+            <li><a href="/#buscar"><span data-en>Find a Home</span><span data-es>Buscar Casa</span></a></li>
+            <li><a href="/#vender"><span data-en>Sell Property</span><span data-es>Vender Propiedad</span></a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contacto</h4>
           <ul>
             <li><a href="https://wa.me/50683725603" target="_blank" rel="noopener">+506 8372-5603</a></li>
-            <li><a href="https://wa.me/50661374443" target="_blank" rel="noopener">+506 6137-4443</a></li>
             <li><a href="mailto:flory@residenciascostarica.com">flory@residenciascostarica.com</a></li>
           </ul>
         </div>
@@ -956,20 +960,20 @@
       <div class="footer-bottom">
         <span>&copy; 2026 Residencias Costa Rica · Todos los derechos reservados</span>
       </div>
-      <div class="footer-pura-vida">
-        Pura Vida <i class="fa-solid fa-heart footer-heart"></i>
-      </div>
+      <div class="footer-pura-vida">Pura Vida <i class="fa-solid fa-heart footer-heart"></i></div>
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOAT -->
+  <!-- WhatsApp float -->
   <a onclick="return gtagSendEvent(this.href)"
-     href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20you%20on%20residenciascostarica.com%20and%20I%27m%20interested%20in%20moving%20to%20Costa%20Rica"
+     href="https://wa.me/50683725603?text=Hi%2C%20I%20found%20your%20Moving%20to%20Costa%20Rica%20guide%20and%20I%27d%20like%20to%20talk"
      target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" id="waFloat">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="wa-label">WhatsApp</span>
   </a>
+
   <script>
+    // WA shake
     setInterval(() => {
       const btn = document.getElementById('waFloat');
       btn.style.animation = 'wa-shake 0.6s ease';
@@ -988,11 +992,11 @@
     const revealObserver = new IntersectionObserver(entries => {
       entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('visible'), i * 70);
+          setTimeout(() => entry.target.classList.add('visible'), i * 60);
           revealObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.07 });
+    }, { threshold: 0.06 });
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
     // Language toggle
@@ -1003,17 +1007,8 @@
       document.querySelectorAll('.lang-btn').forEach(b => {
         b.classList.toggle('active', b.textContent.trim().toLowerCase() === lang);
       });
-      // show/hide dual-language elements
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.style.display = lang === 'en' ? '' : 'none';
-      });
-      document.querySelectorAll('[data-es]').forEach(el => {
-        el.style.display = lang === 'es' ? '' : 'none';
-      });
       localStorage.setItem('rcr_lang', lang);
     }
-
-    // Restore saved language
     const saved = localStorage.getItem('rcr_lang');
     if (saved && saved !== 'en') setLang(saved);
   </script>
