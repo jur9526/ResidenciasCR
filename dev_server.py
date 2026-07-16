@@ -3,7 +3,10 @@
 import http.server, os
 from pathlib import Path
 
-REWRITES = {"/propiedades": "/propiedades.html"}
+REWRITES = {
+    "/propiedades": "/propiedades.html",
+    "/moving-to-costa-rica": "/moving-to-costa-rica.html",
+}
 ROOT = Path(__file__).parent
 
 class Handler(http.server.SimpleHTTPRequestHandler):

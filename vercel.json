@@ -1,6 +1,7 @@
 {
   "rewrites": [
-    { "source": "/propiedades", "destination": "/propiedades.html" }
+    { "source": "/propiedades", "destination": "/propiedades.html" },
+    { "source": "/moving-to-costa-rica", "destination": "/moving-to-costa-rica.html" }
   ],
   "redirects": [
     {
