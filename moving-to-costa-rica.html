@@ -69,12 +69,7 @@
       position: relative; z-index: 1;
       padding-bottom: 3rem;
     }
-    .mtcr-label {
-      display: inline-flex; align-items: center; gap: .5rem;
-      font-size: .72rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
-      color: #f87171; margin-bottom: 1.1rem;
-    }
-    .mtcr-label span { width: 20px; height: 2px; background: #f87171; display: inline-block; }
+    .mtcr-section-head .section-tag { margin-bottom: .75rem; }
     .mtcr-hero h1 { color: #fff; font-size: clamp(2.4rem, 5.5vw, 3.8rem); margin-bottom: 1.2rem; line-height: 1.1; }
     .mtcr-hero h1 em { color: #f87171; font-style: italic; }
     .mtcr-hero-sub {
@@ -117,7 +112,6 @@
     .mtcr-section-alt { background: var(--cream); }
 
     .mtcr-section-head { margin-bottom: 2.5rem; }
-    .mtcr-section-head .mtcr-label { margin-bottom: .6rem; }
     .mtcr-section-head h2 { margin-bottom: .5rem; }
     .mtcr-section-head p { max-width: 620px; }
 
@@ -356,12 +350,6 @@
   <!-- ===== HERO ===== -->
   <section class="mtcr-hero">
     <div class="container mtcr-hero-top">
-      <div class="mtcr-label">
-        <span></span>
-        <span data-en>The honest guide — no fluff</span>
-        <span data-es>La guía honesta — sin relleno</span>
-      </div>
-
       <h1 data-en>Make it to<br><em>Costa Rica.</em></h1>
       <h1 data-es style="display:none">Emigrá a<br><em>Costa Rica.</em></h1>
 
@@ -403,9 +391,8 @@
   <section class="mtcr-section" id="dinero">
     <div class="container">
       <div class="mtcr-section-head">
-        <div class="mtcr-label"><span></span>
-          <span data-en>Cost of Living</span><span data-es>Costo de Vida</span>
-        </div>
+        <span class="section-tag" data-en>Cost of Living</span>
+        <span class="section-tag" data-es style="display:none">Costo de Vida</span>
         <h2 data-en>The money — <em>what it actually costs</em></h2>
         <h2 data-es style="display:none">El dinero — <em>lo que realmente cuesta</em></h2>
         <p data-en>Costa Rica is not cheap by Latin American standards, but it's 35–50% cheaper than the US, Canada, or Western Europe. Here are real numbers, not estimates.</p>
@@ -460,9 +447,8 @@
   <section class="mtcr-section mtcr-section-alt" id="impuestos">
     <div class="container">
       <div class="mtcr-section-head">
-        <div class="mtcr-label"><span></span>
-          <span data-en>Taxes & Law</span><span data-es>Impuestos y Ley</span>
-        </div>
+        <span class="section-tag" data-en>Taxes & Law</span>
+        <span class="section-tag" data-es style="display:none">Impuestos y Ley</span>
         <h2 data-en>Taxes — the <em>rules you must know</em></h2>
         <h2 data-es style="display:none">Impuestos — las <em>reglas que debes conocer</em></h2>
       </div>
@@ -545,9 +531,8 @@
   <section class="mtcr-section" id="visas">
     <div class="container">
       <div class="mtcr-section-head">
-        <div class="mtcr-label"><span></span>
-          <span data-en>Immigration</span><span data-es>Inmigración</span>
-        </div>
+        <span class="section-tag" data-en>Immigration</span>
+        <span class="section-tag" data-es style="display:none">Inmigración</span>
         <h2 data-en>Visa types — <em>find your path</em></h2>
         <h2 data-es style="display:none">Tipos de visa — <em>encontrá tu camino</em></h2>
         <p data-en>Costa Rica offers several legal pathways. Most nationalities can enter visa-free for 90 days as a tourist — but if you want to stay and build a life here, here are your options.</p>
@@ -710,9 +695,8 @@
   <section class="mtcr-section mtcr-section-alt" id="proceso">
     <div class="container" style="max-width:780px">
       <div class="mtcr-section-head">
-        <div class="mtcr-label"><span></span>
-          <span data-en>Step by Step</span><span data-es>Paso a Paso</span>
-        </div>
+        <span class="section-tag" data-en>Step by Step</span>
+        <span class="section-tag" data-es style="display:none">Paso a Paso</span>
         <h2 data-en>The process — <em>what actually happens</em></h2>
         <h2 data-es style="display:none">El proceso — <em>lo que realmente pasa</em></h2>
         <p data-en>From landing as a tourist to holding your DIMEX (Costa Rican resident ID). This is the real timeline.</p>
@@ -805,9 +789,8 @@
   <section class="mtcr-section" id="realidad">
     <div class="container">
       <div class="mtcr-section-head">
-        <div class="mtcr-label"><span></span>
-          <span data-en>Honest Assessment</span><span data-es>Evaluación Honesta</span>
-        </div>
+        <span class="section-tag" data-en>Honest Assessment</span>
+        <span class="section-tag" data-es style="display:none">Evaluación Honesta</span>
         <h2 data-en>Reality check — <em>the good and the hard</em></h2>
         <h2 data-es style="display:none">La realidad — <em>lo bueno y lo difícil</em></h2>
         <p data-en>No one should move to another country based on a travel blog. Here's what people love, and what actually surprises them.</p>
