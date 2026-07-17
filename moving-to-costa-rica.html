@@ -11,7 +11,11 @@
     gtag('config', 'AW-18034283160');
     function gtagSendEvent(url) {
       var callback = function () { if (typeof url === 'string') window.location = url; };
-      gtag('event', 'ads_conversion_Enviar_formulario_de_cl_1', { 'event_callback': callback, 'event_timeout': 2000 });
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18034283160/OGoNCNOe-9EcEJiltZdD',
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
       return false;
     }
   </script>
@@ -279,6 +283,74 @@
     .reality-col.hard .reality-list li i { color: #ea580c; margin-top: .1rem; }
     @media (max-width: 640px) { .reality-grid { grid-template-columns: 1fr; } }
 
+    /* ── Gentrification ── */
+    .gentri-intro {
+      background: var(--dark); color: #fff;
+      border-radius: var(--radius); padding: 2rem 2.25rem;
+      margin-bottom: 2rem; border-left: 4px solid var(--red);
+    }
+    .gentri-intro p { color: rgba(255,255,255,.72); font-size: .95rem; line-height: 1.85; margin: 0; }
+    .gentri-intro strong { color: #fbbf24; }
+    .gentri-areas {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem; margin-bottom: 2rem;
+    }
+    .gentri-area {
+      border-radius: var(--radius); padding: 1.5rem;
+      border: 1px solid var(--light-gray); background: var(--white);
+    }
+    .gentri-area h4 { margin-bottom: .25rem; font-size: .95rem; }
+    .gentri-area .ga-tag {
+      font-size: .7rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .06em; padding: .15rem .5rem; border-radius: 4px;
+      display: inline-block; margin-bottom: .6rem;
+    }
+    .ga-tag.high   { background: #fee2e2; color: #991b1b; }
+    .ga-tag.medium { background: #fef3c7; color: #92400e; }
+    .gentri-area p { font-size: .82rem; margin: 0; }
+    .gentri-note {
+      background: #fff7ed; border: 1px solid #fed7aa;
+      border-radius: var(--radius); padding: 1.5rem 1.75rem;
+    }
+    .gentri-note p { font-size: .88rem; color: #7c2d12; line-height: 1.8; margin: 0; }
+    .gentri-note strong { color: #9a3412; }
+
+    /* ── Pura Vida ── */
+    .puravida-hero {
+      background: linear-gradient(135deg, #14532d 0%, #166534 100%);
+      border-radius: var(--radius); padding: 2.5rem 2.25rem;
+      margin-bottom: 2rem; text-align: center;
+    }
+    .puravida-hero .pv-emoji { font-size: 3rem; margin-bottom: .75rem; display: block; }
+    .puravida-hero h3 { color: #fff; font-size: 1.4rem; margin-bottom: .5rem; }
+    .puravida-hero p { color: rgba(255,255,255,.75); font-size: .95rem; max-width: 560px; margin: 0 auto; line-height: 1.8; }
+    .puravida-hero strong { color: #86efac; }
+    .pv-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-bottom: 2rem;
+    }
+    .pv-card {
+      border-radius: var(--radius); padding: 1.5rem;
+      border: 1px solid var(--light-gray); background: var(--white);
+    }
+    .pv-card .pv-icon { font-size: 1.5rem; margin-bottom: .6rem; display: block; }
+    .pv-card h4 { font-size: .95rem; margin-bottom: .4rem; color: var(--dark); }
+    .pv-card p  { font-size: .84rem; line-height: 1.7; }
+    .pv-warning {
+      background: var(--dark); border-radius: var(--radius);
+      padding: 2rem 2.25rem; border-left: 4px solid #fbbf24;
+    }
+    .pv-warning h3 { color: #fbbf24; margin-bottom: 1rem; font-size: 1.1rem; }
+    .pv-rules { list-style: none; padding: 0; margin: 0; }
+    .pv-rules li {
+      color: rgba(255,255,255,.75); font-size: .88rem;
+      padding: .6rem 0; border-bottom: 1px solid rgba(255,255,255,.08);
+      display: flex; align-items: flex-start; gap: .7rem; line-height: 1.6;
+    }
+    .pv-rules li:last-child { border-bottom: none; }
+    .pv-rules li .pv-no { color: #f87171; font-size: .8rem; margin-top: .1rem; flex-shrink: 0; }
+    .pv-rules li strong { color: #fff; }
+    @media (max-width: 640px) { .pv-grid { grid-template-columns: 1fr; } }
+
     /* ── CTA band ── */
     .mtcr-cta-band {
       background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 100%);
@@ -375,12 +447,16 @@
         <a href="#dinero" class="jump-link" data-es style="display:none">💰 El Dinero</a>
         <a href="#impuestos" class="jump-link" data-en>📋 Taxes</a>
         <a href="#impuestos" class="jump-link" data-es style="display:none">📋 Impuestos</a>
-        <a href="#visas" class="jump-link" data-en>🛂 Visa Types</a>
-        <a href="#visas" class="jump-link" data-es style="display:none">🛂 Tipos de Visa</a>
+        <a href="#visas" class="jump-link" data-en>🛂 Residency Options</a>
+        <a href="#visas" class="jump-link" data-es style="display:none">🛂 Opciones de Residencia</a>
         <a href="#proceso" class="jump-link" data-en>📅 The Process</a>
         <a href="#proceso" class="jump-link" data-es style="display:none">📅 El Proceso</a>
         <a href="#realidad" class="jump-link" data-en>🎯 Reality Check</a>
         <a href="#realidad" class="jump-link" data-es style="display:none">🎯 La Realidad</a>
+        <a href="#gentri" class="jump-link" data-en>🏘️ Gentrification</a>
+        <a href="#gentri" class="jump-link" data-es style="display:none">🏘️ Gentrificación</a>
+        <a href="#puravida" class="jump-link" data-en>🌿 Pura Vida</a>
+        <a href="#puravida" class="jump-link" data-es style="display:none">🌿 Pura Vida</a>
         <a href="#ayuda" class="jump-link" data-en>🤝 How We Help</a>
         <a href="#ayuda" class="jump-link" data-es style="display:none">🤝 Cómo Ayudamos</a>
       </div>
@@ -431,6 +507,23 @@
           <div class="cost-row"><span class="label" data-en>Uber / ride-share (trip)</span><span class="label" data-es style="display:none">Uber / transporte (viaje)</span> <span class="value">$3 – $15</span></div>
           <div class="cost-row"><span class="label" data-en>New car (import tax ~52%)</span><span class="label" data-es style="display:none">Carro nuevo (imp. ~52%)</span> <span class="value red">Very expensive</span></div>
           <div class="cost-row"><span class="label" data-en>Used car (local market)</span><span class="label" data-es style="display:none">Carro usado (mercado local)</span> <span class="value">$8,000 – $25,000</span></div>
+        </div>
+
+        <div class="cost-card reveal">
+          <div class="cost-card-head"><i class="fa-solid fa-house-chimney"></i> <span data-en>Buying Property — Central Valley</span><span data-es>Comprar Propiedad — Valle Central</span></div>
+          <div class="cost-row"><span class="label" data-en>Studio / 1BR apartment</span><span class="label" data-es style="display:none">Estudio / apartamento 1H</span> <span class="value">$55,000 – $110,000</span></div>
+          <div class="cost-row"><span class="label" data-en>2–3BR house, suburbs</span><span class="label" data-es style="display:none">Casa 2–3H, suburbios</span> <span class="value">$90,000 – $220,000</span></div>
+          <div class="cost-row"><span class="label" data-en>3–4BR house, gated community</span><span class="label" data-es style="display:none">Casa 3–4H, condominio</span> <span class="value">$150,000 – $380,000</span></div>
+          <div class="cost-row"><span class="label" data-en>Luxury / Escazú / Santa Ana</span><span class="label" data-es style="display:none">Lujo / Escazú / Santa Ana</span> <span class="value red">$350,000 – $1M+</span></div>
+        </div>
+
+        <div class="cost-card reveal d1">
+          <div class="cost-card-head"><i class="fa-solid fa-umbrella-beach"></i> <span data-en>Buying Property — Beach Zones</span><span data-es>Comprar Propiedad — Zonas de Playa</span></div>
+          <div class="cost-row"><span class="label" data-en>Lot / land near coast</span><span class="label" data-es style="display:none">Lote / terreno cerca de la costa</span> <span class="value">$60,000 – $300,000</span></div>
+          <div class="cost-row"><span class="label" data-en>House — Guanacaste interior</span><span class="label" data-es style="display:none">Casa — interior de Guanacaste</span> <span class="value">$120,000 – $280,000</span></div>
+          <div class="cost-row"><span class="label" data-en>House — Nosara / Tamarindo</span><span class="label" data-es style="display:none">Casa — Nosara / Tamarindo</span> <span class="value red">$300,000 – $900,000+</span></div>
+          <div class="cost-row"><span class="label" data-en>House — Manuel Antonio</span><span class="label" data-es style="display:none">Casa — Manuel Antonio</span> <span class="value red">$250,000 – $800,000+</span></div>
+          <div class="cost-row"><span class="label" data-en>⚠ Maritime zone (0–50m)</span><span class="label" data-es style="display:none">⚠ Zona marítima (0–50m)</span> <span class="value red" data-en>Cannot be owned</span><span class="value red" data-es style="display:none">No se puede poseer</span></div>
         </div>
 
       </div>
@@ -533,10 +626,10 @@
       <div class="mtcr-section-head">
         <span class="section-tag" data-en>Immigration</span>
         <span class="section-tag" data-es style="display:none">Inmigración</span>
-        <h2 data-en>Visa types — <em>find your path</em></h2>
-        <h2 data-es style="display:none">Tipos de visa — <em>encontrá tu camino</em></h2>
-        <p data-en>Costa Rica offers several legal pathways. Most nationalities can enter visa-free for 90 days as a tourist — but if you want to stay and build a life here, here are your options.</p>
-        <p data-es style="display:none">Costa Rica ofrece varias vías legales. La mayoría de nacionalidades pueden entrar sin visa por 90 días como turistas — pero si querés quedarte y construir una vida aquí, estas son tus opciones.</p>
+        <h2 data-en>How to stay legally — <em>residency categories</em></h2>
+        <h2 data-es style="display:none">Cómo quedarse legalmente — <em>categorías de residencia</em></h2>
+        <p data-en>Most nationalities enter Costa Rica visa-free for 90 days as a tourist — no visa needed. What comes after that are not "visas" but <strong>residency categories</strong> (categorías migratorias): legal statuses that allow you to live here long-term. The distinction matters because the requirements, rights, and processes are completely different from a visa.</p>
+        <p data-es style="display:none">La mayoría de nacionalidades entran a Costa Rica sin visa por 90 días como turistas. Lo que viene después no son "visas" sino <strong>categorías de residencia</strong> (categorías migratorias): estatus legales que permiten vivir aquí a largo plazo. La distinción importa porque los requisitos, derechos y procesos son completamente distintos a una visa.</p>
       </div>
 
       <div class="visa-list">
@@ -546,15 +639,15 @@
           <div class="visa-icon"><i class="fa-solid fa-passport"></i></div>
           <div class="visa-body">
             <div class="visa-header">
-              <h3 data-en>Tourist Stay</h3>
-              <h3 data-es style="display:none">Estadía Turística</h3>
+              <h3 data-en>Tourist Entry (not a residency)</h3>
+              <h3 data-es style="display:none">Entrada Turística (no es residencia)</h3>
               <span class="visa-tag easy" data-en>No application needed</span>
               <span class="visa-tag easy" data-es style="display:none">Sin trámite</span>
             </div>
-            <span class="visa-req" data-en>Valid passport · 0 requirements</span>
-            <span class="visa-req" data-es style="display:none">Pasaporte válido · 0 requisitos</span>
-            <p data-en>Citizens of 60+ countries (including US, Canada, EU, UK, Australia) enter Costa Rica visa-free for 90 days. You can exit and re-enter, but immigration has started scrutinizing "perpetual tourists." Not a long-term strategy.</p>
-            <p data-es style="display:none">Ciudadanos de 60+ países (incluyendo EE.UU., Canadá, UE, UK, Australia) entran a Costa Rica sin visa por 90 días. Podés salir y reingresar, pero migración ha comenzado a escrutar a los "turistas perpetuos." No es una estrategia a largo plazo.</p>
+            <span class="visa-req" data-en>Valid passport · 0 requirements · 90 days permitted stay</span>
+            <span class="visa-req" data-es style="display:none">Pasaporte válido · 0 requisitos · 90 días de estadía permitida</span>
+            <p data-en>Citizens of 60+ countries (US, Canada, EU, UK, Australia and more) enter without a visa for 90 days. This is a <strong>permitted stay</strong>, not a residency — you cannot work legally, sign long-term contracts, or open bank accounts. Immigration has started scrutinizing "perpetual tourists" who exit and re-enter every 90 days. It's not a long-term legal strategy.</p>
+            <p data-es style="display:none">Ciudadanos de 60+ países (EE.UU., Canadá, UE, UK, Australia y más) entran sin visa por 90 días. Esto es una <strong>estadía permitida</strong>, no una residencia — no podés trabajar legalmente, firmar contratos a largo plazo ni abrir cuentas bancarias. Migración ha comenzado a revisar a los "turistas perpetuos" que salen y reingresan cada 90 días. No es una estrategia legal a largo plazo.</p>
             <div class="visa-details">
               <span class="visa-detail"><i class="fa-solid fa-clock"></i> 90 days</span>
               <span class="visa-detail"><i class="fa-solid fa-rotate"></i> <span data-en>Renewable by exit</span><span data-es>Renovable saliendo</span></span>
@@ -568,8 +661,8 @@
           <div class="visa-icon"><i class="fa-solid fa-umbrella-beach"></i></div>
           <div class="visa-body">
             <div class="visa-header">
-              <h3 data-en>Pensionado (Retiree)</h3>
-              <h3 data-es style="display:none">Pensionado (Jubilado)</h3>
+              <h3 data-en>Pensionado Residency</h3>
+              <h3 data-es style="display:none">Residencia Pensionado</h3>
               <span class="visa-tag popular" data-en>Most popular</span>
               <span class="visa-tag popular" data-es style="display:none">Más popular</span>
             </div>
@@ -595,8 +688,8 @@
           <div class="visa-icon"><i class="fa-solid fa-chart-line"></i></div>
           <div class="visa-body">
             <div class="visa-header">
-              <h3 data-en>Rentista (Passive Income)</h3>
-              <h3 data-es style="display:none">Rentista (Ingresos Pasivos)</h3>
+              <h3 data-en>Rentista Residency (Passive Income)</h3>
+              <h3 data-es style="display:none">Residencia Rentista (Ingresos Pasivos)</h3>
             </div>
             <span class="visa-req" data-en>Minimum: $2,500/month from a bank or investment source, guaranteed for 5 years</span>
             <span class="visa-req" data-es style="display:none">Mínimo: $2,500/mes de banco o inversión, garantizados por 5 años</span>
@@ -619,8 +712,8 @@
           <div class="visa-icon"><i class="fa-solid fa-building"></i></div>
           <div class="visa-body">
             <div class="visa-header">
-              <h3 data-en>Inversionista (Investor)</h3>
-              <h3 data-es style="display:none">Inversionista</h3>
+              <h3 data-en>Inversionista Residency (Investor)</h3>
+              <h3 data-es style="display:none">Residencia Inversionista</h3>
             </div>
             <span class="visa-req" data-en>Minimum: $150,000 investment in Costa Rican real estate or a registered business</span>
             <span class="visa-req" data-es style="display:none">Mínimo: $150,000 de inversión en bienes raíces o empresa registrada en Costa Rica</span>
@@ -669,8 +762,8 @@
           <div class="visa-icon"><i class="fa-solid fa-heart"></i></div>
           <div class="visa-body">
             <div class="visa-header">
-              <h3 data-en>Family / Marriage Ties</h3>
-              <h3 data-es style="display:none">Vínculos Familiares / Matrimonio</h3>
+              <h3 data-en>Residency by Family / Marriage Ties</h3>
+              <h3 data-es style="display:none">Residencia por Vínculos Familiares</h3>
             </div>
             <span class="visa-req" data-en>Marriage or first-degree family relationship with a Costa Rican citizen</span>
             <span class="visa-req" data-es style="display:none">Matrimonio o vínculo familiar de primer grado con ciudadano costarricense</span>
@@ -827,6 +920,151 @@
             <li><i class="fa-solid fa-circle-exclamation"></i> <span data-en>"Tico time" — punctuality works differently here</span><span data-es>"Hora tica" — la puntualidad funciona diferente acá</span></li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GENTRIFICATION ===== -->
+  <section class="mtcr-section" id="gentri">
+    <div class="container">
+      <div class="mtcr-section-head">
+        <span class="section-tag" data-en>The real talk</span>
+        <span class="section-tag" data-es style="display:none">La conversación real</span>
+        <h2 data-en>Gentrification — <em>what's happening</em></h2>
+        <h2 data-es style="display:none">Gentrificación — <em>lo que está pasando</em></h2>
+        <p data-en>If you're moving to Costa Rica, you should understand what your arrival means for the people already here. This isn't to scare you — it's because informed newcomers make better neighbors.</p>
+        <p data-es style="display:none">Si te mudás a Costa Rica, debés entender lo que tu llegada significa para las personas que ya viven aquí. Esto no es para asustarte — es porque los recién llegados informados son mejores vecinos.</p>
+      </div>
+
+      <div class="gentri-intro reveal">
+        <p data-en>Costa Rica has seen a massive wave of foreign arrivals since 2020 — accelerated by COVID remote work, low interest rates, and a global search for "quality of life." The result: <strong>property prices and rents have increased 40–80% in many areas in just 4 years.</strong> In some neighborhoods, the average local family can no longer afford to rent where they grew up. That's not an abstraction — it's the daily reality for many Costa Ricans.</p>
+        <p data-es style="display:none">Costa Rica ha visto una ola masiva de llegadas extranjeras desde 2020 — acelerada por el trabajo remoto del COVID, las bajas tasas de interés y la búsqueda global de "calidad de vida". El resultado: <strong>los precios de propiedad y alquileres han aumentado 40–80% en muchas zonas en solo 4 años.</strong> En algunos barrios, la familia local promedio ya no puede pagar el alquiler donde creció. Eso no es una abstracción — es la realidad diaria de muchos costarricenses.</p>
+      </div>
+
+      <div class="gentri-areas">
+        <div class="gentri-area reveal">
+          <span class="ga-tag high" data-en>High impact</span>
+          <span class="ga-tag high" data-es style="display:none">Alto impacto</span>
+          <h4>Nosara / Sámara</h4>
+          <p data-en>Once a quiet fishing village. Now one of the most expensive rental markets in Central America. Local families have moved inland. Average rent for a modest house: $2,000+/month.</p>
+          <p data-es style="display:none">Antes un tranquilo pueblo pesquero. Hoy uno de los mercados de alquiler más caros de Centroamérica. Las familias locales se han mudado al interior. Alquiler promedio de una casa modesta: $2,000+/mes.</p>
+        </div>
+        <div class="gentri-area reveal d1">
+          <span class="ga-tag high" data-en>High impact</span>
+          <span class="ga-tag high" data-es style="display:none">Alto impacto</span>
+          <h4>Tamarindo / Manuel Antonio</h4>
+          <p data-en>Tourism boom zones where local workers can no longer afford to live near where they work. Long commutes from inland towns have become the norm for service industry employees.</p>
+          <p data-es style="display:none">Zonas de boom turístico donde los trabajadores locales ya no pueden vivir cerca de donde trabajan. Los largos trayectos desde pueblos del interior se han vuelto la norma para empleados del sector servicios.</p>
+        </div>
+        <div class="gentri-area reveal d2">
+          <span class="ga-tag medium" data-en>Growing pressure</span>
+          <span class="ga-tag medium" data-es style="display:none">Presión creciente</span>
+          <h4>Escazú / Santa Ana</h4>
+          <p data-en>The original expat hub. Now pricing pressure is spreading east to Desamparados, Curridabat, and Tres Ríos — neighborhoods that were affordable for middle-class Costa Rican families.</p>
+          <p data-es style="display:none">El hub original de expats. Ahora la presión de precios se expande hacia el este: Desamparados, Curridabat y Tres Ríos — barrios que eran accesibles para familias costarricenses de clase media.</p>
+        </div>
+        <div class="gentri-area reveal d3">
+          <span class="ga-tag medium" data-en>Growing pressure</span>
+          <span class="ga-tag medium" data-es style="display:none">Presión creciente</span>
+          <h4>Heredia / Alajuela</h4>
+          <p data-en>Still relatively accessible, but rents have climbed steadily since 2021. The areas closest to the airport and San José are feeling it first.</p>
+          <p data-es style="display:none">Todavía relativamente accesible, pero los alquileres han subido constantemente desde 2021. Las zonas más cercanas al aeropuerto y San José lo sienten primero.</p>
+        </div>
+      </div>
+
+      <div class="gentri-note reveal">
+        <p data-en><strong>How Costa Ricans feel about it:</strong> The honest answer is — it's complicated. Many welcome the economic activity, the restaurants, the investment. Others feel like strangers in their own neighborhoods, priced out of land their families have owned for generations. You will hear both sides. The resentment is real, especially in coastal areas. It doesn't mean you're not welcome — but it does mean <strong>you have a responsibility to show up as a guest, not a colonizer.</strong> Support local businesses. Learn Spanish. Pay fair wages if you hire locally. Don't demand that things work like back home.</p>
+        <p data-es style="display:none"><strong>Cómo se sienten los costarricenses:</strong> La respuesta honesta es — es complicado. Muchos dan la bienvenida a la actividad económica, los restaurantes, la inversión. Otros se sienten extraños en sus propios barrios, desplazados de tierras que sus familias han tenido por generaciones. Escucharás ambos lados. El resentimiento es real, especialmente en zonas costeras. No significa que no seas bienvenido — pero sí significa que <strong>tenés la responsabilidad de llegar como huésped, no como colonizador.</strong> Apoyá los negocios locales. Aprendé español. Pagá salarios justos si contratás localmente. No exijas que las cosas funcionen como en tu país.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PURA VIDA ===== -->
+  <section class="mtcr-section mtcr-section-alt" id="puravida">
+    <div class="container">
+      <div class="mtcr-section-head">
+        <span class="section-tag" data-en>Culture</span>
+        <span class="section-tag" data-es style="display:none">Cultura</span>
+        <h2 data-en>Pura Vida — <em>what it actually means</em></h2>
+        <h2 data-es style="display:none">Pura Vida — <em>lo que realmente significa</em></h2>
+        <p data-en>It's not a slogan on a fridge magnet. It's a philosophy, a pace, and a set of unspoken rules about how people treat each other here.</p>
+        <p data-es style="display:none">No es un slogan en un imán de refrigerador. Es una filosofía, un ritmo, y un conjunto de reglas no escritas sobre cómo se trata la gente aquí.</p>
+      </div>
+
+      <div class="puravida-hero reveal">
+        <span class="pv-emoji">🌿</span>
+        <h3 data-en>"Pura Vida" means: life is good, relax, it'll work out.</h3>
+        <h3 data-es style="display:none">"Pura Vida" significa: la vida es buena, relájate, todo saldrá bien.</h3>
+        <p data-en>It's used as a greeting, a farewell, a "you're welcome," a "don't worry," and a general affirmation that things are okay. It reflects a genuine cultural attitude: <strong>people over schedules, presence over productivity, community over individualism.</strong> If that sounds good to you, you'll love it here. If it sounds inefficient — this might not be the right fit.</p>
+        <p data-es style="display:none">Se usa como saludo, despedida, "de nada", "no te preocupés" y una afirmación general de que todo está bien. Refleja una actitud cultural genuina: <strong>las personas sobre los horarios, el presente sobre la productividad, la comunidad sobre el individualismo.</strong> Si eso te parece bien, vas a amar estar aquí. Si te parece ineficiente — quizás este no es el lugar correcto.</p>
+      </div>
+
+      <div class="pv-grid">
+        <div class="pv-card reveal">
+          <span class="pv-icon">⏰</span>
+          <h4 data-en>"Tico time" is real</h4>
+          <h4 data-es style="display:none">La "hora tica" es real</h4>
+          <p data-en>Meetings start late. Contractors arrive when they arrive. Government offices move slowly. This isn't laziness — it's a different relationship with time. Fighting it will make you miserable. Adapting to it will set you free.</p>
+          <p data-es style="display:none">Las reuniones empiezan tarde. Los contratistas llegan cuando llegan. Las oficinas del gobierno se mueven despacio. No es pereza — es una relación diferente con el tiempo. Luchar contra eso te va a hacer miserable. Adaptarte te va a liberar.</p>
+        </div>
+        <div class="pv-card reveal d1">
+          <span class="pv-icon">🗣️</span>
+          <h4 data-en>Learn Spanish. Seriously.</h4>
+          <h4 data-es style="display:none">Aprendé español. En serio.</h4>
+          <p data-en>English works in tourist zones and expat pockets. But to build real relationships, understand your neighbors, navigate bureaucracy, and show respect — you need Spanish. Even basic Spanish goes a very long way here.</p>
+          <p data-es style="display:none">El inglés funciona en zonas turísticas y bolsones de expats. Pero para construir relaciones reales, entender a tus vecinos, navegar la burocracia y mostrar respeto — necesitás español. Incluso un español básico rinde muchísimo aquí.</p>
+        </div>
+        <div class="pv-card reveal">
+          <span class="pv-icon">🛒</span>
+          <h4 data-en>Buy local, eat local</h4>
+          <h4 data-es style="display:none">Comprá local, comé local</h4>
+          <p data-en>The feria del agricultor (farmers market), the soda around the corner, the family hardware store — these are the backbone of Costa Rican communities. Choosing them over imported chains is not just good ethics, it's how you become part of where you live.</p>
+          <p data-es style="display:none">La feria del agricultor, la soda de la esquina, la ferretería familiar — son la columna vertebral de las comunidades costarricenses. Elegirlos sobre las cadenas importadas no es solo ética — es cómo te convertís en parte de donde vivís.</p>
+        </div>
+        <div class="pv-card reveal d1">
+          <span class="pv-icon">🤝</span>
+          <h4 data-en>Integrate, don't isolate</h4>
+          <h4 data-es style="display:none">Integrarte, no aislarte</h4>
+          <p data-en>The expat bubble is real and easy to fall into — same restaurants, same WhatsApp groups, same circle. The people who love Costa Rica most are the ones who pushed past it. Your neighbors have stories, food, knowledge, and friendships that no expat Facebook group can offer.</p>
+          <p data-es style="display:none">La burbuja expat es real y fácil de caer — mismos restaurantes, mismos grupos de WhatsApp, mismo círculo. Las personas que más aman Costa Rica son las que lo superaron. Tus vecinos tienen historias, comida, conocimiento y amistades que ningún grupo de Facebook expat puede ofrecer.</p>
+        </div>
+      </div>
+
+      <div class="pv-warning reveal">
+        <h3 data-en>🙏 We hope you come with the right mindset.</h3>
+        <h3 data-es style="display:none">🙏 Esperamos que llegués con la actitud correcta.</h3>
+        <ul class="pv-rules">
+          <li>
+            <i class="fa-solid fa-circle-xmark pv-no"></i>
+            <span data-en><strong>Don't come expecting a cheaper version of where you're from.</strong> Costa Rica is not a discount USA. It has its own culture, pace, food, politics, and identity — and it doesn't exist to serve your preferences.</span>
+            <span data-es style="display:none"><strong>No vengas esperando una versión más barata de tu país.</strong> Costa Rica no es un EE.UU. con descuento. Tiene su propia cultura, ritmo, comida, política e identidad — y no existe para servir tus preferencias.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-xmark pv-no"></i>
+            <span data-en><strong>Don't complain publicly that "it was better before" — meaning before you arrived.</strong> The irony is not lost on anyone. If the place was better before expats showed up, the solution isn't more expats talking about it.</span>
+            <span data-es style="display:none"><strong>No te quejes públicamente de que "antes era mejor" — refiriéndote a antes de que llegaras.</strong> La ironía no se le escapa a nadie. Si el lugar era mejor antes de que llegaran los expats, la solución no es más expats hablando de ello.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-xmark pv-no"></i>
+            <span data-en><strong>Don't bring your city attitude to rural or beach communities.</strong> If you need Starbucks, same-day delivery, and 300 Mbps everywhere — there are specific neighborhoods for that. Don't go to Sámara and be angry it's not Escazú.</span>
+            <span data-es style="display:none"><strong>No traigás tu actitud de ciudad a comunidades rurales o de playa.</strong> Si necesitás Starbucks, entrega en el mismo día y 300 Mbps en todas partes — hay barrios específicos para eso. No vayas a Sámara y te enojes porque no es Escazú.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-xmark pv-no"></i>
+            <span data-en><strong>Don't pay poverty wages and call it "helping the local economy."</strong> If you hire a housekeeper, a gardener, a driver — pay them fairly. Look up the minimum wage laws. Costa Rica has labor protections. Use them as a floor, not a ceiling.</span>
+            <span data-es style="display:none"><strong>No paguás salarios de pobreza y lo llames "ayudar a la economía local."</strong> Si contratás empleada doméstica, jardinero, chofer — pagales justo. Investigá las leyes de salario mínimo. Costa Rica tiene protecciones laborales. Úsalas como piso, no como techo.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-xmark pv-no"></i>
+            <span data-en><strong>Don't buy land and fence off a beach, a river, or a trail that the community has used for generations.</strong> Maritime zone laws exist for a reason. Know the rules before you build walls around something that was never just yours.</span>
+            <span data-es style="display:none"><strong>No comprés un terreno y cerres una playa, un río o un sendero que la comunidad ha usado por generaciones.</strong> Las leyes de zona marítima existen por una razón. Conocé las reglas antes de levantar muros alrededor de algo que nunca fue solo tuyo.</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-circle-check" style="color:#86efac; margin-top:.1rem; flex-shrink:0;"></i>
+            <span data-en><strong>Come with curiosity, humility, and the willingness to be changed by the place.</strong> The people who thrive here are not the ones who imposed their lifestyle — they're the ones who let Costa Rica get under their skin. Pura Vida is an invitation, not a marketing line.</span>
+            <span data-es style="display:none"><strong>Llegá con curiosidad, humildad y la disposición de ser transformado por este lugar.</strong> Las personas que prosperan aquí no son las que impusieron su estilo de vida — son las que dejaron que Costa Rica les llegara al alma. Pura Vida es una invitación, no una frase de marketing.</span>
+          </li>
+        </ul>
       </div>
     </div>
   </section>

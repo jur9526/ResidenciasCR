@@ -232,7 +232,17 @@ function handleForm(formId, successId) {
         method: 'POST', body: new FormData(form)
       });
       if (res.ok) {
+        const emailVal = form.querySelector('[name="email"]')?.value || '';
+        const phoneVal = form.querySelector('[name="telefono"]')?.value || '';
         form.reset();
+        if (typeof gtag === 'function') {
+          gtag('set', 'user_data', { email: emailVal, phone_number: phoneVal });
+          gtag('event', 'conversion', {
+            'send_to': 'AW-18034283160/H3bDCNae-9EcEJiltZdD',
+            'value': 15000,
+            'currency': 'CRC'
+          });
+        }
         if (success) {
           success.style.display = 'flex';
           setTimeout(() => { success.style.display = 'none'; }, 5000);

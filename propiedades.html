@@ -21,7 +21,11 @@
     gtag('config', 'AW-18034283160');
     function gtagSendEvent(url) {
       var callback = function () { if (typeof url === 'string') window.location = url; };
-      gtag('event', 'ads_conversion_Enviar_formulario_de_cl_1', { 'event_callback': callback, 'event_timeout': 2000 });
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18034283160/OGoNCNOe-9EcEJiltZdD',
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
       return false;
     }
   </script>
