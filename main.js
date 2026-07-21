@@ -34,7 +34,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ── Properties ───────────────────────────────────────────────
 const PROPS_PER_PAGE = 6;
+const PROPS_PER_PROP_PAGE = 9;
 let currentPage = 0;
+let propCurrentPage = 1;
 let properties  = [];
 
 // Estado de filtros
@@ -116,22 +118,61 @@ function buildPropertyCard(prop) {
     </div>`;
 }
 
+// ── Pagination ────────────────────────────────────────────────
+function getPaginationEl() {
+  return document.getElementById('propPagination') || document.getElementById('indexPagination');
+}
+
+function renderPagination(totalPages, current) {
+  const el = getPaginationEl();
+  if (!el) return;
+  if (totalPages <= 1) { el.innerHTML = ''; return; }
+  let html = `<span class="prop-page-label">Página</span>`;
+  if (current > 1)
+    html += `<button class="prop-page-btn prop-page-prev" data-page="${current - 1}" title="Anterior"><i class="fa-solid fa-chevron-left"></i></button>`;
+  for (let i = 1; i <= totalPages; i++)
+    html += `<button class="prop-page-btn${i === current ? ' active' : ''}" data-page="${i}">${i}</button>`;
+  if (current < totalPages)
+    html += `<button class="prop-page-btn prop-page-next" data-page="${current + 1}" title="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>`;
+  el.innerHTML = html;
+  el.querySelectorAll('[data-page]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      propCurrentPage = parseInt(btn.dataset.page);
+      renderProperties();
+      const grid = document.getElementById('propertiesGrid');
+      if (grid) window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+    });
+  });
+}
+
 // ── Render ────────────────────────────────────────────────────
 function renderProperties() {
-  const grid        = document.getElementById('propertiesGrid');
-  const loadMoreBtn = document.getElementById('loadMoreBtn');
-  const noResults   = document.getElementById('propNoResults');
+  const grid         = document.getElementById('propertiesGrid');
+  const loadMoreBtn  = document.getElementById('loadMoreBtn');
+  const noResults    = document.getElementById('propNoResults');
+  const paginationEl = getPaginationEl();
   if (!grid) return;
 
-  const filtered = getFiltered();
+  const filtered      = getFiltered();
+  const usePagination = !!paginationEl;
+  const perPage       = document.getElementById('indexPagination') ? PROPS_PER_PAGE : PROPS_PER_PROP_PAGE;
+  const totalPages    = usePagination ? Math.ceil(filtered.length / perPage) : 0;
+  if (usePagination && totalPages > 0 && propCurrentPage > totalPages) propCurrentPage = 1;
 
-  // Mostrar todo si: filtros activos O usuario pidió ver todo
-  const displayAll = showAll || filtersActive();
-  const slice = displayAll ? filtered : filtered.slice(0, PROPS_PER_PAGE);
+  let slice;
+  if (usePagination) {
+    const start = (propCurrentPage - 1) * perPage;
+    slice = filtered.slice(start, start + perPage);
+  } else {
+    // Mostrar todo si: filtros activos O usuario pidió ver todo
+    const displayAll = showAll || filtersActive();
+    slice = displayAll ? filtered : filtered.slice(0, PROPS_PER_PAGE);
+  }
 
   if (filtered.length === 0) {
     grid.innerHTML = '';
     if (noResults) noResults.style.display = 'flex';
+    if (paginationEl) paginationEl.innerHTML = '';
   } else {
     if (noResults) noResults.style.display = 'none';
     grid.innerHTML = slice.map(buildPropertyCard).join('');
@@ -145,21 +186,22 @@ function renderProperties() {
       });
     });
     grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    if (usePagination) renderPagination(totalPages, propCurrentPage);
   }
 
   // Botón loadMore (fallback)
-  if (loadMoreBtn) {
-    loadMoreBtn.style.display = 'none';
-  }
+  if (loadMoreBtn) loadMoreBtn.style.display = 'none';
 
-  // Botón "Ver más propiedades" → /propiedades
-  const verMasWrapper = document.getElementById('verMasWrapper');
-  const verMasCount   = document.getElementById('verMasCount');
-  if (verMasWrapper) {
-    const remaining = filtered.length - slice.length;
-    verMasWrapper.style.display = remaining > 0 ? 'flex' : 'none';
-    if (verMasCount && remaining > 0) {
-      verMasCount.textContent = `${remaining} propiedades más te están esperando`;
+  // Botón "Ver más propiedades" → /propiedades (solo index)
+  if (!usePagination) {
+    const verMasWrapper = document.getElementById('verMasWrapper');
+    const verMasCount   = document.getElementById('verMasCount');
+    if (verMasWrapper) {
+      const remaining = filtered.length - slice.length;
+      verMasWrapper.style.display = remaining > 0 ? 'flex' : 'none';
+      if (verMasCount && remaining > 0) {
+        verMasCount.textContent = `${remaining} propiedades más te están esperando`;
+      }
     }
   }
 }
@@ -174,7 +216,7 @@ if (loadMoreBtn) {
 }
 
 // ── Filtros ───────────────────────────────────────────────────
-function resetPage() { currentPage = 0; showAll = false; }
+function resetPage() { currentPage = 0; showAll = false; propCurrentPage = 1; }
 
 // Chips de tipo
 document.querySelectorAll('[data-filter-tipo]').forEach(btn => {

@@ -9,21 +9,7 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-SG692XZFCS');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18034283160"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
     gtag('config', 'AW-18034283160');
-  </script>
-  <!-- Google Ads conversion tracking -->
-  <script>
     function gtagSendEvent(url) {
       var callback = function () {
         if (typeof url === 'string') { window.location = url; }
@@ -36,6 +22,10 @@
       return false;
     }
   </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
   <!-- SEO primario -->
   <title>Casas en Venta en Costa Rica | Residencias Costa Rica</title>
@@ -413,12 +403,13 @@
       </div>
 
       <div class="properties-grid" id="propertiesGrid"></div>
+      <div id="indexPagination" class="prop-pagination"></div>
 
       <div class="properties-cta">
         <button class="btn btn-outline" id="loadMoreBtn" style="display:none">
           <i class="fa-solid fa-plus"></i> Ver más
         </button>
-        <div class="ver-mas-wrapper" id="verMasWrapper">
+        <div class="ver-mas-wrapper" id="verMasWrapper" style="display:none">
           <div class="vmc-outer">
           <span class="vmc-badge">¡No te vayas aún!</span>
           <a href="/propiedades" class="btn-ver-mas-cta" id="verMasBtn">
