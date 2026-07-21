@@ -270,18 +270,22 @@
               <!-- Quiero -->
               <div class="form-group">
                 <label>¿Qué querés hacer?</label>
-                <div class="form-toggle-group">
+                <div class="form-toggle-group form-toggle-grid">
                   <label class="form-toggle">
                     <input type="radio" name="intencion" value="Comprar" checked />
                     <span><i class="fa-solid fa-house"></i> Comprar</span>
                   </label>
                   <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Vender" />
-                    <span><i class="fa-solid fa-tag"></i> Vender</span>
-                  </label>
-                  <label class="form-toggle">
                     <input type="radio" name="intencion" value="Invertir" />
                     <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Poner en alquiler" />
+                    <span><i class="fa-solid fa-key"></i> Poner en alquiler</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Vender" />
+                    <span><i class="fa-solid fa-tag"></i> Vender</span>
                   </label>
                 </div>
               </div>
@@ -333,10 +337,24 @@
                 <input type="text" name="presupuesto" placeholder="Ej. 150,000,000 o 250,000" />
               </div>
 
-              <div class="form-group">
-                <label>Detalle adicional (opcional)</label>
-                <textarea name="detalle" rows="2" placeholder="Habitaciones, características, necesidades especiales..."></textarea>
+              <div class="form-group" id="detalleGroup">
+                <label id="labelDetalle">Detalle adicional (opcional)</label>
+                <textarea name="detalle" id="textareaDetalle" rows="2" placeholder="Habitaciones, características, necesidades especiales..."></textarea>
               </div>
+
+              <!-- Fotos — solo para Vender / Poner en alquiler -->
+              <div class="form-group photo-upload-wrap" id="photoUploadWrap" style="display:none">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8 fotos)</span></label>
+                <label class="photo-drop-zone" for="photoInput" id="photoDropZone">
+                  <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
+                  <span>Hacé clic o arrastrá las fotos aquí</span>
+                  <small id="photoHint">JPG, PNG, WEBP — hasta 8 fotos</small>
+                  <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
+                </label>
+                <div id="photoPreview" class="photo-preview-grid"></div>
+                <input type="hidden" name="fotos_urls" id="fotosUrls" />
+              </div>
+
               <button type="submit" class="btn-submit" id="buyerSubmit">
                 <i class="fa-solid fa-paper-plane"></i> Enviar consulta
               </button>
@@ -593,18 +611,22 @@
 
               <div class="form-group">
                 <label>¿Qué querés hacer?</label>
-                <div class="form-toggle-group">
+                <div class="form-toggle-group form-toggle-grid">
                   <label class="form-toggle">
                     <input type="radio" name="intencion" value="Comprar" />
                     <span><i class="fa-solid fa-house"></i> Comprar</span>
                   </label>
                   <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Vender" checked />
-                    <span><i class="fa-solid fa-tag"></i> Vender</span>
-                  </label>
-                  <label class="form-toggle">
                     <input type="radio" name="intencion" value="Invertir" />
                     <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Poner en alquiler" />
+                    <span><i class="fa-solid fa-key"></i> Poner en alquiler</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Vender" checked />
+                    <span><i class="fa-solid fa-tag"></i> Vender</span>
                   </label>
                 </div>
               </div>
@@ -657,8 +679,21 @@
               </div>
 
               <div class="form-group">
-                <label>Detalle adicional (opcional)</label>
-                <textarea name="detalle" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
+                <label id="labelDetalle2">Detalle adicional (opcional)</label>
+                <textarea name="detalle" id="textareaDetalle2" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
+              </div>
+
+              <!-- Fotos — solo para Vender / Poner en alquiler -->
+              <div class="form-group photo-upload-wrap" id="photoUploadWrap2" style="display:none">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8 fotos)</span></label>
+                <label class="photo-drop-zone" for="photoInput2" id="photoDropZone2">
+                  <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
+                  <span>Hacé clic o arrastrá las fotos aquí</span>
+                  <small id="photoHint2">JPG, PNG, WEBP — hasta 8 fotos</small>
+                  <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
+                </label>
+                <div id="photoPreview2" class="photo-preview-grid"></div>
+                <input type="hidden" name="fotos_urls" id="fotosUrls2" />
               </div>
 
               <button type="submit" class="btn-submit">
@@ -789,10 +824,10 @@
   </footer>
 
   <!-- WHATSAPP FLOAT -->
-  <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+  <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20estoy%20interesado%20en%20comprar%20una%20casa%2C%20%C2%BFme%20pod%C3%A9s%20ayudar%3F"
      target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" id="waFloat">
     <i class="fa-brands fa-whatsapp"></i>
-    <span class="wa-label">WhatsApp</span>
+    <span class="wa-label">¡Chateá ahora!</span>
   </a>
   <script>
     // Shake the button every 8 seconds
@@ -807,5 +842,114 @@
   <script src="main.js"></script>
 
   <div id="camara-tooltip">Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032</div>
+
+  <script>
+  // ── Mostrar/ocultar fotos según intención ──────────────────────
+  const IMGBB_KEY = '53e394bb943f40058c8d0715dcc5be19';
+  const SELLER_MODES = ['Vender', 'Poner en alquiler'];
+
+  function setupFormMode(formId, wrapId, inputId, previewId, hintId, urlsId, labelId, textareaId) {
+    const form     = document.getElementById(formId);
+    if (!form) return;
+    const wrap     = document.getElementById(wrapId);
+    const input    = document.getElementById(inputId);
+    const preview  = document.getElementById(previewId);
+    const hint     = document.getElementById(hintId);
+    const urlsEl   = document.getElementById(urlsId);
+    const label    = document.getElementById(labelId);
+    const textarea = document.getElementById(textareaId);
+    const radios   = form.querySelectorAll('[name="intencion"]');
+
+    let uploads = [];
+    const MAX   = 8;
+
+    function syncUrls() {
+      if (urlsEl) urlsEl.value = uploads.filter(u => u.url).map(u => u.url).join(' | ');
+    }
+    function updateHint() {
+      const rem = MAX - uploads.length;
+      if (hint) hint.textContent = uploads.length === 0
+        ? `JPG, PNG, WEBP — hasta ${MAX} fotos`
+        : rem > 0 ? `Podés agregar ${rem} más` : 'Límite alcanzado';
+    }
+
+    async function handleFiles(files) {
+      for (const file of files.slice(0, MAX - uploads.length)) {
+        const entry = { url: null };
+        uploads.push(entry);
+
+        const wrap2 = document.createElement('div');
+        wrap2.className = 'photo-thumb-wrap';
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        const st = document.createElement('div');
+        st.className = 'photo-thumb-status loading';
+        st.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
+        const rm = document.createElement('button');
+        rm.type = 'button'; rm.className = 'photo-thumb-remove';
+        rm.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        rm.onclick = () => { uploads = uploads.filter(u => u !== entry); wrap2.remove(); syncUrls(); updateHint(); };
+        wrap2.append(img, st, rm);
+        if (preview) preview.appendChild(wrap2);
+        updateHint();
+
+        try {
+          const fd = new FormData();
+          fd.append('key', IMGBB_KEY);
+          fd.append('image', file);
+          const res  = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd });
+          const data = await res.json();
+          if (data.success) {
+            entry.url = data.data.url;
+            st.className = 'photo-thumb-status done';
+            st.innerHTML = '<i class="fa-solid fa-check"></i>';
+          } else {
+            throw new Error(data.error?.message || 'error');
+          }
+        } catch {
+          uploads = uploads.filter(u => u !== entry);
+          st.className = 'photo-thumb-status error';
+          st.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          setTimeout(() => { wrap2.remove(); updateHint(); }, 2500);
+        }
+        syncUrls();
+      }
+    }
+
+    if (input) {
+      input.addEventListener('change', () => {
+        const files = Array.from(input.files);
+        input.value = '';
+        handleFiles(files);
+      });
+    }
+    const dz = document.getElementById(inputId.replace('photoInput', 'photoDropZone') || '');
+    if (dz) {
+      dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
+      dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
+      dz.addEventListener('drop', e => {
+        e.preventDefault(); dz.classList.remove('drag-over');
+        handleFiles(Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/')));
+      });
+    }
+
+    function updateMode(val) {
+      const isSeller = SELLER_MODES.includes(val);
+      if (wrap) wrap.style.display = isSeller ? 'block' : 'none';
+      if (label) label.textContent = isSeller ? 'Descripción de la propiedad (opcional)' : 'Detalle adicional (opcional)';
+      if (textarea) textarea.placeholder = isSeller
+        ? 'Tamaño, habitaciones, estado, precio esperado...'
+        : 'Habitaciones, características, necesidades especiales...';
+    }
+
+    radios.forEach(r => {
+      r.addEventListener('change', () => updateMode(r.value));
+      if (r.checked) updateMode(r.value);
+    });
+  }
+
+  setupFormMode('buyerForm', 'photoUploadWrap',  'photoInput',  'photoPreview',  'photoHint',  'fotosUrls',  'labelDetalle',  'textareaDetalle');
+  setupFormMode('sellForm',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'photoHint2', 'fotosUrls2', 'labelDetalle2', 'textareaDetalle2');
+  </script>
 </body>
 </html>

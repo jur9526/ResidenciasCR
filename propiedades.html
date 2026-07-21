@@ -174,6 +174,27 @@
           </div>
         </div>
         <div class="prop-filter-row">
+          <span class="filter-label"><i class="fa-solid fa-key"></i> Operación</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-op="todas">Todas</button>
+            <button class="filter-chip" data-filter-op="compra"><i class="fa-solid fa-house"></i> Compra</button>
+            <button class="filter-chip" data-filter-op="alquiler"><i class="fa-solid fa-key"></i> Alquiler</button>
+          </div>
+        </div>
+        <div class="prop-filter-row">
+          <span class="filter-label"><i class="fa-solid fa-map-location-dot"></i> Provincia</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-prov="todas">Todas</button>
+            <button class="filter-chip" data-filter-prov="San José">San José</button>
+            <button class="filter-chip" data-filter-prov="Alajuela">Alajuela</button>
+            <button class="filter-chip" data-filter-prov="Cartago">Cartago</button>
+            <button class="filter-chip" data-filter-prov="Heredia">Heredia</button>
+            <button class="filter-chip" data-filter-prov="Guanacaste">Guanacaste</button>
+            <button class="filter-chip" data-filter-prov="Puntarenas">Puntarenas</button>
+            <button class="filter-chip" data-filter-prov="Limón">Limón</button>
+          </div>
+        </div>
+        <div class="prop-filter-row">
           <span class="filter-label"><i class="fa-solid fa-house"></i> Tipo</span>
           <div class="filter-chips">
             <button class="filter-chip active" data-filter-tipo="todos">Todos</button>
@@ -328,7 +349,19 @@
 
     // ── Properties ───────────────────────────────────────────────
     let properties = window.DEFAULT_PROPERTIES || [];
-    let activeFilters = { tipo: 'todos', beds: 'todos', zona: '' };
+    let activeFilters = { tipo: 'todos', beds: 'todos', zona: '', provincia: 'todas', operacion: 'todas' };
+    const PER_PAGE = 9;
+    let currentPage = 1;
+
+    const PROVINCE_CANTONS = {
+      'San José':    ['San José','Escazú','Desamparados','Puriscal','Aserrí','Mora','Goicoechea','Santa Ana','Alajuelita','Coronado','Tibás','Moravia','Montes de Oca','Curridabat','Pérez Zeledón','Hatillo','Zapote','San Pedro','La Uruca','Sabanilla','Guadalupe','Tres Ríos'],
+      'Alajuela':   ['Alajuela','San Ramón','Grecia','Atenas','Naranjo','Palmares','Poás','Orotina','San Carlos','Ciudad Quesada','Zarcero','Upala','Los Chiles','La Guácima','Guácima'],
+      'Cartago':    ['Cartago','La Unión','Tres Ríos','Paraíso','Turrialba','El Guarco','Oreamuno','Cot','Tobosi','Dulce Nombre'],
+      'Heredia':    ['Heredia','Barva','Santo Domingo','Santa Bárbara','San Rafael','Belén','Flores','San Pablo','Ulloa','Sarapiquí','San Joaquín','San Isidro','Lagunilla'],
+      'Guanacaste': ['Liberia','Nicoya','Santa Cruz','Tamarindo','Flamingo','Bagaces','Carrillo','Cañas','Nosara','Sámara','Tilarán','La Cruz'],
+      'Puntarenas': ['Puntarenas','Esparza','Quepos','Manuel Antonio','Golfito','Jacó','Parrita','Dominical','Uvita','Coto Brus','Garabito'],
+      'Limón':      ['Limón','Pococí','Siquirres','Talamanca','Matina','Guácimo','Cahuita','Puerto Viejo','Guápiles'],
+    };
 
     function getFiltered() {
       return properties.filter(p => {
@@ -338,7 +371,16 @@
         const zonaOk = !activeFilters.zona ||
           (p.location || '').toLowerCase().includes(activeFilters.zona.toLowerCase()) ||
           (p.title    || '').toLowerCase().includes(activeFilters.zona.toLowerCase());
-        return tipoOk && bedsOk && zonaOk;
+        const provOk = activeFilters.provincia === 'todas' ||
+          (PROVINCE_CANTONS[activeFilters.provincia] || []).some(c =>
+            (p.location || '').toLowerCase().includes(c.toLowerCase())
+          );
+        const isAlquiler = (p.badge || '').toLowerCase().includes('alquiler') ||
+                           (p.title  || '').toLowerCase().includes('alquiler');
+        const opOk = activeFilters.operacion === 'todas' ||
+          (activeFilters.operacion === 'alquiler' && isAlquiler) ||
+          (activeFilters.operacion === 'compra'   && !isAlquiler);
+        return tipoOk && bedsOk && zonaOk && provOk && opOk;
       });
     }
 
@@ -378,56 +420,84 @@
     }
 
     function render() {
-      const grid      = document.getElementById('propertiesGrid');
-      const noResults = document.getElementById('propNoResults');
-      const filtered  = getFiltered();
+      const grid       = document.getElementById('propertiesGrid');
+      const noResults  = document.getElementById('propNoResults');
+      const pagination = document.getElementById('propPagination');
+      const filtered   = getFiltered();
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
-        if (noResults) noResults.style.display = 'flex';
-      } else {
-        if (noResults) noResults.style.display = 'none';
-        grid.innerHTML = filtered.map(buildCard).join('');
-        grid.querySelectorAll('.prop-img-lazy').forEach(img => {
-          const sk = img.previousElementSibling;
-          img.addEventListener('load',  () => { if (sk) sk.style.display = 'none'; img.classList.add('loaded'); });
-          img.addEventListener('error', () => {
-            if (sk) sk.style.display = 'none';
-            img.src = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
-            img.classList.add('loaded');
-          });
+        if (noResults)  noResults.style.display = 'flex';
+        if (pagination) pagination.innerHTML = '';
+        return;
+      }
+
+      if (noResults) noResults.style.display = 'none';
+
+      const totalPages = Math.ceil(filtered.length / PER_PAGE);
+      if (currentPage > totalPages) currentPage = 1;
+
+      const start = (currentPage - 1) * PER_PAGE;
+      const slice = filtered.slice(start, start + PER_PAGE);
+
+      grid.innerHTML = slice.map(buildCard).join('');
+      grid.querySelectorAll('.prop-img-lazy').forEach(img => {
+        const sk = img.previousElementSibling;
+        img.addEventListener('load',  () => { if (sk) sk.style.display = 'none'; img.classList.add('loaded'); });
+        img.addEventListener('error', () => {
+          if (sk) sk.style.display = 'none';
+          img.src = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
+          img.classList.add('loaded');
         });
-        grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+      });
+      grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      if (pagination) {
+        if (totalPages <= 1) {
+          pagination.innerHTML = '';
+        } else {
+          let html = '<span class="prop-page-label">Página</span>';
+          if (currentPage > 1)
+            html += `<button class="prop-page-btn prop-page-prev" data-page="${currentPage - 1}"><i class="fa-solid fa-chevron-left"></i></button>`;
+          for (let i = 1; i <= totalPages; i++)
+            html += `<button class="prop-page-btn${i === currentPage ? ' active' : ''}" data-page="${i}">${i}</button>`;
+          if (currentPage < totalPages)
+            html += `<button class="prop-page-btn prop-page-next" data-page="${currentPage + 1}"><i class="fa-solid fa-chevron-right"></i></button>`;
+          pagination.innerHTML = html;
+          pagination.querySelectorAll('[data-page]').forEach(btn => {
+            btn.addEventListener('click', () => {
+              currentPage = parseInt(btn.dataset.page);
+              render();
+              window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
+            });
+          });
+        }
       }
     }
 
-    // Chips tipo
-    document.querySelectorAll('[data-filter-tipo]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-filter-tipo]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeFilters.tipo = btn.dataset.filterTipo;
-        render();
+    function makeChipFilter(selector, key) {
+      document.querySelectorAll(selector).forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          activeFilters[key] = btn.dataset[key === 'provincia' ? 'filterProv' : key === 'operacion' ? 'filterOp' : key === 'tipo' ? 'filterTipo' : 'filterBeds'];
+          currentPage = 1;
+          render();
+        });
       });
-    });
+    }
 
-    // Chips beds
-    document.querySelectorAll('[data-filter-beds]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('[data-filter-beds]').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        activeFilters.beds = btn.dataset.filterBeds;
-        render();
-      });
-    });
+    makeChipFilter('[data-filter-tipo]',  'tipo');
+    makeChipFilter('[data-filter-beds]',  'beds');
+    makeChipFilter('[data-filter-op]',    'operacion');
+    makeChipFilter('[data-filter-prov]',  'provincia');
 
-    // Búsqueda zona
     const zonaInput = document.getElementById('filterZona');
     if (zonaInput) {
       let debounce;
       zonaInput.addEventListener('input', () => {
         clearTimeout(debounce);
-        debounce = setTimeout(() => { activeFilters.zona = zonaInput.value.trim(); render(); }, 300);
+        debounce = setTimeout(() => { activeFilters.zona = zonaInput.value.trim(); currentPage = 1; render(); }, 300);
       });
     }
 

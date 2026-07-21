@@ -500,18 +500,53 @@ p  { color: var(--gray); font-size: .95rem; }
 .form-toggle-group {
   display: flex; gap: .5rem; flex-wrap: wrap;
 }
+.form-toggle-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: .5rem;
+}
+.form-toggle { display: contents; }
 .form-toggle input[type="radio"] { display: none; }
 .form-toggle span {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .45rem 1rem; border-radius: 8px; font-size: .85rem; font-weight: 600;
+  display: flex; align-items: center; justify-content: center; gap: .4rem;
+  padding: .5rem 1rem; border-radius: 8px; font-size: .85rem; font-weight: 600;
   border: 1.5px solid var(--light-gray); background: #fff; color: var(--dark);
-  cursor: pointer; transition: all .18s;
+  cursor: pointer; transition: all .18s; text-align: center;
 }
 .form-toggle span:hover { border-color: var(--red); color: var(--red); }
 .form-toggle input:checked + span {
   background: var(--red); border-color: var(--red); color: #fff;
 }
 .form-toggle span i { font-size: .8rem; }
+
+/* ── Photo upload ── */
+.photo-drop-zone {
+  display: flex; flex-direction: column; align-items: center; gap: .5rem;
+  padding: 1.5rem; border: 2px dashed var(--light-gray); border-radius: 12px;
+  cursor: pointer; transition: border-color .2s, background .2s; text-align: center;
+}
+.photo-drop-zone:hover, .photo-drop-zone.drag-over {
+  border-color: var(--red); background: var(--red-light);
+}
+.photo-drop-zone span { font-size: .88rem; font-weight: 600; color: var(--dark); }
+.photo-drop-zone small { font-size: .78rem; color: var(--gray); }
+.photo-preview-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: .5rem; margin-top: .5rem;
+}
+.photo-thumb-wrap { position: relative; aspect-ratio: 1; border-radius: 8px; overflow: hidden; }
+.photo-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.photo-thumb-status {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+}
+.photo-thumb-status.loading { background: rgba(0,0,0,.45); color: #fff; }
+.photo-thumb-status.done    { background: rgba(0,150,0,.35); color: #fff; }
+.photo-thumb-status.error   { background: rgba(200,0,0,.45); color: #fff; }
+.photo-thumb-remove {
+  position: absolute; top: 4px; right: 4px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: rgba(0,0,0,.6); color: #fff; font-size: .65rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
 
 .form-success {
   display: none; align-items: center; gap: .5rem;
@@ -999,17 +1034,18 @@ p  { color: var(--gray); font-size: .95rem; }
    ============================================================ */
 .whatsapp-float {
   position: fixed; bottom: 1.75rem; right: 1.75rem; z-index: 800;
-  display: flex; align-items: center; gap: 10px;
-  background: var(--wa); border-radius: 99px;
-  padding: 14px 20px 14px 16px;
-  color: #fff; font-size: 1.5rem; font-weight: 800; font-family: var(--font);
-  box-shadow: 0 6px 28px rgba(37,211,102,.5);
+  display: flex; align-items: center; gap: 12px;
+  background: linear-gradient(135deg, #25d366, #128C7E);
+  border-radius: 99px;
+  padding: 16px 24px 16px 18px;
+  color: #fff; font-size: 1.7rem; font-weight: 800; font-family: var(--font);
+  box-shadow: 0 8px 32px rgba(37,211,102,.6), 0 2px 8px rgba(0,0,0,.15);
   transition: transform .2s, box-shadow .2s;
-  animation: wa-pulse 2s ease-in-out infinite;
+  animation: wa-pulse 2.5s ease-in-out infinite;
   text-decoration: none;
 }
-.whatsapp-float .wa-label { font-size: .95rem; font-weight: 800; white-space: nowrap; }
-.whatsapp-float:hover { transform: scale(1.06) translateY(-2px); box-shadow: 0 12px 36px rgba(37,211,102,.65); animation: none; }
+.whatsapp-float .wa-label { font-size: 1rem; font-weight: 800; white-space: nowrap; letter-spacing: -.01em; }
+.whatsapp-float:hover { transform: scale(1.07) translateY(-3px); box-shadow: 0 14px 40px rgba(37,211,102,.7); animation: none; }
 
 /* notification dot */
 .whatsapp-float::before {
@@ -1562,13 +1598,13 @@ p  { color: var(--gray); font-size: .95rem; }
   justify-content: center;
 }
 .prop-page-btn:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: rgba(46,125,50,.06);
+  border-color: var(--red);
+  color: var(--red);
+  background: var(--red-light);
 }
 .prop-page-btn.active {
-  background: var(--primary);
-  border-color: var(--primary);
+  background: var(--red);
+  border-color: var(--red);
   color: #fff;
 }
 @media (prefers-color-scheme: dark) {
