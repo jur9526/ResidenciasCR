@@ -344,12 +344,12 @@
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
-                <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
-                <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput').click()">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8) — <span id="photoCount"></span></span></label>
+                <label class="photo-drop-zone">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
                   <span>Tocá para agregar fotos</span>
-                </button>
+                  <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
+                </label>
                 <div id="photoPreview" class="photo-preview-grid"></div>
                 <input type="hidden" name="fotos_urls" id="fotosUrls" />
               </div>
@@ -705,12 +705,12 @@
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap2">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
-                <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
-                <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput2').click()">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8) — <span id="photoCount2"></span></span></label>
+                <label class="photo-drop-zone">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
                   <span>Tocá para agregar fotos</span>
-                </button>
+                  <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
+                </label>
                 <div id="photoPreview2" class="photo-preview-grid"></div>
                 <input type="hidden" name="fotos_urls" id="fotosUrls2" />
               </div>
@@ -866,22 +866,28 @@
   const IMGBB_KEY    = '53e394bb943f40058c8d0715dcc5be19';
   const SELLER_MODES = ['Vender', 'Poner en alquiler'];
 
-  function setupForm(formId, successId, wrapId, inputId, previewId, urlsId) {
+  function setupForm(formId, successId, wrapId, inputId, previewId, urlsId, countId) {
     const form    = document.getElementById(formId);
     const success = document.getElementById(successId);
     const wrap    = document.getElementById(wrapId);
     const input   = document.getElementById(inputId);
     const preview = document.getElementById(previewId);
     const urlsEl  = document.getElementById(urlsId);
+    const countEl = countId ? document.getElementById(countId) : null;
     if (!form || !wrap) return;
 
     let files = [];
+
+    function updateCount() {
+      if (!countEl) return;
+      countEl.textContent = files.length > 0 ? `${files.length}/8 fotos` : '';
+    }
 
     // ── Mostrar/ocultar sección de fotos (via clase en el form) ──
     function showPhoto(val) {
       const show = SELLER_MODES.includes(val);
       form.classList.toggle('show-photos', show);
-      if (!show) { files = []; if (preview) preview.innerHTML = ''; }
+      if (!show) { files = []; if (preview) preview.innerHTML = ''; updateCount(); }
     }
     form.querySelectorAll('[name="intencion"]').forEach(r => {
       r.addEventListener('change', () => showPhoto(r.value));
@@ -903,11 +909,12 @@
           const rm = document.createElement('button');
           rm.type = 'button'; rm.className = 'photo-thumb-remove';
           rm.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-          rm.onclick = () => { files = files.filter(x => x !== f); d.remove(); };
+          rm.onclick = () => { files = files.filter(x => x !== f); d.remove(); updateCount(); };
           d.append(img, rm);
           if (preview) preview.appendChild(d);
         });
         input.value = '';
+        updateCount();
       });
     }
 
@@ -946,6 +953,7 @@
           form.reset();
           files = [];
           if (preview) preview.innerHTML = '';
+          updateCount();
           syncWrap();
           if (typeof gtag === 'function') {
             gtag('set', 'user_data', { email: emailVal, phone_number: phoneVal });
@@ -969,8 +977,8 @@
     });
   }
 
-  setupForm('buyerForm', 'buyerSuccess', 'photoUploadWrap',  'photoInput',  'photoPreview',  'fotosUrls');
-  setupForm('sellForm',  'formSuccess',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'fotosUrls2');
+  setupForm('buyerForm', 'buyerSuccess', 'photoUploadWrap',  'photoInput',  'photoPreview',  'fotosUrls',  'photoCount');
+  setupForm('sellForm',  'formSuccess',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'fotosUrls2', 'photoCount2');
   </script>
 </body>
 </html>
