@@ -345,11 +345,11 @@
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap" style="display:none">
                 <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
-                <label class="photo-drop-zone" for="photoInput">
+                <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
+                <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput').click()">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
                   <span>Tocá para agregar fotos</span>
-                  <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
-                </label>
+                </button>
                 <div id="photoPreview" class="photo-preview-grid"></div>
                 <input type="hidden" name="fotos_urls" id="fotosUrls" />
               </div>
@@ -706,11 +706,11 @@
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap2" style="display:none">
                 <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
-                <label class="photo-drop-zone" for="photoInput2">
+                <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
+                <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput2').click()">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
                   <span>Tocá para agregar fotos</span>
-                  <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
-                </label>
+                </button>
                 <div id="photoPreview2" class="photo-preview-grid"></div>
                 <input type="hidden" name="fotos_urls" id="fotosUrls2" />
               </div>
@@ -873,19 +873,20 @@
     const input   = document.getElementById(inputId);
     const preview = document.getElementById(previewId);
     const urlsEl  = document.getElementById(urlsId);
-    if (!form) return;
+    if (!form || !wrap) return;
 
     let files = [];
 
     // ── Mostrar/ocultar sección de fotos ──────────────────
-    function syncWrap() {
-      const checked = form.querySelector('[name="intencion"]:checked');
-      const show = checked && SELLER_MODES.includes(checked.value);
-      if (wrap) wrap.style.display = show ? '' : 'none';
+    function showPhoto(val) {
+      const show = SELLER_MODES.includes(val);
+      wrap.style.display = show ? '' : 'none';
       if (!show) { files = []; if (preview) preview.innerHTML = ''; }
     }
-    form.querySelectorAll('[name="intencion"]').forEach(r => r.addEventListener('change', syncWrap));
-    syncWrap();
+    form.querySelectorAll('[name="intencion"]').forEach(r => {
+      r.addEventListener('change', () => showPhoto(r.value));
+      if (r.checked) showPhoto(r.value); // estado inicial
+    });
 
     // ── Acumular fotos localmente (sin subir aún) ─────────
     if (input) {
