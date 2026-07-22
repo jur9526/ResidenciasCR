@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-07-22 13:31
+// Auto-generado por sync_encuentra24.py — 2026-07-22 15:03
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
@@ -35,7 +35,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216513",
     "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
-    "price": "₡ 180,000,000",
+    "price": "₡ 163,000,000\n\n-2%",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -51,7 +51,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32417016",
     "title": "Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos",
-    "price": "₡ 175,000,000",
+    "price": "₡ 164,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -67,7 +67,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32558151",
     "title": "Viva con comodidad y excelente ubicación en Bambú Eco Urbano, San Sebastián!",
-    "price": "₡ 66,000,000",
+    "price": "$ 149,000\n\n-1%",
     "location": "San Sebastián",
     "beds": 2,
     "baths": 2,
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31939144",
     "title": "Venta de Casa en La Unión de Tres Ríos",
-    "price": "₡ 110,000,000",
+    "price": "₡ 99,000,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 2,
@@ -115,10 +115,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-29377845",
     "title": "Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)",
-    "price": "$ 1,167,000",
+    "price": "$ 950,000",
     "location": "Tres Ríos",
     "beds": 4,
-    "baths": 5,
+    "baths": 4,
     "area": "2,096 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -147,10 +147,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡ 80,000,000",
+    "price": "₡ 98,000,000",
     "location": "Moravia",
     "beds": 3,
-    "baths": 2,
+    "baths": 1,
     "area": "104 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -163,7 +163,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892295",
     "title": "Penthouse en venta ubicado en Curridabat",
-    "price": "$ 290,000",
+    "price": "$ 320,000",
     "location": "Sanchez",
     "beds": 3,
     "baths": 3,
@@ -211,7 +211,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "₡ 150,000,000\n\n-12%",
+    "price": "₡ 115,000,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
@@ -243,9 +243,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592730",
     "title": "Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos",
-    "price": "$ 154,000\n\n-7%",
+    "price": "$ 142,000",
     "location": "San José Capital",
-    "beds": 2,
+    "beds": 1,
     "baths": 2,
     "area": "70 m²",
     "type": "Casa",
@@ -275,7 +275,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216446",
     "title": "Casa en venta en Condominio Ubicada en Concepción de Tres Ríos",
-    "price": "₡ 110,000,000",
+    "price": "₡ 99,000,000",
     "location": "Tres Ríos",
     "beds": 2,
     "baths": 5,
@@ -291,7 +291,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217792",
     "title": "VENTA DE HERMOSA CASA EN CARTAGO",
-    "price": "₡ 68,000,000",
+    "price": "₡ 78,000,000",
     "location": "Dulce Nombre",
     "beds": 3,
     "baths": 2,
@@ -307,7 +307,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32217920",
     "title": "¡Hermosa Casa en Venta en Alajuela Centro!",
-    "price": "₡ 87,000,000",
+    "price": "₡ 85,000,000",
     "location": "Alajuela Centro",
     "beds": 3,
     "baths": 3,
@@ -323,7 +323,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 72,000,000\n\n-6%",
+    "price": "₡ 82,000,000",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
@@ -339,7 +339,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32416347",
     "title": "¡Oportunidad en Condominio en Cartago!",
-    "price": "₡ 72,000,000",
+    "price": "₡ 75,000,000",
     "location": "El Tejar",
     "beds": 3,
     "baths": 2,
@@ -355,10 +355,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30728594",
     "title": "¡Oportunidad! Compre una casa y alquile la otra",
-    "price": "$ 280,000",
+    "price": "$ 370,000",
     "location": "San Rafael",
     "beds": 3,
-    "baths": 5,
+    "baths": 2,
     "area": "357 m²",
     "type": "Casa",
     "badge": "Oportunidad",
@@ -387,7 +387,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 375,000",
+    "price": "$ 320,000",
     "location": "Guácima",
     "beds": 3,
     "baths": 5,
@@ -419,7 +419,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "₡ 100,000,000",
+    "price": "$ 210,000\n\n-13%",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
@@ -435,10 +435,10 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31881272",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "₡ 78,073,592\n\n-5%",
+    "price": "$ 157,000",
     "location": "Guácima",
     "beds": 3,
-    "baths": 5,
+    "baths": 1,
     "area": "170 m²",
     "type": "Casa",
     "badge": "En Venta",
@@ -451,7 +451,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "$ 499,000",
+    "price": "$ 545,000\n\n-1%",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -501,8 +501,8 @@ window.DEFAULT_PROPERTIES = [
     "title": "Casa en venta ubicada en Zapote",
     "price": "₡ 72,000,000",
     "location": "Zapote",
-    "beds": 4,
-    "baths": 1,
+    "beds": 3,
+    "baths": 2,
     "area": "133.55 m²",
     "type": "Casa",
     "badge": "En Venta",
