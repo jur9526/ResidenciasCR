@@ -40,8 +40,18 @@ let propCurrentPage = 1;
 let properties  = [];
 
 // Estado de filtros
-let activeFilters = { tipo: 'todos', beds: 'todos', zona: '' };
-let showAll = false; // true cuando el usuario pide ver todo
+let activeFilters = { tipo: 'todos', beds: 'todos', zona: '', provincia: 'todas', operacion: 'todas' };
+let showAll = false;
+
+const PROVINCE_CANTONS = {
+  'San José':    ['San José','Escazú','Desamparados','Puriscal','Aserrí','Mora','Goicoechea','Santa Ana','Alajuelita','Coronado','Tibás','Moravia','Montes de Oca','Curridabat','Pérez Zeledón','Hatillo','Zapote','San Pedro','La Uruca','Sabanilla','Guadalupe','Tres Ríos','San Sebastián','San Francisco','Ciudad Colón','Paso Ancho'],
+  'Alajuela':   ['Alajuela','San Ramón','Grecia','Atenas','Naranjo','Palmares','Poás','Orotina','San Carlos','Ciudad Quesada','Zarcero','Upala','Los Chiles','La Guácima','Guácima','El Coyol','Coyol','San Rafael de Alajuela'],
+  'Cartago':    ['Cartago','La Unión','Tres Ríos','Paraíso','Turrialba','El Guarco','Oreamuno','Cot','Tobosi','Dulce Nombre','El Tejar','Quebradilla','Tejar','San Diego'],
+  'Heredia':    ['Heredia','Barva','Santo Domingo','Santa Bárbara','San Rafael','Belén','Flores','San Pablo','Ulloa','Sarapiquí','San Joaquín','San Isidro','Lagunilla','Bambú','Calles Blanco','San Antonio'],
+  'Guanacaste': ['Liberia','Nicoya','Santa Cruz','Tamarindo','Flamingo','Bagaces','Carrillo','Cañas','Nosara','Sámara','Tilarán','La Cruz','Tenorio','Guanacaste'],
+  'Puntarenas': ['Puntarenas','Esparza','Quepos','Manuel Antonio','Golfito','Jacó','Parrita','Dominical','Uvita','Coto Brus','Garabito','Osa'],
+  'Limón':      ['Limón','Pococí','Siquirres','Talamanca','Matina','Guácimo','Cahuita','Puerto Viejo','Guápiles','Batán'],
+};
 
 function loadProperties() {
   try {
@@ -56,22 +66,33 @@ function loadProperties() {
 
 // ── Filtrado ─────────────────────────────────────────────────
 function filtersActive() {
-  return activeFilters.tipo !== 'todos' || activeFilters.beds !== 'todos' || activeFilters.zona !== '';
+  return activeFilters.tipo !== 'todos' || activeFilters.beds !== 'todos' ||
+         activeFilters.zona !== '' || activeFilters.provincia !== 'todas' ||
+         activeFilters.operacion !== 'todas';
 }
 
 function getFiltered() {
   return properties.filter(p => {
     const tipoOk = activeFilters.tipo === 'todos' ||
       (p.type || '').toLowerCase() === activeFilters.tipo.toLowerCase();
-
     const bedsOk = activeFilters.beds === 'todos' ||
       p.beds >= parseInt(activeFilters.beds);
-
     const zonaOk = !activeFilters.zona ||
       (p.location || '').toLowerCase().includes(activeFilters.zona.toLowerCase()) ||
-      (p.title   || '').toLowerCase().includes(activeFilters.zona.toLowerCase());
-
-    return tipoOk && bedsOk && zonaOk;
+      (p.title    || '').toLowerCase().includes(activeFilters.zona.toLowerCase());
+    const provOk = activeFilters.provincia === 'todas' ||
+      (PROVINCE_CANTONS[activeFilters.provincia] || []).some(c =>
+        (p.location || '').toLowerCase().includes(c.toLowerCase()) ||
+        (p.title    || '').toLowerCase().includes(c.toLowerCase())
+      );
+    const isAlquiler = (p.badge   || '').toLowerCase().includes('alquiler') ||
+                       (p.title   || '').toLowerCase().includes('alquiler') ||
+                       (p.location|| '').toLowerCase().includes('alquiler') ||
+                       (p.e24url  || '').includes('alquiler');
+    const opOk = activeFilters.operacion === 'todas' ||
+      (activeFilters.operacion === 'alquiler' && isAlquiler) ||
+      (activeFilters.operacion === 'compra'   && !isAlquiler);
+    return tipoOk && bedsOk && zonaOk && provOk && opOk;
   });
 }
 
@@ -218,27 +239,22 @@ if (loadMoreBtn) {
 // ── Filtros ───────────────────────────────────────────────────
 function resetPage() { currentPage = 0; showAll = false; propCurrentPage = 1; }
 
-// Chips de tipo
-document.querySelectorAll('[data-filter-tipo]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-filter-tipo]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilters.tipo = btn.dataset.filterTipo;
-    resetPage();
-    renderProperties();
+function makeChip(selector, key, dataKey) {
+  document.querySelectorAll(selector).forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      activeFilters[key] = btn.dataset[dataKey];
+      resetPage();
+      renderProperties();
+    });
   });
-});
+}
 
-// Chips de habitaciones
-document.querySelectorAll('[data-filter-beds]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('[data-filter-beds]').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    activeFilters.beds = btn.dataset.filterBeds;
-    resetPage();
-    renderProperties();
-  });
-});
+makeChip('[data-filter-tipo]',  'tipo',      'filterTipo');
+makeChip('[data-filter-beds]',  'beds',      'filterBeds');
+makeChip('[data-filter-op]',    'operacion', 'filterOp');
+makeChip('[data-filter-prov]',  'provincia', 'filterProv');
 
 // Búsqueda por zona
 const zonaInput = document.getElementById('filterZona');

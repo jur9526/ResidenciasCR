@@ -350,8 +350,6 @@
     // ── Properties ───────────────────────────────────────────────
     let properties = window.DEFAULT_PROPERTIES || [];
     let activeFilters = { tipo: 'todos', beds: 'todos', zona: '', provincia: 'todas', operacion: 'todas' };
-    const PER_PAGE = 9;
-    let currentPage = 1;
 
     const PROVINCE_CANTONS = {
       'San José':    ['San José','Escazú','Desamparados','Puriscal','Aserrí','Mora','Goicoechea','Santa Ana','Alajuelita','Coronado','Tibás','Moravia','Montes de Oca','Curridabat','Pérez Zeledón','Hatillo','Zapote','San Pedro','La Uruca','Sabanilla','Guadalupe','Tres Ríos','San Sebastián','San Francisco','Ciudad Colón','Paso Ancho'],
@@ -423,27 +421,18 @@
     }
 
     function render() {
-      const grid       = document.getElementById('propertiesGrid');
-      const noResults  = document.getElementById('propNoResults');
-      const pagination = document.getElementById('propPagination');
-      const filtered   = getFiltered();
+      const grid      = document.getElementById('propertiesGrid');
+      const noResults = document.getElementById('propNoResults');
+      const filtered  = getFiltered();
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
-        if (noResults)  noResults.style.display = 'flex';
-        if (pagination) pagination.innerHTML = '';
+        if (noResults) noResults.style.display = 'flex';
         return;
       }
 
       if (noResults) noResults.style.display = 'none';
-
-      const totalPages = Math.ceil(filtered.length / PER_PAGE);
-      if (currentPage > totalPages) currentPage = 1;
-
-      const start = (currentPage - 1) * PER_PAGE;
-      const slice = filtered.slice(start, start + PER_PAGE);
-
-      grid.innerHTML = slice.map(buildCard).join('');
+      grid.innerHTML = filtered.map(buildCard).join('');
       grid.querySelectorAll('.prop-img-lazy').forEach(img => {
         const sk = img.previousElementSibling;
         img.addEventListener('load',  () => { if (sk) sk.style.display = 'none'; img.classList.add('loaded'); });
@@ -454,53 +443,30 @@
         });
       });
       grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      if (pagination) {
-        if (totalPages <= 1) {
-          pagination.innerHTML = '';
-        } else {
-          let html = '<span class="prop-page-label">Página</span>';
-          if (currentPage > 1)
-            html += `<button class="prop-page-btn prop-page-prev" data-page="${currentPage - 1}"><i class="fa-solid fa-chevron-left"></i></button>`;
-          for (let i = 1; i <= totalPages; i++)
-            html += `<button class="prop-page-btn${i === currentPage ? ' active' : ''}" data-page="${i}">${i}</button>`;
-          if (currentPage < totalPages)
-            html += `<button class="prop-page-btn prop-page-next" data-page="${currentPage + 1}"><i class="fa-solid fa-chevron-right"></i></button>`;
-          pagination.innerHTML = html;
-          pagination.querySelectorAll('[data-page]').forEach(btn => {
-            btn.addEventListener('click', () => {
-              currentPage = parseInt(btn.dataset.page);
-              render();
-              window.scrollTo({ top: grid.getBoundingClientRect().top + window.scrollY - 100, behavior: 'smooth' });
-            });
-          });
-        }
-      }
     }
 
-    function makeChipFilter(selector, key) {
+    function makeChipFilter(selector, key, dataKey) {
       document.querySelectorAll(selector).forEach(btn => {
         btn.addEventListener('click', () => {
           document.querySelectorAll(selector).forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          activeFilters[key] = btn.dataset[key === 'provincia' ? 'filterProv' : key === 'operacion' ? 'filterOp' : key === 'tipo' ? 'filterTipo' : 'filterBeds'];
-          currentPage = 1;
+          activeFilters[key] = btn.dataset[dataKey];
           render();
         });
       });
     }
 
-    makeChipFilter('[data-filter-tipo]',  'tipo');
-    makeChipFilter('[data-filter-beds]',  'beds');
-    makeChipFilter('[data-filter-op]',    'operacion');
-    makeChipFilter('[data-filter-prov]',  'provincia');
+    makeChipFilter('[data-filter-tipo]',  'tipo',      'filterTipo');
+    makeChipFilter('[data-filter-beds]',  'beds',      'filterBeds');
+    makeChipFilter('[data-filter-op]',    'operacion', 'filterOp');
+    makeChipFilter('[data-filter-prov]',  'provincia', 'filterProv');
 
     const zonaInput = document.getElementById('filterZona');
     if (zonaInput) {
       let debounce;
       zonaInput.addEventListener('input', () => {
         clearTimeout(debounce);
-        debounce = setTimeout(() => { activeFilters.zona = zonaInput.value.trim(); currentPage = 1; render(); }, 300);
+        debounce = setTimeout(() => { activeFilters.zona = zonaInput.value.trim(); render(); }, 300);
       });
     }
 
