@@ -319,8 +319,7 @@ function handleForm(formId, successId) {
   });
 }
 
-handleForm('buyerForm', 'buyerSuccess');
-handleForm('sellForm',  'formSuccess');
+// Forms con fotos son manejados en el inline script de index.html
 
 // ── Toggle "sin costo" en buyer form ─────────────────────────
 const freeNote = document.getElementById('buyer-free-note');

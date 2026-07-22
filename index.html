@@ -344,11 +344,10 @@
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap" style="display:none">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8 fotos)</span></label>
-                <label class="photo-drop-zone" for="photoInput" id="photoDropZone">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
+                <label class="photo-drop-zone" for="photoInput">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
-                  <span>Hacé clic o arrastrá las fotos aquí</span>
-                  <small id="photoHint">JPG, PNG, WEBP — hasta 8 fotos</small>
+                  <span>Tocá para agregar fotos</span>
                   <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
                 </label>
                 <div id="photoPreview" class="photo-preview-grid"></div>
@@ -706,11 +705,10 @@
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
               <div class="form-group photo-upload-wrap" id="photoUploadWrap2" style="display:none">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8 fotos)</span></label>
-                <label class="photo-drop-zone" for="photoInput2" id="photoDropZone2">
+                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
+                <label class="photo-drop-zone" for="photoInput2">
                   <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
-                  <span>Hacé clic o arrastrá las fotos aquí</span>
-                  <small id="photoHint2">JPG, PNG, WEBP — hasta 8 fotos</small>
+                  <span>Tocá para agregar fotos</span>
                   <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
                 </label>
                 <div id="photoPreview2" class="photo-preview-grid"></div>
@@ -865,112 +863,111 @@
   <div id="camara-tooltip">Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032</div>
 
   <script>
-  // ── Mostrar/ocultar fotos según intención ──────────────────────
-  const IMGBB_KEY = '53e394bb943f40058c8d0715dcc5be19';
+  const IMGBB_KEY    = '53e394bb943f40058c8d0715dcc5be19';
   const SELLER_MODES = ['Vender', 'Poner en alquiler'];
 
-  function setupFormMode(formId, wrapId, inputId, previewId, hintId, urlsId, labelId, textareaId) {
-    const form     = document.getElementById(formId);
+  function setupForm(formId, successId, wrapId, inputId, previewId, urlsId) {
+    const form    = document.getElementById(formId);
+    const success = document.getElementById(successId);
+    const wrap    = document.getElementById(wrapId);
+    const input   = document.getElementById(inputId);
+    const preview = document.getElementById(previewId);
+    const urlsEl  = document.getElementById(urlsId);
     if (!form) return;
-    const wrap     = document.getElementById(wrapId);
-    const input    = document.getElementById(inputId);
-    const preview  = document.getElementById(previewId);
-    const hint     = document.getElementById(hintId);
-    const urlsEl   = document.getElementById(urlsId);
-    const label    = document.getElementById(labelId);
-    const textarea = document.getElementById(textareaId);
-    const radios   = form.querySelectorAll('[name="intencion"]');
 
-    let uploads = [];
-    const MAX   = 8;
+    let files = [];
 
-    function syncUrls() {
-      if (urlsEl) urlsEl.value = uploads.filter(u => u.url).map(u => u.url).join(' | ');
+    // ── Mostrar/ocultar sección de fotos ──────────────────
+    function syncWrap() {
+      const checked = form.querySelector('[name="intencion"]:checked');
+      const show = checked && SELLER_MODES.includes(checked.value);
+      if (wrap) wrap.style.display = show ? '' : 'none';
+      if (!show) { files = []; if (preview) preview.innerHTML = ''; }
     }
-    function updateHint() {
-      const rem = MAX - uploads.length;
-      if (hint) hint.textContent = uploads.length === 0
-        ? `JPG, PNG, WEBP — hasta ${MAX} fotos`
-        : rem > 0 ? `Podés agregar ${rem} más` : 'Límite alcanzado';
-    }
+    form.querySelectorAll('[name="intencion"]').forEach(r => r.addEventListener('change', syncWrap));
+    syncWrap();
 
-    async function handleFiles(files) {
-      for (const file of files.slice(0, MAX - uploads.length)) {
-        const entry = { url: null };
-        uploads.push(entry);
-
-        const wrap2 = document.createElement('div');
-        wrap2.className = 'photo-thumb-wrap';
-        const img = document.createElement('img');
-        img.src = URL.createObjectURL(file);
-        const st = document.createElement('div');
-        st.className = 'photo-thumb-status loading';
-        st.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i>';
-        const rm = document.createElement('button');
-        rm.type = 'button'; rm.className = 'photo-thumb-remove';
-        rm.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-        rm.onclick = () => { uploads = uploads.filter(u => u !== entry); wrap2.remove(); syncUrls(); updateHint(); };
-        wrap2.append(img, st, rm);
-        if (preview) preview.appendChild(wrap2);
-        updateHint();
-
-        try {
-          const fd = new FormData();
-          fd.append('key', IMGBB_KEY);
-          fd.append('image', file);
-          const res  = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd });
-          const data = await res.json();
-          if (data.success) {
-            entry.url = data.data.url;
-            st.className = 'photo-thumb-status done';
-            st.innerHTML = '<i class="fa-solid fa-check"></i>';
-          } else {
-            throw new Error(data.error?.message || 'error');
-          }
-        } catch {
-          uploads = uploads.filter(u => u !== entry);
-          st.className = 'photo-thumb-status error';
-          st.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-          setTimeout(() => { wrap2.remove(); updateHint(); }, 2500);
-        }
-        syncUrls();
-      }
-    }
-
+    // ── Acumular fotos localmente (sin subir aún) ─────────
     if (input) {
       input.addEventListener('change', () => {
-        const files = Array.from(input.files);
+        Array.from(input.files).forEach(f => {
+          if (files.length >= 8) return;
+          files.push(f);
+          const d = document.createElement('div');
+          d.className = 'photo-thumb-wrap';
+          const img = document.createElement('img');
+          img.src = URL.createObjectURL(f);
+          const rm = document.createElement('button');
+          rm.type = 'button'; rm.className = 'photo-thumb-remove';
+          rm.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+          rm.onclick = () => { files = files.filter(x => x !== f); d.remove(); };
+          d.append(img, rm);
+          if (preview) preview.appendChild(d);
+        });
         input.value = '';
-        handleFiles(files);
-      });
-    }
-    const dz = document.getElementById(inputId.replace('photoInput', 'photoDropZone') || '');
-    if (dz) {
-      dz.addEventListener('dragover', e => { e.preventDefault(); dz.classList.add('drag-over'); });
-      dz.addEventListener('dragleave', () => dz.classList.remove('drag-over'));
-      dz.addEventListener('drop', e => {
-        e.preventDefault(); dz.classList.remove('drag-over');
-        handleFiles(Array.from(e.dataTransfer.files).filter(f => f.type.startsWith('image/')));
       });
     }
 
-    function updateMode(val) {
-      const isSeller = SELLER_MODES.includes(val);
-      if (wrap) wrap.style.display = isSeller ? 'block' : 'none';
-      if (label) label.textContent = isSeller ? 'Descripción de la propiedad (opcional)' : 'Detalle adicional (opcional)';
-      if (textarea) textarea.placeholder = isSeller
-        ? 'Tamaño, habitaciones, estado, precio esperado...'
-        : 'Habitaciones, características, necesidades especiales...';
-    }
+    // ── Submit: subir fotos → luego enviar formulario ─────
+    const btn = form.querySelector('.btn-submit');
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
 
-    radios.forEach(r => {
-      r.addEventListener('change', () => updateMode(r.value));
-      if (r.checked) updateMode(r.value);
+      // Subir fotos a imgbb una por una
+      if (files.length > 0 && urlsEl) {
+        const urls = [];
+        for (let i = 0; i < files.length; i++) {
+          if (btn) btn.textContent = `Subiendo foto ${i + 1} de ${files.length}...`;
+          try {
+            const fd = new FormData();
+            fd.append('key', IMGBB_KEY);
+            fd.append('image', files[i]);
+            const r = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd });
+            const d = await r.json();
+            if (d.success) urls.push(d.data.url);
+          } catch { /* omitir foto fallida */ }
+        }
+        urlsEl.value = urls.join('\n');
+      }
+
+      // Enviar a web3forms
+      if (btn) btn.textContent = 'Enviando...';
+      try {
+        const emailVal = form.querySelector('[name="email"]')?.value || '';
+        const phoneVal = form.querySelector('[name="telefono"]')?.value || '';
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST', body: new FormData(form)
+        });
+        if (res.ok) {
+          form.reset();
+          files = [];
+          if (preview) preview.innerHTML = '';
+          syncWrap();
+          if (typeof gtag === 'function') {
+            gtag('set', 'user_data', { email: emailVal, phone_number: phoneVal });
+            gtag('event', 'conversion', {
+              'send_to': 'AW-18034283160/H3bDCNae-9EcEJiltZdD',
+              'value': 15000, 'currency': 'CRC'
+            });
+          }
+          if (success) {
+            success.style.display = 'flex';
+            setTimeout(() => { success.style.display = 'none'; }, 5000);
+          }
+        } else {
+          alert('Hubo un error. Escribinos por WhatsApp.');
+        }
+      } catch {
+        alert('Error de conexión. Escribinos por WhatsApp.');
+      } finally {
+        if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar'; }
+      }
     });
   }
 
-  setupFormMode('buyerForm', 'photoUploadWrap',  'photoInput',  'photoPreview',  'photoHint',  'fotosUrls',  'labelDetalle',  'textareaDetalle');
-  setupFormMode('sellForm',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'photoHint2', 'fotosUrls2', 'labelDetalle2', 'textareaDetalle2');
+  setupForm('buyerForm', 'buyerSuccess', 'photoUploadWrap',  'photoInput',  'photoPreview',  'fotosUrls');
+  setupForm('sellForm',  'formSuccess',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'fotosUrls2');
   </script>
 </body>
 </html>
