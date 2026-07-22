@@ -392,11 +392,14 @@
       const imgSrc = (prop.image && prop.image.trim()) ? prop.image
         : prop.e24id ? `assets/e24-${prop.e24id}.jpg`
         : 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
-      const e24Link = prop.e24id
-        ? `<a href="${prop.e24url || 'https://www.encuentra24.com/costa-rica-es/bienes-raices/' + prop.e24id}"
-               target="_blank" rel="noopener" class="prop-e24-link">
+      const e24url = prop.e24url || (prop.e24id ? 'https://www.encuentra24.com/costa-rica-es/bienes-raices/' + prop.e24id : '');
+      const e24Link = e24url
+        ? `<a href="${e24url}" target="_blank" rel="noopener" class="prop-e24-link">
              <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
            </a>` : '';
+      const waMsg = encodeURIComponent(
+        `Hola, te escribo desde www.residenciascostarica.com. Me interesa la propiedad: ${prop.title}${e24url ? '. Link: ' + e24url : ''}`
+      );
       return `
         <div class="property-card reveal">
           <div class="property-img">
@@ -404,7 +407,7 @@
             <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
             <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
             <div class="property-img-overlay">
-              <a href="https://wa.me/50683725603?text=${prop.wa || 'Hola%2C%20me%20interesa%20una%20propiedad'}"
+              <a href="https://wa.me/50683725603?text=${waMsg}"
                  target="_blank" rel="noopener" class="prop-wa-btn">
                 <i class="fa-brands fa-whatsapp"></i> Consultar
               </a>

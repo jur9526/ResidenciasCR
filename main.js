@@ -108,13 +108,16 @@ function buildPropertyCard(prop) {
   const beds  = prop.beds  > 0 ? `<span><i class="fa-solid fa-bed"></i> ${prop.beds} hab.</span>` : '';
   const baths = prop.baths > 0 ? `<span><i class="fa-solid fa-bath"></i> ${prop.baths} baños</span>` : '';
   const area  = prop.area  ? `<span><i class="fa-solid fa-ruler-combined"></i> ${prop.area}</span>` : '';
-  const e24Link = prop.e24id
-    ? `<a href="${prop.e24url || 'https://www.encuentra24.com/costa-rica-es/bienes-raices/' + prop.e24id}"
-          target="_blank" rel="noopener" class="prop-e24-link">
+  const e24url = prop.e24url || (prop.e24id ? 'https://www.encuentra24.com/costa-rica-es/bienes-raices/' + prop.e24id : '');
+  const e24Link = e24url
+    ? `<a href="${e24url}" target="_blank" rel="noopener" class="prop-e24-link">
          <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
        </a>`
     : '';
   const imgSrc = getPropertyImage(prop);
+  const waMsg = encodeURIComponent(
+    `Hola, te escribo desde www.residenciascostarica.com. Me interesa la propiedad: ${prop.title}${e24url ? '. Link: ' + e24url : ''}`
+  );
 
   return `
     <div class="property-card reveal">
@@ -123,7 +126,7 @@ function buildPropertyCard(prop) {
         <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
         <div class="property-img-overlay">
-          <a href="https://wa.me/50683725603?text=${prop.wa || 'Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas'}"
+          <a href="https://wa.me/50683725603?text=${waMsg}"
              target="_blank" rel="noopener" class="prop-wa-btn">
             <i class="fa-brands fa-whatsapp"></i> Consultar
           </a>
