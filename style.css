@@ -1563,6 +1563,10 @@ p  { color: var(--gray); font-size: .95rem; }
 .scroll-down-hint:hover { color: #fff; }
 
 /* ── Pagination ── */
+/* Fotos: oculto por defecto, visible cuando el form tiene .show-photos */
+.photo-upload-wrap { display: none !important; }
+form.show-photos .photo-upload-wrap { display: block !important; }
+
 .prop-pagination {
   display: flex;
   justify-content: center;

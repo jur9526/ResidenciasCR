@@ -343,7 +343,7 @@
               </div>
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
-              <div class="form-group photo-upload-wrap" id="photoUploadWrap" style="display:none">
+              <div class="form-group photo-upload-wrap" id="photoUploadWrap">
                 <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
                 <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
                 <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput').click()">
@@ -704,7 +704,7 @@
               </div>
 
               <!-- Fotos — solo para Vender / Poner en alquiler -->
-              <div class="form-group photo-upload-wrap" id="photoUploadWrap2" style="display:none">
+              <div class="form-group photo-upload-wrap" id="photoUploadWrap2">
                 <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8)</span></label>
                 <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
                 <button type="button" class="photo-drop-zone" onclick="document.getElementById('photoInput2').click()">
@@ -877,16 +877,18 @@
 
     let files = [];
 
-    // ── Mostrar/ocultar sección de fotos ──────────────────
+    // ── Mostrar/ocultar sección de fotos (via clase en el form) ──
     function showPhoto(val) {
       const show = SELLER_MODES.includes(val);
-      wrap.style.display = show ? '' : 'none';
+      form.classList.toggle('show-photos', show);
       if (!show) { files = []; if (preview) preview.innerHTML = ''; }
     }
     form.querySelectorAll('[name="intencion"]').forEach(r => {
       r.addEventListener('change', () => showPhoto(r.value));
-      if (r.checked) showPhoto(r.value); // estado inicial
     });
+    // estado inicial: leer radio checked
+    const initRadio = form.querySelector('[name="intencion"]:checked');
+    showPhoto(initRadio ? initRadio.value : '');
 
     // ── Acumular fotos localmente (sin subir aún) ─────────
     if (input) {
