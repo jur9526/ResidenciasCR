@@ -924,16 +924,19 @@
       e.preventDefault();
       if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
 
-      // Subir fotos a imgbb una por una
+      // Subir fotos a imgbb una por una (timeout 20s por foto)
       if (files.length > 0 && urlsEl) {
         const urls = [];
         for (let i = 0; i < files.length; i++) {
           if (btn) btn.textContent = `Subiendo foto ${i + 1} de ${files.length}...`;
           try {
+            const ctrl = new AbortController();
+            const tid  = setTimeout(() => ctrl.abort(), 20000);
             const fd = new FormData();
             fd.append('key', IMGBB_KEY);
             fd.append('image', files[i]);
-            const r = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd });
+            const r = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd, signal: ctrl.signal });
+            clearTimeout(tid);
             const d = await r.json();
             if (d.success) urls.push(d.data.url);
           } catch { /* omitir foto fallida */ }
@@ -941,20 +944,23 @@
         urlsEl.value = urls.join('\n');
       }
 
-      // Enviar a web3forms
+      // Enviar a web3forms (timeout 12s)
       if (btn) btn.textContent = 'Enviando...';
       try {
         const emailVal = form.querySelector('[name="email"]')?.value || '';
         const phoneVal = form.querySelector('[name="telefono"]')?.value || '';
+        const ctrl2 = new AbortController();
+        const tid2  = setTimeout(() => ctrl2.abort(), 12000);
         const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST', body: new FormData(form)
+          method: 'POST', body: new FormData(form), signal: ctrl2.signal
         });
+        clearTimeout(tid2);
         if (res.ok) {
           form.reset();
           files = [];
           if (preview) preview.innerHTML = '';
           updateCount();
-          syncWrap();
+          showPhoto('');
           if (typeof gtag === 'function') {
             gtag('set', 'user_data', { email: emailVal, phone_number: phoneVal });
             gtag('event', 'conversion', {
