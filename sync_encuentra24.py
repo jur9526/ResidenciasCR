@@ -106,19 +106,97 @@ def parse_property_page(page, prop_id: str) -> dict:
     if area_m:
         area = f"{area_m.group(1)} m²"
 
-    # ── Imagen ────────────────────────────────────────────
+    # ── Imágenes (múltiples) ──────────────────────────────
     image_url = ""
+    all_images = []
+
+    def is_property_photo(url):
+        """Solo fotos reales de propiedades (photos.encuentra24.com)."""
+        return "photos.encuentra24.com" in url
+
+    # og:image
     og_img = page.query_selector('meta[property="og:image"]')
     if og_img:
-        image_url = og_img.get_attribute("content") or ""
+        url = og_img.get_attribute("content") or ""
+        if url and is_property_photo(url):
+            image_url = url
+            all_images.append(url)
 
-    if not image_url:
-        for img in page.query_selector_all("img"):
-            src = img.get_attribute("src") or ""
-            if src and any(ext in src for ext in [".jpg", ".jpeg", ".png", ".webp"]):
-                if "encuentra24" in src or "e24img" in src:
-                    image_url = src
+    # Buscar galería: src y data-src (lazy-loaded)
+    seen = set(all_images)
+    for img in page.query_selector_all("img"):
+        for attr in ("src", "data-src", "data-lazy-src"):
+            src = img.get_attribute(attr) or ""
+            if src and src not in seen and is_property_photo(src):
+                all_images.append(src)
+                seen.add(src)
+        if len(all_images) >= 15:
+            break
+
+    # También buscar en sourceset de <picture>/<source>
+    for src_el in page.query_selector_all("source[srcset], img[srcset]"):
+        srcset = src_el.get_attribute("srcset") or ""
+        for part in srcset.split(","):
+            url = part.strip().split(" ")[0]
+            if url and url not in seen and is_property_photo(url):
+                all_images.append(url)
+                seen.add(url)
+        if len(all_images) >= 15:
+            break
+
+    if not image_url and all_images:
+        image_url = all_images[0]
+
+    # ── Descripción ───────────────────────────────────────
+    description = ""
+    for sel in [
+        '[class*="description"]', '[class*="Description"]',
+        '[data-testid*="description"]', 'section p',
+    ]:
+        try:
+            els = page.query_selector_all(sel)
+            for el in els:
+                text = el.inner_text().strip()
+                if len(text) > 80:
+                    description = text
                     break
+        except Exception:
+            pass
+        if description:
+            break
+
+    # ── Amenidades — extraer de sección "Amenidades" en descripción ──
+    amenities = []
+    if description:
+        lines = description.splitlines()
+        in_amen = False
+        for line in lines:
+            stripped = line.strip()
+            # Detectar encabezado de sección (línea corta que termina en : o contiene solo el título)
+            if not in_amen and re.match(
+                r'^(amenidades?|amenities|servicios del condominio)[^.]{0,30}$',
+                stripped, re.I
+            ):
+                in_amen = True
+                continue
+            if in_amen:
+                if not stripped:
+                    continue
+                # Nuevo encabezado de sección — detener
+                if re.match(r'^(distribuci|caracter|descripci|ubicaci|precio|contáct|506|\+506|acceso)', stripped, re.I):
+                    break
+                item = re.sub(r'^[\s•\-–*·\(\)]+', '', stripped).strip()
+                item = re.sub(r'\s+', ' ', item)
+                if 2 < len(item) <= 60 and item not in amenities:
+                    amenities.append(item)
+            if len(amenities) >= 20:
+                break
+
+    # ── Parking ───────────────────────────────────────────
+    parking = 0
+    park_m = re.search(r'(\d+)\s*(?:parking|parqueo|estacionamiento|garaje)', full_text, re.I)
+    if park_m:
+        parking = int(park_m.group(1))
 
     # Tipo
     title_low = title.lower()
@@ -144,19 +222,23 @@ def parse_property_page(page, prop_id: str) -> dict:
         badge, badge_class = "En Venta", ""
 
     return {
-        "id":         f"E24-{prop_id}",
-        "title":      title,
-        "price":      price,
-        "location":   location,
-        "beds":       beds,
-        "baths":      baths,
-        "area":       area,
-        "type":       prop_type,
-        "badge":      badge,
-        "badgeClass": badge_class,
-        "image_url":  image_url,   # temporal, se reemplaza abajo
-        "e24id":      prop_id,
-        "wa":         f"Me%20interesa%20la%20propiedad%20{prop_id}%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+        "id":          f"E24-{prop_id}",
+        "title":       title,
+        "price":       price,
+        "location":    location,
+        "beds":        beds,
+        "baths":       baths,
+        "area":        area,
+        "parking":     parking,
+        "type":        prop_type,
+        "badge":       badge,
+        "badgeClass":  badge_class,
+        "description": description,
+        "amenities":   amenities,
+        "image_url":   image_url,    # temporal, se reemplaza abajo
+        "all_images":  all_images,   # todas las URLs de e24 (sin descargar)
+        "e24id":       prop_id,
+        "wa":          f"Me%20interesa%20la%20propiedad%20{prop_id}%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     }
 
 

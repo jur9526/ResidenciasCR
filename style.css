@@ -627,6 +627,15 @@ p  { color: var(--gray); font-size: .95rem; }
 .prop-img-lazy { opacity: 0; transition: opacity .35s; }
 .prop-img-lazy.loaded { opacity: 1; }
 
+/* ── Imagen clickeable en tarjeta ── */
+.prop-img-link { display: block; width: 100%; height: 100%; }
+.prop-img-link img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s; }
+.prop-img-link:hover img { transform: scale(1.04); }
+
+/* ── Título clickeable ── */
+.prop-title-link { display: block; color: var(--dark); transition: color .2s; }
+.prop-title-link:hover { color: var(--red); }
+
 /* ── Footer heart ── */
 .footer-heart { color: var(--red); }
 
@@ -685,6 +694,7 @@ p  { color: var(--gray); font-size: .95rem; }
   display: flex; flex-direction: column;
 }
 .property-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+.prop-card-clickable { cursor: pointer; }
 
 .property-img { position: relative; aspect-ratio: 16/10; overflow: hidden; }
 .property-img img {
@@ -1624,3 +1634,311 @@ form.show-photos .photo-upload-wrap { display: block !important; }
 :root[data-theme="dark"]  .prop-page-btn { border-color: #374151; background: #1f2937; color: #f9fafb; }
 :root[data-theme="dark"]  .prop-page-btn:hover { border-color: #4ade80; color: #4ade80; background: rgba(74,222,128,.1); }
 :root[data-theme="light"] .prop-page-btn { border-color: #e5e7eb; background: #fff; color: #1a1a1a; }
+
+
+
+
+/* ============================================================
+   Modal de detalle — galería, descripción, amenidades
+   ============================================================ */
+
+/* Overlay + panel */
+.pmodal {
+  position: fixed; inset: 0; z-index: 9000;
+  display: none; align-items: flex-end;   /* display:none hasta que JS lo abra */
+  pointer-events: none; opacity: 0; transition: opacity .15s;
+}
+.pmodal.pmodal-open { pointer-events: all; opacity: 1; }
+.pmodal-overlay {
+  position: absolute; inset: 0;
+  background: rgba(8,12,22,.65); backdrop-filter: blur(3px);
+}
+.pmodal-panel {
+  position: relative; z-index: 1;
+  width: 100%; max-height: 94vh; background: #fff;
+  border-radius: 20px 20px 0 0; overflow: hidden;
+  transform: translateY(100%);
+  transition: transform .35s cubic-bezier(.32,1,.28,1);
+  display: flex; flex-direction: column;
+}
+.pmodal.pmodal-open .pmodal-panel { transform: none; }
+.pmodal-scroll { overflow-y: auto; flex: 1; }
+
+@media (min-width: 820px) {
+  .pmodal { align-items: center; justify-content: center; padding: 1.5rem; }
+  .pmodal-panel {
+    max-width: 1080px; max-height: 90vh; border-radius: 16px;
+    transform: scale(.96) translateY(20px);
+  }
+  .pmodal.pmodal-open .pmodal-panel { transform: none; }
+}
+
+.pmodal-close {
+  position: absolute; top: .9rem; right: .9rem; z-index: 20;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(0,0,0,.5); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .95rem; transition: background .2s;
+}
+.pmodal-close:hover { background: var(--red); }
+
+/* Layout — body-row separa scroll y columna contacto */
+.pmodal-body-row {
+  display: flex; flex-direction: column; flex: 1; overflow: hidden;
+}
+.pmodal-layout { display: flex; flex-direction: column; }
+
+@media (min-width: 820px) {
+  .pmodal-body-row { flex-direction: row; }
+  .pmodal-scroll   { flex: 1; min-width: 0; overflow-y: auto; }
+  /* Columna contacto: sibling del scroll → siempre visible */
+  .pmodal-contact-col {
+    width: 280px; flex-shrink: 0;
+    overflow-y: auto; padding: 1.25rem;
+    border-left: 1px solid var(--light-gray);
+  }
+}
+
+/* ── Galería ─────────────────────────────────────────── */
+.pmodal-gallery {
+  position: relative; /* las flechas viven aquí */
+}
+.pmodal-gallery-main {
+  position: relative; width: 100%; height: 280px; overflow: hidden;
+  background: #e8e8e8;
+  background-image: linear-gradient(90deg, #e8e8e8 25%, #d4d4d4 50%, #e8e8e8 75%);
+  background-size: 400% 100%;
+  animation: pmodal-shimmer 1.4s ease-in-out infinite;
+}
+@keyframes pmodal-shimmer {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+@media (prefers-color-scheme: dark) {
+  .pmodal-gallery-main {
+    background: #2a2a2a;
+    background-image: linear-gradient(90deg, #2a2a2a 25%, #3a3a3a 50%, #2a2a2a 75%);
+  }
+}
+@media (min-width: 820px) { .pmodal-gallery-main { height: 380px; } }
+
+.pmodal-main-photo {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: opacity .2s;
+}
+
+/* Badge tipo (En Venta / Alquiler) */
+.pmodal-photo-badge {
+  position: absolute; top: .9rem; left: .9rem; z-index: 4;
+  font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em;
+  padding: .22rem .65rem; border-radius: 20px; color: #fff; pointer-events: none;
+}
+.pmodal-tag-red   { background: var(--red); }
+.pmodal-tag-green { background: #0e7a4f; }
+
+/* Contador "3 / 14" */
+.pmodal-photo-counter {
+  position: absolute; top: .9rem; right: .9rem; z-index: 4;
+  background: rgba(0,0,0,.55); color: #fff;
+  font-size: .75rem; font-weight: 600;
+  padding: .2rem .65rem; border-radius: 20px;
+  backdrop-filter: blur(4px); pointer-events: none;
+}
+
+/* Hint zoom (ícono sobre la foto) */
+.pmodal-zoom-hint {
+  position: absolute; bottom: .7rem; left: .7rem; z-index: 6;
+  background: rgba(0,0,0,.5); color: #fff;
+  width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: .85rem; backdrop-filter: blur(4px);
+  pointer-events: none;
+  opacity: 0; transition: opacity .2s;
+}
+.pmodal-gallery-main:hover .pmodal-zoom-hint { opacity: 1; }
+@media (pointer: coarse) { .pmodal-zoom-hint { opacity: .7; } }
+
+/* ── Flechas ─────────────────────────────────────────── */
+/* IMPORTANTE: están en .pmodal-gallery (no dentro de gallery-main)
+   para que overflow:hidden de gallery-main no las recorte */
+.pmodal-arrow {
+  position: absolute; top: 130px; z-index: 10;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(0,0,0,.55); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; backdrop-filter: blur(4px);
+  transition: background .2s, transform .15s;
+  box-shadow: 0 2px 8px rgba(0,0,0,.3);
+}
+@media (min-width: 820px) { .pmodal-arrow { top: 185px; } }
+.pmodal-arrow:hover { background: rgba(0,0,0,.85); transform: scale(1.12); }
+.pmodal-arrow-prev { left: .6rem; }
+.pmodal-arrow-next { right: .6rem; }
+
+/* ── Thumbnails ─────────────────────────────────────── */
+.pmodal-thumbs {
+  display: flex; gap: .4rem; padding: .45rem .5rem;
+  background: #1a1a1a; overflow-x: auto;
+  scroll-behavior: smooth;
+}
+.pmodal-thumbs::-webkit-scrollbar { height: 3px; }
+.pmodal-thumbs::-webkit-scrollbar-track { background: #333; }
+.pmodal-thumbs::-webkit-scrollbar-thumb { background: var(--wa); border-radius: 2px; }
+.pmodal-thumb {
+  flex-shrink: 0; width: 76px; height: 56px;
+  border-radius: 5px; overflow: hidden;
+  border: 2px solid transparent; transition: border-color .2s, opacity .2s;
+  opacity: .65;
+}
+.pmodal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pmodal-thumb:hover { opacity: 1; }
+.pmodal-thumb.active { border-color: var(--wa); opacity: 1; }
+
+
+/* ── Botón WA flotante mobile (FAB) ─────────────────── */
+.pmodal-wa-fab {
+  display: none; /* JS sets flex — never shows on load */
+  position: fixed; bottom: 1.25rem; right: 1.25rem; z-index: 9010;
+  align-items: center; gap: .45rem;
+  background: var(--wa); color: #fff;
+  padding: .7rem 1.2rem .7rem .9rem;
+  border-radius: 50px; font-size: .9rem; font-weight: 700;
+  box-shadow: 0 4px 18px rgba(37,211,102,.55);
+  text-decoration: none; transition: background .2s, transform .15s;
+}
+.pmodal-wa-fab:hover { background: #1aad55; transform: translateY(-2px); }
+.pmodal-wa-fab i { font-size: 1.2rem; }
+@media (min-width: 820px) { .pmodal-wa-fab { display: none !important; } }
+
+/* ── Separador entre botones de contacto y formulario ─ */
+.pmodal-form-sep {
+  margin: .25rem 0; border-top: 1px solid var(--light-gray); padding-top: .25rem;
+}
+
+/* ── Info block ─────────────────────────────────────── */
+.pmodal-info-block { padding: 1.25rem; }
+@media (min-width: 820px) { .pmodal-info-block { padding: 1.5rem; } }
+.pmodal-title { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: .4rem; }
+.pmodal-location-row { display: flex; align-items: center; gap: .35rem; font-size: .85rem; color: var(--gray); margin-bottom: .6rem; }
+.pmodal-location-row i { color: var(--red); }
+.pmodal-price-row { margin-bottom: .75rem; }
+.pmodal-price { font-size: 1.8rem; font-weight: 800; color: var(--dark); }
+
+.pmodal-stats-row {
+  display: flex; gap: 1.5rem; flex-wrap: wrap;
+  border-top: 1px solid var(--light-gray); border-bottom: 1px solid var(--light-gray);
+  padding: .85rem 0; margin-bottom: 1rem;
+}
+.pmodal-stat { display: flex; flex-direction: column; gap: .1rem; }
+.pmodal-stat-val { font-size: 1.2rem; font-weight: 800; color: var(--dark); }
+.pmodal-stat-lbl { font-size: .73rem; color: var(--gray); }
+
+.pmodal-section { margin-bottom: 1.25rem; }
+.pmodal-section-title { font-size: .95rem; font-weight: 700; color: var(--dark); margin-bottom: .65rem; padding-bottom: .4rem; border-bottom: 2px solid var(--light-gray); }
+
+.pmodal-details-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem 1.5rem; }
+.pmodal-detail-item { display: flex; flex-direction: column; gap: .1rem; border-left: 3px solid var(--red); padding-left: .6rem; }
+.pmodal-detail-lbl  { font-size: .73rem; color: var(--gray); }
+.pmodal-detail-val  { font-size: .85rem; font-weight: 600; color: var(--dark); }
+
+.pmodal-amenities   { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
+.pmodal-amen        { display: flex; align-items: center; gap: .4rem; font-size: .82rem; color: var(--gray); }
+.pmodal-amen i      { color: var(--red); font-size: .78rem; flex-shrink: 0; }
+
+.pmodal-desc { font-size: .88rem; color: var(--gray); line-height: 1.75; max-height: 220px; overflow-y: auto; }
+
+/* ── Columna contacto ───────────────────────────────── */
+.pmodal-contact-card { background: #fff; border: 1px solid var(--light-gray); border-radius: 12px; padding: 1.1rem; display: flex; flex-direction: column; gap: .75rem; box-shadow: var(--shadow-lg); }
+.pmodal-agent-row    { display: flex; align-items: center; gap: .65rem; padding-bottom: .75rem; border-bottom: 1px solid var(--light-gray); }
+.pmodal-agent-avatar { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; border: 2px solid var(--red); flex-shrink: 0; }
+.pmodal-agent-name   { font-weight: 700; font-size: .88rem; color: var(--dark); display: flex; align-items: center; gap: .3rem; }
+.pmodal-verified     { color: #1D9BF0; font-size: .78rem; }
+.pmodal-agent-role   { font-size: .73rem; color: var(--gray); }
+/* Acciones de contacto — sticky dentro de la columna de contacto */
+.pmodal-contact-actions {
+  display: flex; flex-direction: column; gap: .75rem;
+  position: sticky; top: 0; z-index: 5;
+  background: #fff; padding-bottom: .5rem;
+  margin-bottom: -.5rem;
+}
+.pmodal-contact-title { font-size: .9rem; font-weight: 600; color: var(--dark); }
+.pmodal-cta-wa {
+  display: flex; align-items: center; justify-content: center; gap: .55rem;
+  background: var(--wa); color: #fff; padding: .85rem; border-radius: 8px;
+  font-size: .95rem; font-weight: 700; transition: background .2s, transform .15s;
+}
+.pmodal-cta-wa:hover { background: #1aad55; transform: translateY(-1px); }
+.pmodal-cta-wa i { font-size: 1.15rem; }
+.pmodal-cta-call {
+  display: flex; align-items: center; justify-content: center; gap: .5rem;
+  border: 2px solid var(--light-gray); border-radius: 8px; padding: .7rem;
+  font-size: .88rem; font-weight: 600; color: var(--dark); transition: border-color .2s, color .2s;
+}
+.pmodal-cta-call:hover { border-color: var(--red); color: var(--red); }
+.pmodal-email-form {
+  display: flex; flex-direction: column; gap: .5rem; margin-top: .25rem;
+}
+.pmodal-email-input {
+  width: 100%; padding: .6rem .75rem; border: 1.5px solid var(--light-gray);
+  border-radius: 7px; font-size: .82rem; font-family: inherit;
+  transition: border-color .2s; resize: none; box-sizing: border-box;
+}
+.pmodal-email-input:focus { outline: none; border-color: var(--red); }
+.pmodal-email-send {
+  display: flex; align-items: center; justify-content: center; gap: .45rem;
+  background: var(--dark); color: #fff; padding: .7rem; border-radius: 7px;
+  font-size: .85rem; font-weight: 700; transition: background .2s;
+}
+.pmodal-email-send:hover { background: #333; }
+.pmodal-email-ok {
+  display: none; /* JS sets flex on success */
+  align-items: center; justify-content: center; gap: .45rem;
+  color: var(--wa); font-size: .85rem; font-weight: 600;
+}
+.pmodal-email-ok i { font-size: 1rem; }
+
+.pmodal-free-note  { text-align: center; font-size: .75rem; color: var(--gray); }
+.pmodal-free-note i { color: var(--wa); margin-right: .2rem; }
+.pmodal-free-note strong { color: var(--dark); }
+.pmodal-trust      { display: flex; flex-direction: column; gap: .35rem; padding-top: .4rem; border-top: 1px solid var(--light-gray); }
+.pmodal-trust div  { font-size: .75rem; color: var(--gray); display: flex; align-items: center; gap: .4rem; }
+.pmodal-trust i    { color: var(--red); width: .85rem; text-align: center; }
+
+/* ── Lightbox foto ampliada ─────────────────────────── */
+.pmodal-lb {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.95);
+  display: none; /* JS sets flex when opening — never shows on load */
+  align-items: center; justify-content: center;
+}
+.pmodal-lb img {
+  max-width: 94vw; max-height: 90vh; object-fit: contain;
+  border-radius: 4px; box-shadow: 0 8px 40px rgba(0,0,0,.6);
+  transition: opacity .2s;
+}
+.pmodal-lb-close {
+  position: fixed; top: 1rem; right: 1rem;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,.15); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; z-index: 10000; transition: background .2s;
+}
+.pmodal-lb-close:hover { background: var(--red); }
+.pmodal-lb-arr {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  width: 48px; height: 48px; border-radius: 50%;
+  background: rgba(255,255,255,.15); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; z-index: 10000; transition: background .2s, transform .2s;
+}
+.pmodal-lb-arr:hover { background: rgba(255,255,255,.35); transform: translateY(-50%) scale(1.1); }
+.pmodal-lb-prev { left: 1rem; }
+.pmodal-lb-next { right: 1rem; }
+.pmodal-lb-counter {
+  position: fixed; bottom: 1.2rem; left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,.6); color: #fff;
+  font-size: .8rem; font-weight: 600; padding: .3rem .85rem; border-radius: 20px; z-index: 10000;
+}
+
+/* Cursor pointer en tarjetas */
+.prop-card-clickable { cursor: pointer; }

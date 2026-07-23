@@ -108,36 +108,23 @@ function buildPropertyCard(prop) {
   const beds  = prop.beds  > 0 ? `<span><i class="fa-solid fa-bed"></i> ${prop.beds} hab.</span>` : '';
   const baths = prop.baths > 0 ? `<span><i class="fa-solid fa-bath"></i> ${prop.baths} baños</span>` : '';
   const area  = prop.area  ? `<span><i class="fa-solid fa-ruler-combined"></i> ${prop.area}</span>` : '';
-  const e24url = prop.e24url || (prop.e24id ? 'https://www.encuentra24.com/costa-rica-es/bienes-raices/' + prop.e24id : '');
-  const e24Link = e24url
-    ? `<a href="${e24url}" target="_blank" rel="noopener" class="prop-e24-link">
-         <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
-       </a>`
-    : '';
   const imgSrc = getPropertyImage(prop);
-  const waMsg = encodeURIComponent(
-    `Hola, te escribo desde www.residenciascostarica.com. Me interesa la propiedad: ${prop.title}${e24url ? '. Link: ' + e24url : ''}`
-  );
 
+  const eid = prop.e24id || '';
   return `
-    <div class="property-card reveal">
+    <div class="property-card reveal prop-card-clickable"
+         onclick="openPropModal(window.DEFAULT_PROPERTIES.find(p=>p.e24id==='${eid}'))">
       <div class="property-img">
         <div class="prop-skeleton"></div>
-        <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy" />
+        <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80'" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
-        <div class="property-img-overlay">
-          <a href="https://wa.me/50683725603?text=${waMsg}"
-             target="_blank" rel="noopener" class="prop-wa-btn">
-            <i class="fa-brands fa-whatsapp"></i> Consultar
-          </a>
-        </div>
       </div>
       <div class="property-body">
         <div class="property-price">${prop.price}</div>
         <div class="property-title">${prop.title}</div>
         <div class="property-location"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
         <div class="property-features">${beds}${baths}${area}</div>
-        ${e24Link}
       </div>
     </div>`;
 }
@@ -201,7 +188,7 @@ function renderProperties() {
     if (noResults) noResults.style.display = 'none';
     grid.innerHTML = slice.map(buildPropertyCard).join('');
     grid.querySelectorAll('.prop-img-lazy').forEach(img => {
-      const skeleton = img.previousElementSibling;
+      const skeleton = img.closest('.property-img')?.querySelector('.prop-skeleton');
       img.addEventListener('load', () => { if (skeleton) skeleton.style.display = 'none'; img.classList.add('loaded'); });
       img.addEventListener('error', () => {
         if (skeleton) skeleton.style.display = 'none';

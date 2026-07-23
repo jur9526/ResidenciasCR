@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="facebook-domain-verification" content="zey8s8t1xdp8aee6oti7ftr337w1m4" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SG692XZFCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SG692XZFCS');
+    gtag('config', 'AW-18034283160');
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18034283160/OGoNCNOe-9EcEJiltZdD',
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
+      return false;
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net 'unsafe-inline';
+    style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+    img-src 'self' https://images.unsplash.com https://*.encuentra24.com https://e24img.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://i.ibb.co data: blob:;
+    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://ad.doubleclick.net https://www.google.com;
+    frame-src 'none';
+    object-src 'none';
+  " />
+
+  <title id="pageTitle">Propiedad — Residencias Costa Rica</title>
+  <meta name="description" id="pageDesc" content="Detalles de la propiedad en Residencias Costa Rica." />
+
+  <link rel="icon" href="favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* ── Propiedad detail styles ── */
+    .prop-hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      min-height: 340px;
+      max-height: 560px;
+      background: var(--dark);
+      overflow: hidden;
+    }
+    .prop-hero-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: .88;
+    }
+    .prop-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,12,22,.82) 30%, rgba(8,12,22,.18) 100%);
+      display: flex; align-items: flex-end;
+    }
+    .prop-hero-content {
+      padding: 2rem 1.5rem;
+      width: 100%; max-width: 1200px;
+      margin: 0 auto;
+      color: #fff;
+    }
+    .prop-back {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: rgba(255,255,255,.75); font-size: .85rem; font-weight: 500;
+      margin-bottom: 1rem;
+      transition: color .2s;
+    }
+    .prop-back:hover { color: #fff; }
+    .prop-hero-badge {
+      display: inline-block;
+      background: var(--red); color: #fff;
+      font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+      padding: .25rem .7rem; border-radius: 20px;
+      margin-bottom: .75rem;
+    }
+    .prop-hero-badge.badge-special { background: #0e7a4f; }
+    .prop-hero-price {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.1;
+      margin-bottom: .4rem;
+    }
+    .prop-hero-title {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 600; color: rgba(255,255,255,.88);
+      margin-bottom: .4rem;
+    }
+    .prop-hero-location {
+      font-size: .9rem; color: rgba(255,255,255,.65);
+      display: flex; align-items: center; gap: .35rem;
+    }
+
+    /* ── Detail body ── */
+    .prop-detail-wrap {
+      max-width: 1200px; margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .prop-detail-wrap { grid-template-columns: 1fr; }
+      .prop-cta-card { order: -1; }
+    }
+
+    .prop-features-bar {
+      display: flex; flex-wrap: wrap; gap: 1.2rem;
+      padding: 1.5rem;
+      background: var(--cream); border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+    }
+    .prop-feat {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .95rem; font-weight: 600; color: var(--dark);
+    }
+    .prop-feat i { color: var(--red); font-size: 1rem; width: 1.1rem; text-align: center; }
+
+    .prop-section-title {
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--dark); margin-bottom: .75rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--light-gray);
+    }
+    .prop-description {
+      color: var(--gray); line-height: 1.75; font-size: .95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ── CTA Card ── */
+    .prop-cta-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      position: sticky;
+      top: calc(var(--nav-h) + 1.5rem);
+    }
+    .prop-cta-header {
+      background: var(--dark);
+      color: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+    .prop-cta-header p { color: rgba(255,255,255,.65); font-size: .85rem; margin-top: .2rem; }
+    .prop-cta-price {
+      font-size: 1.8rem; font-weight: 800; color: #fff;
+    }
+    .prop-cta-body { padding: 1.5rem; }
+    .prop-cta-wa {
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      width: 100%;
+      background: var(--wa); color: #fff;
+      padding: 1rem; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 700;
+      transition: background .2s, transform .15s;
+      margin-bottom: 1rem;
+    }
+    .prop-cta-wa:hover { background: #1aad55; transform: translateY(-2px); }
+    .prop-cta-wa i { font-size: 1.3rem; }
+    .prop-cta-call {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      width: 100%;
+      border: 2px solid var(--light-gray); border-radius: 10px;
+      padding: .85rem; font-size: .95rem; font-weight: 600; color: var(--dark);
+      transition: border-color .2s, color .2s;
+      margin-bottom: 1.25rem;
+    }
+    .prop-cta-call:hover { border-color: var(--red); color: var(--red); }
+    .prop-cta-note {
+      text-align: center; font-size: .8rem; color: var(--gray);
+      display: flex; align-items: center; justify-content: center; gap: .35rem;
+    }
+    .prop-cta-note i { color: var(--red); }
+    .prop-cta-agent {
+      display: flex; align-items: center; gap: .75rem;
+      padding: 1rem 1.5rem;
+      background: var(--cream);
+      border-top: 1px solid var(--light-gray);
+    }
+    .prop-cta-agent img {
+      width: 44px; height: 44px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--red);
+    }
+    .prop-cta-agent-name { font-weight: 700; font-size: .9rem; color: var(--dark); }
+    .prop-cta-agent-role { font-size: .78rem; color: var(--gray); }
+
+    /* ── Not found ── */
+    .prop-not-found {
+      min-height: 60vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; gap: 1rem; padding: 2rem;
+    }
+    .prop-not-found i { font-size: 3rem; color: var(--light-gray); }
+    .prop-not-found h2 { font-size: 1.4rem; color: var(--dark); }
+    .prop-not-found p { max-width: 360px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-dot"><i class="fa-solid fa-house-chimney"></i></span>
+        Residencias<strong>CostaRica</strong>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#buscar">Buscar Casa</a></li>
+        <li><a href="/propiedades">Propiedades</a></li>
+        <li><a href="/#vender">Vende tu Casa</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li>
+          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+             target="_blank" rel="noopener" class="nav-cta">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENIDO DINÁMICO ===== -->
+  <div id="propContent">
+    <!-- se llena con JS -->
+    <div class="prop-not-found">
+      <i class="fa-solid fa-circle-notch fa-spin"></i>
+      <h2>Cargando propiedad...</h2>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <div class="footer-brand">
+            <i class="fa-solid fa-house-chimney"></i> Residencias<strong>CostaRica</strong>
+          </div>
+          <p>Tu aliado de confianza en el mercado inmobiliario de Costa Rica. Compramos, vendemos y conectamos con los mejores bancos del país.</p>
+          <div class="social-pills">
+            <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-pill ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="social-pill th"><i class="fa-brands fa-threads"></i> Threads</a>
+            <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-pill fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-pill tt"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20interesa%20informaci%C3%B3n%20sobre%20propiedades." target="_blank" rel="noopener" class="social-pill wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Propiedades</h4>
+          <ul>
+            <li><a href="/propiedades">Ver todas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="/#buscar">Buscar Casa</a></li>
+            <li><a href="/#vender">Vender Propiedad</a></li>
+            <li><a href="/#buscar">Bono de Vivienda</a></li>
+            <li><a href="/#buscar">Tramitología</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20interesa%20informaci%C3%B3n%20sobre%20propiedades." target="_blank" rel="noopener">+506 8372-5603</a></li>
+            <li><a href="https://wa.me/50661374443" target="_blank" rel="noopener">+506 6137-4443</a></li>
+            <li><a href="mailto:flory@residenciascostarica.com">flory@residenciascostarica.com</a></li>
+            <li><span>Costa Rica</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Residencias Costa Rica · Todos los derechos reservados</span>
+      </div>
+      <div class="footer-pura-vida">
+        Pura Vida <i class="fa-solid fa-heart footer-heart"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20propiedades%2C%20%C2%BFme%20pod%C3%A9s%20ayudar%3F"
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" id="waFloat">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-label">¡Chateá ahora!</span>
+  </a>
+
+  <script src="properties-data.js"></script>
+  <script>
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    }
+
+    // WA float shake
+    setInterval(() => {
+      const btn = document.getElementById('waFloat');
+      if (!btn) return;
+      btn.style.animation = 'wa-shake 0.6s ease';
+      setTimeout(() => { btn.style.animation = 'wa-pulse 2s ease-in-out infinite'; }, 700);
+    }, 8000);
+
+    // ── Render de la propiedad ──
+    function getImg(p) {
+      if (p.image && p.image.trim()) return p.image;
+      if (p.e24id) return `assets/e24-${p.e24id}.jpg`;
+      return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80';
+    }
+
+    function render(prop) {
+      const waMsg = encodeURIComponent(
+        `Hola, te escribo desde www.residenciascostarica.com. Me interesa la propiedad: ${prop.title}${prop.e24url ? '. Link: ' + prop.e24url : ''}`
+      );
+      const waHref = `https://wa.me/50683725603?text=${waMsg}`;
+
+      const beds  = prop.beds  > 0 ? `<div class="prop-feat"><i class="fa-solid fa-bed"></i> ${prop.beds} habitaciones</div>` : '';
+      const baths = prop.baths > 0 ? `<div class="prop-feat"><i class="fa-solid fa-bath"></i> ${prop.baths} baños</div>` : '';
+      const area  = prop.area  ? `<div class="prop-feat"><i class="fa-solid fa-ruler-combined"></i> ${prop.area}</div>` : '';
+
+      const badgeClass = prop.badgeClass || '';
+      const badge      = prop.badge || 'En Venta';
+
+      document.getElementById('pageTitle').textContent = `${prop.title} — Residencias Costa Rica`;
+      document.getElementById('pageDesc').setAttribute('content', `${prop.price} · ${prop.location}`);
+
+      document.getElementById('propContent').innerHTML = `
+        <!-- HERO -->
+        <div class="prop-hero">
+          <img src="${getImg(prop)}" alt="${prop.title}" class="prop-hero-img"
+               onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1600&q=80'" />
+          <div class="prop-hero-overlay">
+            <div class="prop-hero-content">
+              <a href="/propiedades" class="prop-back">
+                <i class="fa-solid fa-arrow-left"></i> Volver a propiedades
+              </a>
+              <div class="prop-hero-badge ${badgeClass}">${badge}</div>
+              <div class="prop-hero-price">${prop.price}</div>
+              <div class="prop-hero-title">${prop.title}</div>
+              <div class="prop-hero-location">
+                <i class="fa-solid fa-location-dot"></i> ${prop.location}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DETALLE -->
+        <div class="prop-detail-wrap">
+
+          <!-- Columna izquierda: detalles -->
+          <div class="prop-detail-left">
+            ${(beds || baths || area) ? `
+            <div class="prop-features-bar">
+              ${beds}${baths}${area}
+              <div class="prop-feat"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
+            </div>` : ''}
+
+            <div class="prop-section-title">Sobre esta propiedad</div>
+            <p class="prop-description">
+              ${prop.title}. Ubicada en ${prop.location}.
+              Contactanos hoy y uno de nuestros asesores te brinda todos los detalles,
+              te acompaña en la visita y te guía en el proceso de compra — <strong>sin costo para el comprador</strong>.
+            </p>
+
+            <div class="prop-section-title">¿Por qué elegir Residencias Costa Rica?</div>
+            <div class="prop-features-bar" style="flex-direction:column;gap:.9rem;">
+              <div class="prop-feat"><i class="fa-solid fa-circle-check"></i> Servicio 100% gratis para el comprador</div>
+              <div class="prop-feat"><i class="fa-solid fa-circle-check"></i> Tramitología con más de 10 bancos nacionales</div>
+              <div class="prop-feat"><i class="fa-solid fa-circle-check"></i> Asesoría en Bono de Vivienda</div>
+              <div class="prop-feat"><i class="fa-solid fa-circle-check"></i> Más de 10 años de experiencia · 200+ cierres</div>
+              <div class="prop-feat"><i class="fa-solid fa-circle-check"></i> Afiliados a la Cámara de Comercio de Costa Rica</div>
+            </div>
+          </div>
+
+          <!-- Columna derecha: CTA sticky -->
+          <div class="prop-cta-card">
+            <div class="prop-cta-header">
+              <div class="prop-cta-price">${prop.price}</div>
+              <p>Consultá sin compromiso</p>
+            </div>
+            <div class="prop-cta-body">
+              <a onclick="return gtagSendEvent(this.href)" href="${waHref}"
+                 target="_blank" rel="noopener" class="prop-cta-wa">
+                <i class="fa-brands fa-whatsapp"></i> Escribir por WhatsApp
+              </a>
+              <a href="tel:+50683725603" class="prop-cta-call">
+                <i class="fa-solid fa-phone"></i> +506 8372-5603
+              </a>
+              <p class="prop-cta-note">
+                <i class="fa-solid fa-bolt"></i> Respuesta en menos de 24 horas
+              </p>
+            </div>
+            <div class="prop-cta-agent">
+              <img src="flory.jpg" alt="Floribeth Elizondo" onerror="this.style.display='none'" />
+              <div>
+                <div class="prop-cta-agent-name">Floribeth Elizondo</div>
+                <div class="prop-cta-agent-role">Asesora inmobiliaria</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      `;
+    }
+
+    function notFound() {
+      document.getElementById('propContent').innerHTML = `
+        <div class="prop-not-found">
+          <i class="fa-solid fa-house-circle-xmark"></i>
+          <h2>Propiedad no encontrada</h2>
+          <p>Es posible que esta propiedad ya no esté disponible.</p>
+          <a href="/propiedades" class="btn btn-primary" style="margin-top:1rem;">
+            <i class="fa-solid fa-arrow-left"></i> Ver todas las propiedades
+          </a>
+        </div>
+      `;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const id     = params.get('id');
+    const props  = window.DEFAULT_PROPERTIES || [];
+
+    if (!id || props.length === 0) {
+      notFound();
+    } else {
+      const prop = props.find(p => String(p.e24id) === String(id));
+      prop ? render(prop) : notFound();
+    }
+  </script>
+</body>
+</html>
