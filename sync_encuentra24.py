@@ -242,16 +242,22 @@ def parse_property_page(page, prop_id: str) -> dict:
     }
 
 
-# ── Descargar imagen ──────────────────────────────────────────
+# ── Descargar imagen → WebP optimizado ───────────────────────
 def download_image(image_url: str, prop_id: str) -> str:
     if not image_url:
         return ""
     try:
+        from PIL import Image
+        import io
         r = requests.get(image_url, headers=HEADERS, timeout=15)
         if r.status_code == 200:
-            path = ASSETS_DIR / f"e24-{prop_id}.jpg"
-            path.write_bytes(r.content)
-            return f"assets/e24-{prop_id}.jpg"
+            img = Image.open(io.BytesIO(r.content)).convert("RGB")
+            if img.width > 800:
+                h = int(img.height * 800 / img.width)
+                img = img.resize((800, h), Image.LANCZOS)
+            path = ASSETS_DIR / f"e24-{prop_id}.webp"
+            img.save(path, "WebP", quality=78, method=6)
+            return f"assets/e24-{prop_id}.webp"
     except Exception as e:
         print(f"    ⚠  Imagen {prop_id}: {str(e)[:40]}")
     return ""

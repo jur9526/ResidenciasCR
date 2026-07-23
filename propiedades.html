@@ -393,7 +393,7 @@
       const baths = prop.baths > 0 ? `<span><i class="fa-solid fa-bath"></i> ${prop.baths} baños</span>` : '';
       const area  = prop.area  ? `<span><i class="fa-solid fa-ruler-combined"></i> ${prop.area}</span>` : '';
       const imgSrc = (prop.image && prop.image.trim()) ? prop.image
-        : prop.e24id ? `assets/e24-${prop.e24id}.jpg`
+        : prop.e24id ? `assets/e24-${prop.e24id}.webp`
         : 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
       const eid = prop.e24id || '';
       return `
@@ -401,7 +401,8 @@
              onclick="openPropModal(window.DEFAULT_PROPERTIES.find(p=>p.e24id==='${eid}'))">
           <div class="property-img">
             <div class="prop-skeleton"></div>
-            <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy"
+            <img src="${imgSrc}" alt="${prop.title}" loading="lazy" decoding="async"
+                 width="800" height="500" class="prop-img-lazy"
                  onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80'" />
             <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
           </div>

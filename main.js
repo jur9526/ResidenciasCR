@@ -99,7 +99,7 @@ function getFiltered() {
 // ── Imagen con skeleton ───────────────────────────────────────
 function getPropertyImage(prop) {
   if (prop.image && prop.image.trim()) return prop.image;
-  if (prop.e24id) return `assets/e24-${prop.e24id}.jpg`;
+  if (prop.e24id) return `assets/e24-${prop.e24id}.webp`;
   return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
 }
 
@@ -116,7 +116,8 @@ function buildPropertyCard(prop) {
          onclick="openPropModal(window.DEFAULT_PROPERTIES.find(p=>p.e24id==='${eid}'))">
       <div class="property-img">
         <div class="prop-skeleton"></div>
-        <img src="${imgSrc}" alt="${prop.title}" loading="lazy" class="prop-img-lazy"
+        <img src="${imgSrc}" alt="${prop.title}" loading="lazy" decoding="async"
+             width="800" height="500" class="prop-img-lazy"
              onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80'" />
         <span class="property-badge ${prop.badgeClass || ''}">${prop.badge || 'En Venta'}</span>
       </div>
