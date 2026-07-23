@@ -81,10 +81,10 @@ function getFiltered() {
       (p.location || '').toLowerCase().includes(activeFilters.zona.toLowerCase()) ||
       (p.title    || '').toLowerCase().includes(activeFilters.zona.toLowerCase());
     const provOk = activeFilters.provincia === 'todas' ||
-      (PROVINCE_CANTONS[activeFilters.provincia] || []).some(c =>
-        (p.location || '').toLowerCase().includes(c.toLowerCase()) ||
-        (p.title    || '').toLowerCase().includes(c.toLowerCase())
-      );
+      (PROVINCE_CANTONS[activeFilters.provincia] || []).some(c => {
+        const re = new RegExp('\\b' + c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+        return re.test(p.location || '') || re.test(p.title || '');
+      });
     const isAlquiler = (p.badge   || '').toLowerCase().includes('alquiler') ||
                        (p.title   || '').toLowerCase().includes('alquiler') ||
                        (p.location|| '').toLowerCase().includes('alquiler') ||
