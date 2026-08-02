@@ -3,7 +3,7 @@
   'use strict';
 
   const FALLBACK = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80';
-  let gallery = [], galIdx = 0, openedAt = 0;
+  let gallery = [], galIdx = 0, openedAt = 0, savedScrollY = 0;
 
   /* ── Inyectar HTML ─────────────────────────────── */
   document.body.insertAdjacentHTML('beforeend', `
@@ -124,7 +124,6 @@
     lbImg.src = gallery[galIdx];
     lbCount.textContent = `${galIdx + 1} / ${gallery.length}`;
     lb.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
   }
 
   function lbGoTo(idx) {
@@ -327,7 +326,12 @@
     modal.style.display = 'flex';
     openedAt = Date.now();
     requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('pmodal-open')));
+    savedScrollY = window.scrollY;
     document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.top      = `-${savedScrollY}px`;
+    document.body.style.left     = '0';
+    document.body.style.right    = '0';
     scroll.scrollTop = 0;
 
     // Mostrar FAB mobile con delay (tras la animación del modal)
@@ -370,6 +374,11 @@
     waFab.style.display = 'none';
     contactCol.style.display = 'none';
     document.body.style.overflow = '';
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.left = '';
+    document.body.style.right = '';
+    window.scrollTo(0, savedScrollY);
     setTimeout(() => { modal.style.display = 'none'; }, 180);
     gallery = []; galIdx = 0;
   }
@@ -380,7 +389,7 @@
   /* ── Teclado y swipe ──────────────────────────── */
   document.addEventListener('keydown', e => {
     if (lb.style.display !== 'none') {
-      if (e.key === 'Escape')     { lb.style.display = 'none'; document.body.style.overflow = modal.classList.contains('pmodal-open') ? 'hidden' : ''; }
+      if (e.key === 'Escape')     { lb.style.display = 'none'; }
       if (e.key === 'ArrowLeft')  lbGoTo(galIdx - 1);
       if (e.key === 'ArrowRight') lbGoTo(galIdx + 1);
       return;
