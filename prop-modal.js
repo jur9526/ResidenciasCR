@@ -4,6 +4,7 @@
 
   const FALLBACK = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80';
   let gallery = [], galIdx = 0, openedAt = 0, savedScrollY = 0, ignoreNextPopstate = false;
+  let shareUrl = '', sharePropTitle = '';
 
   /* ── Inyectar HTML ─────────────────────────────── */
   document.body.insertAdjacentHTML('beforeend', `
@@ -218,7 +219,12 @@
 
           <!-- ── Info ── -->
           <div class="pmodal-info-block">
-            <h2 class="pmodal-title">${prop.title}</h2>
+            <div class="pmodal-title-row">
+              <h2 class="pmodal-title">${prop.title}</h2>
+              <button class="pmodal-share-btn" onclick="window._pShare()" type="button" title="Compartir">
+                <i class="fa-solid fa-share-nodes"></i><span>Compartir</span>
+              </button>
+            </div>
             <div class="pmodal-location-row"><i class="fa-solid fa-location-dot"></i> ${prop.location}</div>
             <div class="pmodal-price-row"><span class="pmodal-price">${prop.price}</span></div>
             ${(beds||baths||area||parking) ? `<div class="pmodal-stats-row">${beds}${baths}${area}${parking}</div>` : ''}
@@ -330,8 +336,12 @@
     document.body.style.overflow = 'hidden';
     scroll.scrollTop = 0;
 
-    // Empujar entrada al historial para que "Atrás" cierre el modal
-    history.pushState({ pmodal: true }, '');
+    // URL compartible: ?prop=XXXXX — al abrir se actualiza, al cerrar se restaura
+    const _u = new URL(window.location.href);
+    _u.searchParams.set('prop', prop.e24id);
+    shareUrl = _u.toString();
+    sharePropTitle = prop.title;
+    history.pushState({ pmodal: true }, '', shareUrl);
 
     // Mostrar FAB mobile con delay (tras la animación del modal)
     setTimeout(() => { waFab.style.display = 'flex'; }, 450);
@@ -417,6 +427,52 @@
     const dx = e.changedTouches[0].clientX - tx;
     if (Math.abs(dx) > 50) goTo(galIdx + (dx < 0 ? 1 : -1));
   });
+
+  /* ── Compartir propiedad ──────────────────────── */
+  window._pShare = function () {
+    const data = {
+      title: `🏡 ${sharePropTitle}`,
+      text:  `Mirá esta propiedad en Residencias Costa Rica`,
+      url:   shareUrl,
+    };
+    if (navigator.share) {
+      navigator.share(data).catch(() => {});
+      return;
+    }
+    // Fallback desktop: mostrar dropdown
+    let dd = document.getElementById('pmodalShareDd');
+    if (dd) { dd.classList.toggle('pmodal-share-dd--open'); return; }
+    dd = document.createElement('div');
+    dd.id = 'pmodalShareDd';
+    dd.className = 'pmodal-share-dd pmodal-share-dd--open';
+    const waText = encodeURIComponent(`🏡 ${sharePropTitle}\n${shareUrl}`);
+    dd.innerHTML = `
+      <button class="pmodal-share-dd-item" onclick="navigator.clipboard.writeText('${shareUrl.replace(/'/g,"\\'")}').then(()=>{this.textContent='✓ ¡Link copiado!';setTimeout(()=>this.textContent='Copiar link',1800)})">
+        <i class="fa-regular fa-copy"></i> Copiar link
+      </button>
+      <a class="pmodal-share-dd-item" href="https://wa.me/?text=${waText}" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>`;
+    const btn = document.querySelector('.pmodal-share-btn');
+    btn.parentElement.style.position = 'relative';
+    btn.parentElement.appendChild(dd);
+    document.addEventListener('click', function hide(e) {
+      if (!dd.contains(e.target) && e.target !== btn) { dd.classList.remove('pmodal-share-dd--open'); document.removeEventListener('click', hide); }
+    }, { capture: true, once: false });
+  };
+
+  /* ── Auto-abrir si la URL trae ?prop= ────────── */
+  function openFromUrl() {
+    const pid = new URLSearchParams(window.location.search).get('prop');
+    if (!pid || !window.DEFAULT_PROPERTIES) return;
+    const prop = window.DEFAULT_PROPERTIES.find(p => p.e24id === pid);
+    if (prop) open(prop);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => setTimeout(openFromUrl, 100));
+  } else {
+    setTimeout(openFromUrl, 100);
+  }
 
   /* ── Exponer globals ──────────────────────────── */
   window.openPropModal = open;

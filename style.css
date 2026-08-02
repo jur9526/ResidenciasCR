@@ -1829,7 +1829,34 @@ form.show-photos .photo-upload-wrap { display: block !important; }
 /* ── Info block ─────────────────────────────────────── */
 .pmodal-info-block { padding: 1.25rem; }
 @media (min-width: 820px) { .pmodal-info-block { padding: 1.5rem; } }
-.pmodal-title { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: .4rem; }
+
+.pmodal-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: .75rem; margin-bottom: .4rem; }
+.pmodal-title { font-size: 1.15rem; font-weight: 700; color: var(--dark); margin-bottom: 0; flex: 1; }
+
+/* Botón compartir */
+.pmodal-share-btn {
+  flex-shrink: 0; display: inline-flex; align-items: center; gap: .35rem;
+  border: 1.5px solid var(--light-gray); background: #fff; color: var(--gray);
+  padding: .35rem .75rem; border-radius: 20px; font-size: .78rem; font-weight: 600;
+  cursor: pointer; transition: border-color .2s, color .2s; white-space: nowrap;
+}
+.pmodal-share-btn:hover { border-color: var(--wa); color: var(--wa); }
+.pmodal-share-btn i { font-size: .85rem; }
+
+/* Dropdown compartir (desktop) */
+.pmodal-share-dd {
+  display: none; position: absolute; top: calc(100% + .4rem); right: 0; z-index: 200;
+  background: #fff; border: 1px solid var(--light-gray); border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.12); padding: .35rem; min-width: 160px;
+}
+.pmodal-share-dd--open { display: flex; flex-direction: column; gap: .15rem; }
+.pmodal-share-dd-item {
+  display: flex; align-items: center; gap: .55rem;
+  padding: .55rem .75rem; border-radius: 7px; font-size: .84rem; font-weight: 500;
+  color: var(--dark); text-decoration: none; background: none; border: none;
+  cursor: pointer; transition: background .15s; text-align: left;
+}
+.pmodal-share-dd-item:hover { background: var(--light-gray); }
 .pmodal-location-row { display: flex; align-items: center; gap: .35rem; font-size: .85rem; color: var(--gray); margin-bottom: .6rem; }
 .pmodal-location-row i { color: var(--red); }
 .pmodal-price-row { margin-bottom: .75rem; }
