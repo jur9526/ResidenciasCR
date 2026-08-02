@@ -328,10 +328,6 @@
     requestAnimationFrame(() => requestAnimationFrame(() => modal.classList.add('pmodal-open')));
     savedScrollY = window.scrollY;
     document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.top      = `-${savedScrollY}px`;
-    document.body.style.left     = '0';
-    document.body.style.right    = '0';
     scroll.scrollTop = 0;
 
     // Empujar entrada al historial para que "Atrás" cierre el modal
@@ -377,10 +373,6 @@
     waFab.style.display = 'none';
     contactCol.style.display = 'none';
     document.body.style.overflow = '';
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
     window.scrollTo(0, savedScrollY);
     setTimeout(() => { modal.style.display = 'none'; }, 180);
     gallery = []; galIdx = 0;
