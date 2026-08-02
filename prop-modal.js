@@ -330,6 +330,7 @@
 
     // Botón WA flotante mobile
     waFab.href = waHref;
+    waFab.onclick = function() { typeof gtagSendEvent === 'function' && gtagSendEvent(waHref); };
 
     modal.style.display = 'flex';
     openedAt = Date.now();

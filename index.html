@@ -115,10 +115,11 @@
         Residencias<strong>CostaRica</strong>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#buscar">Buscar Casa</a></li>
-        <li><a href="#propiedades">Propiedades</a></li>
+        <li><a href="#propiedades" onclick="heroNav('comprar')">Comprar</a></li>
+        <li><a href="#propiedades" onclick="heroNav('alquilar')">Alquilar</a></li>
+        <li><a href="#buscar" onclick="heroNav('invertir')">Invertir</a></li>
         <!-- <li><a href="/moving-to-costa-rica">Moving to CR 🇨🇷</a></li> -->
-        <li><a href="#vender">Vende tu Casa</a></li>
+        <li><a href="#vender">Vender</a></li>
         <li><a href="#contacto">Contacto</a></li>
         <li>
           <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
@@ -143,23 +144,46 @@
         <span class="hero-eyebrow">
           <i class="fa-solid fa-map-pin"></i>&nbsp; Costa Rica
         </span>
-        <h1>Tu nuevo hogar te<br>está <em>esperando</em></h1>
-        <p>Casas, apartamentos y terrenos en venta en Costa Rica. Tramitología con todos los bancos. <strong>Sin costo para el comprador.</strong></p>
-        <div class="hero-actions">
-          <a href="#buscar" class="btn btn-primary">
-            <i class="fa-solid fa-magnifying-glass"></i> Buscar mi Casa
+        <h1>Tu próxima propiedad<br>te está <em>esperando</em></h1>
+        <p>Comprá, alquilá, invertí o vendé en Costa Rica. Tramitología con todos los bancos. <strong>Sin costo para el comprador.</strong></p>
+
+        <!-- 5 rutas de intención (Comprar + Precal de la mano) -->
+        <div class="hero-intent-grid">
+          <a href="#propiedades" class="hero-intent-card"
+             onclick="heroNav('comprar'); return false;">
+            <i class="fa-solid fa-house"></i>
+            <strong>Comprar</strong>
+            <span>Casas y aptos en venta</span>
           </a>
-          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
-             target="_blank" rel="noopener" class="btn btn-wa-hero">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp — Más rápido
+          <a href="#buscar" class="hero-intent-card"
+             onclick="document.getElementById('buscar').scrollIntoView({behavior:'smooth'}); return false;">
+            <i class="fa-solid fa-circle-check"></i>
+            <strong>Precalificar ahora</strong>
+            <span>Gratuito</span>
+          </a>
+          <a href="#propiedades" class="hero-intent-card"
+             onclick="heroNav('alquilar'); return false;">
+            <i class="fa-solid fa-key"></i>
+            <strong>Alquilar</strong>
+            <span>Propiedades en alquiler</span>
+          </a>
+          <a href="#buscar" class="hero-intent-card"
+             onclick="heroNav('invertir'); return false;">
+            <i class="fa-solid fa-chart-line"></i>
+            <strong>Invertir</strong>
+            <span>Oportunidades GAM</span>
+          </a>
+          <a href="#vender" class="hero-intent-card">
+            <i class="fa-solid fa-tag"></i>
+            <strong>Vender / Arrendar</strong>
+            <span>Publicá tu propiedad</span>
           </a>
         </div>
-        <div class="hero-sell-cta">
-          <a href="#vender" class="btn-sell-hero">
-            <i class="fa-solid fa-tag"></i> ¿Quieres vender tu casa? Hacelo aquí
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-        </div>
+
+        <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+           target="_blank" rel="noopener" class="btn btn-wa-hero">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp — Respuesta inmediata
+        </a>
         <div class="hero-stats">
           <div class="hero-stat">
             <strong>10+</strong>
@@ -235,8 +259,8 @@
       <div class="buyer-inner">
 
         <div class="buyer-left">
-          <span class="section-tag">Para Compradores</span>
-          <h2>¿Buscas tu<br>casa ideal?</h2>
+          <span class="section-tag">Para Compradores e Inquilinos</span>
+          <h2>¿Buscas tu<br>propiedad ideal?</h2>
           <p>Cuéntanos qué necesitás y te mostramos opciones que se ajusten a tu presupuesto. Nuestro servicio es <strong>completamente gratuito</strong> para el comprador.</p>
 
           <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
@@ -250,10 +274,15 @@
           </a>
 
           <div class="buyer-perks">
-            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Asesoría completamente gratuita</div>
-            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Tramitología con +10 bancos</div>
+            <a onclick="return gtagSendEvent(this.href)"
+               href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20quisiera%20saber%20si%20califico%20para%20cr%C3%A9dito%20hipotecario.%20%C2%BFPueden%20hacer%20una%20precalificaci%C3%B3n%20gratuita%3F"
+               target="_blank" rel="noopener" class="buyer-perk buyer-perk-cta">
+              <span><i class="fa-solid fa-check"></i> Precalificación bancaria gratuita</span>
+              <i class="fa-brands fa-whatsapp buyer-perk-wa-icon"></i>
+            </a>
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Tramitología con +10 bancos sin costo</div>
             <div class="buyer-perk"><i class="fa-solid fa-check"></i> Bono de vivienda si calificás</div>
-            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Te acompañamos a ver la casa</div>
+            <div class="buyer-perk"><i class="fa-solid fa-check"></i> Te acompañamos a ver la propiedad</div>
           </div>
         </div>
 
@@ -261,7 +290,7 @@
           <div class="buyer-form-card">
             <div class="form-card-header">
               <div class="form-card-badge"><i class="fa-solid fa-bolt"></i> Respuesta en menos de 24 h</div>
-              <h3>Encuentra tu casa ideal</h3>
+              <h3>Encuentra tu propiedad ideal</h3>
               <p>Completa el formulario y una asesora experta te contacta con opciones personalizadas<span id="buyer-free-note"> — <strong>sin costo</strong></span>.</p>
             </div>
             <form id="buyerForm">
@@ -272,22 +301,22 @@
               <!-- Quiero -->
               <div class="form-group">
                 <label>¿Qué querés hacer?</label>
-                <div class="form-toggle-group form-toggle-grid">
+                <div class="form-toggle-group form-toggle-grid" style="grid-template-columns:repeat(2,1fr)">
                   <label class="form-toggle">
                     <input type="radio" name="intencion" value="Comprar" checked />
                     <span><i class="fa-solid fa-house"></i> Comprar</span>
+                  </label>
+                  <label class="form-toggle">
+                    <input type="radio" name="intencion" value="Alquilar" />
+                    <span><i class="fa-solid fa-key"></i> Alquilar</span>
                   </label>
                   <label class="form-toggle">
                     <input type="radio" name="intencion" value="Invertir" />
                     <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
                   </label>
                   <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Poner en alquiler" />
-                    <span><i class="fa-solid fa-key"></i> Poner en alquiler</span>
-                  </label>
-                  <label class="form-toggle">
                     <input type="radio" name="intencion" value="Vender" />
-                    <span><i class="fa-solid fa-tag"></i> Vender</span>
+                    <span><i class="fa-solid fa-tag"></i> Vender / Arrendar</span>
                   </label>
                 </div>
               </div>
@@ -344,18 +373,6 @@
                 <textarea name="detalle" id="textareaDetalle" rows="2" placeholder="Habitaciones, características, necesidades especiales..."></textarea>
               </div>
 
-              <!-- Fotos — solo para Vender / Poner en alquiler -->
-              <div class="form-group photo-upload-wrap" id="photoUploadWrap">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8) — <span id="photoCount"></span></span></label>
-                <label class="photo-drop-zone">
-                  <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
-                  <span>Tocá para agregar fotos</span>
-                  <input type="file" id="photoInput" accept="image/*" multiple style="display:none" />
-                </label>
-                <div id="photoPreview" class="photo-preview-grid"></div>
-                <input type="hidden" name="fotos_urls" id="fotosUrls" />
-              </div>
-
               <button type="submit" class="btn-submit" id="buyerSubmit">
                 <i class="fa-solid fa-paper-plane"></i> Enviar consulta
               </button>
@@ -374,9 +391,9 @@
   <section class="section properties-section" id="propiedades">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">En Venta</span>
+        <span class="section-tag">Propiedades</span>
         <h2>Propiedades Destacadas</h2>
-        <p>Propiedades verificadas en las mejores zonas de Costa Rica.</p>
+        <p>Casas, apartamentos y terrenos en venta y alquiler en las mejores zonas de Costa Rica.</p>
       </div>
 
       <!-- ── Filtros ── -->
@@ -429,6 +446,30 @@
             <button class="filter-chip" data-filter-beds="4">4+</button>
           </div>
         </div>
+        <div class="prop-filter-row prop-filter-row--slider">
+          <span class="filter-label"><i class="fa-solid fa-colon-sign"></i> Precio</span>
+          <div class="price-slider-wrap">
+            <div class="price-slider-track">
+              <div class="price-slider-fill" id="priceSliderFill"></div>
+              <input type="range" class="price-slider-input" id="priceSliderMin" min="0" max="500" value="0" step="10">
+              <input type="range" class="price-slider-input" id="priceSliderMax" min="0" max="500" value="500" step="10">
+            </div>
+            <div class="price-slider-labels">
+              <span id="priceSliderMinLabel">₡0</span>
+              <span id="priceSliderMaxLabel">₡500M+</span>
+            </div>
+          </div>
+        </div>
+        <div class="prop-filter-row">
+          <span class="filter-label"><i class="fa-solid fa-ruler-combined"></i> Área m²</span>
+          <div class="filter-chips">
+            <button class="filter-chip active" data-filter-area="todos">Todas</button>
+            <button class="filter-chip" data-filter-area="a1">Hasta 120 m²</button>
+            <button class="filter-chip" data-filter-area="a2">120 – 200 m²</button>
+            <button class="filter-chip" data-filter-area="a3">200 – 400 m²</button>
+            <button class="filter-chip" data-filter-area="a4">Más de 400 m²</button>
+          </div>
+        </div>
       </div>
 
       <!-- Sin resultados -->
@@ -451,39 +492,65 @@
         </button>
         <div class="ver-mas-wrapper" id="verMasWrapper" style="display:none">
           <div class="vmc-outer">
-          <span class="vmc-badge">¡No te vayas aún!</span>
-          <a href="/propiedades" class="btn-ver-mas-cta" id="verMasBtn">
-            <span class="vmc-body">
-              <span class="vmc-icon"><i class="fa-solid fa-house-circle-check"></i></span>
-              <span class="vmc-text">
-                <strong>¿Ya viste todas las opciones?</strong>
-                <small id="verMasCount">Hay más propiedades esperándote</small>
+            <span class="vmc-badge">Seguís buscando</span>
+            <a onclick="return gtagSendEvent(this.href)"
+               href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20estaba%20buscando%20en%20residenciascostarica.com%20y%20quisiera%20que%20me%20envi%C3%A9s%20el%20cat%C3%A1logo%20completo%20de%20propiedades%20disponibles"
+               target="_blank" rel="noopener"
+               class="btn-ver-mas-cta" id="verMasBtn">
+              <span class="vmc-body">
+                <span class="vmc-icon" style="color:#25d366"><i class="fa-brands fa-whatsapp"></i></span>
+                <span class="vmc-text">
+                  <strong>Solicitar catálogo especial de propiedades</strong>
+                  <small id="verMasCount">Hay más propiedades disponibles</small>
+                </span>
               </span>
-            </span>
-            <span class="vmc-arrow">
-              <i class="fa-solid fa-arrow-right"></i>
-            </span>
-          </a>
+              <span class="vmc-arrow"><i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <a href="#buscar"
+               onclick="document.getElementById('buscar').scrollIntoView({behavior:'smooth'});return false;"
+               class="vmc-form-link">
+              <i class="fa-solid fa-file-signature"></i>
+              <span>Llenás el formulario y Floribeth te busca la opción ideal — incluyendo propiedades que no publicamos</span>
+              <i class="fa-solid fa-arrow-up vmc-arrow-up"></i>
+            </a>
           </div>
         </div>
-        <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
-           target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-solid fa-external-link-alt"></i> Ver en Encuentra24
+        <a onclick="return gtagSendEvent(this.href)"
+           href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20estaba%20buscando%20en%20residenciascostarica.com%20y%20quisiera%20que%20me%20envi%C3%A9s%20el%20cat%C3%A1logo%20completo%20de%20propiedades%20disponibles"
+           target="_blank" rel="noopener" class="btn btn-wa">
+          <i class="fa-brands fa-whatsapp"></i> Ver todas las propiedades
         </a>
+      </div>
+
+      <!-- Banner más propiedades -->
+      <div class="mas-props-banner">
+        <div class="mas-props-icon"><i class="fa-solid fa-magnifying-glass-location"></i></div>
+        <div class="mas-props-text">
+          <strong>¿No encontrás lo que buscás?</strong>
+          <span>Tenemos muchas más propiedades — algunas las publicamos primero en Instagram. Si tampoco encontrás ahí, llenás tu perfil y Floribeth te busca una opción a medida.</span>
+        </div>
+        <div class="mas-props-btns">
+          <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="mas-props-btn mas-props-ig">
+            <i class="fa-brands fa-instagram"></i> Ver en Instagram
+          </a>
+          <a href="#buscar" onclick="document.getElementById('buscar').scrollIntoView({behavior:'smooth'});return false;" class="mas-props-btn mas-props-form">
+            <i class="fa-solid fa-file-signature"></i> Llenar mi perfil
+          </a>
+        </div>
       </div>
 
       <!-- Tarjeta marketing propiedades ocultas -->
       <div class="hidden-props-cta">
         <div class="hidden-props-inner">
-          <div class="hidden-props-icon"><i class="fa-solid fa-lock"></i></div>
+          <div class="hidden-props-icon"><i class="fa-solid fa-key-skeleton"></i></div>
           <div class="hidden-props-text">
-            <h3>¿No encontraste lo que buscas?</h3>
-            <p>Manejamos un portafolio <strong>privado y exclusivo</strong> de propiedades que no publicamos en internet — por discreción del vendedor, precio preferencial o acceso anticipado antes del lanzamiento. <strong>Llamá ahora y te contamos.</strong></p>
+            <h3>¿No encontraste la propiedad ideal?</h3>
+            <p>Tenemos propiedades que <strong>no publicamos en internet</strong> — vendedores que prefieren discreción, precios preferenciales y acceso anticipado antes del lanzamiento público. Preguntá y te contamos cuáles hay disponibles ahora.</p>
           </div>
-          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20sobre%20el%20portafolio%20privado%20de%20propiedades"
              target="_blank" rel="noopener" class="btn-hidden-props">
-            <i class="fa-solid fa-unlock"></i>
-            <span>Ver portafolio privado</span>
+            <i class="fa-solid fa-key-skeleton"></i>
+            <span>Preguntar por propiedades exclusivas</span>
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
@@ -599,21 +666,83 @@
     </div>
   </section>
 
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clientes satisfechos</span>
+        <h2>Ya confían en Residencias Costa Rica</h2>
+        <p>Historias reales de compradores, vendedores e inquilinos en Costa Rica.</p>
+      </div>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Floribeth nos guió en todo el proceso. Tramitó el crédito con el BCR, coordinó el avalúo y la escritura. En menos de 4 meses ya vivimos en nuestra casa en Escazú. Nunca imaginé que comprar casa fuera tan sencillo."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div class="testimonial-meta">
+              <strong>Marcela Rodríguez</strong>
+              <span><i class="fa-solid fa-house"></i> Compró en Escazú · 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal d1">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Publicó mi casa, la vendió al precio que pedía y manejó todo con los abogados del banco. Sin estrés, sin sorpresas. Si tenés una propiedad que vender, Floribeth es la persona indicada."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JS</div>
+            <div class="testimonial-meta">
+              <strong>Jorge Solano</strong>
+              <span><i class="fa-solid fa-tag"></i> Vendió en Santa Ana · 2024</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal d2">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Buscaba apartamento en Heredia con poco tiempo. Me envió opciones ese mismo día, coordinó las visitas y en dos semanas firmé contrato. El servicio fue totalmente gratuito para mí como inquilina."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">DV</div>
+            <div class="testimonial-meta">
+              <strong>Daniela Vega</strong>
+              <span><i class="fa-solid fa-key"></i> Alquiló en Heredia · 2025</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal d3">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"No sabíamos que calificábamos para el bono de vivienda. Floribeth tramitó todo gratuitamente y hoy vivimos en nuestra primera casa propia. Sin su ayuda no hubiéramos sabido ni por dónde empezar."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LM</div>
+            <div class="testimonial-meta">
+              <strong>Luis y Carmen Méndez</strong>
+              <span><i class="fa-solid fa-house-circle-check"></i> Bono de Vivienda · Alajuela · 2024</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ===== SELL SECTION ===== -->
   <section class="sell-section" id="vender">
     <div class="container">
       <div class="sell-inner">
         <div class="sell-content">
-          <span class="section-tag-white">Para Vendedores</span>
-          <h2>¿Quieres vender<br>tu casa?</h2>
-          <p>Publicamos tu propiedad en Instagram, Facebook, TikTok y <strong>encuentra24.com</strong> para llegar a miles de compradores activos.</p>
+          <span class="section-tag-white">Para Propietarios</span>
+          <h2>¿Quieres vender<br>o arrendar tu propiedad?</h2>
+          <p>Publicamos tu propiedad en Instagram, Facebook, TikTok y <strong>encuentra24.com</strong> para llegar a miles de compradores e inquilinos activos.</p>
           <ul class="sell-features">
             <li><i class="fa-solid fa-check"></i> Publicación en redes sociales y Encuentra24</li>
-            <li><i class="fa-solid fa-check"></i> Compradores calificados y verificados</li>
+            <li><i class="fa-solid fa-check"></i> Compradores e inquilinos calificados</li>
             <li><i class="fa-solid fa-check"></i> Te acompañamos en todo el proceso</li>
             <li><i class="fa-solid fa-check"></i> Sin complicaciones ni papeleo extra</li>
           </ul>
-          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20publicar%20mi%20propiedad"
              target="_blank" rel="noopener" class="btn btn-primary">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp — Publicar ahora
           </a>
@@ -623,8 +752,8 @@
           <div class="buyer-form-card form-compact">
             <div class="form-card-header">
               <div class="form-card-badge"><i class="fa-solid fa-bolt"></i> Respuesta en menos de 24 h</div>
-              <h3>Vendé más rápido y al mejor precio</h3>
-              <p>Completa el formulario y te ayudamos a publicar tu propiedad donde están los compradores.</p>
+              <h3>Vendé o arrendá al mejor precio</h3>
+              <p>Completa el formulario y te ayudamos a publicar tu propiedad donde están los compradores e inquilinos.</p>
             </div>
             <form id="sellForm">
               <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
@@ -633,22 +762,14 @@
 
               <div class="form-group">
                 <label>¿Qué querés hacer?</label>
-                <div class="form-toggle-group form-toggle-grid">
+                <div class="form-toggle-group">
                   <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Comprar" />
-                    <span><i class="fa-solid fa-house"></i> Comprar</span>
-                  </label>
-                  <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Invertir" />
-                    <span><i class="fa-solid fa-chart-line"></i> Invertir</span>
+                    <input type="radio" name="intencion" value="Vender" checked />
+                    <span><i class="fa-solid fa-tag"></i> Vender</span>
                   </label>
                   <label class="form-toggle">
                     <input type="radio" name="intencion" value="Poner en alquiler" />
                     <span><i class="fa-solid fa-key"></i> Poner en alquiler</span>
-                  </label>
-                  <label class="form-toggle">
-                    <input type="radio" name="intencion" value="Vender" checked />
-                    <span><i class="fa-solid fa-tag"></i> Vender</span>
                   </label>
                 </div>
               </div>
@@ -705,18 +826,6 @@
                 <textarea name="detalle" id="textareaDetalle2" rows="2" placeholder="Habitaciones, baños, características..."></textarea>
               </div>
 
-              <!-- Fotos — solo para Vender / Poner en alquiler -->
-              <div class="form-group photo-upload-wrap" id="photoUploadWrap2">
-                <label>Fotos de la propiedad <span style="font-weight:400;color:var(--gray);font-size:.82rem;">(opcional, máx. 8) — <span id="photoCount2"></span></span></label>
-                <label class="photo-drop-zone">
-                  <i class="fa-solid fa-camera-retro" style="font-size:1.4rem;color:var(--red);"></i>
-                  <span>Tocá para agregar fotos</span>
-                  <input type="file" id="photoInput2" accept="image/*" multiple style="display:none" />
-                </label>
-                <div id="photoPreview2" class="photo-preview-grid"></div>
-                <input type="hidden" name="fotos_urls" id="fotosUrls2" />
-              </div>
-
               <button type="submit" class="btn-submit">
                 <i class="fa-solid fa-paper-plane"></i> Enviar consulta
               </button>
@@ -731,63 +840,76 @@
   </section>
 
   <!-- ===== CONTACT ===== -->
-  <section class="section section-alt" id="contacto">
+  <section class="section contact-section" id="contacto">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Contacto</span>
-        <h2>Estamos para ayudarte</h2>
-        <p>Escríbenos por cualquiera de estos canales y te respondemos rápido.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <h3>Canales de Contacto</h3>
-          <div class="contact-channels">
-            <div class="channel-group">
-              <span class="channel-label">WhatsApp</span>
-              <div class="social-pills">
-                <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas" target="_blank" rel="noopener" class="social-pill wa"><i class="fa-brands fa-whatsapp"></i> 8372-5603</a>
-                <a href="https://wa.me/50661374443?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" class="social-pill wa"><i class="fa-brands fa-whatsapp"></i> 6137-4443</a>
-              </div>
+      <div class="contact-split">
+
+        <!-- Floribeth -->
+        <div class="contact-agent-side reveal">
+          <div class="contact-agent-photo-wrap">
+            <img src="FloryRcr.png" alt="Floribeth Elizondo — Asesora Inmobiliaria" class="contact-agent-photo" />
+            <div class="contact-agent-badge-pill">
+              <i class="fa-solid fa-shield-halved"></i> Top Agente · 10+ Años
             </div>
-            <div class="channel-group">
-              <span class="channel-label">Correo</span>
-              <div class="social-pills">
-                <a href="mailto:flory@residenciascostarica.com" class="social-pill email"><i class="fa-solid fa-envelope"></i> flory@residenciascostarica.com</a>
-              </div>
-            </div>
-            <div class="channel-group">
-              <span class="channel-label">Propiedades</span>
-              <div class="social-pills">
-                <a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117" target="_blank" rel="noopener" class="social-pill e24"><i class="fa-solid fa-globe"></i> Encuentra24</a>
-              </div>
-            </div>
-            <div class="channel-group">
-              <span class="channel-label">Redes Sociales</span>
-              <div class="social-pills">
-                <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-pill ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
-                <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="social-pill th"><i class="fa-brands fa-threads"></i> Threads</a>
-                <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-pill fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
-                <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-pill tt"><i class="fa-brands fa-tiktok"></i> TikTok</a>
-              </div>
-            </div>
-            <div class="channel-group">
-              <span class="channel-label">Certificación</span>
-              <div class="camara-sello-wrap">
-                <img src="assets/sello-floribeth.png" alt="Empresa Asociada Cámara de Comercio de Costa Rica" class="camara-sello-img">
-              </div>
-            </div>
+          </div>
+          <h3 class="contact-agent-name">Floribeth Elizondo</h3>
+          <p class="contact-agent-role">Asesora Inmobiliaria · Costa Rica</p>
+          <ul class="contact-agent-perks">
+            <li>
+              <a onclick="return gtagSendEvent(this.href)"
+                 href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20quisiera%20saber%20si%20califico%20para%20cr%C3%A9dito%20hipotecario.%20%C2%BFPueden%20hacer%20una%20precalificaci%C3%B3n%20gratuita%3F"
+                 target="_blank" rel="noopener" class="contact-perk-cta">
+                <i class="fa-solid fa-check"></i> Precalificación bancaria gratuita
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </li>
+            <li><i class="fa-solid fa-check"></i> Tramitología completa sin costo</li>
+            <li><i class="fa-solid fa-check"></i> Acceso a +10 bancos y bono SFNV</li>
+            <li><i class="fa-solid fa-check"></i> 200+ cierres exitosos · 98% satisfacción</li>
+          </ul>
+          <div class="camara-sello-wrap" style="justify-content:center;margin-top:.5rem">
+            <img src="assets/sello-floribeth.png" alt="Empresa Asociada Cámara de Comercio de Costa Rica AF: 2026032" class="camara-sello-img">
           </div>
         </div>
 
-        <div class="contact-cta-box">
-          <h3>¿Listo para empezar?</h3>
-          <p>Un asesor te contacta hoy mismo. Sin costo, sin compromiso.</p>
-          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
-             target="_blank" rel="noopener" class="btn btn-wa-full">
-            <i class="fa-brands fa-whatsapp"></i> Escribir ahora
+        <!-- CTA -->
+        <div class="contact-cta-side reveal d1">
+          <span class="section-tag">Contacto directo</span>
+          <h2>¿Listo para empezar?</h2>
+          <p>Sin costo, sin compromiso. Floribeth te responde hoy mismo.</p>
+
+          <a onclick="return gtagSendEvent(this.href)"
+             href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20propiedades"
+             target="_blank" rel="noopener" class="btn btn-wa-full contact-wa-btn">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp — Escribir ahora
           </a>
           <p class="cta-note"><i class="fa-solid fa-clock"></i> Respuesta en menos de 24 horas</p>
+
+          <div class="contact-channels-compact">
+            <a onclick="return gtagSendEvent(this.href)"
+               href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20propiedades"
+               target="_blank" rel="noopener" class="contact-channel-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+506 8372-5603</span>
+            </a>
+            <a href="https://wa.me/50661374443" target="_blank" rel="noopener" class="contact-channel-item">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>+506 6137-4443</span>
+            </a>
+            <a href="mailto:flory@residenciascostarica.com" class="contact-channel-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>flory@residenciascostarica.com</span>
+            </a>
+          </div>
+
+          <div class="contact-social-row">
+            <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="contact-social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="contact-social-icon" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="contact-social-icon" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="contact-social-icon" title="Threads"><i class="fa-brands fa-threads"></i></a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -810,19 +932,23 @@
           </div>
         </div>
         <div class="footer-col">
-          <h4>Propiedades</h4>
+          <h4>Zonas</h4>
           <ul>
-            <li><a href="#propiedades">Casas en Venta</a></li>
-            <li><a href="https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117" target="_blank" rel="noopener">Encuentra24</a></li>
+            <li><a href="/escazu">Escazú</a></li>
+            <li><a href="/santa-ana">Santa Ana</a></li>
+            <li><a href="/heredia">Heredia</a></li>
+            <li><a href="/alajuela">Alajuela</a></li>
+            <li><a href="/curridabat">Curridabat</a></li>
+            <li><a href="/propiedades-alquiler">En Alquiler</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Servicios</h4>
           <ul>
-            <li><a href="#buscar">Buscar Casa</a></li>
-            <li><a href="#vender">Vender Propiedad</a></li>
+            <li><a href="#propiedades">Comprar</a></li>
+            <li><a href="#propiedades" onclick="heroNav('alquilar')">Alquilar</a></li>
+            <li><a href="#vender">Vender / Arrendar</a></li>
             <li><a href="#buscar">Bono de Vivienda</a></li>
-            <li><a href="#buscar">Tramitología</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -851,12 +977,12 @@
     <span class="wa-label">¡Chateá ahora!</span>
   </a>
   <script>
-    // Shake the button every 8 seconds
+    // Shake the button every 30 seconds
     setInterval(() => {
       const btn = document.getElementById('waFloat');
       btn.style.animation = 'wa-shake 0.6s ease';
       setTimeout(() => { btn.style.animation = 'wa-pulse 2s ease-in-out infinite'; }, 700);
-    }, 8000);
+    }, 30000);
   </script>
 
   <script src="properties-data.js"></script>
@@ -866,104 +992,22 @@
   <div id="camara-tooltip">Empresa asociada Cámara de Comercio de Costa Rica AF: 2026032</div>
 
   <script>
-  const IMGBB_KEY    = '53e394bb943f40058c8d0715dcc5be19';
-  const SELLER_MODES = ['Vender', 'Poner en alquiler'];
-
-  function setupForm(formId, successId, wrapId, inputId, previewId, urlsId, countId) {
+  function setupForm(formId, successId) {
     const form    = document.getElementById(formId);
     const success = document.getElementById(successId);
-    const wrap    = document.getElementById(wrapId);
-    const input   = document.getElementById(inputId);
-    const preview = document.getElementById(previewId);
-    const urlsEl  = document.getElementById(urlsId);
-    const countEl = countId ? document.getElementById(countId) : null;
-    if (!form || !wrap) return;
-
-    let files = [];
-
-    function updateCount() {
-      if (!countEl) return;
-      countEl.textContent = files.length > 0 ? `${files.length}/8 fotos` : '';
-    }
-
-    // ── Mostrar/ocultar sección de fotos (via clase en el form) ──
-    function showPhoto(val) {
-      const show = SELLER_MODES.includes(val);
-      form.classList.toggle('show-photos', show);
-      if (!show) { files = []; if (preview) preview.innerHTML = ''; updateCount(); }
-    }
-    form.querySelectorAll('[name="intencion"]').forEach(r => {
-      r.addEventListener('change', () => showPhoto(r.value));
-    });
-    // estado inicial: leer radio checked
-    const initRadio = form.querySelector('[name="intencion"]:checked');
-    showPhoto(initRadio ? initRadio.value : '');
-
-    // ── Acumular fotos localmente (sin subir aún) ─────────
-    if (input) {
-      input.addEventListener('change', () => {
-        Array.from(input.files).forEach(f => {
-          if (files.length >= 8) return;
-          files.push(f);
-          const d = document.createElement('div');
-          d.className = 'photo-thumb-wrap';
-          const img = document.createElement('img');
-          img.src = URL.createObjectURL(f);
-          const rm = document.createElement('button');
-          rm.type = 'button'; rm.className = 'photo-thumb-remove';
-          rm.innerHTML = '<i class="fa-solid fa-xmark"></i>';
-          rm.onclick = () => { files = files.filter(x => x !== f); d.remove(); updateCount(); };
-          d.append(img, rm);
-          if (preview) preview.appendChild(d);
-        });
-        input.value = '';
-        updateCount();
-      });
-    }
-
-    // ── Submit: subir fotos → luego enviar formulario ─────
+    if (!form) return;
     const btn = form.querySelector('.btn-submit');
     form.addEventListener('submit', async e => {
       e.preventDefault();
       if (btn) { btn.disabled = true; btn.textContent = 'Enviando...'; }
-
-      // Subir fotos a imgbb una por una (timeout 20s por foto)
-      if (files.length > 0 && urlsEl) {
-        const urls = [];
-        for (let i = 0; i < files.length; i++) {
-          if (btn) btn.textContent = `Subiendo foto ${i + 1} de ${files.length}...`;
-          try {
-            const ctrl = new AbortController();
-            const tid  = setTimeout(() => ctrl.abort(), 20000);
-            const fd = new FormData();
-            fd.append('key', IMGBB_KEY);
-            fd.append('image', files[i]);
-            const r = await fetch('https://api.imgbb.com/1/upload', { method: 'POST', body: fd, signal: ctrl.signal });
-            clearTimeout(tid);
-            const d = await r.json();
-            if (d.success) urls.push(d.data.url);
-          } catch { /* omitir foto fallida */ }
-        }
-        urlsEl.value = urls.join('\n');
-      }
-
-      // Enviar a web3forms (timeout 12s)
-      if (btn) btn.textContent = 'Enviando...';
       try {
         const emailVal = form.querySelector('[name="email"]')?.value || '';
         const phoneVal = form.querySelector('[name="telefono"]')?.value || '';
-        const ctrl2 = new AbortController();
-        const tid2  = setTimeout(() => ctrl2.abort(), 12000);
         const res = await fetch('https://api.web3forms.com/submit', {
-          method: 'POST', body: new FormData(form), signal: ctrl2.signal
+          method: 'POST', body: new FormData(form)
         });
-        clearTimeout(tid2);
         if (res.ok) {
           form.reset();
-          files = [];
-          if (preview) preview.innerHTML = '';
-          updateCount();
-          showPhoto('');
           if (typeof gtag === 'function') {
             gtag('set', 'user_data', { email: emailVal, phone_number: phoneVal });
             gtag('event', 'conversion', {
@@ -985,9 +1029,8 @@
       }
     });
   }
-
-  setupForm('buyerForm', 'buyerSuccess', 'photoUploadWrap',  'photoInput',  'photoPreview',  'fotosUrls',  'photoCount');
-  setupForm('sellForm',  'formSuccess',  'photoUploadWrap2', 'photoInput2', 'photoPreview2', 'fotosUrls2', 'photoCount2');
+  setupForm('buyerForm', 'buyerSuccess');
+  setupForm('sellForm',  'formSuccess');
   </script>
 </body>
 </html>

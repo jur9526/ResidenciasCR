@@ -40,7 +40,8 @@ let propCurrentPage = 1;
 let properties  = [];
 
 // Estado de filtros
-let activeFilters = { tipo: 'todos', beds: 'todos', zona: '', provincia: 'todas', operacion: 'todas' };
+const MAX_PRICE_M = 500; // millones CRC — techo del slider
+let activeFilters = { tipo: 'todos', beds: 'todos', zona: '', provincia: 'todas', operacion: 'todas', precioMin: 0, precioMax: MAX_PRICE_M, area: 'todos' };
 let showAll = false;
 
 const PROVINCE_CANTONS = {
@@ -68,7 +69,23 @@ function loadProperties() {
 function filtersActive() {
   return activeFilters.tipo !== 'todos' || activeFilters.beds !== 'todos' ||
          activeFilters.zona !== '' || activeFilters.provincia !== 'todas' ||
-         activeFilters.operacion !== 'todas';
+         activeFilters.operacion !== 'todas' || activeFilters.area !== 'todos' ||
+         activeFilters.precioMin > 0 || activeFilters.precioMax < MAX_PRICE_M;
+}
+
+function parsePriceCRC(price) {
+  if (!price) return null;
+  const line = String(price).split('\n')[0].trim();
+  const isUSD = line.includes('$');
+  const n = parseFloat(line.replace(/[₡$\s]/g, '').replace(/,/g, ''));
+  if (!n || n <= 0) return null;
+  return isUSD ? n * 530 : n; // USD → CRC a tasa fija 530
+}
+
+function parseAreaM2(area) {
+  if (!area) return null;
+  const n = parseFloat(String(area).replace(/,/g, '.').replace(/[^\d.]/g, ''));
+  return isNaN(n) ? null : n;
 }
 
 function getFiltered() {
@@ -92,7 +109,22 @@ function getFiltered() {
     const opOk = activeFilters.operacion === 'todas' ||
       (activeFilters.operacion === 'alquiler' && isAlquiler) ||
       (activeFilters.operacion === 'compra'   && !isAlquiler);
-    return tipoOk && bedsOk && zonaOk && provOk && opOk;
+    const priceCRC = parsePriceCRC(p.price);
+    const priceOk = (activeFilters.precioMin === 0 && activeFilters.precioMax >= MAX_PRICE_M) || (() => {
+      if (priceCRC === null) return true;
+      const minCRC = activeFilters.precioMin * 1e6;
+      const maxCRC = activeFilters.precioMax * 1e6;
+      const upperOk = activeFilters.precioMax >= MAX_PRICE_M || priceCRC <= maxCRC;
+      return priceCRC >= minCRC && upperOk;
+    })();
+    const AREA_RANGES = { a1:[0,120], a2:[121,200], a3:[201,400], a4:[401,Infinity] };
+    const areaM2 = parseAreaM2(p.area);
+    const areaOk = activeFilters.area === 'todos' || (() => {
+      if (areaM2 === null) return true;
+      const [mn, mx] = AREA_RANGES[activeFilters.area] || [0, Infinity];
+      return areaM2 >= mn && areaM2 <= mx;
+    })();
+    return tipoOk && bedsOk && zonaOk && provOk && opOk && priceOk && areaOk;
   });
 }
 
@@ -215,7 +247,7 @@ function renderProperties() {
       const remaining = filtered.length - slice.length;
       verMasWrapper.style.display = remaining > 0 ? 'flex' : 'none';
       if (verMasCount && remaining > 0) {
-        verMasCount.textContent = `${remaining} propiedades más te están esperando`;
+        verMasCount.textContent = `${remaining} propiedades más en el catálogo completo`;
       }
     }
   }
@@ -249,6 +281,46 @@ makeChip('[data-filter-tipo]',  'tipo',      'filterTipo');
 makeChip('[data-filter-beds]',  'beds',      'filterBeds');
 makeChip('[data-filter-op]',    'operacion', 'filterOp');
 makeChip('[data-filter-prov]',  'provincia', 'filterProv');
+makeChip('[data-filter-area]',  'area',      'filterArea');
+
+// ── Slider de precio (CRC) ────────────────────────────────────
+(function initPriceSlider() {
+  const slMin   = document.getElementById('priceSliderMin');
+  const slMax   = document.getElementById('priceSliderMax');
+  const fill    = document.getElementById('priceSliderFill');
+  const lblMin  = document.getElementById('priceSliderMinLabel');
+  const lblMax  = document.getElementById('priceSliderMaxLabel');
+  if (!slMin || !slMax) return;
+
+  function fmtM(v) {
+    if (v === 0)             return '₡0';
+    if (v >= MAX_PRICE_M)    return '₡' + MAX_PRICE_M + 'M+';
+    return '₡' + v + 'M';
+  }
+
+  function syncVisual() {
+    const lo = parseInt(slMin.value), hi = parseInt(slMax.value);
+    const pct = v => (v / MAX_PRICE_M * 100).toFixed(1) + '%';
+    if (fill) { fill.style.left = pct(lo); fill.style.width = (hi - lo) / MAX_PRICE_M * 100 + '%'; }
+    if (lblMin) lblMin.textContent = fmtM(lo);
+    if (lblMax) lblMax.textContent = fmtM(hi);
+  }
+
+  slMin.addEventListener('input', () => {
+    if (parseInt(slMin.value) >= parseInt(slMax.value) - 10) slMin.value = parseInt(slMax.value) - 10;
+    syncVisual();
+    activeFilters.precioMin = parseInt(slMin.value);
+    resetPage(); renderProperties();
+  });
+  slMax.addEventListener('input', () => {
+    if (parseInt(slMax.value) <= parseInt(slMin.value) + 10) slMax.value = parseInt(slMin.value) + 10;
+    syncVisual();
+    activeFilters.precioMax = parseInt(slMax.value);
+    resetPage(); renderProperties();
+  });
+
+  syncVisual(); // visual inicial sin re-render
+})();
 
 // Búsqueda por zona
 const zonaInput = document.getElementById('filterZona');
@@ -258,14 +330,66 @@ if (zonaInput) {
     clearTimeout(debounce);
     debounce = setTimeout(() => {
       activeFilters.zona = zonaInput.value.trim();
+      // Desactivar canton chip si el usuario escribe manualmente
+      document.querySelectorAll('.canton-chip').forEach(c => c.classList.remove('active'));
+      if (!zonaInput.value.trim()) {
+        document.querySelector('.canton-chip[data-canton=""]')?.classList.add('active');
+      }
       resetPage();
       renderProperties();
     }, 300);
   });
 }
 
+// Chips de cantón dinámicos — se generan según las zonas con más propiedades
+function buildCantonChips() {
+  const counts = {};
+  properties.forEach(p => {
+    const text = ((p.location || '') + ' ' + (p.title || '')).toLowerCase();
+    for (const cantons of Object.values(PROVINCE_CANTONS)) {
+      for (const c of cantons) {
+        const re = new RegExp('\\b' + c.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i');
+        if (re.test(text)) { counts[c] = (counts[c] || 0) + 1; break; }
+      }
+    }
+  });
+  const top = Object.entries(counts).filter(([, n]) => n >= 1).sort((a, b) => b[1] - a[1]).slice(0, 7).map(([c]) => c);
+  document.querySelectorAll('.canton-chips').forEach(container => {
+    container.innerHTML =
+      '<button class="filter-chip canton-chip active" data-canton="">Todas</button>' +
+      top.map(c => `<button class="filter-chip canton-chip" data-canton="${c}">${c}</button>`).join('');
+    container.querySelectorAll('.canton-chip').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.canton-chip').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        activeFilters.zona = btn.dataset.canton;
+        if (zonaInput) zonaInput.value = btn.dataset.canton;
+        resetPage();
+        renderProperties();
+      });
+    });
+  });
+}
+
 // ── Init ──────────────────────────────────────────────────────
 loadProperties();
+
+// Soporte de páginas de zona: window.ZONA_PRESET = { zona, operacion }
+if (window.ZONA_PRESET) {
+  if (window.ZONA_PRESET.zona)      activeFilters.zona      = window.ZONA_PRESET.zona;
+  if (window.ZONA_PRESET.operacion) activeFilters.operacion = window.ZONA_PRESET.operacion;
+  const zonaInp = document.getElementById('filterZona');
+  if (zonaInp && window.ZONA_PRESET.zona) zonaInp.value = window.ZONA_PRESET.zona;
+  if (window.ZONA_PRESET.operacion) {
+    const opChip = document.querySelector(`[data-filter-op="${window.ZONA_PRESET.operacion}"]`);
+    if (opChip) {
+      document.querySelectorAll('[data-filter-op]').forEach(b => b.classList.remove('active'));
+      opChip.classList.add('active');
+    }
+  }
+}
+
+buildCantonChips();
 renderProperties();
 
 // ── Form handler ─────────────────────────────────────────────
@@ -315,10 +439,38 @@ function handleForm(formId, successId) {
 
 // Forms con fotos son manejados en el inline script de index.html
 
+// ── Hero intent navigation ────────────────────────────────────
+function heroNav(intent) {
+  function setOpChip(val) {
+    const chip = document.querySelector(`[data-filter-op="${val}"]`);
+    if (chip && !chip.classList.contains('active')) chip.click();
+  }
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+  }
+  if (intent === 'comprar') {
+    setOpChip('todas');
+    scrollTo('propiedades');
+  } else if (intent === 'alquilar') {
+    setOpChip('alquiler');
+    scrollTo('propiedades');
+  } else if (intent === 'invertir') {
+    setOpChip('todas');
+    const radio = document.querySelector('#buyerForm [name="intencion"][value="Invertir"]');
+    if (radio) { radio.checked = true; radio.dispatchEvent(new Event('change', { bubbles: true })); }
+    scrollTo('buscar');
+  }
+}
+
 // ── Toggle "sin costo" en buyer form ─────────────────────────
 const freeNote = document.getElementById('buyer-free-note');
 document.querySelectorAll('#buyerForm input[name="intencion"]').forEach(radio => {
   radio.addEventListener('change', () => {
     if (freeNote) freeNote.style.display = radio.value === 'Comprar' ? '' : 'none';
+    if (radio.value === 'Vender' || radio.value === 'Poner en alquiler') {
+      const sel = document.getElementById('vender');
+      if (sel) setTimeout(() => window.scrollTo({ top: sel.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }), 200);
+    }
   });
 });
