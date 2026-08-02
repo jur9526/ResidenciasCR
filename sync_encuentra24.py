@@ -244,6 +244,9 @@ def parse_property_page(page, prop_id: str) -> dict:
 
 # ── Descargar imagen → WebP optimizado ───────────────────────
 def download_image(image_url: str, prop_id: str) -> str:
+    path = ASSETS_DIR / f"e24-{prop_id}.webp"
+    if path.exists():
+        return f"assets/e24-{prop_id}.webp"
     if not image_url:
         return ""
     try:
@@ -255,7 +258,6 @@ def download_image(image_url: str, prop_id: str) -> str:
             if img.width > 800:
                 h = int(img.height * 800 / img.width)
                 img = img.resize((800, h), Image.LANCZOS)
-            path = ASSETS_DIR / f"e24-{prop_id}.webp"
             img.save(path, "WebP", quality=78, method=6)
             return f"assets/e24-{prop_id}.webp"
     except Exception as e:

@@ -97,10 +97,13 @@ function getFiltered() {
 }
 
 // ── Imagen con skeleton ───────────────────────────────────────
+const UNSPLASH_FALLBACK = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
 function getPropertyImage(prop) {
-  if (prop.image && prop.image.trim()) return prop.image;
+  const img = prop.image && prop.image.trim();
+  if (img && !img.includes('unsplash.com')) return img;
   if (prop.e24id) return `assets/e24-${prop.e24id}.webp`;
-  return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80';
+  if (prop.all_images && prop.all_images.length > 0) return prop.all_images[0];
+  return UNSPLASH_FALLBACK;
 }
 
 // ── Card HTML ─────────────────────────────────────────────────
