@@ -334,6 +334,9 @@
     document.body.style.right    = '0';
     scroll.scrollTop = 0;
 
+    // Empujar entrada al historial para que "Atrás" cierre el modal
+    history.pushState({ pmodal: true }, '');
+
     // Mostrar FAB mobile con delay (tras la animación del modal)
     setTimeout(() => { waFab.style.display = 'flex'; }, 450);
   }
@@ -369,7 +372,7 @@
   };
 
   /* ── Cerrar modal ─────────────────────────────── */
-  function close() {
+  function closeUI() {
     modal.classList.remove('pmodal-open');
     waFab.style.display = 'none';
     contactCol.style.display = 'none';
@@ -382,6 +385,20 @@
     setTimeout(() => { modal.style.display = 'none'; }, 180);
     gallery = []; galIdx = 0;
   }
+
+  function close() {
+    // Si hay una entrada de historial del modal, sacarla primero
+    if (history.state && history.state.pmodal) {
+      history.back(); // dispara popstate → closeUI
+    } else {
+      closeUI();
+    }
+  }
+
+  // Botón Atrás del navegador cierra el modal
+  window.addEventListener('popstate', e => {
+    if (modal.classList.contains('pmodal-open')) closeUI();
+  });
 
   closeBtn.addEventListener('click', close);
   overlay.addEventListener('click', close);
