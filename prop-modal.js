@@ -3,7 +3,7 @@
   'use strict';
 
   const FALLBACK = 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=80';
-  let gallery = [], galIdx = 0, openedAt = 0, savedScrollY = 0;
+  let gallery = [], galIdx = 0, openedAt = 0, savedScrollY = 0, ignoreNextPopstate = false;
 
   /* ── Inyectar HTML ─────────────────────────────── */
   document.body.insertAdjacentHTML('beforeend', `
@@ -369,6 +369,7 @@
 
   /* ── Cerrar modal ─────────────────────────────── */
   function closeUI() {
+    if (!modal.classList.contains('pmodal-open')) return;
     modal.classList.remove('pmodal-open');
     waFab.style.display = 'none';
     contactCol.style.display = 'none';
@@ -379,16 +380,17 @@
   }
 
   function close() {
-    // Si hay una entrada de historial del modal, sacarla primero
+    closeUI();
+    // Limpiar la entrada de historial que creamos al abrir, ignorando el popstate resultante
     if (history.state && history.state.pmodal) {
-      history.back(); // dispara popstate → closeUI
-    } else {
-      closeUI();
+      ignoreNextPopstate = true;
+      history.back();
     }
   }
 
   // Botón Atrás del navegador cierra el modal
-  window.addEventListener('popstate', e => {
+  window.addEventListener('popstate', () => {
+    if (ignoreNextPopstate) { ignoreNextPopstate = false; return; }
     if (modal.classList.contains('pmodal-open')) closeUI();
   });
 

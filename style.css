@@ -1739,9 +1739,9 @@ form.show-photos .photo-upload-wrap { display: block !important; }
 .pmodal-tag-red   { background: var(--red); }
 .pmodal-tag-green { background: #0e7a4f; }
 
-/* Contador "3 / 14" */
+/* Contador "3 / 14" — abajo a la derecha para no tapar la X */
 .pmodal-photo-counter {
-  position: absolute; top: .9rem; right: .9rem; z-index: 4;
+  position: absolute; bottom: .7rem; right: .7rem; z-index: 4;
   background: rgba(0,0,0,.55); color: #fff;
   font-size: .75rem; font-weight: 600;
   padding: .2rem .65rem; border-radius: 20px;
