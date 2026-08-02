@@ -1688,6 +1688,9 @@ form.show-photos .photo-upload-wrap { display: block !important; }
 }
 .pmodal-layout { display: flex; flex-direction: column; }
 
+/* En mobile la columna de contacto se oculta (el form vive dentro del scroll) */
+@media (max-width: 819px) { .pmodal-contact-col { display: none !important; } }
+
 @media (min-width: 820px) {
   .pmodal-body-row { flex-direction: row; }
   .pmodal-scroll   { flex: 1; min-width: 0; overflow-y: auto; }
@@ -1814,6 +1817,14 @@ form.show-photos .photo-upload-wrap { display: block !important; }
 .pmodal-form-sep {
   margin: .25rem 0; border-top: 1px solid var(--light-gray); padding-top: .25rem;
 }
+
+/* ── Contacto mobile (dentro del scroll, oculto en desktop) ── */
+.pmodal-mobile-contact {
+  display: flex; flex-direction: column; gap: .75rem;
+  padding: 1.25rem 1.25rem 2rem;
+  border-top: 1px solid var(--light-gray);
+}
+@media (min-width: 820px) { .pmodal-mobile-contact { display: none; } }
 
 /* ── Info block ─────────────────────────────────────── */
 .pmodal-info-block { padding: 1.25rem; }

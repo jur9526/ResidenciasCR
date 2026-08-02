@@ -61,7 +61,7 @@
   /* ── Helpers ──────────────────────────────────── */
   function getImg(prop) {
     if (prop.image && prop.image.trim()) return prop.image;
-    if (prop.e24id) return `assets/e24-${prop.e24id}.jpg`;
+    if (prop.e24id) return `assets/e24-${prop.e24id}.webp`;
     return FALLBACK;
   }
 
@@ -102,13 +102,10 @@
     const mainImg = document.getElementById('pmodalMainPhoto');
     if (mainImg) {
       mainImg.style.opacity = '0';
-      mainImg.src = toSize(gallery[galIdx], 'm'); // medium: faster than large, enough for display
+      mainImg.src = gallery[galIdx];
       mainImg.onload  = () => { mainImg.style.opacity = '1'; };
       mainImg.onerror = () => { mainImg.src = FALLBACK; mainImg.style.opacity = '1'; };
     }
-
-    // Cargar thumbnail actual + vecinos
-    loadThumb(galIdx); loadThumb(galIdx + 1); loadThumb(galIdx - 1);
 
     // Marcar thumbnail activo y scrollear
     document.querySelectorAll('.pmodal-thumb').forEach((t, i) => {
@@ -163,15 +160,13 @@
     const area    = prop.area   ? `<div class="pmodal-stat"><span class="pmodal-stat-val">${prop.area}</span><span class="pmodal-stat-lbl">Área</span></div>` : '';
     const parking = prop.parking > 0 ? `<div class="pmodal-stat"><span class="pmodal-stat-val">${prop.parking}</span><span class="pmodal-stat-lbl">Parking</span></div>` : '';
 
-    // Thumbnails — tamaño pequeño (s) para carga rápida. Primeros 3 inmediatos, resto lazy.
-    const BLANK = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
+    // Thumbnails — todos cargan al abrir (t_or_fh_s son ~5-10KB, total mínimo)
     const thumbsHTML = gallery.map((src, i) => {
       const thumbSrc = toSize(src, 's');
-      const imgTag = i < 3
-        ? `<img src="${thumbSrc}" onerror="this.parentElement.style.display='none'" />`
-        : `<img data-src="${thumbSrc}" src="${BLANK}" onerror="this.parentElement.style.display='none'" />`;
       return `<button class="pmodal-thumb${i === 0 ? ' active' : ''}"
-        onclick="window._pGoTo(${i})" type="button">${imgTag}</button>`;
+        onclick="window._pGoTo(${i})" type="button">
+        <img src="${thumbSrc}" loading="lazy" onerror="this.parentElement.style.display='none'" />
+      </button>`;
     }).join('');
 
     const amens    = prop.amenities || [];
@@ -201,7 +196,7 @@
             <!-- Foto principal — click para zoom (con guardia anti-ghost-tap) -->
             <div class="pmodal-gallery-main" style="cursor:zoom-in"
                  onclick="if(Date.now()-window._pOpenedAt()>500)window._pOpenLb(window._pIdx())">
-              <img id="pmodalMainPhoto" src="${toSize(gallery[0], 'm')}" alt="${prop.title}"
+              <img id="pmodalMainPhoto" src="${gallery[0]}" alt="${prop.title}"
                    class="pmodal-main-photo" onerror="this.src='${FALLBACK}'"
                    fetchpriority="high" style="transition:opacity .2s" />
               <span class="${tagCls} pmodal-photo-badge">${badge}</span>
@@ -240,7 +235,40 @@
             </div>
             ${amenHTML}${descHTML}
           </div>
-        </div>`;
+
+          <!-- Contacto mobile (oculto en desktop) -->
+          <div class="pmodal-mobile-contact">
+            <div class="pmodal-contact-title">Consultar propiedad</div>
+            <a href="tel:+50683725603" class="pmodal-cta-call">
+              <i class="fa-solid fa-phone"></i> Llamar
+            </a>
+            <a href="${waHref}" target="_blank" rel="noopener" class="pmodal-cta-wa"
+               onclick="typeof gtagSendEvent==='function'&&gtagSendEvent('${waHref}')">
+              <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <div class="pmodal-form-sep"></div>
+            <form class="pmodal-email-form" onsubmit="window._pSendEmail(event, this)">
+              <input type="hidden" name="access_key" value="cd9e63a3-13ad-4f01-bdbe-fdda47e172a9" />
+              <input type="hidden" name="to" value="flory@residenciascostarica.com" />
+              <input type="hidden" name="subject" value="Consulta: ${prop.title.replace(/'/g,"\\'")} — residenciascostarica.com" />
+              <input type="hidden" name="redirect" value="false" />
+              <input type="hidden" name="prop_titulo" value="${prop.title.replace(/"/g,'&quot;')}" />
+              <input type="hidden" name="prop_link" value="${propLink}" />
+              <input class="pmodal-email-input" name="nombre" type="text" placeholder="Tu nombre" required />
+              <input class="pmodal-email-input" name="email" type="email" placeholder="Tu email" required />
+              <input class="pmodal-email-input" name="telefono" type="tel" placeholder="Tu teléfono" />
+              <textarea class="pmodal-email-input" name="message" rows="3"
+                placeholder="Hola, me interesa esta propiedad..."></textarea>
+              <button class="pmodal-email-send" type="submit">
+                <i class="fa-solid fa-paper-plane"></i> Enviar
+              </button>
+              <div class="pmodal-email-ok">
+                <i class="fa-solid fa-circle-check"></i> ¡Mensaje enviado!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>`;
 
     // ── Columna contacto (fuera del scroll) ──────────
     contactCol.style.display = '';
