@@ -146,10 +146,12 @@
     gallery  = e24imgs.length > 0 ? e24imgs : [getImg(prop)];
     galIdx   = 0;
 
-    // Usar el link real de encuentra24; fallback al inicio del sitio
-    const propLink = prop.e24url || 'https://www.residenciascostarica.com';
+    // Link compartible en residenciascostarica.com (no encuentra24)
+    const _pu = new URL(window.location.href);
+    _pu.searchParams.set('prop', prop.e24id);
+    const propLink = _pu.toString();
     const waMsg  = encodeURIComponent(
-      `Hola Floribeth, te escribo desde www.residenciascostarica.com. Me interesa la propiedad: ${prop.title}. Link: ${propLink}`
+      `Hola Floribeth, te escribo desde residenciascostarica.com. Me interesa la propiedad: ${prop.title}. Link: ${propLink}`
     );
     const waHref = `https://wa.me/50683725603?text=${waMsg}`;
 
