@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-09-13 16:51
+// Auto-generado por sync_encuentra24.py — 2026-09-13 18:09
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32216446",
@@ -47,6 +47,42 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032216446%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32216446.webp",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios/32216446"
+  },
+  {
+    "id": "E24-32216513",
+    "title": "¡ESTRENE HERMOSA CASA EN CONDOMINIO!",
+    "price": "₡ 155,990,000",
+    "location": "Tres Ríos",
+    "beds": 4,
+    "baths": 3,
+    "area": "161 m²",
+    "parking": 2,
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "description": "Tres Ríos, Cartago | Cerca del Colegio Angloamericano nueva para estrenar entrega inmediata.\n\n+ Lote: 161 m²\n+ Construcción: 220m²\n+ Cerca de Calle Vieja\n+ Plazas comerciales\n+ Centros educativos\n\nPrecio: 170.000.000\n\n-Una casa diseñada para enamorar, espacios amplios, modernos y llenos de luz natural.\n\n+ 4 habitaciones\n+ 1 en primera planta con baño\n+ Habitación principal con balcón, walk-in closet y baño con doble lavatorio\n+ 3 baños\n+ Sala – comedor con doble altura y ventanales espectaculares\n+ Sala de TV\n+ Cocina moderna en cuarzo\n+ Desayunador\n+ Espacio de alacena\n+ Extractor incluido\n+ Cuarto de lavado\n+ Parqueo para 2 vehículos\n+ Conexión 220V para carro eléctrico\n+ Patio trasero privado\n\n\n- Amenidades del Condominio: Piscina semiolímpica temperada + recreativa + infantil.\n- Gimnasio totalmente equipado\n- Casa club amplia\n- Cancha multiuso\n- Parques infantiles\n- Deck de yoga\n- Parque para mascotas\n- Ranchos BBQ\n\n-Te asesoramos con todos los bancos del país\n\nAgenda tu cita hoy al mismo y conocé tu próximo hogar.",
+    "amenities": [],
+    "all_images": [
+      "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-806c9cf",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-806c9cf",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-6fe7285",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-4904b5b",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-a04cbd5",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-36ce1e8",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-e99e906",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-e287395",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-beb78bf",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-a993d9d",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-f496861",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-be7da9a",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-847bb0a",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-f68f336",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-f710db1"
+    ],
+    "e24id": "32216513",
+    "wa": "Me%20interesa%20la%20propiedad%2032216513%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32216513.webp",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrene-hermosa-casa-en-condominio/32216513"
   },
   {
     "id": "E24-32217792",
@@ -123,12 +159,12 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32218078",
     "title": "Casa en Venta en Lagunilla de Heredia",
-    "price": "₡ 91,049,648",
+    "price": "₡ 108,000,000\n\n-4%",
     "location": "Ulloa",
     "beds": 3,
     "baths": 5,
     "area": "124 m²",
-    "parking": 2,
+    "parking": 4,
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -159,11 +195,11 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31076847",
     "title": "Casa de Lujo en Venta en Santa Ana, Costa Rica",
-    "price": "$ 1,100,000",
+    "price": "₡ 115,000,000",
     "location": "Santa Ana Centro",
     "beds": 4,
     "baths": 5,
-    "area": "429 m²",
+    "area": "150 m²",
     "parking": 3,
     "type": "Casa",
     "badge": "En Venta",
@@ -182,10 +218,10 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/07/68/47/31076847_222e2ce",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/07/68/47/31076847_c706f56",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/07/68/47/31076847_0a19a51",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/29/52/83/96/29528396_f9745a",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/31/70/04/31317004_cdd738",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/28/28/94/80/28289480_010d32",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/38/53/70/30385370_e70a7c"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/64/46/32216446_f7a0936ea6d65922893de55926f2f729-ee2d129",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/65/13/32216513_2e716e271965e356e4a3ca29b52f164c-806c9cf",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/77/92/32217792_0796368a0ceaf82642f5f806d19061ec-b0b7b3d",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/79/20/32217920_fc2dc9b04dd490009706bc650f648f3b-1e50547"
     ],
     "e24id": "31076847",
     "wa": "Me%20interesa%20la%20propiedad%2031076847%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -195,9 +231,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-30856282",
     "title": "Casa en Venta en la Guácima de Alajuela",
-    "price": "$ 440,000\n\n-32%",
+    "price": "$ 399,000",
     "location": "Guácima",
-    "beds": 2,
+    "beds": 3,
     "baths": 5,
     "area": "1,019.31 m²",
     "parking": 2,
@@ -227,11 +263,11 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/85/62/82/30856282_2db457",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/85/62/82/30856282_d9b767",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/85/62/82/30856282_9ba4c1",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/20/10/05/99/20100599_6964dc",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/87/37/11/32873711_80bd39c13f03ad2a653ec68e428b177b-a99756f",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/63/70/38/32637038_7b655386783bb3fac070da0f3f0070c8-1451afa",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/09/78/29/32097829_56f9d86",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/77/93/24/32779324_121df43"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/77/93/24/32779324_121df43",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/00/93/95/32009395_85c18fc69cc57a35010f524c31e0d68f-0971f0e",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/58/88/66/31588866_4d0170",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/13/65/83/32136583_019f226cc5fa62442bc5695f0bd168da-8499c40",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/29/77/25/31297725_3d5f85"
     ],
     "e24id": "30856282",
     "wa": "Me%20interesa%20la%20propiedad%2030856282%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -241,7 +277,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31254567",
     "title": "¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!",
-    "price": "₡ 209,500,000\n\n-3%",
+    "price": "$ 570,000",
     "location": "Ciudad Curridabat",
     "beds": 5,
     "baths": 3,
@@ -393,7 +429,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32273860",
     "title": "Estrena casa en Santo Domingo de Heredia",
-    "price": "$ 180,000\n\n-12%",
+    "price": "₡ 79,000,000",
     "location": "Santo Domingo",
     "beds": 1,
     "baths": 2,
@@ -429,7 +465,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32274041",
     "title": "Venta de casa en San Pablo de Heredia",
-    "price": "$ 279,000",
+    "price": "₡ 120,000,000",
     "location": "San Pablo",
     "beds": 3,
     "baths": 3,
@@ -465,9 +501,9 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592729",
     "title": "Apartamentos en alquiler en San José Capital",
-    "price": "$ 1,100",
+    "price": "$ 1,300",
     "location": "Bambú Rivera , Calles Blanco 1 recámaras por USD 1100.00",
-    "beds": 3,
+    "beds": 1,
     "baths": 2,
     "area": "70 m²",
     "parking": 1,
@@ -497,10 +533,10 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_4a6354d",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_ec026ae",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_36bb742",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/86/54/01/32865401_a0db513",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/57/49/81/32574981_55c962bc9fd0a40865377ebd76898811-bc96f02",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/35/59/21/32355921_908819f",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/74/13/40/31741340_c5da8a"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/98/52/34/32985234_2b349b8",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/87/32/75/32873275_71b72c8",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/24/36/35/32243635_3ffa431",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/88/31/85/32883185_cfc6ab4ac52ac159ab8fc14ab7f520c0-a5f2d95"
     ],
     "e24id": "32592729",
     "wa": "Me%20interesa%20la%20propiedad%2032592729%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -510,12 +546,12 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592730",
     "title": "Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos",
-    "price": "$ 195,000",
+    "price": "$ 169,000\n\n-3%",
     "location": "San José Capital",
-    "beds": 1,
+    "beds": 2,
     "baths": 2,
     "area": "70 m²",
-    "parking": 2,
+    "parking": 1,
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -542,10 +578,10 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/30/32592730_95c65e8",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/30/32592730_d2b5abb",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/30/32592730_6a0a98b",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/93/53/08/31935308_ab0ff5d",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/00/30/88/32003088_7d8a53a270b8789adb26063fde4d1d8b-fad2c93",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/90/80/26/32908026_f4a4da1b9e7b668c80500ff571ac38fa-1ce6122",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/11/01/36/32110136_435d1bf",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/92/42/56/31924256_3031f89",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/92/02/95/32920295_1981ba"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/11/01/36/32110136_435d1bf"
     ],
     "e24id": "32592730",
     "wa": "Me%20interesa%20la%20propiedad%2032592730%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -597,7 +633,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32417016",
     "title": "Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos",
-    "price": "₡ 155,990,000",
+    "price": "₡ 169,990,000",
     "location": "Tres Ríos",
     "beds": 4,
     "baths": 3,
@@ -688,7 +724,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-31892169",
     "title": "Casa en Venta ubicada en Moravia",
-    "price": "₡ 87,000,000",
+    "price": "$ 233,500",
     "location": "Moravia",
     "beds": 3,
     "baths": 5,
@@ -721,10 +757,10 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/89/21/69/31892169_29f7de",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/89/21/69/31892169_50ba62",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/89/21/69/31892169_3f3cf8",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/68/78/71/32687871_ac23e7a",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/29/12/10/32291210_a4c1a57",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/56/81/92/32568192_bb9980",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/85/34/60/32853460_7ecbb28de4b6c39a04dede3ecd45503c-651e7d0"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/85/34/60/32853460_7ecbb28de4b6c39a04dede3ecd45503c-651e7d0",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/29/41/30/32294130_8e37bf",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/86/75/20/32867520_8ba81e7"
     ],
     "e24id": "31892169",
     "wa": "Me%20interesa%20la%20propiedad%2031892169%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -806,7 +842,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32822851",
     "title": "Se vende casa amplia y funcional en Ciruelas de Alajuela",
-    "price": "$ 225,000",
+    "price": "₡ 90,000,000",
     "location": "San Antonio",
     "beds": 1,
     "baths": 3,
@@ -831,8 +867,8 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/82/28/51/32822851_2ad663fe5f23743d066e9c29ad38567c-5ac7e4d",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/82/28/51/32822851_2ad663fe5f23743d066e9c29ad38567c-8b893c0",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/82/28/51/32822851_2ad663fe5f23743d066e9c29ad38567c-8f93197",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/55/60/33/32556033_6c7ea29c95683a32aa44eaca57f418bd-78547fe",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/09/52/56/31095256_db9185"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/09/52/56/31095256_db9185",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/55/60/33/32556033_6c7ea29c95683a32aa44eaca57f418bd-78547fe"
     ],
     "e24id": "32822851",
     "wa": "Me%20interesa%20la%20propiedad%2032822851%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -1004,12 +1040,12 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32471958",
     "title": "Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones",
-    "price": "₡ 85,000,000",
+    "price": "₡ 71,000,000\n\n-1%",
     "location": "San José Capital",
     "beds": 5,
     "baths": 3,
     "area": "143 m²",
-    "parking": 1,
+    "parking": 3,
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -1064,9 +1100,9 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/88/52/30/30885230_3e37ec",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/30/88/52/30/30885230_d44728",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/43/91/46/32439146_9609d55",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/68/92/13/32689213_fbbdc73",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/86/23/09/32862309_c255ef4a38792c0cb8b702de320704bb-4693aa2",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/19/43/88/32194388_a1e57a1"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/19/43/88/32194388_a1e57a1",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/40/53/16/32405316_17ed626"
     ],
     "e24id": "30885230",
     "wa": "Me%20interesa%20la%20propiedad%2030885230%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -1100,9 +1136,9 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/29/83/56/32298356_08406bdff99226a2bf1399889430c027-88851a2",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/29/83/56/32298356_08406bdff99226a2bf1399889430c027-09fbb94",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/86/21/68/32862168_4f9181c",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/79/97/51/32799751_7a88296fc246e39d80af1891e2287752-a29fd47",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/95/09/63/32950963_b67c7519482874ff0cf6e2b59131c46b-674833c",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/38/26/03/32382603_f93fb98486aef0e29a761540b208dda6-0a75c35",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/36/29/53/32362953_432ab7e6b3cf5015ff33ff397b201d9b-6eb4058"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/38/26/03/32382603_f93fb98486aef0e29a761540b208dda6-0a75c35"
     ],
     "e24id": "32298356",
     "wa": "Me%20interesa%20la%20propiedad%2032298356%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -1172,8 +1208,8 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/21/79/93/32217993_84ed1a3fb3257bc84d414fe191640246-4d937e4",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/26/06/33/00/26063300_63f8250",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/74/08/10/32740810_c3736d1dff69b8c205e1e0b54ae10458-0a8e633",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/73/45/03/32734503_80744d949cc2735d19835db1f3472bc1-3485846",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/29/02/29/10/29022910_53164c9"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/29/00/66/87/29006687_7bf71fb",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/29/01/33/27/29013327_e0f609c"
     ],
     "e24id": "32217993",
     "wa": "Me%20interesa%20la%20propiedad%2032217993%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
@@ -1183,7 +1219,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32369690",
     "title": "Lotes y Terrenos en Bagaces",
-    "price": "$ 200,000",
+    "price": "$ 230,000",
     "location": "venta con vistas al Volcán Tenorio: CRC 95000000.00",
     "beds": 2,
     "baths": 1,
@@ -1209,7 +1245,7 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/36/96/90/32369690_a84f612",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/36/96/90/32369690_278d609",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/36/96/90/32369690_2b4faeb",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/23/32/38/51/23323851_978340"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/23/32/38/49/23323849_f62df8"
     ],
     "e24id": "32369690",
     "wa": "Me%20interesa%20la%20propiedad%2032369690%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
