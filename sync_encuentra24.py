@@ -35,6 +35,7 @@ DATA_FILE    = PROJECT_DIR / "properties-data.js"
 PROFILE_URL  = "https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
 MAX_PROPS    = 50
 MAX_PAGES    = 8
+PROFILE_PAGE_SIZE = 8  # propiedades por página del perfil
 REFRESH_PER_RUN = int(os.environ.get("REFRESH_PER_RUN", "1"))  # existentes a re-descargar por corrida
 FULL_SCAN    = os.environ.get("FULL_SCAN") == "1"
 # Saldo mínimo de ScraperAPI para correr (una completa cuesta ~105 créditos)
@@ -413,8 +414,8 @@ def sync():
             for href, pid in new_here:
                 seen[pid] = "https://www.encuentra24.com" + href
             print(f"  {len(new_here)} propiedades")
-            if not new_here:
-                break
+            if not new_here or len(new_here) < PROFILE_PAGE_SIZE:
+                break  # última página: no gastar créditos pidiendo la siguiente
             # En modo incremental basta con seguir mientras aparezcan nuevas
             if not full_scan and all(pid in existing_by_id for _, pid in new_here):
                 break
