@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-09-26 23:27
+// Auto-generado por sync_encuentra24.py — 2026-09-26 21:33
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-33012693",
@@ -77,7 +77,7 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-33013190",
     "title": "Hermosa Casa en Venta en Heredia",
-    "price": "₡ 94,000,000\n\n-2%",
+    "price": "$ 180,000",
     "location": "Heredia provincia",
     "beds": 3,
     "baths": 2,
@@ -90,7 +90,7 @@ window.DEFAULT_PROPERTIES = [
     "amenities": [],
     "all_images": [
       "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/33/01/31/90/33013190_3deec97",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_3deec97",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_4ffa206",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_b0178f8",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_8be073d",
@@ -102,13 +102,14 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_6987f6e",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_41ddc9b",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/31/90/33013190_1ae90d8",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/25/45/19/32254519_2b6dc6f",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/04/23/91/33042391_a4335d7"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/91/03/84/32910384_46b3a76",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/62/99/76/32629976_04195b8"
     ],
     "e24id": "33013190",
     "wa": "Me%20interesa%20la%20propiedad%2033013190%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-33013190.webp",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-heredia/33013190"
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/hermosa-casa-en-venta-en-heredia/33013190",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-32592729",
@@ -172,7 +173,7 @@ window.DEFAULT_PROPERTIES = [
     "amenities": [],
     "all_images": [
       "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/32/27/38/60/32273860_5c236a9b7718c9ba6a5397614483afc1-036157e",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/38/60/32273860_5c236a9b7718c9ba6a5397614483afc1-036157e",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/38/60/32273860_5c236a9b7718c9ba6a5397614483afc1-e2feb87",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/38/60/32273860_5c236a9b7718c9ba6a5397614483afc1-64c5e1b",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/38/60/32273860_5c236a9b7718c9ba6a5397614483afc1-f432bed",
@@ -190,7 +191,8 @@ window.DEFAULT_PROPERTIES = [
     "e24id": "32273860",
     "wa": "Me%20interesa%20la%20propiedad%2032273860%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32273860.webp",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrena-casa-en-santo-domingo-de-heredia/32273860"
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrena-casa-en-santo-domingo-de-heredia/32273860",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-32274041",
