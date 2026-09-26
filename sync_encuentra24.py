@@ -278,6 +278,23 @@ def update_data_file(properties: list):
     print(f"\n✓ properties-data.js actualizado con {len(properties)} propiedades")
 
 
+# ── Navegación ────────────────────────────────────────────────
+def goto(page, url: str):
+    """Carga una URL sin depender de networkidle (los trackers pueden
+    mantener la red ocupada indefinidamente) y detecta bloqueos de Cloudflare."""
+    resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+    try:
+        page.wait_for_load_state("networkidle", timeout=15000)
+    except PWTimeout:
+        pass
+    title = page.title()
+    if (resp and resp.status in (403, 503)) or "Cloudflare" in title or "Just a moment" in title:
+        raise RuntimeError(
+            f"Bloqueado por Cloudflare (HTTP {resp.status if resp else '?'}, título: {title!r}) en {url}"
+        )
+    return resp
+
+
 # ── Sync principal ────────────────────────────────────────────
 def sync():
     print("=" * 55)
@@ -311,7 +328,7 @@ def sync():
 
         # Página 1
         print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
-        page.goto(PROFILE_URL, wait_until="networkidle", timeout=45000)
+        goto(page, PROFILE_URL)
         page.wait_for_timeout(3000)
 
         # Aceptar cookies (solo la primera vez)
@@ -331,7 +348,7 @@ def sync():
             page_url = f"{PROFILE_URL}?page={pnum}"
             print(f"  Cargando página {pnum}: {page_url}")
             try:
-                page.goto(page_url, wait_until="networkidle", timeout=45000)
+                goto(page, page_url)
                 page.wait_for_timeout(2500)
                 if not cookies_accepted:
                     try:
@@ -368,7 +385,7 @@ def sync():
                 print(f"  ⚠  {prop_id} — URL desconocida, saltando")
                 continue
             try:
-                page.goto(prop_url, wait_until="networkidle", timeout=45000)
+                goto(page, prop_url)
                 page.wait_for_timeout(2000)
                 try:
                     page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
@@ -402,4 +419,4 @@ def sync():
 
 
 if __name__ == "__main__":
-    sync()
+    sys.exit(0 if sync() else 1)
