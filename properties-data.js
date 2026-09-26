@@ -1,4 +1,4 @@
-// Auto-generado por sync_encuentra24.py — 2026-09-26 21:25
+// Auto-generado por sync_encuentra24.py — 2026-09-26 19:27
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592729",
@@ -86,12 +86,12 @@ window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-33012849",
     "title": "Casa Nueva en Venta, Condominio Casa Hacienda",
-    "price": "$ 300,000",
+    "price": "₡ 135,000,000",
     "location": "Cartago provincia",
     "beds": 3,
     "baths": 5,
     "area": "159 m²",
-    "parking": 0,
+    "parking": 4,
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -99,7 +99,7 @@ window.DEFAULT_PROPERTIES = [
     "amenities": [],
     "all_images": [
       "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/33/01/28/49/33012849_8ddabd9",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_8ddabd9",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_22ed6d5",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_608f388",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_9d3b322",
@@ -111,13 +111,14 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_476e723",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_3707548",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/28/49/33012849_cbefddb",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/72/09/95/32720995_3a5fbbed69ffb39a61a319847ca89e7c-8e24880",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/63/16/34/32631634_8d2494921cdebcbbcadfc787f7c9d0ac-da32fad"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/99/96/43/32999643_a6760ef",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/48/37/72/32483772_14c3e99"
     ],
     "e24id": "33012849",
     "wa": "Me%20interesa%20la%20propiedad%2033012849%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-33012849.webp",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-nueva-en-venta-condominio-casa-hacienda/33012849"
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-nueva-en-venta-condominio-casa-hacienda/33012849",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-33013190",
