@@ -1,9 +1,9 @@
 name: Sync Encuentra24
 
+# El sync diario corre desde la Mac (run_sync.sh + launchd) porque Cloudflare
+# bloquea las IPs de GitHub Actions desde 2026-09-22. Solo ejecución manual.
 on:
-  schedule:
-    - cron: '0 15 * * *'   # 9:00 AM Costa Rica (UTC-6)
-  workflow_dispatch:         # Permite correrlo manualmente desde GitHub
+  workflow_dispatch:
 
 jobs:
   sync:
