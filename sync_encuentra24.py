@@ -37,6 +37,9 @@ MAX_PROPS    = 50
 MAX_PAGES    = 8
 REFRESH_PER_RUN = int(os.environ.get("REFRESH_PER_RUN", "1"))  # existentes a re-descargar por corrida
 FULL_SCAN    = os.environ.get("FULL_SCAN") == "1"
+# Saldo mínimo de ScraperAPI para correr (una completa cuesta ~105 créditos)
+MIN_CREDITS_FULL        = 120
+MIN_CREDITS_INCREMENTAL = 350
 
 HEADERS = {
     "User-Agent": (
@@ -313,6 +316,16 @@ def fetch_via_scraperapi(url: str) -> str:
     raise RuntimeError(f"ScraperAPI falló ({last}) en {url}")
 
 
+def scraperapi_credits_left():
+    """Créditos restantes en ScraperAPI (la consulta es gratis); None si falla."""
+    try:
+        r = requests.get("https://api.scraperapi.com/account",
+                         params={"api_key": SCRAPERAPI_KEY}, timeout=30)
+        return int(r.json()["creditsLeft"])
+    except Exception:
+        return None
+
+
 def fetch_via_playwright(browser, url: str) -> str:
     # Contexto nuevo por navegación: Cloudflare bloquea (403) a partir de la
     # segunda página dentro de la misma sesión.
@@ -354,7 +367,18 @@ def sync():
     full_scan = FULL_SCAN or not existing
     print(f"Modo: {'completo' if full_scan else 'incremental'} · "
           f"{'ScraperAPI' if SCRAPERAPI_KEY else 'Playwright directo'} · "
-          f"{len(existing)} propiedades existentes\n")
+          f"{len(existing)} propiedades existentes")
+
+    # Las corridas incrementales ceden créditos a las completas: si queda
+    # poco saldo en el mes, se saltan en vez de agotarlo.
+    if SCRAPERAPI_KEY:
+        credits = scraperapi_credits_left()
+        needed = MIN_CREDITS_FULL if full_scan else MIN_CREDITS_INCREMENTAL
+        print(f"Créditos ScraperAPI: {credits if credits is not None else '?'} (mínimo {needed})")
+        if credits is not None and credits < needed:
+            print("\n⏭  Pocos créditos este mes; se omite esta corrida.")
+            return True
+    print()
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
@@ -448,7 +472,10 @@ def sync():
         print("\n✗ No se obtuvieron propiedades.")
         return False
 
-    update_data_file(properties)
+    if properties == existing:
+        print("\n= Sin cambios en las propiedades")
+    else:
+        update_data_file(properties)
     print(f"\n✅ Sync completado: {len(properties)} propiedades "
           f"({len(fetched)} descargadas, {len(failed)} fallidas)\n")
     return not failed

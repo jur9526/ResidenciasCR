@@ -2,7 +2,8 @@ name: Sync Encuentra24
 
 on:
   schedule:
-    - cron: '0 15 * * 3'   # Miércoles 9:00 AM Costa Rica (UTC-6)
+    - cron: '0 15 * * 3'        # Miércoles 9:00 AM CR: completa (todo el perfil)
+    - cron: '0 15 * * 1,2,4,5'  # Lun/Mar/Jue/Vie 9:00 AM CR: rápida (solo página 1)
   workflow_dispatch:         # Permite correrlo manualmente desde GitHub
     inputs:
       full_scan:
@@ -36,9 +37,10 @@ jobs:
         run: python3 sync_encuentra24.py
         env:
           SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
-          # Semanal: escaneo completo + 4 refrescos ≈ 11 páginas × 15 créditos (plan gratis: 1000/mes)
-          FULL_SCAN: ${{ (github.event_name == 'schedule' || inputs.full_scan) && '1' || '' }}
-          REFRESH_PER_RUN: '4'
+          # Créditos (plan gratis 1000/mes, ~15 por página): completa ≈ 105,
+          # rápida ≈ 15 → ~730/mes + propiedades nuevas.
+          FULL_SCAN: ${{ (github.event.schedule == '0 15 * * 3' || inputs.full_scan) && '1' || '' }}
+          REFRESH_PER_RUN: ${{ (github.event.schedule == '0 15 * * 3' || inputs.full_scan) && '2' || '0' }}
 
       - name: Commit and push changes
         run: |
