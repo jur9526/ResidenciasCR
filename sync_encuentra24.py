@@ -2,16 +2,19 @@
 """
 ResidenciasCostaRica — sync_encuentra24.py
 ==========================================
-Usa Playwright para renderizar encuentra24.com (SPA),
-extrae las últimas 6 propiedades del perfil y actualiza
-properties-data.js con imágenes descargadas.
+Sincroniza las propiedades del perfil de encuentra24.com a
+properties-data.js (incremental: solo descarga las nuevas y refresca
+REFRESH_PER_RUN existentes por corrida).
 
 Uso:
-  python3 sync_encuentra24.py
+  SCRAPERAPI_KEY=... python3 sync_encuentra24.py   # en CI (Cloudflare bloquea GitHub)
+  python3 sync_encuentra24.py                      # local, Playwright directo
+  FULL_SCAN=1 ...                                  # recorrer todas las páginas del perfil
 """
 
 import re
 import json
+import os
 import sys
 import requests
 from pathlib import Path
@@ -32,6 +35,8 @@ DATA_FILE    = PROJECT_DIR / "properties-data.js"
 PROFILE_URL  = "https://www.encuentra24.com/costa-rica-es/user/profile/id/13021117"
 MAX_PROPS    = 50
 MAX_PAGES    = 8
+REFRESH_PER_RUN = int(os.environ.get("REFRESH_PER_RUN", "1"))  # existentes a re-descargar por corrida
+FULL_SCAN    = os.environ.get("FULL_SCAN") == "1"
 
 HEADERS = {
     "User-Agent": (
@@ -278,21 +283,62 @@ def update_data_file(properties: list):
     print(f"\n✓ properties-data.js actualizado con {len(properties)} propiedades")
 
 
-# ── Navegación ────────────────────────────────────────────────
-def goto(page, url: str):
-    """Carga una URL sin depender de networkidle (los trackers pueden
-    mantener la red ocupada indefinidamente) y detecta bloqueos de Cloudflare."""
-    resp = page.goto(url, wait_until="domcontentloaded", timeout=45000)
+# ── Descarga de HTML ──────────────────────────────────────────
+# Cloudflare bloquea las IPs de GitHub Actions, así que en CI las páginas se
+# piden a ScraperAPI (render=true). Sin SCRAPERAPI_KEY se usa Playwright
+# directo, que funciona desde una conexión residencial.
+SCRAPERAPI_KEY = os.environ.get("SCRAPERAPI_KEY", "")
+CF_TITLES = ("Cloudflare", "Un momento", "Just a moment")
+
+
+def is_blocked(html: str) -> bool:
+    m = re.search(r"<title>([^<]*)", html)
+    return bool(m) and any(t in m.group(1) for t in CF_TITLES)
+
+
+def fetch_via_scraperapi(url: str) -> str:
+    last = ""
+    for attempt in range(3):
+        try:
+            r = requests.get(
+                "https://api.scraperapi.com/",
+                params={"api_key": SCRAPERAPI_KEY, "url": url, "render": "true"},
+                timeout=120,
+            )
+            if r.status_code == 200 and not is_blocked(r.text):
+                return r.text
+            last = f"HTTP {r.status_code}: {r.text[:100]}"
+        except requests.RequestException as e:
+            last = str(e)[:100]
+    raise RuntimeError(f"ScraperAPI falló ({last}) en {url}")
+
+
+def fetch_via_playwright(browser, url: str) -> str:
+    # Contexto nuevo por navegación: Cloudflare bloquea (403) a partir de la
+    # segunda página dentro de la misma sesión.
+    ctx = browser.new_context(user_agent=HEADERS["User-Agent"], locale="es-CR")
     try:
-        page.wait_for_load_state("networkidle", timeout=15000)
-    except PWTimeout:
-        pass
-    title = page.title()
-    if (resp and resp.status in (403, 503)) or "Cloudflare" in title or "Just a moment" in title:
-        raise RuntimeError(
-            f"Bloqueado por Cloudflare (HTTP {resp.status if resp else '?'}, título: {title!r}) en {url}"
-        )
-    return resp
+        page = ctx.new_page()
+        page.goto(url, wait_until="domcontentloaded", timeout=45000)
+        try:
+            page.wait_for_load_state("networkidle", timeout=15000)
+        except PWTimeout:
+            pass
+        html = page.content()
+    finally:
+        ctx.close()
+    if is_blocked(html):
+        raise RuntimeError(f"Bloqueado por Cloudflare en {url}")
+    return html
+
+
+# ── Datos existentes ──────────────────────────────────────────
+def load_existing() -> list:
+    try:
+        text = DATA_FILE.read_text(encoding="utf-8")
+        return json.loads(text[text.index("["):text.rindex("]") + 1])
+    except (OSError, ValueError):
+        return []
 
 
 # ── Sync principal ────────────────────────────────────────────
@@ -301,132 +347,111 @@ def sync():
     print(f"Sincronización Encuentra24 — {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 55 + "\n")
 
+    existing = load_existing()
+    existing_by_id = {p.get("e24id") or p["id"].removeprefix("E24-"): p for p in existing}
+    # Escaneo completo (todas las páginas del perfil) los domingos o si no hay
+    # datos; el resto de días solo la página 1 para ahorrar créditos.
+    full_scan = FULL_SCAN or datetime.now().weekday() == 6 or not existing
+    print(f"Modo: {'completo' if full_scan else 'incremental'} · "
+          f"{'ScraperAPI' if SCRAPERAPI_KEY else 'Playwright directo'} · "
+          f"{len(existing)} propiedades existentes\n")
+
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
-        page = None
 
-        def fresh_page():
-            """Contexto nuevo por navegación: Cloudflare bloquea (403) a partir
-            de la segunda página dentro de la misma sesión."""
-            nonlocal page
-            if page:
-                page.context.close()
-            ctx = browser.new_context(
-                user_agent=HEADERS["User-Agent"],
-                locale="es-CR",
-            )
-            page = ctx.new_page()
-            return page
+        def fetch(url: str) -> str:
+            if SCRAPERAPI_KEY:
+                return fetch_via_scraperapi(url)
+            return fetch_via_playwright(browser, url)
 
-        # ── Paso 1: Perfil — raspar TODAS las páginas ─────────
-        prop_urls_map = {}  # id -> url_completa (preserva orden de aparición)
+        # Página sin red ni JS donde se carga el HTML para parsearlo
+        parse_ctx = browser.new_context(java_script_enabled=False)
+        parse_ctx.route("**/*", lambda route: route.abort())
+        parse_page = parse_ctx.new_page()
 
-        def scrape_profile_page(html_content):
-            """Extrae URLs de propiedades del HTML de una página de perfil."""
-            hrefs = re.findall(
-                r'href="(/costa-rica-es/bienes-raices[^"]+?/(\d{7,}))"',
-                html_content
-            )
-            added = 0
-            for href, pid in hrefs:
-                if pid != "13021117" and pid not in prop_urls_map:
-                    prop_urls_map[pid] = "https://www.encuentra24.com" + href
-                    added += 1
-            return added
-
-        # Página 1
-        print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
-        goto(fresh_page(), PROFILE_URL)
-        page.wait_for_timeout(3000)
-
-        # Aceptar cookies (solo la primera vez)
-        try:
-            page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-            page.wait_for_timeout(2000)
-        except Exception:
-            pass
-
-        html = page.content()
-        found_p1 = scrape_profile_page(html)
-        print(f"  Página 1: {found_p1} propiedades")
-
-        # Páginas 2..MAX_PAGES (usa ?page=N)
-        for pnum in range(2, MAX_PAGES + 1):
-            page_url = f"{PROFILE_URL}?page={pnum}"
-            print(f"  Cargando página {pnum}: {page_url}")
+        # ── Paso 1: Perfil ────────────────────────────────────
+        seen = {}  # id -> url, en orden de aparición
+        for pnum in range(1, MAX_PAGES + 1):
+            page_url = PROFILE_URL if pnum == 1 else f"{PROFILE_URL}?page={pnum}"
+            print(f"📋 Perfil página {pnum}")
             try:
-                goto(fresh_page(), page_url)
-                page.wait_for_timeout(2500)
-                try:
-                    page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-                    page.wait_for_timeout(1500)
-                except Exception:
-                    pass
-                html_n = page.content()
-                found_n = scrape_profile_page(html_n)
-                print(f"  Página {pnum}: {found_n} propiedades nuevas")
-                if found_n == 0:
-                    print(f"  ⚠ Página {pnum} sin propiedades nuevas, deteniendo paginación")
-                    break
+                html = fetch(page_url)
             except Exception as e:
-                print(f"  ⚠ Error en página {pnum}: {e}")
+                if pnum == 1:
+                    print(f"  ✗ {e}\n\n✗ No se pudo cargar el perfil. Abortando.")
+                    browser.close()
+                    return False
+                print(f"  ⚠ {e}")
+                full_scan = False  # escaneo incompleto: no borrar propiedades
+                break
+            hrefs = re.findall(r'href="(/costa-rica-es/bienes-raices[^"]+?/(\d{7,}))"', html)
+            new_here = [(h, pid) for h, pid in hrefs if pid != "13021117" and pid not in seen]
+            for href, pid in new_here:
+                seen[pid] = "https://www.encuentra24.com" + href
+            print(f"  {len(new_here)} propiedades")
+            if not new_here:
+                break
+            # En modo incremental basta con seguir mientras aparezcan nuevas
+            if not full_scan and all(pid in existing_by_id for _, pid in new_here):
                 break
 
-        selected = list(prop_urls_map.items())[:MAX_PROPS]
-        print(f"\n  ✓ Total acumulado: {len(prop_urls_map)} propiedades")
-        print(f"  ✓ Se descargarán las primeras {len(selected)}")
-
-        if not selected:
+        if not seen:
             print("  ✗ No se encontraron propiedades. Abortando.")
             browser.close()
             return False
 
-        # ── Paso 2: Datos de cada propiedad ───────────────────
-        print(f"\n🏠 Descargando {len(selected)} propiedades...\n")
-        properties = []
+        # Orden final: lo visto en el perfil; en incremental, luego el resto
+        order = list(seen)
+        if full_scan:
+            removed = [pid for pid in existing_by_id if pid not in seen]
+            if len(removed) > len(existing_by_id) / 2:
+                print(f"  ⚠ Desaparecerían {len(removed)} propiedades; se conservan por seguridad")
+                order += removed
+            elif removed:
+                print(f"  − Ya no están en el perfil: {', '.join(removed)}")
+        else:
+            order += [pid for pid in existing_by_id if pid not in seen]
+        order = order[:MAX_PROPS]
 
-        for prop_id, prop_url in selected:
-            if not prop_url:
-                print(f"  ⚠  {prop_id} — URL desconocida, saltando")
-                continue
+        # ── Paso 2: Qué descargar ─────────────────────────────
+        new_ids = [pid for pid in order if pid not in existing_by_id]
+        # Refrescar las existentes sincronizadas hace más tiempo
+        stale = sorted((pid for pid in order if pid in existing_by_id),
+                       key=lambda pid: existing_by_id[pid].get("synced", ""))
+        to_fetch = new_ids + stale[:REFRESH_PER_RUN]
+        print(f"\n🏠 {len(new_ids)} nuevas, {min(REFRESH_PER_RUN, len(stale))} a refrescar\n")
+
+        fetched, failed = {}, []
+        for pid in to_fetch:
+            url = seen.get(pid) or existing_by_id[pid].get("e24url")
             try:
-                goto(fresh_page(), prop_url)
-                page.wait_for_timeout(2000)
-                try:
-                    page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-                    page.wait_for_timeout(1500)
-                except Exception:
-                    pass
-
-                data = parse_property_page(page, prop_id)
+                parse_page.set_content(fetch(url), wait_until="domcontentloaded")
+                data = parse_property_page(parse_page, pid)
                 image_url = data.pop("image_url", "")
-                local_img = download_image(image_url, prop_id)
-                data["image"] = local_img or FALLBACK_IMG
-                data["e24url"] = prop_url
-
-                print(f"  ✓ {prop_id} — {data['title'][:55]}")
-                properties.append(data)
-
-            except PWTimeout:
-                print(f"  ⚠  {prop_id} — Timeout")
+                data["image"] = download_image(image_url, pid) or FALLBACK_IMG
+                data["e24url"] = url
+                data["synced"] = datetime.now().strftime("%Y-%m-%d")
+                fetched[pid] = data
+                print(f"  ✓ {pid} — {data['title'][:55]}")
             except Exception as e:
-                print(f"  ✗ {prop_id} — {e}")
+                failed.append(pid)
+                print(f"  ✗ {pid} — {e}")
 
         browser.close()
+
+    # Nuevas que fallaron se reintentan en la próxima corrida;
+    # existentes que fallaron conservan sus datos anteriores.
+    properties = [fetched.get(pid) or existing_by_id[pid]
+                  for pid in order if pid in fetched or pid in existing_by_id]
 
     if not properties:
         print("\n✗ No se obtuvieron propiedades.")
         return False
 
-    # Si falla una parte importante (p.ej. bloqueo de Cloudflare), no tocar
-    # properties-data.js: es mejor mantener los datos de ayer que publicar pocos.
-    if len(properties) < len(selected) * 0.8:
-        print(f"\n✗ Solo {len(properties)}/{len(selected)} propiedades — no se actualiza el archivo.")
-        return False
-
     update_data_file(properties)
-    print(f"\n✅ Sync completado: {len(properties)}/{len(selected)} propiedades\n")
-    return True
+    print(f"\n✅ Sync completado: {len(properties)} propiedades "
+          f"({len(fetched)} descargadas, {len(failed)} fallidas)\n")
+    return not failed
 
 
 if __name__ == "__main__":

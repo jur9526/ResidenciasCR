@@ -1,9 +1,14 @@
 name: Sync Encuentra24
 
-# El sync diario corre desde la Mac (run_sync.sh + launchd) porque Cloudflare
-# bloquea las IPs de GitHub Actions desde 2026-09-22. Solo ejecución manual.
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 15 * * *'   # 9:00 AM Costa Rica (UTC-6)
+  workflow_dispatch:         # Permite correrlo manualmente desde GitHub
+    inputs:
+      full_scan:
+        description: 'Recorrer todas las páginas del perfil'
+        type: boolean
+        default: false
 
 jobs:
   sync:
@@ -26,8 +31,12 @@ jobs:
           python -m playwright install chromium
           python -m playwright install-deps chromium
 
+      # Cloudflare bloquea las IPs de GitHub: las páginas se piden vía ScraperAPI
       - name: Run sync script
         run: python3 sync_encuentra24.py
+        env:
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
+          FULL_SCAN: ${{ inputs.full_scan && '1' || '' }}
 
       - name: Commit and push changes
         run: |
@@ -38,3 +47,4 @@ jobs:
             git commit -m "Auto-sync: actualizar propiedades desde Encuentra24 [$(date +'%Y-%m-%d')]"
             git push
           )
+        if: always()  # guardar lo descargado aunque alguna propiedad haya fallado

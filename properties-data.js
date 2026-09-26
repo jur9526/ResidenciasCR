@@ -1,14 +1,14 @@
-// Auto-generado por sync_encuentra24.py — 2026-09-26 20:58
+// Auto-generado por sync_encuentra24.py — 2026-09-26 21:25
 window.DEFAULT_PROPERTIES = [
   {
     "id": "E24-32592729",
     "title": "Apartamentos en alquiler en San José Capital",
-    "price": "$ 1,200",
+    "price": "$ 1,300",
     "location": "Bambú Rivera , Calles Blanco 1 recámaras por USD 1100.00",
-    "beds": 3,
+    "beds": 1,
     "baths": 2,
     "area": "70 m²",
-    "parking": 2,
+    "parking": 1,
     "type": "Apartamento",
     "badge": "Venta / Alquiler",
     "badgeClass": "badge-special",
@@ -25,7 +25,7 @@ window.DEFAULT_PROPERTIES = [
     ],
     "all_images": [
       "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/32/59/27/29/32592729_d4fc399",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_d4fc399",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_0c34b0b",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_b42b826",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_86b68be",
@@ -35,25 +35,26 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_4a6354d",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_ec026ae",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/59/27/29/32592729_36bb742",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/04/46/32/33044632_30886c9",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/99/29/92/32992992_b3c5953",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/04/37/81/33043781_131eb4f",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/86/92/80/32869280_04d5d9f"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/98/52/34/32985234_2b349b8",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/95/41/76/32954176_4875f44f5d6161cf960c346158e9ca14-50776d2",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/99/41/83/32994183_47d7211",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/02/41/43/33024143_2549675"
     ],
     "e24id": "32592729",
     "wa": "Me%20interesa%20la%20propiedad%2032592729%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32592729.webp",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-alquiler-apartamentos/viva-con-comodidad-y-excelente-ubicacion-en-bambu-rivera-calles-blanco/32592729"
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-alquiler-apartamentos/viva-con-comodidad-y-excelente-ubicacion-en-bambu-rivera-calles-blanco/32592729",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-33012693",
     "title": "Casa en venta, Condominio Nobleza de Coris",
-    "price": "₡ 88,000,000\n\n-2%",
+    "price": "₡ 90,000,000\n\n-7%",
     "location": "Cartago provincia",
     "beds": 4,
     "baths": 2,
     "area": "135 m²",
-    "parking": 0,
+    "parking": 2,
     "type": "Casa",
     "badge": "En Venta",
     "badgeClass": "",
@@ -61,7 +62,7 @@ window.DEFAULT_PROPERTIES = [
     "amenities": [],
     "all_images": [
       "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/33/01/26/93/33012693_21aeef0",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_21aeef0",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_8aa7f88",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_ffa09c0",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_cd5f124",
@@ -72,14 +73,15 @@ window.DEFAULT_PROPERTIES = [
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_a977f47",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_6064341",
       "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/33/01/26/93/33012693_782137c",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/34/30/29/32343029_5cb00e0",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/51/28/29/32512829_7f6e9a3",
-      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/10/98/89/32109889_9a298bb"
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/94/98/78/32949878_85169ee",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/97/65/17/31976517_6db479e",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/31/72/40/36/31724036_883e37"
     ],
     "e24id": "33012693",
     "wa": "Me%20interesa%20la%20propiedad%2033012693%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-33012693.webp",
-    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-condominio-nobleza-de-coris/33012693"
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/casa-en-venta-condominio-nobleza-de-coris/33012693",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-33012849",
@@ -188,6 +190,43 @@ window.DEFAULT_PROPERTIES = [
     "wa": "Me%20interesa%20la%20propiedad%2032273860%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
     "image": "assets/e24-32273860.webp",
     "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/estrena-casa-en-santo-domingo-de-heredia/32273860"
+  },
+  {
+    "id": "E24-32274041",
+    "title": "Venta de casa en San Pablo de Heredia",
+    "price": "$ 285,000",
+    "location": "San Pablo",
+    "beds": 3,
+    "baths": 3,
+    "area": "224 m²",
+    "parking": 0,
+    "type": "Casa",
+    "badge": "En Venta",
+    "badgeClass": "",
+    "description": "Ubicada en Exclusivo Condominio\nLote: 224m2\nConstrucción: 230m2\n\n* 3 dormitorios (principal con baño, jacuzzi y clóset vestidor)\n* Cuarto de servicio\n* 3 baños\n* 2 Salas\n* Comedor\n* Cocina\n* Bar\n* Patio amplio\n* 4 balcones\n* Área de lavandería\n* Terraza\n* Ático\n* Parqueo para 2 vehículos\n\nAREAS COMUNES: parque infantil, parqueo de visitas, cancha de básquet, rancho BBQ y zonas verdes.\n\nPrecio: $285,000\n\nMás información: Floribeth Elizondo",
+    "amenities": [],
+    "all_images": [
+      "https://photos.encuentra24.com/t_or_fh_l/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-ce3b65d",
+      "https://photos.encuentra24.com/t_or_cvr/f_auto/v1/public/no-img-re.png",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-7db7ea3",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-f85a8b8",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-3292f7d",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-5b3ee43",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-deb8b01",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-6adda93",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-ebedf5b",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-e6288f4",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-eefb764",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-dbaba7c",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-b867d53",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-8e0587a",
+      "https://photos.encuentra24.com/t_or_fh_m/f_auto/v1/cr/32/27/40/41/32274041_18e2a0521c91fcc5797bff37be7c1ab4-ca444ee"
+    ],
+    "e24id": "32274041",
+    "wa": "Me%20interesa%20la%20propiedad%2032274041%20en%20encuentra24%20(v%C3%ADa%20residenciascostarica.com)",
+    "image": "assets/e24-32274041.webp",
+    "e24url": "https://www.encuentra24.com/costa-rica-es/bienes-raices-venta-de-propiedades-casas/venta-de-casa-en-san-pablo-de-heredia/32274041",
+    "synced": "2026-09-26"
   },
   {
     "id": "E24-31254567",
