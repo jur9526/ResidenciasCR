@@ -303,15 +303,23 @@ def sync():
 
     with sync_playwright() as pw:
         browser = pw.chromium.launch(headless=True)
-        ctx = browser.new_context(
-            user_agent=HEADERS["User-Agent"],
-            locale="es-CR",
-        )
-        page = ctx.new_page()
+        page = None
+
+        def fresh_page():
+            """Contexto nuevo por navegación: Cloudflare bloquea (403) a partir
+            de la segunda página dentro de la misma sesión."""
+            nonlocal page
+            if page:
+                page.context.close()
+            ctx = browser.new_context(
+                user_agent=HEADERS["User-Agent"],
+                locale="es-CR",
+            )
+            page = ctx.new_page()
+            return page
 
         # ── Paso 1: Perfil — raspar TODAS las páginas ─────────
         prop_urls_map = {}  # id -> url_completa (preserva orden de aparición)
-        cookies_accepted = False
 
         def scrape_profile_page(html_content):
             """Extrae URLs de propiedades del HTML de una página de perfil."""
@@ -328,14 +336,13 @@ def sync():
 
         # Página 1
         print(f"📋 Cargando perfil página 1:\n   {PROFILE_URL}\n")
-        goto(page, PROFILE_URL)
+        goto(fresh_page(), PROFILE_URL)
         page.wait_for_timeout(3000)
 
         # Aceptar cookies (solo la primera vez)
         try:
             page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
             page.wait_for_timeout(2000)
-            cookies_accepted = True
         except Exception:
             pass
 
@@ -348,15 +355,13 @@ def sync():
             page_url = f"{PROFILE_URL}?page={pnum}"
             print(f"  Cargando página {pnum}: {page_url}")
             try:
-                goto(page, page_url)
+                goto(fresh_page(), page_url)
                 page.wait_for_timeout(2500)
-                if not cookies_accepted:
-                    try:
-                        page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
-                        page.wait_for_timeout(1500)
-                        cookies_accepted = True
-                    except Exception:
-                        pass
+                try:
+                    page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
+                    page.wait_for_timeout(1500)
+                except Exception:
+                    pass
                 html_n = page.content()
                 found_n = scrape_profile_page(html_n)
                 print(f"  Página {pnum}: {found_n} propiedades nuevas")
@@ -385,7 +390,7 @@ def sync():
                 print(f"  ⚠  {prop_id} — URL desconocida, saltando")
                 continue
             try:
-                goto(page, prop_url)
+                goto(fresh_page(), prop_url)
                 page.wait_for_timeout(2000)
                 try:
                     page.evaluate("document.querySelector('.fc-button.fc-data-preferences-accept-all').click()")
@@ -411,6 +416,12 @@ def sync():
 
     if not properties:
         print("\n✗ No se obtuvieron propiedades.")
+        return False
+
+    # Si falla una parte importante (p.ej. bloqueo de Cloudflare), no tocar
+    # properties-data.js: es mejor mantener los datos de ayer que publicar pocos.
+    if len(properties) < len(selected) * 0.8:
+        print(f"\n✗ Solo {len(properties)}/{len(selected)} propiedades — no se actualiza el archivo.")
         return False
 
     update_data_file(properties)
