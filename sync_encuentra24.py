@@ -349,10 +349,9 @@ def sync():
 
     existing = load_existing()
     existing_by_id = {p.get("e24id") or p["id"].removeprefix("E24-"): p for p in existing}
-    # Escaneo completo (todas las páginas del perfil) los días 1 y 15 o si no
-    # hay datos; el resto solo la página 1. Cada página cuesta ~15 créditos de
-    # ScraperAPI y el plan gratis trae 1000/mes.
-    full_scan = FULL_SCAN or datetime.now().day in (1, 15) or not existing
+    # Escaneo completo = todas las páginas del perfil (detecta bajas); si no,
+    # solo la página 1. Cada página cuesta ~15 créditos de ScraperAPI.
+    full_scan = FULL_SCAN or not existing
     print(f"Modo: {'completo' if full_scan else 'incremental'} · "
           f"{'ScraperAPI' if SCRAPERAPI_KEY else 'Playwright directo'} · "
           f"{len(existing)} propiedades existentes\n")
