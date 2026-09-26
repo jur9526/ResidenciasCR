@@ -2,7 +2,7 @@ name: Sync Encuentra24
 
 on:
   schedule:
-    - cron: '0 15 * * *'   # 9:00 AM Costa Rica (UTC-6)
+    - cron: '0 15 */2 * *' # 9:00 AM Costa Rica (UTC-6), cada 2 días (días impares) por créditos de ScraperAPI
   workflow_dispatch:         # Permite correrlo manualmente desde GitHub
     inputs:
       full_scan:
