@@ -55,5 +55,7 @@ jobs:
           git diff --staged --quiet && echo "Sin cambios" || (
             git commit -m "Auto-sync: actualizar propiedades desde Encuentra24 [$(date +'%Y-%m-%d')]"
             git push
+            # Avisar a Bing de las páginas nuevas o cambiadas (las borradas también)
+            python3 indexnow.py $(git diff --name-only HEAD~1 HEAD -- inmueble/) || true
           )
         if: always()  # guardar lo descargado aunque alguna propiedad haya fallado
