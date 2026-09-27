@@ -42,11 +42,16 @@ jobs:
           FULL_SCAN: ${{ (github.event.schedule == '0 15 * * 3' || inputs.full_scan) && '1' || '' }}
           REFRESH_PER_RUN: ${{ (github.event.schedule == '0 15 * * 3' || inputs.full_scan) && '2' || '0' }}
 
+      # Páginas estáticas por propiedad, sitemap y llms.txt (SEO / buscadores de IA)
+      - name: Generate SEO pages
+        run: python3 generate_seo.py
+        if: always()
+
       - name: Commit and push changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add properties-data.js assets/
+          git add properties-data.js assets/ inmueble/ sitemap.xml llms.txt
           git diff --staged --quiet && echo "Sin cambios" || (
             git commit -m "Auto-sync: actualizar propiedades desde Encuentra24 [$(date +'%Y-%m-%d')]"
             git push

@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="facebook-domain-verification" content="zey8s8t1xdp8aee6oti7ftr337w1m4" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SG692XZFCS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SG692XZFCS');
+    gtag('config', 'AW-18034283160');
+    function gtagSendEvent(url) {
+      var callback = function () {
+        if (typeof url === 'string') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18034283160/OGoNCNOe-9EcEJiltZdD',
+        'event_callback': callback,
+        'event_timeout': 2000
+      });
+      return false;
+    }
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.googleadservices.com https://googleads.g.doubleclick.net 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:;
+    img-src 'self' https://images.unsplash.com https://*.encuentra24.com https://e24img.com https://www.googletagmanager.com https://www.google.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://i.ibb.co data: blob:;
+    connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://www.googleadservices.com https://ad.doubleclick.net https://www.google.com;
+    frame-src 'none';
+    object-src 'none';
+  " />
+
+  <title>Propiedades en venta y alquiler en Costa Rica | Residencias Costa Rica</title>
+  <meta name="description" content="38 casas, apartamentos y lotes en venta y alquiler en Costa Rica. Asesoría gratis para el comprador y trámite de bono de vivienda." />
+  <link rel="canonical" href="https://residenciascostarica.com/inmueble/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Propiedades en venta y alquiler en Costa Rica | Residencias Costa Rica" />
+  <meta property="og:description" content="38 casas, apartamentos y lotes en venta y alquiler en Costa Rica. Asesoría gratis para el comprador y trámite de bono de vivienda." />
+  <meta property="og:url" content="https://residenciascostarica.com/inmueble/" />
+  <meta property="og:image" content="https://residenciascostarica.com/logo-social.svg" />
+  <meta property="og:locale" content="es_CR" />
+  
+
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B"
+        crossorigin="anonymous" />
+  <link rel="stylesheet" href="/style.css" />
+
+  <style>
+    /* ── Propiedad detail styles ── */
+    .prop-hero {
+      position: relative;
+      width: 100%;
+      height: 60vh;
+      min-height: 340px;
+      max-height: 560px;
+      background: var(--dark);
+      overflow: hidden;
+    }
+    .prop-hero-img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: .88;
+    }
+    .prop-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,12,22,.82) 30%, rgba(8,12,22,.18) 100%);
+      display: flex; align-items: flex-end;
+    }
+    .prop-hero-content {
+      padding: 2rem 1.5rem;
+      width: 100%; max-width: 1200px;
+      margin: 0 auto;
+      color: #fff;
+    }
+    .prop-back {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: rgba(255,255,255,.75); font-size: .85rem; font-weight: 500;
+      margin-bottom: 1rem;
+      transition: color .2s;
+    }
+    .prop-back:hover { color: #fff; }
+    .prop-hero-badge {
+      display: inline-block;
+      background: var(--red); color: #fff;
+      font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em;
+      padding: .25rem .7rem; border-radius: 20px;
+      margin-bottom: .75rem;
+    }
+    .prop-hero-badge.badge-special { background: #0e7a4f; }
+    .prop-hero-price {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800; color: #fff;
+      line-height: 1.1;
+      margin-bottom: .4rem;
+    }
+    .prop-hero-title {
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 600; color: rgba(255,255,255,.88);
+      margin-bottom: .4rem;
+    }
+    .prop-hero-location {
+      font-size: .9rem; color: rgba(255,255,255,.65);
+      display: flex; align-items: center; gap: .35rem;
+    }
+
+    /* ── Detail body ── */
+    .prop-detail-wrap {
+      max-width: 1200px; margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+    @media (max-width: 860px) {
+      .prop-detail-wrap { grid-template-columns: 1fr; }
+      .prop-cta-card { order: -1; }
+    }
+
+    .prop-features-bar {
+      display: flex; flex-wrap: wrap; gap: 1.2rem;
+      padding: 1.5rem;
+      background: var(--cream); border-radius: var(--radius);
+      margin-bottom: 1.5rem;
+    }
+    .prop-feat {
+      display: flex; align-items: center; gap: .5rem;
+      font-size: .95rem; font-weight: 600; color: var(--dark);
+    }
+    .prop-feat i { color: var(--red); font-size: 1rem; width: 1.1rem; text-align: center; }
+
+    .prop-section-title {
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--dark); margin-bottom: .75rem;
+      padding-bottom: .5rem;
+      border-bottom: 2px solid var(--light-gray);
+    }
+    .prop-description {
+      color: var(--gray); line-height: 1.75; font-size: .95rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ── CTA Card ── */
+    .prop-cta-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      position: sticky;
+      top: calc(var(--nav-h) + 1.5rem);
+    }
+    .prop-cta-header {
+      background: var(--dark);
+      color: #fff;
+      padding: 1.25rem 1.5rem;
+    }
+    .prop-cta-header p { color: rgba(255,255,255,.65); font-size: .85rem; margin-top: .2rem; }
+    .prop-cta-price {
+      font-size: 1.8rem; font-weight: 800; color: #fff;
+    }
+    .prop-cta-body { padding: 1.5rem; }
+    .prop-cta-wa {
+      display: flex; align-items: center; justify-content: center; gap: .6rem;
+      width: 100%;
+      background: var(--wa); color: #fff;
+      padding: 1rem; border-radius: 10px;
+      font-size: 1.05rem; font-weight: 700;
+      transition: background .2s, transform .15s;
+      margin-bottom: 1rem;
+    }
+    .prop-cta-wa:hover { background: #1aad55; transform: translateY(-2px); }
+    .prop-cta-wa i { font-size: 1.3rem; }
+    .prop-cta-call {
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      width: 100%;
+      border: 2px solid var(--light-gray); border-radius: 10px;
+      padding: .85rem; font-size: .95rem; font-weight: 600; color: var(--dark);
+      transition: border-color .2s, color .2s;
+      margin-bottom: 1.25rem;
+    }
+    .prop-cta-call:hover { border-color: var(--red); color: var(--red); }
+    .prop-cta-note {
+      text-align: center; font-size: .8rem; color: var(--gray);
+      display: flex; align-items: center; justify-content: center; gap: .35rem;
+    }
+    .prop-cta-note i { color: var(--red); }
+    .prop-cta-agent {
+      display: flex; align-items: center; gap: .75rem;
+      padding: 1rem 1.5rem;
+      background: var(--cream);
+      border-top: 1px solid var(--light-gray);
+    }
+    .prop-cta-agent img {
+      width: 44px; height: 44px; border-radius: 50%;
+      object-fit: cover; border: 2px solid var(--red);
+    }
+    .prop-cta-agent-name { font-weight: 700; font-size: .9rem; color: var(--dark); }
+    .prop-cta-agent-role { font-size: .78rem; color: var(--gray); }
+
+    /* ── Not found ── */
+    .prop-not-found {
+      min-height: 60vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; gap: 1rem; padding: 2rem;
+    }
+    .prop-not-found i { font-size: 3rem; color: var(--light-gray); }
+    .prop-not-found h2 { font-size: 1.4rem; color: var(--dark); }
+    .prop-not-found p { max-width: 360px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <span class="brand-dot"><i class="fa-solid fa-house-chimney"></i></span>
+        Residencias<strong>CostaRica</strong>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/#buscar">Buscar Casa</a></li>
+        <li><a href="/propiedades">Propiedades</a></li>
+        <li><a href="/#vender">Vende tu Casa</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+        <li>
+          <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20estaba%20en%20residenciascostarica.com%20y%20me%20interesa%20saber%20informaci%C3%B3n%20de%20casas"
+             target="_blank" rel="noopener" class="nav-cta">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== CONTENIDO DINÁMICO ===== -->
+  <main id="propContent">
+    <!-- Generado por generate_seo.py — no editar a mano -->
+    <div class="container" style="padding:7rem 1rem 3rem;max-width:1200px;margin:0 auto;">
+      <h1 style="margin-bottom:.5rem;">Casas, apartamentos y lotes en venta y alquiler en Costa Rica</h1>
+      <p style="margin-bottom:.5rem;">38 propiedades disponibles con asesoría gratuita para el comprador y trámite de bono de vivienda. Actualizado el 27/09/2026.</p>
+      <p style="margin-bottom:1.5rem;">Por zona: <a href="/escazu">Escazú</a> · <a href="/santa-ana">Santa Ana</a> · <a href="/heredia">Heredia</a> · <a href="/alajuela">Alajuela</a> · <a href="/curridabat">Curridabat</a> · <a href="/propiedades">Buscar con filtros</a></p>
+      <ul style="list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;">
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-condominio-nobleza-de-coris-33012693" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-33012693.webp" alt="Casa en venta, Condominio Nobleza de Coris" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 85,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en venta, Condominio Nobleza de Coris</h2>
+            <div style="font-size:.85rem;opacity:.75;">Cartago provincia · 3 hab · 2 baños · 135 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-nueva-en-venta-condominio-casa-hacienda-33012849" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-33012849.webp" alt="Casa Nueva en Venta, Condominio Casa Hacienda" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 125,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa Nueva en Venta, Condominio Casa Hacienda</h2>
+            <div style="font-size:.85rem;opacity:.75;">Cartago provincia · 3 hab · 5 baños · 159 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/hermosa-casa-en-venta-en-heredia-33013190" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-33013190.webp" alt="Hermosa Casa en Venta en Heredia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 83,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Hermosa Casa en Venta en Heredia</h2>
+            <div style="font-size:.85rem;opacity:.75;">Heredia provincia · 3 hab · 2 baños · 120 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/viva-con-comodidad-y-excelente-ubicacion-en-bambu-rivera-calles-blanco-32592729" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32592729.webp" alt="Apartamentos en alquiler en San José Capital" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 1,100</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Apartamentos en alquiler en San José Capital</h2>
+            <div style="font-size:.85rem;opacity:.75;">San José Capital · 3 hab · 2 baños · 70 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/estrena-casa-en-santo-domingo-de-heredia-32273860" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32273860.webp" alt="Estrena casa en Santo Domingo de Heredia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 79,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Estrena casa en Santo Domingo de Heredia</h2>
+            <div style="font-size:.85rem;opacity:.75;">Santo Domingo · 1 hab · 2 baños · 115 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/venta-de-casa-en-san-pablo-de-heredia-32274041" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32274041.webp" alt="Venta de casa en San Pablo de Heredia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 285,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Venta de casa en San Pablo de Heredia</h2>
+            <div style="font-size:.85rem;opacity:.75;">San Pablo · 3 hab · 3 baños · 224 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/excelente-oportunidad-para-vivir-o-invertir-en-el-corazon-de-curridabat-31254567" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31254567.webp" alt="¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 480,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡Excelente oportunidad para vivir o invertir en el corazón de Curridabat!</h2>
+            <div style="font-size:.85rem;opacity:.75;">Ciudad Curridabat · 5 hab · 3 baños · 629 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/gran-remate-en-copey-de-dota-31254758" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31254758.webp" alt="Lotes y Terrenos en Copey" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 130,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Lotes y Terrenos en Copey</h2>
+            <div style="font-size:.85rem;opacity:.75;">Copey · 4 hab · 2 baños · 380 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/la-casa-de-sus-suenos-en-la-trinidad-de-moravia-31254818" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31254818.webp" alt="¡La casa de sus sueños en la Trinidad de Moravia!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 103,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡La casa de sus sueños en la Trinidad de Moravia!</h2>
+            <div style="font-size:.85rem;opacity:.75;">La Trinidad · 3 hab · 5 baños · 147 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/oportunidad-compre-una-casa-y-alquile-la-otra-30728594" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-30728594.webp" alt="¡Oportunidad! Compre una casa y alquile la otra" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 145,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡Oportunidad! Compre una casa y alquile la otra</h2>
+            <div style="font-size:.85rem;opacity:.75;">San Rafael · 3 hab · 1 baños · 357 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/se-vende-casa-amplia-y-funcional-en-ciruelas-de-alajuela-32822851" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32822851.webp" alt="Se vende casa amplia y funcional en Ciruelas de Alajuela" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 89,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Se vende casa amplia y funcional en Ciruelas de Alajuela</h2>
+            <div style="font-size:.85rem;opacity:.75;">San Antonio · 1 hab · 3 baños · 227 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/venta-de-hermosa-casa-nueva-en-exclusivo-condominio-32822897" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32822897.webp" alt="Venta de Hermosa Casa Nueva en Exclusivo Condominio" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 168,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Venta de Hermosa Casa Nueva en Exclusivo Condominio</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 1 hab · 3 baños · 162 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/alquilamos-apartamento-a-estrenar-en-condominio-totalmente-nuevo-32822993" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32822993.webp" alt="Apartamentos en alquiler en San Sebastián" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 500,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Apartamentos en alquiler en San Sebastián</h2>
+            <div style="font-size:.85rem;opacity:.75;">San Sebastián · 2 hab · 1 baños · 84 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/oportunidad-en-condominio-en-cartago-32416347" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32416347.webp" alt="¡Oportunidad en Condominio en Cartago!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 68,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡Oportunidad en Condominio en Cartago!</h2>
+            <div style="font-size:.85rem;opacity:.75;">El Tejar · 3 hab · 2 baños · 136 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/estrene-casa-en-exclusivo-condominio-en-dulce-nombre-de-tres-rios-32417016" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32417016.webp" alt="Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 175,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Estrene casa en exclusivo Condominio en Dulce Nombre de Tres Ríos</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 4 hab · 3 baños · 200 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/se-vende-hermosa-casa-de-dos-niveles-en-el-coyol-alajuela-30885230" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-30885230.webp" alt="Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 120,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Se Vende Hermosa Casa de Dos Niveles en El Coyol, Alajuela</h2>
+            <div style="font-size:.85rem;opacity:.75;">Coyol · 2 hab · 2 baños · 398 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/estrene-moderna-casa-en-tres-rios-32417374" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32417374.webp" alt="Estrene Moderna Casa En Tres Ríos" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 178,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Estrene Moderna Casa En Tres Ríos</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 4 hab · 3 baños · 172 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/oportunidad-unica-en-aserri-32298356" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32298356.webp" alt="¡OPORTUNIDAD ÚNICA EN ASERRÍ!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 70,500,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡OPORTUNIDAD ÚNICA EN ASERRÍ!</h2>
+            <div style="font-size:.85rem;opacity:.75;">Aserrí · 3 hab · 2 baños · 140 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-ubicada-en-moravia-31892169" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31892169.webp" alt="Casa en Venta ubicada en Moravia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 90,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en Venta ubicada en Moravia</h2>
+            <div style="font-size:.85rem;opacity:.75;">Moravia · 3 hab · 5 baños · 104 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/penthouse-en-venta-ubicado-en-curridabat-31892295" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31892295.webp" alt="Penthouse en venta ubicado en Curridabat" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 280,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Penthouse en venta ubicado en Curridabat</h2>
+            <div style="font-size:.85rem;opacity:.75;">Sanchez · 3 hab · 3 baños · 14 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-en-condominio-ubicada-en-concepcion-de-tres-rios-32216446" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32216446.webp" alt="Casa en venta en Condominio Ubicada en Concepción de Tres Ríos" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 115,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en venta en Condominio Ubicada en Concepción de Tres Ríos</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 2 hab · 5 baños · 150 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/estrene-hermosa-casa-en-condominio-32216513" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32216513.webp" alt="¡ESTRENE HERMOSA CASA EN CONDOMINIO!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 170,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡ESTRENE HERMOSA CASA EN CONDOMINIO!</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 4 hab · 3 baños · 161 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-de-5-habitaciones-en-paso-ancho-amplia-y-centrica-75-millones-32471958" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32471958.webp" alt="Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 75,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa de 5 habitaciones en Paso Ancho – Amplia y céntrica 75 millones</h2>
+            <div style="font-size:.85rem;opacity:.75;">San José Capital · 5 hab · 3 baños · 143 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-de-lujo-en-venta-en-santa-ana-costa-rica-31076847" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-31076847.webp" alt="Casa de Lujo en Venta en Santa Ana, Costa Rica" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 1,150,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa de Lujo en Venta en Santa Ana, Costa Rica</h2>
+            <div style="font-size:.85rem;opacity:.75;">Santa Ana Centro · 4 hab · 5 baños · 429 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/viva-con-comodidad-y-excelente-ubicacion-en-bambu-eco-urbano-san-sebastian-32558151" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32558151.webp" alt="Viva con comodidad y excelente ubicación en Bambú Eco Urbano, San Sebastián!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 76,500,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Viva con comodidad y excelente ubicación en Bambú Eco Urbano, San Sebastián!</h2>
+            <div style="font-size:.85rem;opacity:.75;">San Sebastián · 2 hab · 2 baños · 70 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/apartamento-en-venta-vista-extraordinaria-y-excelente-ubicacion-32558182" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32558182.webp" alt="Apartamento en Venta – ¡Vista extraordinaria y excelente ubicación!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 49,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Apartamento en Venta – ¡Vista extraordinaria y excelente ubicación!</h2>
+            <div style="font-size:.85rem;opacity:.75;">Moravia · 2 hab · 1 baños · 50 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/venta-de-hermosa-casa-en-cartago-32217792" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32217792.webp" alt="VENTA DE HERMOSA CASA EN CARTAGO" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 78,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">VENTA DE HERMOSA CASA EN CARTAGO</h2>
+            <div style="font-size:.85rem;opacity:.75;">Dulce Nombre · 3 hab · 2 baños · 210 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/hermosa-casa-en-venta-en-alajuela-centro-32217920" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32217920.webp" alt="¡Hermosa Casa en Venta en Alajuela Centro!" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 99,990,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">¡Hermosa Casa en Venta en Alajuela Centro!</h2>
+            <div style="font-size:.85rem;opacity:.75;">Alajuela Centro · 3 hab · 3 baños · 180 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-en-la-guacima-de-alajuela-30856282" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-30856282.webp" alt="Casa en Venta en la Guácima de Alajuela" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">$ 380,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en Venta en la Guácima de Alajuela</h2>
+            <div style="font-size:.85rem;opacity:.75;">Guácima · 3 hab · 5 baños · 1,019.31 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-en-lagunilla-de-heredia-ubicacion-premium-y-seguridad-32218078" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32218078.webp" alt="Casa en Venta en Lagunilla de Heredia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 108,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en Venta en Lagunilla de Heredia</h2>
+            <div style="font-size:.85rem;opacity:.75;">Ulloa · 3 hab · 5 baños · 124 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/viva-con-comodidad-y-excelente-ubicacion-en-bambu-rivera-calles-blancos-32592730" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32592730.webp" alt="Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 76,500,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Viva con comodidad y excelente ubicación en Bambú Rivera , Calles Blancos</h2>
+            <div style="font-size:.85rem;opacity:.75;">San José Capital · 1 hab · 2 baños · 70 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/propiedad-en-venta-de-inversion-en-san-ramon-de-tres-rios-inversion-restaurante-29377845" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-29377845.webp" alt="Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 450,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Propiedad en Venta de inversión en San Ramón de Tres Ríos (Inversión Restaurante)</h2>
+            <div style="font-size:.85rem;opacity:.75;">Tres Ríos · 5 hab · 5 baños · 2,096 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-venta-ubicada-en-zapote-29377968" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-29377968.webp" alt="Casa en venta ubicada en Zapote" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 75,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casa en venta ubicada en Zapote</h2>
+            <div style="font-size:.85rem;opacity:.75;">Zapote · 4 hab · 5 baños · 133.55 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/venta-de-casa-en-condominio-en-la-trinidad-de-moravia-28313598" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-28313598.webp" alt="Venta de casa en condominio en la Trinidad de Moravia" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 103,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Venta de casa en condominio en la Trinidad de Moravia</h2>
+            <div style="font-size:.85rem;opacity:.75;">La Trinidad · 2 hab · 5 baños · 120 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/casa-en-alquiler-condominio-novarum-cartago-quebradilla-de-tejar-32554362" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32554362.webp" alt="Casas en alquiler en El Tejar" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 550,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Casas en alquiler en El Tejar</h2>
+            <div style="font-size:.85rem;opacity:.75;">El Tejar · 2 hab · 2 baños · 135 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/finca-en-venta-con-vistas-al-volcan-tenorio-32369690" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32369690.webp" alt="Lotes y Terrenos en Bagaces" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 95,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Lotes y Terrenos en Bagaces</h2>
+            <div style="font-size:.85rem;opacity:.75;">Bagaces · 2 hab · 1 baños · 130 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/oportunidad-unica-venta-de-lote-en-condominio-en-cartago-32217733" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32217733.webp" alt="Lotes y Terrenos en El Tejar" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 36,000,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Lotes y Terrenos en El Tejar</h2>
+            <div style="font-size:.85rem;opacity:.75;">El Tejar · 5 hab · 2 baños · 151 m²</div>
+          </div>
+        </a>
+      </li>
+      <li style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden;">
+        <a href="/inmueble/lote-en-venta-en-condominio-en-naranjo-32217993" style="display:block;color:inherit;text-decoration:none;">
+          <img src="/assets/e24-32217993.webp" alt="Lotes y Terrenos en El Rosario" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;" />
+          <div style="padding:.9rem 1rem;">
+            <div style="font-weight:700;">₡ 48,500,000</div>
+            <h2 style="font-size:1rem;margin:.25rem 0;">Lotes y Terrenos en El Rosario</h2>
+            <div style="font-size:.85rem;opacity:.75;">El Rosario · 5 hab · 2 baños · 922 m²</div>
+          </div>
+        </a>
+      </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-about">
+          <div class="footer-brand">
+            <i class="fa-solid fa-house-chimney"></i> Residencias<strong>CostaRica</strong>
+          </div>
+          <p>Tu aliado de confianza en el mercado inmobiliario de Costa Rica. Compramos, vendemos y conectamos con los mejores bancos del país.</p>
+          <div class="social-pills">
+            <a href="https://www.instagram.com/residenciascostarica/" target="_blank" rel="noopener" class="social-pill ig"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://www.threads.net/@residenciascostarica" target="_blank" rel="noopener" class="social-pill th"><i class="fa-brands fa-threads"></i> Threads</a>
+            <a href="https://www.facebook.com/residenciascostarica" target="_blank" rel="noopener" class="social-pill fb"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="https://www.tiktok.com/@residenciascostarica" target="_blank" rel="noopener" class="social-pill tt"><i class="fa-brands fa-tiktok"></i> TikTok</a>
+            <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20interesa%20informaci%C3%B3n%20sobre%20propiedades." target="_blank" rel="noopener" class="social-pill wa"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Propiedades</h4>
+          <ul>
+            <li><a href="/propiedades">Ver todas</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="/#buscar">Buscar Casa</a></li>
+            <li><a href="/#vender">Vender Propiedad</a></li>
+            <li><a href="/#buscar">Bono de Vivienda</a></li>
+            <li><a href="/#buscar">Tramitología</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20interesa%20informaci%C3%B3n%20sobre%20propiedades." target="_blank" rel="noopener">+506 8372-5603</a></li>
+            <li><a href="https://wa.me/50661374443" target="_blank" rel="noopener">+506 6137-4443</a></li>
+            <li><a href="mailto:flory@residenciascostarica.com">flory@residenciascostarica.com</a></li>
+            <li><span>Costa Rica</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Residencias Costa Rica · Todos los derechos reservados</span>
+      </div>
+      <div class="footer-pura-vida">
+        Pura Vida <i class="fa-solid fa-heart footer-heart"></i>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a onclick="return gtagSendEvent(this.href)" href="https://wa.me/50683725603?text=Hola%20Floribeth%2C%20te%20escribo%20desde%20www.residenciascostarica.com.%20Me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20propiedades%2C%20%C2%BFme%20pod%C3%A9s%20ayudar%3F"
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp" id="waFloat">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="wa-label">¡Chateá ahora!</span>
+  </a>
+
+  <script>
+    // Mobile nav
+    const navToggle = document.getElementById('navToggle');
+    const navLinks  = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+    }
+
+    // WA float shake
+    setInterval(() => {
+      const btn = document.getElementById('waFloat');
+      if (!btn) return;
+      btn.style.animation = 'wa-shake 0.6s ease';
+      setTimeout(() => { btn.style.animation = 'wa-pulse 2s ease-in-out infinite'; }, 700);
+    }, 8000);
+
+  </script>
+</body>
+</html>

@@ -65,9 +65,25 @@ def parse_property_page(page, prop_id: str) -> dict:
     # ── Título ────────────────────────────────────────────
     title = og_title.split("|")[0].strip() if og_title else f"Propiedad {prop_id}"
 
+    # ── JSON-LD Product de la página: fuente más confiable de precio y zona ──
+    # (los selectores CSS de precio pueden caer en tarjetas de anuncios relacionados)
+    ld_price, ld_locality = "", ""
+    for el in page.query_selector_all('script[type="application/ld+json"]'):
+        try:
+            ld = json.loads(el.text_content() or "")
+        except ValueError:
+            continue
+        offers = ld.get("offers") if isinstance(ld, dict) and ld.get("@type") == "Product" else None
+        if isinstance(offers, dict) and offers.get("price"):
+            symbol = {"CRC": "₡", "USD": "$"}.get(offers.get("priceCurrency"), offers.get("priceCurrency", "") + " ")
+            ld_price = f"{symbol} {int(float(offers['price'])):,}"
+            addr = (offers.get("availableAtOrFrom") or {}).get("address") or {}
+            ld_locality = (addr.get("addressLocality") or "").strip()
+            break
+
     # ── Precio ────────────────────────────────────────────
-    price = "Consultar"
-    price_el = page.query_selector('[class*="price"], [class*="Price"], [itemprop="price"]')
+    price = ld_price or "Consultar"
+    price_el = None if ld_price else page.query_selector('[class*="price"], [class*="Price"], [itemprop="price"]')
     if price_el:
         t = price_el.inner_text().strip()
         if t and any(c.isdigit() for c in t):
@@ -83,8 +99,8 @@ def parse_property_page(page, prop_id: str) -> dict:
 
     # ── Ubicación ─────────────────────────────────────────
     # h2 suele ser "Casas en ZONA | Título"
-    location = "Costa Rica"
-    h2_el = page.query_selector("h2")
+    location = ld_locality or "Costa Rica"
+    h2_el = None if ld_locality else page.query_selector("h2")
     if h2_el:
         h2_text = h2_el.inner_text().strip()
         loc_m = re.match(r'[^|]+en\s+([^|]+)', h2_text, re.I)
